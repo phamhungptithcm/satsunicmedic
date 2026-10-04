@@ -3,7 +3,7 @@ import { describe, it, expect, afterEach } from 'vitest';
 // @ts-expect-error Native ESM script has no generated declaration file.
 import { identity, assertCurrent, existingTag, publish, validateManifest } from '../scripts/ci/release.mjs';
 // @ts-expect-error Native ESM script has no generated declaration file.
-import { validateAcceptance, validateConfig, candidatePaths, safeSourcePath, poll, indexesReady, functionDeployArgs, deployCandidate, googleClient, command, stageSource, publicDiscoveryCatalog, commandFailureSummary } from '../scripts/ci/deploy-production.mjs';
+import { validateAcceptance, validateConfig, candidatePaths, safeSourcePath, poll, indexesReady, functionDeployArgs, canonicalResource, deployCandidate, googleClient, command, stageSource, publicDiscoveryCatalog, commandFailureSummary } from '../scripts/ci/deploy-production.mjs';
 // @ts-expect-error Native ESM script has no generated declaration file.
 import { smoke } from '../scripts/ci/smoke-production.mjs';
 
@@ -26,6 +26,15 @@ const currentFunction = { name: 'projects/satsunicmedic/locations/asia-southeast
   serviceConfig: { revision: 'api-new', serviceAccountEmail: 'medic-functions@satsunicmedic.iam.gserviceaccount.com' } };
 
 describe('production configuration and immutable identity', () => {
+  it('matches only the verified project ID/number aliases and preserves the entire resource suffix', () => {
+    const suffix = '/locations/asia-southeast1/backends/medic/builds/ci-123-1';
+    expect(canonicalResource('projects/satsunicmedic' + suffix)).toBe('projects/108608537442' + suffix);
+    expect(canonicalResource('projects/108608537442' + suffix)).toBe('projects/108608537442' + suffix);
+    expect(canonicalResource('projects/other' + suffix)).not.toBe(canonicalResource('projects/satsunicmedic' + suffix));
+    expect(canonicalResource('projects/satsunicmedic-evil' + suffix)).not.toBe(canonicalResource('projects/satsunicmedic' + suffix));
+    expect(canonicalResource('projects/satsunicmedic' + suffix + '-other')).not.toBe(canonicalResource('projects/satsunicmedic' + suffix));
+    expect(() => functionDeployArgs({ ...currentFunction, name: canonicalResource(currentFunction.name) })).not.toThrow();
+  });
   it('updates only the existing function with approved identities and leaves invoker policy intact', () => {
     const args = functionDeployArgs(currentFunction);
     expect(args.slice(0, 3)).toEqual(['functions', 'deploy', 'api']);
@@ -142,7 +151,7 @@ function deploymentFixture(fail?: string) {
   const api = async (url: string, method = 'GET', body?: Record<string, unknown>) => {
     if (url.includes('/collectionGroups/')) return { indexes: [{ state: 'READY' }] };
     if (url.includes('cloudfunctions')) return currentFunction;
-    if (url.endsWith('/traffic')) return { current: { splits: [{ build: `${base}/builds/${rolled ? 'ci-123-1' : 'previous'}`, percent: 100 }] } };
+    if (url.endsWith('/traffic')) return { current: { splits: [{ build: canonicalResource(`${base}/builds/${rolled ? 'ci-123-1' : 'previous'}`), percent: 100 }] } };
     if (url.endsWith('/builds/previous')) return { image: 'previous-image', config: { env: [{ variable: 'EXISTING_FLAG', value: 'false', availability: ['RUNTIME'] }] } };
     if (method === 'POST') {
       requests.push({ url, body });
@@ -152,7 +161,7 @@ function deploymentFixture(fail?: string) {
       return { name: 'projects/satsunicmedic/locations/asia-southeast1/operations/123' };
     }
     if (url.includes('/operations/')) return { done: true };
-    if (url.includes('/rollouts/')) return rolled ? { state: 'SUCCEEDED', build: `${base}/builds/ci-123-1` } : null;
+    if (url.includes('/rollouts/')) return rolled ? { state: 'SUCCEEDED', build: canonicalResource(`${base}/builds/ci-123-1`) } : null;
     if (url.includes('/builds/ci-123-1')) return built ? { state: 'READY', source: { container: { image } }, image } : null;
     throw new Error(`Unexpected URL ${url}`);
   };

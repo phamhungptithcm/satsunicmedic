@@ -9,6 +9,8 @@ import { smoke, productionOrigin } from './smoke-production.mjs';
 import { checkProductionCosts, costPolicy } from './check-production-costs.mjs';
 
 const project = 'satsunicmedic';
+const projectNumber = '108608537442';
+export const canonicalResource = name => typeof name === 'string' ? name.replace(/^projects\/satsunicmedic\//, `projects/${projectNumber}/`) : '';
 const location = 'asia-southeast1';
 const backend = `projects/${project}/locations/${location}/backends/medic`;
 const appHosting = 'https://firebaseapphosting.googleapis.com/v1beta/';
@@ -119,7 +121,7 @@ export async function poll(read, accept, label, { attempts = 120, wait = sleep }
 }
 
 export async function waitOperation(op, api) {
-  if (!op.name?.startsWith(`projects/${project}/locations/`)) throw new Error('Unexpected operation name');
+  if (!canonicalResource(op.name).startsWith(`projects/${projectNumber}/locations/`)) throw new Error('Unexpected operation name');
   return poll(() => api(appHosting + op.name), v => v.done === true, 'App Hosting operation');
 }
 
@@ -143,7 +145,7 @@ export async function indexesReady(api) {
 export function functionDeployArgs(existing) {
   const buildAccount = `projects/${project}/serviceAccounts/medic-build@${project}.iam.gserviceaccount.com`;
   const runtimeAccount = `medic-functions@${project}.iam.gserviceaccount.com`;
-  if (existing.name !== `projects/${project}/locations/${location}/functions/api` || existing.state !== 'ACTIVE' ||
+  if (canonicalResource(existing.name) !== `projects/${projectNumber}/locations/${location}/functions/api` || existing.state !== 'ACTIVE' ||
       existing.environment !== 'GEN_2' || existing.buildConfig?.serviceAccount !== buildAccount ||
       existing.serviceConfig?.serviceAccountEmail !== runtimeAccount) throw new Error('Existing Functions identity drift; do not create or change delegation');
   return ['functions', 'deploy', 'api', '--gen2', '--project', project, '--region', location,
@@ -207,10 +209,10 @@ export async function deployCandidate(id, image, deps) {
     await poll(() => api(appHosting + buildName), v => ['READY', 'BUILT'].includes(v.state), 'App Hosting build');
     const rolloutName = `${backend}/rollouts/${buildId}`;
     const rollout = await api(appHosting + rolloutName, 'GET', undefined, true);
-    if (rollout && rollout.build !== buildName) throw new Error('Existing rollout points to another build');
+    if (rollout && canonicalResource(rollout.build) !== canonicalResource(buildName)) throw new Error('Existing rollout points to another build');
     if (!rollout) await waitOperation(await api(`${appHosting}${backend}/rollouts?rolloutId=${buildId}`, 'POST', { build: buildName }), api);
     await poll(() => api(appHosting + rolloutName), v => v.state === 'SUCCEEDED', 'App Hosting rollout');
-    await poll(() => api(`${appHosting}${backend}/traffic`), v => !v.reconciling && v.current?.splits?.some(s => s.build === buildName && s.percent === 100), 'Production traffic');
+    await poll(() => api(`${appHosting}${backend}/traffic`), v => !v.reconciling && v.current?.splits?.some(s => canonicalResource(s.build) === canonicalResource(buildName) && s.percent === 100), 'Production traffic');
     const deployed = await api(appHosting + buildName);
     if (deployed.image !== image) throw new Error('Deployed image digest mismatch');
     manifest.rollout = rolloutName; manifest.build = buildName;
