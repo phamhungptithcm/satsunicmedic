@@ -140,6 +140,22 @@ export async function indexesReady(api) {
   }, value => value.ready, 'Firestore indexes');
 }
 
+export function functionDeployArgs(existing) {
+  const buildAccount = `projects/${project}/serviceAccounts/medic-build@${project}.iam.gserviceaccount.com`;
+  const runtimeAccount = `medic-functions@${project}.iam.gserviceaccount.com`;
+  if (existing.name !== `projects/${project}/locations/${location}/functions/api` || existing.state !== 'ACTIVE' ||
+      existing.environment !== 'GEN_2' || existing.buildConfig?.serviceAccount !== buildAccount ||
+      existing.serviceConfig?.serviceAccountEmail !== runtimeAccount) throw new Error('Existing Functions identity drift; do not create or change delegation');
+  return ['functions', 'deploy', 'api', '--gen2', '--project', project, '--region', location,
+    '--source', '.ai/local/firebase-functions', '--ignore-file', '.gcloudignore',
+    '--runtime', 'nodejs24', '--entry-point', 'api', '--build-service-account', buildAccount,
+    '--service-account', runtimeAccount, '--min-instances', '0', '--max-instances', '1',
+    '--cpu', '1', '--memory', '512Mi', '--concurrency', '20', '--timeout', '60s',
+    '--serve-all-traffic-latest-revision',
+    '--update-env-vars', `NODE_ENV=production,APP_ORIGIN=${productionOrigin},MEDIC_FIREBASE_PROJECT_ID=${project},ASSET_DELIVERY_ENABLED=false`,
+    '--quiet'];
+}
+
 export async function deployCandidate(id, image, deps) {
   const { api, run, github, smokeCheck = smoke, persist = save } = deps;
   if (!new RegExp(`^${registry.replaceAll('.', '\\.')}@sha256:[a-f0-9]{64}$`).test(image)) throw new Error('Invalid immutable image');
@@ -148,6 +164,7 @@ export async function deployCandidate(id, image, deps) {
   const previous = await api(`${appHosting}${backend}/traffic`);
   if (previous.rolloutPolicy?.codebaseBranch && !previous.rolloutPolicy.disabled) throw new Error('Disable competing App Hosting automatic rollout before CI owns deployment');
   const oldFunction = await api(functionUrl);
+  const functionArgs = functionDeployArgs(oldFunction);
   const oldBuild = previous.current?.splits?.find(s => s.percent === 100)?.build;
   if (!oldBuild) throw new Error('Cannot establish previous production build for rollback');
   const oldBuildState = await api(appHosting + oldBuild);
@@ -164,7 +181,8 @@ export async function deployCandidate(id, image, deps) {
     if (changed) run('firebase', ['deploy', '--project', project, '--only', 'firestore:rules,firestore:indexes', '--non-interactive']);
     await indexesReady(api);
     manifest.status = 'FIRESTORE_READY'; persist('deployment', manifest);
-    run('firebase', ['deploy', '--project', project, '--only', 'functions:medic', '--non-interactive']);
+    // Update only the verified existing function. No invoker/IAM flags: preserve its policy.
+    run('gcloud', functionArgs);
     const fn = await poll(() => api(functionUrl), v => v.state === 'ACTIVE', 'Functions readiness');
     if (!fn.serviceConfig?.revision) throw new Error('Missing Functions revision readback');
     manifest.functionRevision = fn.serviceConfig.revision;

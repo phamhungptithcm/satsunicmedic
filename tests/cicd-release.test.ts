@@ -3,7 +3,7 @@ import { describe, it, expect, afterEach } from 'vitest';
 // @ts-expect-error Native ESM script has no generated declaration file.
 import { identity, assertCurrent, existingTag, publish, validateManifest } from '../scripts/ci/release.mjs';
 // @ts-expect-error Native ESM script has no generated declaration file.
-import { validateAcceptance, validateConfig, candidatePaths, safeSourcePath, poll, indexesReady, deployCandidate, googleClient, command, stageSource, publicDiscoveryCatalog, commandFailureSummary } from '../scripts/ci/deploy-production.mjs';
+import { validateAcceptance, validateConfig, candidatePaths, safeSourcePath, poll, indexesReady, functionDeployArgs, deployCandidate, googleClient, command, stageSource, publicDiscoveryCatalog, commandFailureSummary } from '../scripts/ci/deploy-production.mjs';
 // @ts-expect-error Native ESM script has no generated declaration file.
 import { smoke } from '../scripts/ci/smoke-production.mjs';
 
@@ -21,8 +21,24 @@ const env = { GITHUB_SHA: sha, GITHUB_REF: 'refs/heads/main', GITHUB_RUN_NUMBER:
 const id = identity(env, '0.1.0');
 const image = `asia-southeast1-docker.pkg.dev/satsunicmedic/production/web@sha256:${'b'.repeat(64)}`;
 const good = { ...id, status: 'SUCCEEDED', smoke: 'PASSED', image, functionRevision: 'api-1', rollout: 'rollout-1' };
+const currentFunction = { name: 'projects/satsunicmedic/locations/asia-southeast1/functions/api', environment: 'GEN_2', state: 'ACTIVE',
+  buildConfig: { serviceAccount: 'projects/satsunicmedic/serviceAccounts/medic-build@satsunicmedic.iam.gserviceaccount.com', source: {} },
+  serviceConfig: { revision: 'api-new', serviceAccountEmail: 'medic-functions@satsunicmedic.iam.gserviceaccount.com' } };
 
 describe('production configuration and immutable identity', () => {
+  it('updates only the existing function with approved identities and leaves invoker policy intact', () => {
+    const args = functionDeployArgs(currentFunction);
+    expect(args.slice(0, 3)).toEqual(['functions', 'deploy', 'api']);
+    expect(args).toContain('.ai/local/firebase-functions');
+    expect(args).toContain(currentFunction.buildConfig.serviceAccount);
+    expect(args).toContain(currentFunction.serviceConfig.serviceAccountEmail);
+    expect(args).not.toContain('--allow-unauthenticated');
+    expect(args).not.toContain('--no-allow-unauthenticated');
+    expect(args.some((v: string) => v.startsWith('--clear-') || v === 'delete')).toBe(false);
+    for (const change of [{ name: 'other' }, { state: 'FAILED' }, { environment: 'GEN_1' }, { buildConfig: {} }, { serviceConfig: {} }]) {
+      expect(() => functionDeployArgs({ ...currentFunction, ...change })).toThrow('identity drift');
+    }
+  });
   it('uses stable tag across reruns and rejects non-main', () => {
     expect(id.tag).toBe('v0.1.0-build.12');
     expect(identity({ ...env, GITHUB_RUN_ATTEMPT: '2' }, '0.1.0')).toEqual(id);
@@ -125,7 +141,7 @@ function deploymentFixture(fail?: string) {
   let rolled = false; let built = false;
   const api = async (url: string, method = 'GET', body?: Record<string, unknown>) => {
     if (url.includes('/collectionGroups/')) return { indexes: [{ state: 'READY' }] };
-    if (url.includes('cloudfunctions')) return { state: 'ACTIVE', serviceConfig: { revision: 'api-new' }, buildConfig: { source: {} } };
+    if (url.includes('cloudfunctions')) return currentFunction;
     if (url.endsWith('/traffic')) return { current: { splits: [{ build: `${base}/builds/${rolled ? 'ci-123-1' : 'previous'}`, percent: 100 }] } };
     if (url.endsWith('/builds/previous')) return { image: 'previous-image', config: { env: [{ variable: 'EXISTING_FLAG', value: 'false', availability: ['RUNTIME'] }] } };
     if (method === 'POST') {
@@ -142,7 +158,7 @@ function deploymentFixture(fail?: string) {
   };
   return { commands, snapshots, requests, deps: { api, attempt: '1',
     github: async (path: string) => path === 'git/ref/heads/main' ? { object: { sha: fail === 'stale' ? 'other' : sha } } : null,
-    run: (cmd: string, args: string[]) => { commands.push(`${cmd} ${args.join(' ')}`); if (fail === 'api' && args.includes('functions:medic')) throw new Error('api failed'); return ''; },
+    run: (cmd: string, args: string[]) => { commands.push(`${cmd} ${args.join(' ')}`); if (fail === 'api' && cmd === 'gcloud' && args[0] === 'functions') throw new Error('api failed'); return ''; },
     smokeCheck: async () => { if (fail === 'smoke') throw new Error('smoke failed'); return 'PASSED'; },
     persist: (_name: string, value: Record<string, unknown>) => snapshots.push(structuredClone(value)),
   } };
@@ -151,7 +167,7 @@ describe('deployment ordering and partial failure', () => {
   it('deploys API before web and records rollback metadata and verified success', async () => {
     const { deps, commands, snapshots, requests } = deploymentFixture();
     await expect(deployCandidate(id, image, deps)).resolves.toMatchObject({ status: 'SUCCEEDED', smoke: 'PASSED', functionRevision: 'api-new' });
-    expect(commands[0]).toContain('firestore:rules,firestore:indexes'); expect(commands[1]).toContain('functions:medic');
+    expect(commands[0]).toContain('firestore:rules,firestore:indexes'); expect(commands[1]).toContain('gcloud functions deploy api');
     expect(snapshots[0]?.previous).toHaveProperty('build');
     expect(requests.find(r => r.url.includes('builds?'))?.body).toMatchObject({ config: { env: expect.arrayContaining([{ variable: 'EXISTING_FLAG', value: 'false', availability: ['RUNTIME'] }]) } });
   });

@@ -26,4 +26,5 @@ const dependencies={...api.dependencies,'@hs/contracts':'file:vendor/contracts'}
 if(Object.keys(dependencies).some(name=>name.includes('prisma')||name==='pg'))throw new Error('SQL dependency in Firebase artifact');
 await writeFile(path.join(output,'package.json'),JSON.stringify({name:'humanscope-firebase-api',version:'0.1.0',private:true,type:'module',main:'dist/firebase.js',engines:{node:'24'},dependencies,overrides},null,2)+'\n');
 await writeFile(path.join(output,'.env.satsunicmedic'),'NODE_ENV=production\nAPP_ORIGIN=https://medic--satsunicmedic.asia-southeast1.hosted.app\nMEDIC_FIREBASE_PROJECT_ID=satsunicmedic\nASSET_DELIVERY_ENABLED=false\n');
+await writeFile(path.join(output,'.gcloudignore'),'.gcloudignore\n.git\nnode_modules\n.env*\n*.log\n');
 console.log(output);
