@@ -1,0 +1,439 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "notes",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "ownerId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "createdAt",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "lessons",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "ownerId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "createdAt",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "attempts",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "userId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "createdAt",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "assets",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "createdAt",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "anatomy",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "published",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "grams",
+          "arrayConfig": "CONTAINS"
+        },
+        {
+          "fieldPath": "__name__",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "articleSearch",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "locale",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "grams",
+          "arrayConfig": "CONTAINS"
+        },
+        {
+          "fieldPath": "__name__",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "reviews",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "revisionId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "approved",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "contentHash",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "reviews",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "revisionId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "approved",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "contentHash",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "createdAt",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "facilities",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "legalName",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "__name__",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "facilities",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "specialties",
+          "arrayConfig": "CONTAINS"
+        },
+        {
+          "fieldPath": "legalName",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "__name__",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "facilities",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "areaCode",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "legalName",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "__name__",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "facilities",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "areaCode",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "specialties",
+          "arrayConfig": "CONTAINS"
+        },
+        {
+          "fieldPath": "legalName",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "__name__",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "anatomy",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "systemId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "published",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "reviewDueAt",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "learningReviews",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "userId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "schedule.dueAt",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "classes",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "ownerId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "createdAt",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "classMembers",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "userId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "createdAt",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "teachingAssignments",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "ownerId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "createdAt",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "teachingSubmissions",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "userId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "createdAt",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": [
+    {
+      "collectionGroup": "payloads",
+      "fieldPath": "bytes",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "notes",
+      "fieldPath": "text",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "lessons",
+      "fieldPath": "description",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "assets",
+      "fieldPath": "manifestPayload",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "assets",
+      "fieldPath": "objectKey",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "assets",
+      "fieldPath": "sha256",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "revisions",
+      "fieldPath": "bodyPayload",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "scenes",
+      "fieldPath": "snapshotPayload",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "shares",
+      "fieldPath": "snapshotPayload",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "quizzes",
+      "fieldPath": "questionsPayload",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "facilities",
+      "fieldPath": "evidencePayload",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "facilities",
+      "fieldPath": "address",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "facilities",
+      "fieldPath": "officialUrl",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "attempts",
+      "fieldPath": "resultPayload",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "idempotency",
+      "fieldPath": "responsePayload",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "reports",
+      "fieldPath": "text",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "articleSearch",
+      "fieldPath": "title",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "articleSearch",
+      "fieldPath": "summary",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "sessions",
+      "fieldPath": "tokenHash",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "contributions",
+      "fieldPath": "draft",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "contributionRevisions",
+      "fieldPath": "draft",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "contributionDecisions",
+      "fieldPath": "reason",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "lessons",
+      "fieldPath": "blocks",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "teachingAssignments",
+      "fieldPath": "content",
+      "indexes": []
+    },
+    {
+      "collectionGroup": "teachingSubmissions",
+      "fieldPath": "reflection",
+      "indexes": []
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+<!-- BEGIN @hunpeolabs/ai-agent-kit managed -->
+.codegraph/
+.cocoindex_code/
+.ai/local/
+.ai-agent-kit/backups/
+.ai-agent-kit/architecture/
+.ai-agent-kit/conflicts/
+.ai-agent-kit/context/
+.ai-agent-kit/demo/
+.ai-agent-kit/failure-lab/
+.ai-agent-kit/local/
+.ai-agent-kit/passport/
+.ai-agent-kit/proof/
+.ai-agent-kit/transactions/
+.ai-agent-kit/runtime/
+<!-- END @hunpeolabs/ai-agent-kit managed -->
+
+# Application outputs and local configuration
+node_modules/
+.next/
+dist/
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+coverage/
+playwright-report/
+test-results/
+infra/terraform/.terraform/
+*.tfstate*
+*.tfplan
+
+*-debug.log
+apps/api/generated/
+.pnpm-store/
+
+# Local QA artifacts and interpreter caches
+__pycache__/
+*.py[cod]
+.playwright-cli/
+output/
+.ai-agent-kit/baselines/
+.ai-agent-kit/output/
+ChatGPT Image*.png

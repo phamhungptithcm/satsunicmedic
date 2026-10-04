@@ -1,0 +1,194 @@
+[
+  {
+    "width": 1440,
+    "id": "overview",
+    "heading": "Không gian của bạn",
+    "scrollWidth": 1440
+  },
+  {
+    "width": 1440,
+    "id": "profile",
+    "heading": "Hồ sơ cá nhân",
+    "scrollWidth": 1440
+  },
+  {
+    "width": 1440,
+    "id": "security",
+    "heading": "Đăng nhập & bảo mật",
+    "scrollWidth": 1440
+  },
+  {
+    "width": 1440,
+    "id": "preferences",
+    "heading": "Tùy chọn",
+    "scrollWidth": 1440
+  },
+  {
+    "width": 1440,
+    "id": "plan",
+    "heading": "Thêm chiều sâu cho việc học.",
+    "scrollWidth": 1440
+  },
+  {
+    "width": 1440,
+    "id": "billing",
+    "heading": "Thanh toán",
+    "scrollWidth": 1440
+  },
+  {
+    "width": 1440,
+    "id": "privacy",
+    "heading": "Dữ liệu & quyền riêng tư",
+    "scrollWidth": 1440
+  },
+  {
+    "width": 1440,
+    "id": "help",
+    "heading": "Trợ giúp tài khoản",
+    "scrollWidth": 1440
+  },
+  {
+    "width": 390,
+    "id": "overview",
+    "heading": "Không gian của bạn",
+    "scrollWidth": 390
+  },
+  {
+    "width": 390,
+    "id": "profile",
+    "heading": "Hồ sơ cá nhân",
+    "scrollWidth": 390
+  },
+  {
+    "width": 390,
+    "id": "security",
+    "heading": "Đăng nhập & bảo mật",
+    "scrollWidth": 390
+  },
+  {
+    "width": 390,
+    "id": "preferences",
+    "heading": "Tùy chọn",
+    "scrollWidth": 390
+  },
+  {
+    "width": 390,
+    "id": "plan",
+    "heading": "Thêm chiều sâu cho việc học.",
+    "scrollWidth": 390
+  },
+  {
+    "width": 390,
+    "id": "billing",
+    "heading": "Thanh toán",
+    "scrollWidth": 390
+  },
+  {
+    "width": 390,
+    "id": "privacy",
+    "heading": "Dữ liệu & quyền riêng tư",
+    "scrollWidth": 390
+  },
+  {
+    "width": 390,
+    "id": "help",
+    "heading": "Trợ giúp tài khoản",
+    "scrollWidth": 390
+  },
+  {
+    "width": 320,
+    "id": "overview",
+    "heading": "Không gian của bạn",
+    "scrollWidth": 320
+  },
+  {
+    "width": 320,
+    "id": "profile",
+    "heading": "Hồ sơ cá nhân",
+    "scrollWidth": 320
+  },
+  {
+    "width": 320,
+    "id": "security",
+    "heading": "Đăng nhập & bảo mật",
+    "scrollWidth": 320
+  },
+  {
+    "width": 320,
+    "id": "preferences",
+    "heading": "Tùy chọn",
+    "scrollWidth": 320
+  },
+  {
+    "width": 320,
+    "id": "plan",
+    "heading": "Thêm chiều sâu cho việc học.",
+    "scrollWidth": 320
+  },
+  {
+    "width": 320,
+    "id": "billing",
+    "heading": "Thanh toán",
+    "scrollWidth": 320
+  },
+  {
+    "width": 320,
+    "id": "privacy",
+    "heading": "Dữ liệu & quyền riêng tư",
+    "scrollWidth": 320
+  },
+  {
+    "width": 320,
+    "id": "help",
+    "heading": "Trợ giúp tài khoản",
+    "scrollWidth": 320
+  },
+  {
+    "width": 768,
+    "id": "overview",
+    "heading": "Không gian của bạn",
+    "scrollWidth": 768
+  },
+  {
+    "width": 768,
+    "id": "profile",
+    "heading": "Hồ sơ cá nhân",
+    "scrollWidth": 768
+  },
+  {
+    "width": 768,
+    "id": "security",
+    "heading": "Đăng nhập & bảo mật",
+    "scrollWidth": 768
+  },
+  {
+    "width": 768,
+    "id": "preferences",
+    "heading": "Tùy chọn",
+    "scrollWidth": 768
+  },
+  {
+    "width": 768,
+    "id": "plan",
+    "heading": "Thêm chiều sâu cho việc học.",
+    "scrollWidth": 768
+  },
+  {
+    "width": 768,
+    "id": "billing",
+    "heading": "Thanh toán",
+    "scrollWidth": 768
+  },
+  {
+    "width": 768,
+    "id": "privacy",
+    "heading": "Dữ liệu & quyền riêng tư",
+    "scrollWidth": 768
+  },
+  {
+    "width": 768,
+    "id": "help",
+    "heading": "Trợ giúp tài khoản",
+    "scrollWidth": 768
+  }
+]

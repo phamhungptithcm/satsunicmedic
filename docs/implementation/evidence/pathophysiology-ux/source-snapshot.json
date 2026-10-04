@@ -1,0 +1,14 @@
+[
+  {
+    "path": "apps/web/src/components/pathophysiology-panel.tsx",
+    "sha256": "dbb52d62e2b519080253024bc1865d38c1ccaf34ef9e7292bb77f771ca52a936"
+  },
+  {
+    "path": "apps/web/src/components/pathophysiology.module.css",
+    "sha256": "3686449a4d377e742966821f9e5dfe4b63346ce80869397b3f24916e685e2a6d"
+  },
+  {
+    "path": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "sha256": "5f7ebbfbeb76a5c2d0470723a3a966c2e76a08c8f0c7f96334193262a5c66eb0"
+  }
+]

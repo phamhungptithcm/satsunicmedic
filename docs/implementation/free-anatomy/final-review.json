@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "task_id": "FREE-ANATOMY-01",
+  "status": "BLOCKED",
+  "dimensions": {
+    "requirement_match": {
+      "status": "NOT_RUN",
+      "summary": "Same-project preview implemented; multi-age model selection remains unfulfilled because source has no age variants.",
+      "evidence_refs": [
+        "README.md",
+        "evidence/source-hashes.json"
+      ]
+    },
+    "security": {
+      "status": "PASSED",
+      "summary": "Scoped review recorded in README.md; source snapshot in evidence/source-hashes.json.",
+      "evidence_refs": [
+        "README.md",
+        "evidence/source-hashes.json"
+      ]
+    },
+    "code_quality": {
+      "status": "PASSED",
+      "summary": "Scoped review recorded in README.md; source snapshot in evidence/source-hashes.json.",
+      "evidence_refs": [
+        "README.md",
+        "evidence/source-hashes.json"
+      ]
+    },
+    "failure_paths": {
+      "status": "NOT_RUN",
+      "summary": "Handler invalid asset checks passed; browser offline/retry and WebGL loss not exercised.",
+      "evidence_refs": [
+        "README.md",
+        "evidence/source-hashes.json"
+      ]
+    },
+    "error_handling": {
+      "status": "PASSED",
+      "summary": "Scoped review recorded in README.md; source snapshot in evidence/source-hashes.json.",
+      "evidence_refs": [
+        "README.md",
+        "evidence/source-hashes.json"
+      ]
+    },
+    "production_readiness": {
+      "status": "NOT_RUN",
+      "summary": "Unreviewed model kept development-only; clinical, age and release gates incomplete.",
+      "evidence_refs": [
+        "README.md",
+        "evidence/source-hashes.json"
+      ]
+    },
+    "trade_offs": {
+      "status": "PASSED",
+      "summary": "Scoped review recorded in README.md; source snapshot in evidence/source-hashes.json.",
+      "evidence_refs": [
+        "README.md",
+        "evidence/source-hashes.json"
+      ]
+    },
+    "product_language": {
+      "status": "NOT_RUN",
+      "summary": "See product-content-review.md; rendered desktop/mobile reviewed, broader accessibility and recovery checks incomplete.",
+      "evidence_refs": [
+        "product-content-review.md"
+      ]
+    }
+  },
+  "findings": [
+    {
+      "severity": "medium",
+      "status": "fixed",
+      "location": "Explorer navigation",
+      "summary": "Mobile entry was hidden; moved and explicitly displayed, verified at 390px."
+    },
+    {
+      "severity": "medium",
+      "status": "fixed",
+      "location": "reference-canvas.tsx",
+      "summary": "Added 30-second fetch timeout; browser timeout scenario not exercised."
+    }
+  ],
+  "residual_risks": [
+    "99% source reduction may omit clinically meaningful details",
+    "Only one adult male reference and no outer lung surfaces",
+    "Browser recovery and full accessibility validation remain incomplete"
+  ],
+  "limitations": [
+    "DEGRADED repository intelligence",
+    "Runtime ledger CLI unavailable; manual record only",
+    "Dirty shared working tree; hash-bound scoped evidence",
+    "No clinical or multi-age validation"
+  ]
+}

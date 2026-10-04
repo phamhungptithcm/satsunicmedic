@@ -1,0 +1,266 @@
+{
+  "pageChecks": [
+    {
+      "id": "profile",
+      "heading": "Hồ sơ cá nhân"
+    },
+    {
+      "id": "security",
+      "heading": "Đăng nhập & bảo mật"
+    },
+    {
+      "id": "preferences",
+      "heading": "Tùy chọn"
+    },
+    {
+      "id": "plan",
+      "heading": "Gói của bạn"
+    },
+    {
+      "id": "billing",
+      "heading": "Thanh toán"
+    },
+    {
+      "id": "privacy",
+      "heading": "Dữ liệu & quyền riêng tư"
+    },
+    {
+      "id": "help",
+      "heading": "Trợ giúp tài khoản"
+    }
+  ],
+  "stateChecks": [
+    {
+      "state": "loading",
+      "heading": "Đang tải tài khoản"
+    },
+    {
+      "state": "error",
+      "heading": "Chưa tải được thông tin"
+    },
+    {
+      "state": "offline",
+      "heading": "Bạn đang mất kết nối"
+    },
+    {
+      "state": "guest",
+      "heading": "Tiếp tục với HumanScope"
+    },
+    {
+      "state": "ready",
+      "heading": "Tài khoản của bạn"
+    }
+  ],
+  "mobileChecks": [
+    {
+      "id": "profile",
+      "heading": "Hồ sơ cá nhân",
+      "layout": {
+        "document": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "id": "security",
+      "heading": "Đăng nhập & bảo mật",
+      "layout": {
+        "document": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "id": "preferences",
+      "heading": "Tùy chọn",
+      "layout": {
+        "document": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "id": "plan",
+      "heading": "Gói của bạn",
+      "layout": {
+        "document": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "id": "billing",
+      "heading": "Thanh toán",
+      "layout": {
+        "document": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "id": "privacy",
+      "heading": "Dữ liệu & quyền riêng tư",
+      "layout": {
+        "document": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "id": "help",
+      "heading": "Trợ giúp tài khoản",
+      "layout": {
+        "document": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "id": "overview",
+      "heading": "Tài khoản của bạn",
+      "layout": {
+        "document": 390,
+        "viewport": 390
+      }
+    }
+  ],
+  "responsiveChecks": [
+    {
+      "width": 320,
+      "id": "overview",
+      "h1": "Tài khoản của bạn",
+      "scrollWidth": 320
+    },
+    {
+      "width": 320,
+      "id": "profile",
+      "h1": "Hồ sơ cá nhân",
+      "scrollWidth": 320
+    },
+    {
+      "width": 320,
+      "id": "security",
+      "h1": "Đăng nhập & bảo mật",
+      "scrollWidth": 320
+    },
+    {
+      "width": 320,
+      "id": "preferences",
+      "h1": "Tùy chọn",
+      "scrollWidth": 320
+    },
+    {
+      "width": 320,
+      "id": "plan",
+      "h1": "Gói của bạn",
+      "scrollWidth": 320
+    },
+    {
+      "width": 320,
+      "id": "billing",
+      "h1": "Thanh toán",
+      "scrollWidth": 320
+    },
+    {
+      "width": 320,
+      "id": "privacy",
+      "h1": "Dữ liệu & quyền riêng tư",
+      "scrollWidth": 320
+    },
+    {
+      "width": 320,
+      "id": "help",
+      "h1": "Trợ giúp tài khoản",
+      "scrollWidth": 320
+    },
+    {
+      "width": 390,
+      "id": "overview",
+      "h1": "Tài khoản của bạn",
+      "scrollWidth": 390
+    },
+    {
+      "width": 390,
+      "id": "profile",
+      "h1": "Hồ sơ cá nhân",
+      "scrollWidth": 390
+    },
+    {
+      "width": 390,
+      "id": "security",
+      "h1": "Đăng nhập & bảo mật",
+      "scrollWidth": 390
+    },
+    {
+      "width": 390,
+      "id": "preferences",
+      "h1": "Tùy chọn",
+      "scrollWidth": 390
+    },
+    {
+      "width": 390,
+      "id": "plan",
+      "h1": "Gói của bạn",
+      "scrollWidth": 390
+    },
+    {
+      "width": 390,
+      "id": "billing",
+      "h1": "Thanh toán",
+      "scrollWidth": 390
+    },
+    {
+      "width": 390,
+      "id": "privacy",
+      "h1": "Dữ liệu & quyền riêng tư",
+      "scrollWidth": 390
+    },
+    {
+      "width": 390,
+      "id": "help",
+      "h1": "Trợ giúp tài khoản",
+      "scrollWidth": 390
+    },
+    {
+      "width": 768,
+      "id": "overview",
+      "h1": "Tài khoản của bạn",
+      "scrollWidth": 768
+    },
+    {
+      "width": 768,
+      "id": "profile",
+      "h1": "Hồ sơ cá nhân",
+      "scrollWidth": 768
+    },
+    {
+      "width": 768,
+      "id": "security",
+      "h1": "Đăng nhập & bảo mật",
+      "scrollWidth": 768
+    },
+    {
+      "width": 768,
+      "id": "preferences",
+      "h1": "Tùy chọn",
+      "scrollWidth": 768
+    },
+    {
+      "width": 768,
+      "id": "plan",
+      "h1": "Gói của bạn",
+      "scrollWidth": 768
+    },
+    {
+      "width": 768,
+      "id": "billing",
+      "h1": "Thanh toán",
+      "scrollWidth": 768
+    },
+    {
+      "width": 768,
+      "id": "privacy",
+      "h1": "Dữ liệu & quyền riêng tư",
+      "scrollWidth": 768
+    },
+    {
+      "width": 768,
+      "id": "help",
+      "h1": "Trợ giúp tài khoản",
+      "scrollWidth": 768
+    }
+  ]
+}

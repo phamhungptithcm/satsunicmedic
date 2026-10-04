@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="700" viewBox="0 0 1120 700" fill="none">
+<title>SatsunicMec — đề xuất logo và chữ trên navbar</title>
+<defs><g id="mark"><rect width="64" height="64" rx="18" fill="#163cff"/><path d="M44 18H27C15 18 15 32 27 32H37C49 32 49 46 37 46H20" stroke="white" stroke-width="8" stroke-linecap="round"/></g></defs>
+<rect width="1120" height="700" rx="24" fill="#f4f6fa"/>
+<g font-family="Arial, sans-serif">
+<text x="48" y="48" font-size="12" letter-spacing="2" fill="#64718a">SATSUNICMEC / ĐỀ XUẤT NHẬN DIỆN 01</text>
+<rect x="40" y="80" width="1040" height="260" rx="18" fill="white"/>
+<use href="#mark" transform="translate(90 153) scale(1.6)"/>
+<text x="220" y="221" font-size="66" font-weight="700" letter-spacing="-2.8" fill="#111c35">Satsunic<tspan fill="#163cff" font-weight="400">Mec</tspan></text>
+<text x="92" y="305" font-size="14" fill="#64718a">Chữ S · nét liền mạch · biểu tượng gọn cho tab trình duyệt</text>
+<text x="48" y="383" font-size="12" letter-spacing="1.5" fill="#64718a">NAVBAR / BẢN MẪU</text>
+<rect x="40" y="401" width="1040" height="72" rx="12" fill="white"/>
+<use href="#mark" transform="translate(62 419) scale(.5625)"/>
+<text x="109" y="445" font-size="23" font-weight="700" letter-spacing="-.9" fill="#111c35">Satsunic<tspan fill="#163cff" font-weight="400">Mec</tspan></text>
+<rect x="296" y="416" width="103" height="42" rx="8" fill="#edf1ff"/>
+<g font-size="13"><text x="315" y="442" fill="#163cff">Khám phá</text><text x="420" y="442" fill="#59657a">Thư viện</text><text x="514" y="442" fill="#59657a">Cơ sở y tế</text><text x="620" y="442" fill="#59657a">Học tập</text><text x="711" y="442" fill="#59657a">Về SatsunicMec</text><rect x="950" y="416" width="108" height="42" rx="8" fill="#f5f7ff" stroke="#d5defd"/><text x="970" y="442" fill="#163cff">Đăng nhập</text></g>
+<rect x="40" y="501" width="495" height="156" rx="16" fill="white"/>
+<text x="64" y="532" font-size="12" letter-spacing="1.2" fill="#64718a">FAVICON / 16 · 24 · 32 PX</text>
+<use href="#mark" transform="translate(66 571) scale(.25)"/>
+<use href="#mark" transform="translate(108 567) scale(.375)"/>
+<use href="#mark" transform="translate(157 563) scale(.5)"/>
+<rect x="221" y="557" width="282" height="43" rx="9" fill="#eef1f6"/>
+<use href="#mark" transform="translate(235 570) scale(.25)"/>
+<text x="262" y="583" font-size="11" fill="#111c35">SatsunicMec — Khám phá cơ thể người</text>
+<text x="64" y="631" font-size="12" fill="#64718a">SVG vector · không chứa font hoặc tài nguyên ngoài</text>
+<rect x="555" y="501" width="525" height="156" rx="16" fill="#111c35"/>
+<use href="#mark" transform="translate(583 537) scale(.75)"/>
+<text x="647" y="571" font-size="32" font-weight="700" letter-spacing="-1" fill="white">Satsunic<tspan font-weight="400" fill="#a9c1ff">Mec</tspan></text>
+<text x="584" y="630" font-size="12" fill="#bdc8dd">Biểu tượng trên nền tối · tên giữ cách viết SatsunicMec</text>
+</g></svg>

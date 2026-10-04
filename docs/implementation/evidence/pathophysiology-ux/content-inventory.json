@@ -1,0 +1,2052 @@
+[
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 1,
+    "text": "use client"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 3,
+    "text": "react"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 4,
+    "text": "next/dynamic"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 5,
+    "text": "next/link"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 6,
+    "text": "lucide-react"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 7,
+    "text": "@hs/contracts"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 8,
+    "text": "../lib/pathophysiology"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 9,
+    "text": "./pathophysiology.module.css"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 11,
+    "text": "(prefers-reduced-motion: reduce)"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 12,
+    "text": "@hs/anatomy-viewer/pathophysiology-canvas"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 15,
+    "text": "change"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 16,
+    "text": "change"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 20,
+    "text": "button"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 20,
+    "text": "true"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 24,
+    "text": "stages"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 24,
+    "text": "appearance"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 29,
+    "text": ":"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 30,
+    "text": "occlusion"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 30,
+    "text": "injury"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 31,
+    "text": "injury"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 32,
+    "text": "Bình thường"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 32,
+    "text": "Kịch bản đang xem"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 33,
+    "text": "nhánh trên bị tắc, vùng cơ tim phía sau bị ảnh hưởng"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 33,
+    "text": "dòng máu tới hai vùng cơ tim"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 35,
+    "text": "Sơ đồ cơ chế · không theo tỷ lệ"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 36,
+    "text": "0 0 640 330"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 36,
+    "text": "img"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 38,
+    "text": "Mũi tên chỉ chiều dòng máu."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 38,
+    "text": "Dấu chặn ở nhánh trên; dòng không vượt qua chỗ tắc. Nhánh dưới vẫn có dòng."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 38,
+    "text": "Cả hai nhánh đều có đường dòng máu."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 38,
+    "text": "Vùng gạch chéo là ký hiệu mô bị ảnh hưởng, không phải số đo."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 40,
+    "text": "7"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 40,
+    "text": "7"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 40,
+    "text": "5"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 40,
+    "text": "3.5"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 40,
+    "text": "auto"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 40,
+    "text": "M0 0L6 3.5L0 7"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 40,
+    "text": "none"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 40,
+    "text": "#b62944"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 40,
+    "text": "1.5"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 41,
+    "text": "9"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 41,
+    "text": "9"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 41,
+    "text": "userSpaceOnUse"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 41,
+    "text": "M-2 2L2 -2M0 9L9 0M7 11L11 7"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 41,
+    "text": "#9a4c18"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 41,
+    "text": "1.5"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 43,
+    "text": "16"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 43,
+    "text": "24"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 43,
+    "text": "608"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 43,
+    "text": "199"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 43,
+    "text": "18"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 43,
+    "text": "#fff"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 43,
+    "text": "vessel"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 43,
+    "text": "#163cff"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 43,
+    "text": "#dce2ec"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 43,
+    "text": "vessel"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 44,
+    "text": "34"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 44,
+    "text": "49"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 44,
+    "text": "MẠCH VÀNH → MÁU NUÔI CƠ TIM"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 45,
+    "text": "M40 135H155Q185 135 200 110L228 84H444M155 135Q185 135 210 168H444"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 45,
+    "text": "none"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 45,
+    "text": "#f5d6dc"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 45,
+    "text": "22"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 45,
+    "text": "round"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 46,
+    "text": "M40 135H155Q185 135 200 110L228 84H300"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 46,
+    "text": "M40 135H155Q185 135 200 110L228 84H436"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 46,
+    "text": "none"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 46,
+    "text": "#b62944"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 46,
+    "text": "4"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 46,
+    "text": "7 11"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 47,
+    "text": "M155 135Q185 135 210 168H436"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 47,
+    "text": "none"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 47,
+    "text": "#b62944"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 47,
+    "text": "4"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 47,
+    "text": "7 11"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 48,
+    "text": "normal"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 48,
+    "text": "M274 73Q304 98 335 73Z"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 48,
+    "text": "#c08a22"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 48,
+    "text": "#875c0e"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 49,
+    "text": "304"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 49,
+    "text": "73"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 49,
+    "text": "18"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 49,
+    "text": "22"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 49,
+    "text": "4"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 49,
+    "text": "#7e1936"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 49,
+    "text": "M300 69L325 99M325 69L300 99"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 49,
+    "text": "#591025"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 49,
+    "text": "2"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 49,
+    "text": "270"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 49,
+    "text": "119"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 49,
+    "text": "Chỗ tắc"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 50,
+    "text": "plaque"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 50,
+    "text": "269"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 50,
+    "text": "119"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 50,
+    "text": "Mảng xơ vữa"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 51,
+    "text": "456"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 51,
+    "text": "64"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 51,
+    "text": "146"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 51,
+    "text": "66"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 51,
+    "text": "10"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 51,
+    "text": "#fff2e3"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 51,
+    "text": "#f3f6fe"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 51,
+    "text": "tissue"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 51,
+    "text": "#163cff"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 51,
+    "text": "#ccd5e6"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 51,
+    "text": "tissue"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 52,
+    "text": "456"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 52,
+    "text": "64"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 52,
+    "text": "146"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 52,
+    "text": "66"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 52,
+    "text": "10"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 52,
+    "text": ".3"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 53,
+    "text": "529"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 53,
+    "text": "90"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 53,
+    "text": "middle"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 53,
+    "text": "Vùng cơ tim"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 54,
+    "text": "529"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 54,
+    "text": "113"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 54,
+    "text": "middle"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 54,
+    "text": "Tổn thương"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 54,
+    "text": "Thiếu máu nuôi"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 54,
+    "text": "Có máu nuôi"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 55,
+    "text": "456"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 55,
+    "text": "148"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 55,
+    "text": "146"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 55,
+    "text": "48"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 55,
+    "text": "10"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 55,
+    "text": "#f3f6fe"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 55,
+    "text": "#ccd5e6"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 56,
+    "text": "529"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 56,
+    "text": "177"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 56,
+    "text": "middle"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 56,
+    "text": "Vùng khác"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 57,
+    "text": "34"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 57,
+    "text": "204"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 57,
+    "text": "Một nhánh tổn thương; không mô tả toàn bộ hệ mạch vành."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 58,
+    "text": "16"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 58,
+    "text": "240"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 58,
+    "text": "608"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 58,
+    "text": "72"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 58,
+    "text": "16"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 58,
+    "text": "#edf2ff"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 58,
+    "text": "chamber"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 58,
+    "text": "#163cff"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 58,
+    "text": "#dce2ec"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 58,
+    "text": "chamber"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 59,
+    "text": "34"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 59,
+    "text": "269"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 59,
+    "text": "ĐƯỜNG QUA BUỒNG TIM"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 60,
+    "text": "34"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 60,
+    "text": "292"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 60,
+    "text": "Tách riêng với đường máu nuôi cơ tim ở trên."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 61,
+    "text": "M407 276H592"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 61,
+    "text": "#b62944"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 61,
+    "text": "4"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 61,
+    "text": "7 11"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 63,
+    "text": "Nhánh minh họa bị tắc → vùng cơ tim phía sau bị tổn thương."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 63,
+    "text": "Nhánh minh họa bị tắc → vùng cơ tim phía sau thiếu máu nuôi."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 63,
+    "text": "Hai nhánh có dòng máu tới cơ tim."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 63,
+    "text": "Đường qua buồng tim được biểu diễn riêng."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 79,
+    "text": "pointerdown"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 80,
+    "text": "pointerdown"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 86,
+    "text": "fullscreenchange"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 87,
+    "text": "fullscreenchange"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 94,
+    "text": "Trình duyệt này chưa hỗ trợ toàn màn hình."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 95,
+    "text": "Chưa mở được toàn màn hình. Bạn vẫn có thể xem ở khung hiện tại."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 105,
+    "text": "lad"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 107,
+    "text": "front"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 107,
+    "text": "back"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 107,
+    "text": "left"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 107,
+    "text": "right"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 107,
+    "text": "front"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 110,
+    "text": "loading"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 110,
+    "text": "ready"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 110,
+    "text": "error"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 110,
+    "text": "loading"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 112,
+    "text": "loading"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 112,
+    "text": "ready"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 112,
+    "text": "error"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 112,
+    "text": "error"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 119,
+    "text": "ready"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 125,
+    "text": "visibilitychange"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 126,
+    "text": "change"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 127,
+    "text": "visibilitychange"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 127,
+    "text": "change"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 153,
+    "text": "main"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 154,
+    "text": "Vị trí hiện tại"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 154,
+    "text": "/hoc-tap"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 154,
+    "text": "Học tập"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 154,
+    "text": "Sinh lý bệnh"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 156,
+    "text": "KHÔNG GIAN THỰC HÀNH"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 156,
+    "text": "Nhìn sâu. Hiểu rõ."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 156,
+    "text": "Khám phá cơ chế bệnh qua từng chuyển động."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 157,
+    "text": "Escape"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 157,
+    "text": "summary"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 157,
+    "text": "Tim mạch · 1 bài học"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 158,
+    "text": "disease-search"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 158,
+    "text": "Tìm bệnh hoặc cơ quan"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 158,
+    "text": "disease-search"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 158,
+    "text": "Tên Việt, Anh hoặc viết tắt"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 159,
+    "text": "status"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 159,
+    "text": "1 bài học hiện có"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 159,
+    "text": "Không tìm thấy bài học"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 160,
+    "text": "summary"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 160,
+    "text": "Đột quỵ: chưa có bài tương tác."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 163,
+    "text": "Bản xem trước · Chưa duyệt y khoa. Dùng để góp ý mô hình và tương tác."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 165,
+    "text": "Không gian mô hình tim 3D và diễn tiến 4D"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 167,
+    "text": "BodyParts3D"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 167,
+    "text": "Mô hình 3D · Dòng chảy theo thời gian"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 167,
+    "text": "Thoát toàn màn hình"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 167,
+    "text": "Toàn màn hình"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 169,
+    "text": "error"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 169,
+    "text": "occlusion"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 169,
+    "text": "plaque"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 170,
+    "text": "Bình thường · Cùng góc nhìn"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 170,
+    "text": "4D · Đang phát"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 170,
+    "text": "3D · Khám phá"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 171,
+    "text": "loading"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 171,
+    "text": "status"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 171,
+    "text": "Đang mở mô hình tim"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 171,
+    "text": "Chuẩn bị không gian khám phá…"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 172,
+    "text": "error"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 172,
+    "text": "alert"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 172,
+    "text": "Chưa mở được mô hình 3D"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 172,
+    "text": "Thử tải lại hoặc xem sơ đồ giải thích bên dưới."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 172,
+    "text": "loading"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 172,
+    "text": "Tải lại mô hình"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 173,
+    "text": "group"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 173,
+    "text": "Công cụ quan sát"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 174,
+    "text": "ready"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 174,
+    "text": "Về kịch bản bệnh"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 174,
+    "text": "So với bình thường"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 176,
+    "text": "Escape"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 176,
+    "text": "summary"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 176,
+    "text": "Góc nhìn và lớp mô"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 176,
+    "text": "true"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 176,
+    "text": "Góc nhìn và lớp mô"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 177,
+    "text": "Góc nhìn và lớp mô"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 177,
+    "text": "Thu/phóng mô hình"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 177,
+    "text": "Thu nhỏ mô hình"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 177,
+    "text": "ready"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 177,
+    "text": "Phóng to mô hình"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 177,
+    "text": "ready"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 177,
+    "text": "camera-view"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 177,
+    "text": "Góc quan sát"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 177,
+    "text": "camera-view"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 177,
+    "text": "ready"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 177,
+    "text": "front"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 177,
+    "text": "Phía trước"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 177,
+    "text": "back"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 177,
+    "text": "Phía sau"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 177,
+    "text": "left"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 177,
+    "text": "Bên trái"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 177,
+    "text": "right"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 177,
+    "text": "Bên phải"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 178,
+    "text": "wall-opacity"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 178,
+    "text": "Độ rõ thành tim"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 178,
+    "text": "%"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 178,
+    "text": "wall-opacity"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 178,
+    "text": "range"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 178,
+    "text": "0.12"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 178,
+    "text": "1"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 178,
+    "text": "0.01"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 178,
+    "text": "ready"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 178,
+    "text": "Giảm độ rõ để nhìn các mạch phía trong."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 180,
+    "text": "Đặt lại góc nhìn"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 180,
+    "text": "ready"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 180,
+    "text": "front"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 182,
+    "text": "Kéo để xoay · Cuộn/chụm để phóng to · Chạm để chọn"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 185,
+    "text": "Tạm dừng dòng chảy"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 185,
+    "text": "Phát lại minh họa"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 185,
+    "text": "Phát dòng chảy"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 185,
+    "text": "ready"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 185,
+    "text": "currentColor"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 185,
+    "text": "currentColor"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 185,
+    "text": "Theo dòng chảy"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 185,
+    "text": "Đã hết minh họa"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 185,
+    "text": "Khám phá dòng chảy"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 185,
+    "text": "Đang so với bình thường"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 185,
+    "text": "Về đầu bài"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 185,
+    "text": "Giai đoạn tiếp"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 185,
+    "text": "Tốc độ phát"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 185,
+    "text": "0.5"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 185,
+    "text": "0,5×"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 185,
+    "text": "1"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 185,
+    "text": "1×"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 185,
+    "text": "2"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 185,
+    "text": "2×"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 186,
+    "text": "lesson-timeline"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 186,
+    "text": "Tiến trình minh họa"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 186,
+    "text": "lesson-timeline"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 186,
+    "text": "range"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 186,
+    "text": "0"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 186,
+    "text": "0.1"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 187,
+    "text": "Bình thường"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 187,
+    "text": "Tổn thương"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 187,
+    "text": "Giảm chuyển động đang bật. Chọn từng giai đoạn để xem tĩnh."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 187,
+    "text": "Tiến trình minh họa · Không phải thời gian diễn tiến bệnh thực tế"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 188,
+    "text": "status"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 191,
+    "text": "Giai đoạn và cấu trúc"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 192,
+    "text": "DIỄN TIẾN BỆNH"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 192,
+    "text": "01—04"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 193,
+    "text": "step"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 193,
+    "text": "0"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 194,
+    "text": "polite"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 194,
+    "text": "ĐỐI CHIẾU BÌNH THƯỜNG"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 194,
+    "text": "Theo dõi mạch thông"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 194,
+    "text": "Hai đường LAD và nhánh mũ được minh họa đang thông. Góc nhìn và cấu trúc bạn chọn được giữ nguyên."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 194,
+    "text": "Vì sao điều này xảy ra?"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 194,
+    "text": "_blank"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 194,
+    "text": "noreferrer"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 194,
+    "text": "↗"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 195,
+    "text": "heart-structure"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 195,
+    "text": "Cấu trúc đang chọn"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 195,
+    "text": "heart-structure"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 195,
+    "text": "status"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 196,
+    "text": "Hạt sáng: chiều dòng chảy"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 196,
+    "text": "Vòng vàng: vị trí tổn thương giả định"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 196,
+    "text": "Chỉ minh họa dòng trên LAD và nhánh mũ. Không phải vận tốc hay lưu lượng đo được."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 197,
+    "text": "Chưa tô vùng cơ tim thiếu máu: bản đồ vùng tưới máu chưa được duyệt."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 201,
+    "text": "quiz-title"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 201,
+    "text": "THỬ HIỂU BIẾT CỦA BẠN"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 201,
+    "text": "quiz-title"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 201,
+    "text": "Theo dấu dòng máu"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 201,
+    "text": "radio"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 201,
+    "text": "answer"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 201,
+    "text": "status"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 201,
+    "text": "Bạn đã xác định đúng vùng."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 201,
+    "text": "Cùng theo dõi lại nhánh bị tắc."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 201,
+    "text": "button"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 201,
+    "text": "Làm lại câu hỏi"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 201,
+    "text": "submit"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 201,
+    "text": "Xem giải thích"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 201,
+    "text": "Câu trả lời chỉ ở phiên xem này, không lưu vào tài khoản."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 203,
+    "text": "Sơ đồ giải thích 2D"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 203,
+    "text": "Một góc nhìn khác về cùng cơ chế"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 203,
+    "text": "group"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 203,
+    "text": "Chọn cấu trúc trong sơ đồ"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 204,
+    "text": "Nguồn và giới hạn"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 204,
+    "text": "Nội dung, mô hình và mức đơn giản hóa"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 204,
+    "text": "_blank"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 204,
+    "text": "noreferrer"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 204,
+    "text": "↗"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 204,
+    "text": "_blank"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 204,
+    "text": "noreferrer"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 204,
+    "text": "Nguồn BodyParts3D"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 204,
+    "text": "·"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 204,
+    "text": "_blank"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 204,
+    "text": "noreferrer"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 204,
+    "text": "CC BY 4.0"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 204,
+    "text": "Đã đổi hệ tọa độ, vật liệu và dựng đường tâm từ mesh nguồn. Đường tâm và kịch bản bệnh chưa được duyệt chuyên môn; mô hình không có chuyển động co bóp tim. “4D” là dòng chảy và biến cố theo thời gian trên cùng mô hình 3D."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 204,
+    "text": "Bản nháp"
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 204,
+    "text": "· Chưa dùng làm tài liệu giảng dạy đã thẩm định hoặc hướng dẫn chẩn đoán, điều trị."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 205,
+    "text": "Quan sát mô hình để đặt câu hỏi. Đối chiếu nguồn và hướng dẫn của giảng viên để học sâu hơn."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 208,
+    "text": "Chưa có bài phù hợp."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 208,
+    "text": "Thử “tim”, “nhồi máu cơ tim” hoặc “MI”."
+  },
+  {
+    "file": "apps/web/src/components/pathophysiology-panel.tsx",
+    "line": 208,
+    "text": "Xem bài hiện có"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 1,
+    "text": "use client"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 3,
+    "text": "react"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 4,
+    "text": "@react-three/fiber"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 5,
+    "text": "@react-three/drei"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 6,
+    "text": "three"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 7,
+    "text": "three/examples/jsm/loaders/GLTFLoader.js"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 8,
+    "text": "@hs/contracts"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 9,
+    "text": "./pathophysiology-flow"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 22,
+    "text": "front"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 22,
+    "text": "back"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 22,
+    "text": "left"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 22,
+    "text": "right"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 25,
+    "text": "loading"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 25,
+    "text": "ready"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 25,
+    "text": "error"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 37,
+    "text": "/hoc-tap/sinh-ly-benh/asset"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 37,
+    "text": "no-store"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 38,
+    "text": "Asset unavailable"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 46,
+    "text": "Oversized asset"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 50,
+    "text": "Truncated asset"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 51,
+    "text": "SHA-256"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 51,
+    "text": "0"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 52,
+    "text": "Asset integrity mismatch"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 54,
+    "text": "data:"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 54,
+    "text": "blob:"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 54,
+    "text": "External dependency"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 57,
+    "text": "Aborted"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 61,
+    "text": "Unmapped mesh"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 64,
+    "text": "Missing anatomy"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 69,
+    "text": "flows"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 89,
+    "text": "#ffedaa"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 121,
+    "text": "error"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 122,
+    "text": "webglcontextlost"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 123,
+    "text": "webglcontextlost"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 133,
+    "text": "wall"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 137,
+    "text": "#602015"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 137,
+    "text": "#000000"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 139,
+    "text": "wall"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 151,
+    "text": "background"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 151,
+    "text": "#141b29"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 154,
+    "text": "#b7caff"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 162,
+    "text": "#70261c"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 165,
+    "text": "#ffb33f"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 182,
+    "text": "loading"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 183,
+    "text": "error"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 185,
+    "text": "ready"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 186,
+    "text": "error"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 190,
+    "text": "error"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 191,
+    "text": "calc(100% - 96px)"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 191,
+    "text": "always"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 191,
+    "text": "demand"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 191,
+    "text": "default"
+  },
+  {
+    "file": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "line": 191,
+    "text": "Tim 3D tương tác: kéo để xoay, cuộn để phóng to; có nút chọn cấu trúc và góc nhìn bên ngoài mô hình"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "publisherId": "ca-pub-5281756390120867",
+  "accountLoginVerified": true,
+  "webSiteManagementVisible": true,
+  "accountInformationNavigation": "redirects_to_home",
+  "siteDomain": null,
+  "plannedDomain": "satsunicmedic.com",
+  "domainPurchaseStatus": "OWNER_PURCHASE_PENDING",
+  "siteApprovalVerified": false,
+  "adSlotId": "9611937108",
+  "certifiedCmpConfigured": false,
+  "adsEnabled": false,
+  "nextStep": "Wait for owner to complete satsunicmedic.com purchase; then connect the production domain, request Sites approval and configure CMP before serving ads",
+  "adsenseForContentOnboardingStarted": true,
+  "adUnitName": "SatsunicMedic - Public article - Responsive",
+  "publisherProductOriginally": "AdMob",
+  "webAccountOnboardingVerified": true
+}

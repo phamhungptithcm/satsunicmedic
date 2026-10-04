@@ -1,0 +1,42 @@
+[
+  {
+    "path": "apps/web/src/components/disease-atlas.tsx",
+    "sha256": "3d9d0c5623411c8219de7fcbfdd0c5ec1beebf9eb0e89eb393f914363b66ea21"
+  },
+  {
+    "path": "apps/web/src/components/disease-atlas.module.css",
+    "sha256": "ffae92ef852d28f3d557674044bb1d9ec604a778375c009070cde04a7ce87761"
+  },
+  {
+    "path": "apps/web/src/components/pathophysiology-panel.tsx",
+    "sha256": "92297d8c970108165b7b7a638fb0aaac65c0bc6b1a38124a8ef97dd4163483a1"
+  },
+  {
+    "path": "apps/web/src/lib/disease-catalog.ts",
+    "sha256": "5ceef9f0f7acc70e4cfe756953f336a0768d5dd8e6a0507bd0045b6432feaeb8"
+  },
+  {
+    "path": "apps/web/src/lib/disease-catalog-data.ts",
+    "sha256": "ee331e200ff8c644ea1adcb1191214ad78f4246b04441533a5f95e683f412bbf"
+  },
+  {
+    "path": "apps/web/src/lib/coronary-scenarios.ts",
+    "sha256": "901e3996126b62a6331d5c10308809897c0e3eb55322a596d7af6e35436674b1"
+  },
+  {
+    "path": "apps/web/src/app/hoc-tap/sinh-ly-benh/page.tsx",
+    "sha256": "161d9ea9537c83cc4de8e5659246215c31e14048bc041ea1cc737f009ecb0bf6"
+  },
+  {
+    "path": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "sha256": "922dd7660e9b764b90feb5a78cd4cf84c5e95f6be6966ba26953b23e2169602e"
+  },
+  {
+    "path": "packages/anatomy-viewer/src/pathophysiology-flow.ts",
+    "sha256": "e07a83b6fbd457bba2abca257c1c2ae0b5f30aab0f38e6225574c1dfe8e6a1ac"
+  },
+  {
+    "path": "tests/disease-atlas.test.ts",
+    "sha256": "56d6cfff9ed3f5f187a1a50da668283e2a43f3174e7c9832cd0d66dfa294c9fe"
+  }
+]

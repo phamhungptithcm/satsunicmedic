@@ -1,0 +1,178 @@
+[
+  {
+    "heading": "Tài khoản của bạn",
+    "overflow": false,
+    "route": "/tai-khoan",
+    "width": 1440
+  },
+  {
+    "heading": "Hồ sơ cá nhân",
+    "overflow": false,
+    "route": "/tai-khoan/ho-so",
+    "width": 1440
+  },
+  {
+    "heading": "Đăng nhập & bảo mật",
+    "overflow": false,
+    "route": "/tai-khoan/bao-mat",
+    "width": 1440
+  },
+  {
+    "heading": "Tùy chọn",
+    "overflow": false,
+    "route": "/tai-khoan/tuy-chon",
+    "width": 1440
+  },
+  {
+    "heading": "Gói của bạn",
+    "overflow": false,
+    "route": "/tai-khoan/goi",
+    "width": 1440
+  },
+  {
+    "heading": "Thanh toán",
+    "overflow": false,
+    "route": "/tai-khoan/thanh-toan",
+    "width": 1440
+  },
+  {
+    "heading": "Dữ liệu & quyền riêng tư",
+    "overflow": false,
+    "route": "/tai-khoan/du-lieu",
+    "width": 1440
+  },
+  {
+    "heading": "Trợ giúp",
+    "overflow": false,
+    "route": "/tai-khoan/tro-giup",
+    "width": 1440
+  },
+  {
+    "heading": "Tài khoản của bạn",
+    "overflow": false,
+    "route": "/tai-khoan",
+    "width": 390
+  },
+  {
+    "heading": "Hồ sơ cá nhân",
+    "overflow": false,
+    "route": "/tai-khoan/ho-so",
+    "width": 390
+  },
+  {
+    "heading": "Đăng nhập & bảo mật",
+    "overflow": false,
+    "route": "/tai-khoan/bao-mat",
+    "width": 390
+  },
+  {
+    "heading": "Tùy chọn",
+    "overflow": false,
+    "route": "/tai-khoan/tuy-chon",
+    "width": 390
+  },
+  {
+    "heading": "Gói của bạn",
+    "overflow": false,
+    "route": "/tai-khoan/goi",
+    "width": 390
+  },
+  {
+    "heading": "Thanh toán",
+    "overflow": false,
+    "route": "/tai-khoan/thanh-toan",
+    "width": 390
+  },
+  {
+    "heading": "Dữ liệu & quyền riêng tư",
+    "overflow": false,
+    "route": "/tai-khoan/du-lieu",
+    "width": 390
+  },
+  {
+    "heading": "Trợ giúp",
+    "overflow": false,
+    "route": "/tai-khoan/tro-giup",
+    "width": 390
+  },
+  {
+    "overflow": false,
+    "route": "/tai-khoan",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "route": "/tai-khoan/ho-so",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "route": "/tai-khoan/bao-mat",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "route": "/tai-khoan/tuy-chon",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "route": "/tai-khoan/goi",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "route": "/tai-khoan/thanh-toan",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "route": "/tai-khoan/du-lieu",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "route": "/tai-khoan/tro-giup",
+    "width": 320
+  },
+  {
+    "overflow": false,
+    "route": "/tai-khoan",
+    "width": 768
+  },
+  {
+    "overflow": false,
+    "route": "/tai-khoan/ho-so",
+    "width": 768
+  },
+  {
+    "overflow": false,
+    "route": "/tai-khoan/bao-mat",
+    "width": 768
+  },
+  {
+    "overflow": false,
+    "route": "/tai-khoan/tuy-chon",
+    "width": 768
+  },
+  {
+    "overflow": false,
+    "route": "/tai-khoan/goi",
+    "width": 768
+  },
+  {
+    "overflow": false,
+    "route": "/tai-khoan/thanh-toan",
+    "width": 768
+  },
+  {
+    "overflow": false,
+    "route": "/tai-khoan/du-lieu",
+    "width": 768
+  },
+  {
+    "overflow": false,
+    "route": "/tai-khoan/tro-giup",
+    "width": 768
+  }
+]

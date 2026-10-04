@@ -1,0 +1,1379 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/auth/csrf": {
+      "get": {
+        "operationId": "AuthController_csrf",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Auth"
+        ]
+      }
+    },
+    "/auth/session": {
+      "post": {
+        "operationId": "AuthController_session",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Auth"
+        ]
+      },
+      "delete": {
+        "operationId": "AuthController_logout",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Auth"
+        ]
+      }
+    },
+    "/auth/revoke-all": {
+      "post": {
+        "operationId": "AuthController_revokeAll",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Auth"
+        ]
+      }
+    },
+    "/api/v1/me/account": {
+      "get": {
+        "operationId": "AccountController_get",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Account"
+        ]
+      },
+      "patch": {
+        "operationId": "AccountController_update",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Account"
+        ]
+      }
+    },
+    "/api/v1/me/account/export": {
+      "post": {
+        "operationId": "AccountExportController_page",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "AccountExport"
+        ]
+      }
+    },
+    "/api/v1/me/contributions": {
+      "get": {
+        "operationId": "ContributionsController_list",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Contributions"
+        ]
+      }
+    },
+    "/api/v1/contributions": {
+      "post": {
+        "operationId": "ContributionsController_create",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Contributions"
+        ]
+      }
+    },
+    "/api/v1/contributions/{id}": {
+      "get": {
+        "operationId": "ContributionsController_get",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Contributions"
+        ]
+      }
+    },
+    "/api/v1/contributions/{id}/revisions": {
+      "post": {
+        "operationId": "ContributionsController_revise",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Contributions"
+        ]
+      }
+    },
+    "/api/v1/contributions/{id}/consent": {
+      "post": {
+        "operationId": "ContributionsController_coauthor",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Contributions"
+        ]
+      }
+    },
+    "/api/v1/contributions/{id}/submit": {
+      "post": {
+        "operationId": "ContributionsController_submit",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Contributions"
+        ]
+      }
+    },
+    "/api/v1/contributions/{id}/withdraw-submission": {
+      "post": {
+        "operationId": "ContributionsController_withdraw",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Contributions"
+        ]
+      }
+    },
+    "/api/v1/editor/contributions/{id}/assign": {
+      "post": {
+        "operationId": "ContributionsController_assign",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Contributions"
+        ]
+      }
+    },
+    "/api/v1/review-assignments/{id}/decisions": {
+      "post": {
+        "operationId": "ContributionsController_decide",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Contributions"
+        ]
+      }
+    },
+    "/api/v1/editor/contributions/{id}/publish": {
+      "post": {
+        "operationId": "ContributionsController_publish",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Contributions"
+        ]
+      }
+    },
+    "/api/v1/health/live": {
+      "get": {
+        "operationId": "PublicController_live",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Public"
+        ]
+      }
+    },
+    "/api/v1/health/ready": {
+      "get": {
+        "operationId": "PublicController_ready",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Public"
+        ]
+      }
+    },
+    "/api/v1/anatomy/systems": {
+      "get": {
+        "operationId": "PublicController_systems",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Public"
+        ]
+      }
+    },
+    "/api/v1/anatomy/search": {
+      "post": {
+        "operationId": "PublicController_search",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Public"
+        ]
+      }
+    },
+    "/api/v1/anatomy/structures/{id}": {
+      "get": {
+        "operationId": "PublicController_structure",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Public"
+        ]
+      }
+    },
+    "/api/v1/assets/current": {
+      "get": {
+        "operationId": "PublicController_currentAsset",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Public"
+        ]
+      }
+    },
+    "/api/v1/assets/manifests/{id}": {
+      "get": {
+        "operationId": "PublicController_manifest",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Public"
+        ]
+      }
+    },
+    "/api/v1/assets/versions/{id}/access": {
+      "post": {
+        "operationId": "PublicController_access",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Public"
+        ]
+      }
+    },
+    "/api/v1/knowledge/search": {
+      "post": {
+        "operationId": "PublicController_knowledge",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Public"
+        ]
+      }
+    },
+    "/api/v1/articles/{slug}": {
+      "get": {
+        "operationId": "PublicController_article",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Public"
+        ]
+      }
+    },
+    "/api/v1/content-reports": {
+      "post": {
+        "operationId": "PublicController_report",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Public"
+        ]
+      }
+    },
+    "/api/v1/me": {
+      "get": {
+        "operationId": "PrivateController_me",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Private"
+        ]
+      }
+    },
+    "/api/v1/me/learning-position": {
+      "get": {
+        "operationId": "PrivateController_position",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Private"
+        ]
+      },
+      "put": {
+        "operationId": "PrivateController_savePosition",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Private"
+        ]
+      }
+    },
+    "/api/v1/notes": {
+      "get": {
+        "operationId": "PrivateController_notes",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Private"
+        ]
+      },
+      "post": {
+        "operationId": "PrivateController_createNote",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Private"
+        ]
+      }
+    },
+    "/api/v1/notes/{id}": {
+      "patch": {
+        "operationId": "PrivateController_updateNote",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Private"
+        ]
+      },
+      "delete": {
+        "operationId": "PrivateController_deleteNote",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Private"
+        ]
+      }
+    },
+    "/api/v1/lessons": {
+      "get": {
+        "operationId": "PrivateController_lessons",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Private"
+        ]
+      },
+      "post": {
+        "operationId": "PrivateController_createLesson",
+        "parameters": [
+          {
+            "name": "idempotency-key",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Private"
+        ]
+      }
+    },
+    "/api/v1/lessons/{id}": {
+      "get": {
+        "operationId": "PrivateController_lesson",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Private"
+        ]
+      },
+      "patch": {
+        "operationId": "PrivateController_updateLesson",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "idempotency-key",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Private"
+        ]
+      }
+    },
+    "/api/v1/lessons/{id}/presentation": {
+      "get": {
+        "operationId": "PrivateController_presentation",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Private"
+        ]
+      }
+    },
+    "/api/v1/lessons/{id}/scenes": {
+      "post": {
+        "operationId": "PrivateController_addScene",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Private"
+        ]
+      }
+    },
+    "/api/v1/scenes/{id}": {
+      "put": {
+        "operationId": "PrivateController_updateScene",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Private"
+        ]
+      }
+    },
+    "/api/v1/editor/articles": {
+      "post": {
+        "operationId": "EditorController_create",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Editor"
+        ]
+      }
+    },
+    "/api/v1/editor/articles/{id}/revisions": {
+      "post": {
+        "operationId": "EditorController_revise",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Editor"
+        ]
+      }
+    },
+    "/api/v1/editor/revisions/{id}/submit": {
+      "post": {
+        "operationId": "EditorController_submit",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Editor"
+        ]
+      }
+    },
+    "/api/v1/editor/revisions/{id}/reviews": {
+      "post": {
+        "operationId": "EditorController_review",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Editor"
+        ]
+      }
+    },
+    "/api/v1/editor/revisions/{id}/publish": {
+      "post": {
+        "operationId": "EditorController_publish",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Editor"
+        ]
+      }
+    },
+    "/api/v1/editor/articles/{id}/withdraw": {
+      "post": {
+        "operationId": "EditorController_withdraw",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Editor"
+        ]
+      }
+    },
+    "/api/v1/quizzes": {
+      "get": {
+        "operationId": "LearningController_list",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Learning"
+        ]
+      }
+    },
+    "/api/v1/quizzes/{id}": {
+      "get": {
+        "operationId": "LearningController_quiz",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Learning"
+        ]
+      }
+    },
+    "/api/v1/quizzes/{id}/attempts": {
+      "post": {
+        "operationId": "LearningController_attempt",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Learning"
+        ]
+      }
+    },
+    "/api/v1/me/reviews": {
+      "get": {
+        "operationId": "LearningController_reviews",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Learning"
+        ]
+      }
+    },
+    "/api/v1/me/progress": {
+      "get": {
+        "operationId": "LearningController_progress",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Learning"
+        ]
+      }
+    },
+    "/api/v1/lessons/{id}/shares": {
+      "post": {
+        "operationId": "LearningController_share",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Learning"
+        ]
+      }
+    },
+    "/api/v1/shares/{id}": {
+      "get": {
+        "operationId": "LearningController_shared",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Learning"
+        ]
+      },
+      "delete": {
+        "operationId": "LearningController_revoke",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Learning"
+        ]
+      }
+    },
+    "/api/v1/facilities/search": {
+      "post": {
+        "operationId": "FacilityController_search",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Facility"
+        ]
+      }
+    },
+    "/api/v1/facilities/{id}": {
+      "get": {
+        "operationId": "FacilityController_branch",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Facility"
+        ]
+      }
+    },
+    "/api/v1/classes": {
+      "get": {
+        "operationId": "ClassroomController_list",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Classroom"
+        ]
+      },
+      "post": {
+        "operationId": "ClassroomController_create",
+        "parameters": [
+          {
+            "name": "idempotency-key",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Classroom"
+        ]
+      }
+    },
+    "/api/v1/classes/{id}/invites": {
+      "post": {
+        "operationId": "ClassroomController_invite",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Classroom"
+        ]
+      }
+    },
+    "/api/v1/classes/{id}/join": {
+      "post": {
+        "operationId": "ClassroomController_join",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Classroom"
+        ]
+      }
+    },
+    "/api/v1/classes/{id}": {
+      "get": {
+        "operationId": "ClassroomController_detail",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Classroom"
+        ]
+      }
+    },
+    "/api/v1/classes/{id}/assignments": {
+      "post": {
+        "operationId": "ClassroomController_assign",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "idempotency-key",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Classroom"
+        ]
+      }
+    },
+    "/api/v1/classes/{id}/assignments/{assignmentId}": {
+      "get": {
+        "operationId": "ClassroomController_assignment",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "assignmentId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Classroom"
+        ]
+      }
+    },
+    "/api/v1/classes/{id}/assignments/{assignmentId}/submissions": {
+      "post": {
+        "operationId": "ClassroomController_submit",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "assignmentId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Classroom"
+        ]
+      }
+    },
+    "/api/v1/classes/{id}/results/{assignmentId}": {
+      "get": {
+        "operationId": "ClassroomController_results",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "assignmentId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Classroom"
+        ]
+      }
+    },
+    "/api/v1/classes/{id}/members/{userId}": {
+      "delete": {
+        "operationId": "ClassroomController_revoke",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Classroom"
+        ]
+      }
+    },
+    "/api/v1/classes/{id}/members": {
+      "get": {
+        "operationId": "ClassroomController_members",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Classroom"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "HumanScope REST API",
+    "description": "Foundation route inventory. Body validation is defined by Zod contracts; response schemas and full OpenAPI coverage remain a release gate.",
+    "version": "1",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "securitySchemes": {
+      "cookie": {
+        "type": "apiKey",
+        "in": "cookie",
+        "name": "hs_session"
+      }
+    },
+    "schemas": {}
+  }
+}

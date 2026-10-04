@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "task_id": "HS-RELEASE-1",
+  "status": "BLOCKED",
+  "dimensions": {
+    "requirement_match": {
+      "status": "NOT_RUN",
+      "summary": "BLOCKED: full five flows and release acceptance incomplete",
+      "evidence_refs": [
+        "docs/implementation/evidence/verification.json",
+        "docs/implementation/runbook.md",
+        "docs/implementation/cost-and-monetization.md"
+      ]
+    },
+    "security": {
+      "status": "NOT_RUN",
+      "summary": "BLOCKED: local negative checks pass; live IAM, abuse and full privacy lifecycle unverified",
+      "evidence_refs": [
+        "docs/implementation/evidence/verification.json",
+        "docs/implementation/runbook.md",
+        "docs/implementation/cost-and-monetization.md"
+      ]
+    },
+    "code_quality": {
+      "status": "PASSED",
+      "summary": "PASSED within typecheck/lint/build scope only; package/runtime portability still unverified",
+      "evidence_refs": [
+        "docs/implementation/evidence/verification.json",
+        "docs/implementation/runbook.md",
+        "docs/implementation/cost-and-monetization.md",
+        "docs/implementation/evidence/ads-verification.json"
+      ]
+    },
+    "failure_paths": {
+      "status": "PASSED",
+      "summary": "24unit tests PASS; null CMP/error/denied consent covered in policy tests.14integration tests are from prior APIcandidate, not rerun for web-onlydelta.",
+      "evidence_refs": [
+        "docs/implementation/evidence/verification.json",
+        "docs/implementation/runbook.md",
+        "docs/implementation/cost-and-monetization.md"
+      ]
+    },
+    "error_handling": {
+      "status": "PASSED",
+      "summary": "PASSED within malformed payload, provider errors and ownership checks; operator traces incomplete",
+      "evidence_refs": [
+        "docs/implementation/evidence/verification.json",
+        "docs/implementation/runbook.md",
+        "docs/implementation/cost-and-monetization.md"
+      ]
+    },
+    "production_readiness": {
+      "status": "NOT_RUN",
+      "summary": "BLOCKED: cloud and medical/asset gates missing",
+      "evidence_refs": [
+        "docs/implementation/evidence/verification.json",
+        "docs/implementation/runbook.md",
+        "docs/implementation/cost-and-monetization.md"
+      ]
+    },
+    "trade_offs": {
+      "status": "PASSED",
+      "summary": "PASSED: budget and availability/monetization assumptions documented",
+      "evidence_refs": [
+        "docs/implementation/evidence/verification.json",
+        "docs/implementation/runbook.md",
+        "docs/implementation/cost-and-monetization.md"
+      ]
+    }
+  },
+  "findings": [
+    {
+      "severity": "high",
+      "location": "apps/api/src/public.ts:92",
+      "summary": "Real licensed anatomy and reviewed medical content absent; asset delivery returns explicit503.",
+      "status": "OPEN",
+      "id": "HS-FR-1",
+      "category": "production_readiness",
+      "evidence_refs": [
+        "docs/implementation/status.md"
+      ]
+    },
+    {
+      "severity": "high",
+      "location": "infra/",
+      "summary": "No live deployment, billing selection, domain, restore/rollback or image verification.",
+      "status": "OPEN",
+      "id": "HS-FR-2",
+      "category": "production_readiness",
+      "evidence_refs": [
+        "docs/implementation/status.md"
+      ]
+    },
+    {
+      "severity": "high",
+      "location": "docs/implementation/runbook.md",
+      "summary": "Teaching/editorial UI, org authorization, privacy export/deletion and operational coverage incomplete.",
+      "status": "OPEN",
+      "id": "HS-FR-3",
+      "category": "production_readiness",
+      "evidence_refs": [
+        "docs/implementation/status.md"
+      ]
+    },
+    {
+      "id": "HS-FR-4",
+      "severity": "HIGH",
+      "status": "OPEN",
+      "category": "privacy",
+      "location": "apps/web/src/components/article-ad.tsx",
+      "summary": "Live certified CMP bootstrap/choices and creative CSP compatibility are not verified; keep ads disabled until domain/site approval and live checks.",
+      "evidence_refs": [
+        "docs/implementation/ads-runbook.md"
+      ]
+    }
+  ],
+  "residual_risks": [
+    "No independent reviewer evidence; this cycle is self-review",
+    "No valid production readiness claim from passing local tests"
+  ],
+  "limitations": [
+    "Repository intelligence DEGRADED: indexes missing",
+    "Product-content review incomplete",
+    "Token usage and actual billed cost unavailable",
+    "Budget650 and zonal target160 approved production only; billing identity/domain/region missing",
+    "Latest ads delta:24unit tests/typecheck/lint/build PASS; livead/CMP NOT_TESTED, no revenue claim"
+  ]
+}

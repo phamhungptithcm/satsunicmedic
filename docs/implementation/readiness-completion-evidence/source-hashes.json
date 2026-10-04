@@ -1,0 +1,126 @@
+{
+  "capturedAt": "2026-10-02T03:22:19.809393+00:00",
+  "scope": "Files touched by readiness work; verify.yml also contains concurrent CI work. Not a whole-repository certification.",
+  "files": [
+    {
+      "path": "apps/api/src/pagination.ts",
+      "sha256": "7b6d1d5b35545757ed8a0cb48f4c08e8354d85ff63c2d608660e7965d8c23075"
+    },
+    {
+      "path": "apps/api/src/account-export.ts",
+      "sha256": "3b810e0027b53d5839a3a952eace3b836db53776226da9954dac426b5da591d6"
+    },
+    {
+      "path": "apps/api/src/private.ts",
+      "sha256": "acbcfaf50a17c3cc67815e868b82fce24f22236b62666d9b7c8844036e091921"
+    },
+    {
+      "path": "apps/api/src/learning.ts",
+      "sha256": "818f13a0dc23957417d2c9b015e76b3114bf5a56a385a3a26c3a35fe42f258ed"
+    },
+    {
+      "path": "apps/api/src/account.ts",
+      "sha256": "1c23387da56e6e057aa83b067a34871429d328ae0e70b9f36aba2b7f2b21e8da"
+    },
+    {
+      "path": "apps/api/src/app.ts",
+      "sha256": "cf9079de4be213b6bb77c6a5c22c63b3872cc4fed65b24c6fd798cd8b989c688"
+    },
+    {
+      "path": "apps/web/src/components/explorer.tsx",
+      "sha256": "11a94a78ddf1da7772571821a34f10de956bc4ceb29ca0cf260edd8f4302320d"
+    },
+    {
+      "path": "apps/web/src/components/learning-reviews.tsx",
+      "sha256": "50a88fdccd85a2411b28bae1dcf9e65f2e9c25193f73f68282fd93dea2775ae6"
+    },
+    {
+      "path": "apps/web/src/components/account/account-export.tsx",
+      "sha256": "925fb963cd01ebabffb65011f9e39feb2b909b43647f01f76a28591bba225daf"
+    },
+    {
+      "path": "apps/web/src/components/account/account-page.tsx",
+      "sha256": "5ec707cfd9e36d5ee36ec5e90246f1df90d00e2401599977de0f00ff5189b43b"
+    },
+    {
+      "path": "apps/web/src/lib/personal-export.ts",
+      "sha256": "20183e92e8c6b5f2c2de1b71e4eab8c52f77fda52f588de3bebe00acee3687c7"
+    },
+    {
+      "path": "packages/contracts/src/account.ts",
+      "sha256": "24c0d26511b99b4365593cca2670c0b151eeb619c558796efd121c8dfd1e99bf"
+    },
+    {
+      "path": "packages/contracts/src/learning-review.ts",
+      "sha256": "7ed3ec9d2927a10ec87097e645a9f0dbc723d997739e5d1922a256268a88a613"
+    },
+    {
+      "path": "infra/firebase/firestore.indexes.json",
+      "sha256": "ddfd418f5a208b83826c564fe3ce8cfe2e4791534c1cb16b8d793cae9c909138"
+    },
+    {
+      "path": "scripts/discovery-release-check.ts",
+      "sha256": "efe8154b7c078eb207977df1d2ecaf5733d928c4b2d50eb902872472b5ebabfc"
+    },
+    {
+      "path": "scripts/freeze-candidate.py",
+      "sha256": "81a6015b9af856cc7caecf4f512c0774ef35490d9c02a11738daf1e3aa37165b"
+    },
+    {
+      "path": "scripts/free-anatomy/requirements-audit.txt",
+      "sha256": "ac9120679bc7e1ca2dbc0b38a8594ff9fb1e573c194f08bbe17d272ed3c174b3"
+    },
+    {
+      "path": "tests/api.integration.test.ts",
+      "sha256": "4790ed91991e41f3e02bf84d5624ae96c67a3a963b78bd10b099e02160371a7f"
+    },
+    {
+      "path": "tests/discovery-release-gate.test.ts",
+      "sha256": "ae403f59e5f00bd74e144eb23f955f48c5264bf61f74cb50f98b8dc4154c2cbb"
+    },
+    {
+      "path": "tests/personal-export.test.ts",
+      "sha256": "a7351c01ecd81971e0c01276e1b042a55cb7e02d96490f159404331ddcfc6668"
+    },
+    {
+      "path": "tests/e2e/readiness.mjs",
+      "sha256": "47c7f457bcd96567a07a61fbebbdb806ad0f92d938a46be91d36948f180b54b5"
+    },
+    {
+      "path": ".github/workflows/verify.yml",
+      "sha256": "d54d010146d23255076403819ca51ba6ed3163e7aa7b3e505fe58bfadb5709db"
+    },
+    {
+      "path": "apps/api/src/community-policy.ts",
+      "sha256": "e2032fe7bc416b572c99dba2b9301fa49c2d7ec213292752892f0189b634ac51"
+    },
+    {
+      "path": "apps/api/src/contributions.ts",
+      "sha256": "53ad0aee0cb6b680d621d0fbbcc0771963adcd3195c7ec8cdd2f5efaa61e08f6"
+    },
+    {
+      "path": "apps/api/src/config.ts",
+      "sha256": "5b9c7b30e2ea52278cc63ab90b3b043dbd87f38103469dd0d54262c70026be7f"
+    },
+    {
+      "path": "apps/api/src/domain.ts",
+      "sha256": "8391cfe801637128e729f69592f3ffff5abf6a64f558ff90cd4fa2f26cd51526"
+    },
+    {
+      "path": "tests/community-policy.test.ts",
+      "sha256": "0afb8771844843d1d0d3c181851bc2297da8b4ab394dd0981b00c702c5e85eb6"
+    },
+    {
+      "path": "tests/community.integration.test.ts",
+      "sha256": "56de87f35476fdf52f0668aef3bae4aaa3922ceff1eaef3b2e1d716c97d3da42"
+    },
+    {
+      "path": ".env.example",
+      "sha256": "8d6300b2e6f69ef8a14b728b75b40ae1323185fcb51558132844948fc412f1ac"
+    },
+    {
+      "path": "docs/implementation/openapi.json",
+      "sha256": "e181de0fd684f91f033a7c6d43b11aa878432212ff931cb493814349d2b9e430"
+    }
+  ]
+}

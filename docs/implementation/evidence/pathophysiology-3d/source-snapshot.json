@@ -1,0 +1,110 @@
+[
+  {
+    "path": "packages/contracts/src/pathophysiology.ts",
+    "sha256": "a8fb9482e7774761dd89ff787bd6b070fae041dce3b56a31299510e27ced6323"
+  },
+  {
+    "path": "packages/contracts/src/index.ts",
+    "sha256": "030d0f42474cc8eed196eeea0ded49113d6b16cb0d0d56ff5e038076669c58c7"
+  },
+  {
+    "path": "packages/anatomy-viewer/package.json",
+    "sha256": "13c2e915ebda6323ccf801b71e2fd5c3c0b0931ff2cae1982c399e9beb937c08"
+  },
+  {
+    "path": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+    "sha256": "8e384739faa176ed3c53d3c749e05214aebce2da3307e5ec4af0e17acdd10ef2"
+  },
+  {
+    "path": "packages/anatomy-viewer/src/pathophysiology-flow.ts",
+    "sha256": "a8abc7e5ed0370a4e4d2f34e82c86412134faebc3a902800ec33bd03686c0243"
+  },
+  {
+    "path": "apps/web/src/components/pathophysiology-panel.tsx",
+    "sha256": "9bc63249e3f002ec8d671fc08a6056b8f168bcf58dbbc671d6d2cb867cc7e998"
+  },
+  {
+    "path": "apps/web/src/components/pathophysiology.module.css",
+    "sha256": "8bd0645ea9bde230410b1679baa2a08c5363817aae30ecc44cef5443c8fe8e57"
+  },
+  {
+    "path": "apps/web/src/lib/pathophysiology-draft.ts",
+    "sha256": "e8827f6895ac699bb996390da722bff9a2f972b173d148a0dc81d17f82a13c7f"
+  },
+  {
+    "path": "apps/web/src/app/hoc-tap/sinh-ly-benh/page.tsx",
+    "sha256": "d31de8d008bfb7087cfc3d829474cd3867f3fcd86905032d0f08a04e6de415ef"
+  },
+  {
+    "path": "apps/web/src/app/hoc-tap/sinh-ly-benh/asset/route.ts",
+    "sha256": "f3ac99e641e26065580b53ed5ef77ff3303d8f2ea48afeca2bb502a020a3474c"
+  },
+  {
+    "path": "tests/pathophysiology-flow.test.ts",
+    "sha256": "1045e63c508a57b9f1d7252cc8aeaf064efe3ef23f56f8fa0b4c151ab877a065"
+  },
+  {
+    "path": "apps/web/preview-assets/heart/source-manifest.json",
+    "sha256": "9adc429e38557183782f163b05a92f113b565c1c32be3fa3909c03f6156518eb"
+  },
+  {
+    "path": "apps/web/preview-assets/heart/heart.glb",
+    "sha256": "6438ad759f81fdbc05c5910a1f4b7970bc193633695bff16c1b1e7928e5c2784"
+  },
+  {
+    "path": "apps/web/preview-assets/heart/binding.json",
+    "sha256": "06691b73bfc6ab392388dad172f8ab669d2906dcc219f32c25a452d10c9834f3"
+  },
+  {
+    "path": "apps/web/preview-assets/heart/verify.mjs",
+    "sha256": "20e6c490962c2ab984991151deb3913807a8279fa3ae80199e36c2d7e1fcb9b1"
+  },
+  {
+    "path": "apps/web/preview-assets/heart/README.md",
+    "sha256": "3388a7b5efb9819aec831b1f0be57b094b9685c1b02cec35a23e6280fd09f777"
+  },
+  {
+    "path": "apps/web/preview-assets/heart/build.mjs",
+    "sha256": "94139cfaad2701283ebb868e762aaf516bb930b4271eaf84631f50863cdcaf14"
+  },
+  {
+    "path": "apps/web/preview-assets/heart/source/FJ2649.obj",
+    "sha256": "16423ff420831deba4e5c8106233e7778e5fb246be8d36302d766c7624a59899"
+  },
+  {
+    "path": "apps/web/preview-assets/heart/source/FJ2438.obj",
+    "sha256": "17544b1214ea0626f9564aeb42b5bb9d52a126f22237a499f8de0eca6073d8a7"
+  },
+  {
+    "path": "apps/web/preview-assets/heart/source/FJ2439.obj",
+    "sha256": "85fddffea47ac61de11d29219fc4f32dfc857d17b3082929a3f048c57522c887"
+  },
+  {
+    "path": "apps/web/preview-assets/heart/source/FJ2428.obj",
+    "sha256": "db5d6415f07c42b7b1af03f66190679595f8b6c4ff659b8d571ba8694afed75f"
+  },
+  {
+    "path": "apps/web/preview-assets/heart/source/FJ2631.obj",
+    "sha256": "8326aefd6ff1ccf6ca7c3194ed61b57ed9d7ccf3376f537ae83eb08f4f824714"
+  },
+  {
+    "path": "apps/web/preview-assets/heart/source/FJ2966.obj",
+    "sha256": "21cd36edc646954c795e8bd658f97448953b3e09d3e0c8b78f78711d7c9ef776"
+  },
+  {
+    "path": "apps/web/preview-assets/heart/source/FJ3413.obj",
+    "sha256": "6903aed5746a4e210ebd7c0a15bba69707b2ef29398b97903bc2815c2f82c2bc"
+  },
+  {
+    "path": "apps/web/preview-assets/heart/source/FJ3411.obj",
+    "sha256": "6b72258bcc413abbcf6193e11575933d08f3ba960b52a7b8462a7b0ccb4607eb"
+  },
+  {
+    "path": "apps/web/preview-assets/heart/source/FJ2737.obj",
+    "sha256": "b9ad2fdf82c49029a65ab124e98ac8ce8cc58b20b77ce392cfac004d6bbab7b1"
+  },
+  {
+    "path": "apps/web/preview-assets/heart/source/FJ2723.obj",
+    "sha256": "641cff7c6ee08e0a78eee7368a0ea3be421c689fd6f289656312b897226d6538"
+  }
+]

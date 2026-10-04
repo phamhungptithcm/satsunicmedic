@@ -1,0 +1,29 @@
+# No provider keys or credentials belong in build args.
+FROM node:24.19.0-bookworm-slim@sha256:a9f5f7c91a432850b2a8a7797adf5eadb6c733ceed61167806cee7ea7fbc29df AS build
+WORKDIR /app
+RUN npm install --global pnpm@11.19.0
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc tsconfig.base.json ./
+COPY apps/web ./apps/web
+COPY packages ./packages
+RUN pnpm install --frozen-lockfile
+ARG API_ORIGIN=http://127.0.0.1:4186
+ENV API_ORIGIN=$API_ORIGIN
+ARG NEXT_PUBLIC_FIREBASE_API_KEY
+ARG NEXT_PUBLIC_FIREBASE_PROJECT_ID
+ARG NEXT_PUBLIC_GOOGLE_CLIENT_ID
+ARG NEXT_PUBLIC_GOOGLE_ONE_TAP_ENABLED=false
+ENV NEXT_PUBLIC_GOOGLE_CLIENT_ID=$NEXT_PUBLIC_GOOGLE_CLIENT_ID NEXT_PUBLIC_GOOGLE_ONE_TAP_ENABLED=$NEXT_PUBLIC_GOOGLE_ONE_TAP_ENABLED
+ARG NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+ENV NEXT_PUBLIC_FIREBASE_API_KEY=$NEXT_PUBLIC_FIREBASE_API_KEY NEXT_PUBLIC_FIREBASE_PROJECT_ID=$NEXT_PUBLIC_FIREBASE_PROJECT_ID NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=$NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+# Compile same-origin rewrites for the selected deployment network.
+RUN mkdir -p apps/web/public && pnpm --filter @hs/contracts build && pnpm --filter @hs/web build
+FROM node:24.19.0-bookworm-slim@sha256:a9f5f7c91a432850b2a8a7797adf5eadb6c733ceed61167806cee7ea7fbc29df AS runtime
+ENV NODE_ENV=production HOSTNAME=0.0.0.0 PORT=8080
+WORKDIR /app
+COPY --from=build --chown=node:node /app/apps/web/.next/standalone ./
+COPY --from=build --chown=node:node /app/apps/web/.next/static ./apps/web/.next/static
+COPY --from=build --chown=node:node /app/apps/web/public ./apps/web/public
+COPY --from=build --chown=node:node /app/apps/web/preview-assets/discovery ./apps/web/preview-assets/discovery
+USER node
+EXPOSE 8080
+CMD ["node", "apps/web/server.js"]

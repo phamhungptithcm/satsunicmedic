@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="vi">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Đánh giá mô hình giải phẫu miễn phí</title>
+<link rel="stylesheet" href="preview.css">
+<script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js"}}</script>
+<header><span class="brand">Satsunic<span>Medic</span></span><span class="badge">Bản xem thử cục bộ</span></header>
+<main>
+  <section class="workspace">
+    <div class="heading"><p class="eyebrow">NGUỒN MỞ · BODYPARTS3D</p><h1>Khám phá vùng ngực</h1><p>Mô hình từ dữ liệu giải phẫu nam trưởng thành.</p></div>
+    <div class="viewer" id="viewer" aria-label="Không gian xem mô hình 3D"><p id="status" role="status">Đang tải mô hình…</p></div>
+    <nav aria-label="Điều khiển mô hình"><button id="rotate-left" disabled>Xoay trái</button><button id="rotate-right" disabled>Xoay phải</button><button id="zoom-in" disabled>Phóng to</button><button id="zoom-out" disabled>Thu nhỏ</button><button id="reset" disabled>Góc nhìn ban đầu</button></nav>
+    <p class="hint">Kéo để xoay · Cuộn để phóng to · Hoặc dùng các nút điều khiển</p>
+  </section>
+  <aside>
+    <p class="eyebrow">CẤU TRÚC HIỂN THỊ</p><h2>Chọn lớp để quan sát</h2>
+    <fieldset disabled id="layers"><legend class="sr-only">Các lớp giải phẫu</legend>
+      <label><span><i class="dot bone"></i>Lồng ngực</span><input type="checkbox" data-group="skeleton" checked></label>
+      <label><span><i class="dot lung"></i>Mạch và phế quản</span><input type="checkbox" data-group="lungs" checked></label>
+      <label><span><i class="dot heart"></i>Tim</span><input type="checkbox" data-group="heart" checked></label>
+    </fieldset>
+    <section class="age"><h2>Độ tuổi mô hình</h2><p class="value">Trưởng thành</p><p>Nguồn chưa xác định tuổi cụ thể và chưa có các mẫu tuổi khác.</p></section>
+    <section class="notice"><h2>Phạm vi bản xem thử</h2><p>Chưa duyệt chuyên môn. Đang đánh giá hình ảnh và khả năng tương tác, chưa dùng để học chi tiết hoặc chẩn đoán.</p><p>Phần phổi chỉ có mạch và phế quản; chưa có bề mặt phổi. Màu sắc dùng để phân biệt cấu trúc. Bản nguồn đã giảm số đa giác, có thể mất chi tiết nhỏ.</p></section>
+    <p id="stats" class="meta"></p>
+    <a href="inventory.json">Xem nguồn và thông số</a>
+  </aside>
+</main>
+<footer>BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International. <a href="https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html">Giấy phép nguồn</a> · <a href="ATTRIBUTION.txt">Thông tin ghi nguồn</a></footer>
+<script type="module" src="preview.mjs"></script>
+</html>

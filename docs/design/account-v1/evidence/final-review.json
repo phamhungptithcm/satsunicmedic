@@ -1,0 +1,25 @@
+{
+  "scope": "standalone-design-prototype-revision2",
+  "reviewCycles": 4,
+  "productionReadiness": "NOT_READY",
+  "sourceSha256": {
+    "index.html": "8c7b7ff6150043f0dcf6423489113e4a63060bbbe970004ef1a1fb279ea6812d",
+    "style.css": "46d3272f6e8f5498ffd3eeb9582e0090b65d0145577c8e8ee453083b5950a12f",
+    "refinement.css": "ff9f76018f7f663c80162478533c817dbcc1f3a26aca6b58d13fa3b5fe989510",
+    "app.js": "2b6ec036abd9d53c26082a481c6d2d03549ee4c4cf9822c22cf717c0ec9f2371",
+    "README.md": "454367ded678652fd3a6fa35d28ce211392761f5861523340a4b1f5d9f89f221",
+    "product-content-review.md": "b18b9c0d29456e3780a4c8722aa5c6595486fef927e053cc549567a3afb094a8"
+  },
+  "checks": {
+    "syntax": "PASSED",
+    "routeViewportPairs": 32,
+    "planStates": 6,
+    "profileKeyboardValidationSave": "PASSED"
+  },
+  "limitations": [
+    "No production integration",
+    "Full assistive technology and browser zoom NOT_TESTED",
+    "IAB tablet pointer coordinate drift; keyboard retest verified and replaced stale observations",
+    "CocoIndex unavailable after one refresh attempt"
+  ]
+}

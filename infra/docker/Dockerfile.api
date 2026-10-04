@@ -1,0 +1,22 @@
+# Build-only candidate. Verify base image digest and image scan before promotion.
+FROM node:24.19.0-bookworm-slim@sha256:a9f5f7c91a432850b2a8a7797adf5eadb6c733ceed61167806cee7ea7fbc29df AS build
+WORKDIR /app
+RUN apt-get update && apt-get install -y --no-install-recommends openssl ca-certificates && rm -rf /var/lib/apt/lists/*
+RUN npm install --global pnpm@11.19.0
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc tsconfig.base.json ./
+COPY apps/api ./apps/api
+COPY packages/contracts ./packages/contracts
+RUN pnpm install --frozen-lockfile
+RUN pnpm --filter @hs/contracts build && pnpm db:generate && pnpm --filter @hs/api build
+RUN pnpm --filter @hs/api deploy --prod --legacy /out
+FROM build AS migrate
+WORKDIR /app/apps/api
+USER node
+CMD ["pnpm", "exec", "prisma", "migrate", "deploy"]
+FROM node:24.19.0-bookworm-slim@sha256:a9f5f7c91a432850b2a8a7797adf5eadb6c733ceed61167806cee7ea7fbc29df AS runtime
+ENV NODE_ENV=production HOST=0.0.0.0 PORT=8080
+WORKDIR /app
+COPY --from=build --chown=node:node /out ./
+USER node
+EXPOSE 8080
+CMD ["node", "dist/main.js"]

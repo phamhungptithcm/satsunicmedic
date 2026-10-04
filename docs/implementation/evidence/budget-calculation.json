@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-09-30",
+  "production": 441.39,
+  "scheduledStaging": 92.38,
+  "base": 533.77,
+  "with20PercentReserve": 640.52,
+  "alwaysOnBase": 641.25,
+  "alwaysOnWithReserve": 769.5,
+  "status": "PROPOSED_NOT_AUTHORIZED"
+}

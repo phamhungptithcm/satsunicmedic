@@ -1,0 +1,31 @@
+{
+  "name": "satsunicmedic",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=22.12 <26"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel --filter @hs/web --filter @hs/api dev",
+    "build": "pnpm --filter @hs/contracts build && pnpm --filter @hs/api build && pnpm --filter @hs/web build",
+    "typecheck": "pnpm --filter @hs/contracts build && pnpm -r typecheck && tsc --noEmit",
+    "test": "vitest run",
+    "lint": "eslint apps packages tests",
+    "test:integration": "vitest run --config vitest.integration.config.ts",
+    "release:check": "node scripts/release-check.mjs",
+    "openapi:generate": "pnpm --filter @hs/api exec node --import tsx src/openapi.ts"
+  },
+  "devDependencies": {
+    "typescript": "6.0.3",
+    "vitest": "5.0.3",
+    "tsx": "4.23.15",
+    "@types/node": "24.12.0",
+    "eslint": "10.11.0",
+    "typescript-eslint": "8.71.0",
+    "@eslint/js": "10.0.1",
+    "supertest": "7.3.0",
+    "@types/supertest": "7.2.1"
+  },
+  "type": "module"
+}

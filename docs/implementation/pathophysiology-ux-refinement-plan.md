@@ -1,0 +1,11 @@
+# Refinement of approved 3D/4D preview
+
+Authorization: existing approved `pathophysiology-3d-delta-plan.md` explicitly includes panel/CSS/canvas controls, accessibility, clock and responsive layout. Current user directs synchronization, less button clutter, icons and more engaging interaction. This is an in-scope UX refinement of those same surfaces, not a new medical feature or asset. The separate reference-anatomy route is read for consistency but not changed by this refinement.
+
+Repository gate: DEGRADED; CodeGraph stale, CocoIndex health failed. One refresh failed on daemon-log permission. Source verified: panel duplicates playback, exposes all camera buttons and full-width explanations; existing design spec calls for canvas-first and context-sensitive controls. Existing source atlas, flow math, stage contract and production guard are retained.
+
+Plan: (1) Keep a single 3D canvas for static exploration and temporal flow. (2) Replace duplicate controls with an icon dock; camera selection and wall opacity in a labelled view disclosure. (3) Put lesson selection/search in compact disclosure, timeline below canvas, four numbered stage rows plus selected explanation in a contextual inspector. (4) Add native fullscreen/focus control with truthful unavailable/error handling, labelled icons/tooltips, responsive stacking and reduced-motion-safe microtransitions. (5) Match existing HumanScope navy/blue and dark exploration canvas; retain anatomy colors, no synthetic heartbeat or new physiology. No new dependency.
+
+Files: `apps/web/src/components/pathophysiology-panel.tsx`, `pathophysiology.module.css`; presentation-only background in `packages/anatomy-viewer/src/pathophysiology-canvas.tsx`; UX evidence/report in docs. Existing sources/contracts/binary/API/database/publication untouched. Risk: medium interaction regression; preserve hidden-tab pause, selected structure, model ownership, camera across playback/compare, retry, quiz and production boundary.
+
+Verification: focused types/lint/build; browser actual WebGL, stage/compare/play/pause/seek, fullscreen, disclosures/keyboard/focus, narrow 320/390/tablet/desktop, error recovery and reduced motion. Product-language inventory and eight principles; final implementation self-review. Prior medical acceptance blocker remains separate and visible.

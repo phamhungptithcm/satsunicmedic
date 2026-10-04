@@ -1,0 +1,15 @@
+# Full body first — region navigation
+
+Approval basis: owner explicitly requires a real full human model matching mockup, initially whole; user chooses region before navigating inward. This refines approved model implementation, not authorization to fabricate clinical review. Local source preparation and implementation authorized by this request. Production publication remains subject to real asset provenance/review; do not alter approved asset guards.
+
+Intelligence: DEGRADED stale indexes, native source verified. Existing BodyParts3D source archive has1258 elements; FMA20394 maps fullbody and FMA7163 maps skin FJ2810. Existing renderer only loads4thoraxgroups; home consumes publishedAPI returningnull. Existing preview developmentonly.
+
+Implementation boundary: new fullbody conversion pipeline with bounded ZIP reads, validated IDs incl legitimate suffixes, hashes and provenance. Preserve original thoraxcandidate. Build fullbody outer surface plus same-coordinate internal structures with stable sourceIDs and region membership, no fictional geometry or age variations. Keep file/payload limits and reject unexpectedresources. Avoid loading duplicated overlapping concept meshes; selectunique sourceelements. Record size/triangles and anatomy coverage.
+
+Viewer: initialcamera fits head through feet; body visible on initialpage; named region selector and click targets for head/neck/thorax/abdomen/pelvis/arms/legs; smooth camera focus with reducedmotion, reversible wholebody reset, optional skin/internal layers and clipping only on user action. Region navigation must not reload unrelated model or break existing thorax viewer. Region membership derives source mapping; describe slice as geometric clipping, not diagnostic CT. Accessible labels/keyboards and loading/error/retry.
+
+Paths: scripts/free-anatomy/full-body*; .ai/local/free-anatomy/full-body*; new fullbody viewer/component/moduleCSS, reference metadata/route and tests; minimal existing referencepage/home dev wiring if safe. Preserve concurrent reference/pathophysiology WIP and existing shared header/footer. No newpaid asset/dependency/cloud/DB writes. Sole implementationagent; parent verifies browser and publication gap.
+
+Validation: archive integrity/idbounds, no duplicateelements, geometry nonempty and head-to-feet coverage, initialouterbody, choose region/camera reset, togglinglayers/clipping, mobile/nooverflow, errors/reducedmotion/sourcechecks, typecheck/lint/focusedtests. Independent finalreview plus productcontentinventory8principles. Current result must not claim production completed while assetpublicationmissing.
+
+Verified discovery: skin FJ2810 spans ~1.72m head-to-feet and14.5MB sourceOBJ; boundednewpipeline may accept up to24MB perentry,300MBtotal with1258 uniqueIDs inclM suffix. Render skin first; lazyload internals so firstview fast. Wholelimb FMA7185/7186/7187/7188 instead of partialarm/leg concepts. Packages/anatomy-viewer new full-body canvas/export explicitly within scope. Production API assetaccess additionally hardcodes503ASSET_DELIVERY_NOT_CONFIGURED; publication needs delivery implementation, not just uploading a binary.

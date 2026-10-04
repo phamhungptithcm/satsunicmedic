@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "scope": "Purposive product research, not systematic review or GRADE assessment",
+  "sources": [
+    {
+      "id": "E01",
+      "title": "Repeated testing improves long-term retention",
+      "publication_year": 2009,
+      "source_type": "randomized_trial",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19930508/",
+      "access_scope": "indexed_abstract",
+      "supported_observation": "Feedback-supported repeated retrieval outperformed repeated study in the reported resident sample.",
+      "limitation": "Small topic-specific sample; not a HumanScope effect estimate.",
+      "checked_on": "2026-10-01"
+    },
+    {
+      "id": "E02",
+      "title": "Comparative effects of test-enhanced learning and self-explanation",
+      "publication_year": 2013,
+      "source_type": "original_study",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23746156/",
+      "access_scope": "indexed_abstract",
+      "supported_observation": "Supports testing transfer and delayed retention, not only immediate recall.",
+      "limitation": "47 first-year students; full-text methods not appraised.",
+      "checked_on": "2026-10-01"
+    },
+    {
+      "id": "E03",
+      "title": "Spatial ability and 3D model colour-coding affect anatomy performance",
+      "publication_year": 2023,
+      "source_type": "original_study_with_randomized_trial",
+      "url": "https://www.nature.com/articles/s41598-023-35046-2",
+      "access_scope": "publisher_full_text_sections",
+      "supported_observation": "Colour-coded liver model improved post-test performance relative to photorealistic model in this task.",
+      "limitation": "46 participants in liver trial; does not establish universal benefit.",
+      "checked_on": "2026-10-01"
+    },
+    {
+      "id": "E04",
+      "title": "Effect of binocular disparity on learning anatomy",
+      "publication_year": 2022,
+      "source_type": "randomized_trial",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34894205/",
+      "access_scope": "indexed_abstract",
+      "supported_observation": "Stereoscopic and monoscopic anatomy groups performed similarly in the tested setting.",
+      "limitation": "66 learners; not evidence that all VR is ineffective.",
+      "checked_on": "2026-10-01"
+    },
+    {
+      "id": "E05",
+      "title": "Effects of instructional strategies using cross sections",
+      "publication_year": null,
+      "source_type": "original_comparative_studies",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19177385/",
+      "access_scope": "indexed_abstract",
+      "supported_observation": "Combining cross-sections and radiological images did not show clear recognition benefits in those self-directed studies.",
+      "limitation": "Mixed populations and older design; do not infer all linked imaging has no value.",
+      "checked_on": "2026-10-01"
+    },
+    {
+      "id": "E06",
+      "title": "Exploring cognitive load in anatomy education using fNIRS",
+      "publication_year": 2026,
+      "source_type": "small_randomized_study",
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1767614/full",
+      "access_scope": "publisher_full_text_sections",
+      "supported_observation": "Comparable knowledge gains reported for 2D and immersive VR.",
+      "limitation": "21 first-year students; exploratory physiological measures do not justify adaptive-product claims.",
+      "checked_on": "2026-10-01"
+    },
+    {
+      "id": "E07",
+      "title": "Large Language Model Influence on Diagnostic Reasoning",
+      "publication_year": 2024,
+      "source_type": "randomized_trial",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39466245/",
+      "access_scope": "indexed_abstract",
+      "supported_observation": "Providing chatbot access did not significantly improve physician diagnostic reasoning in this trial.",
+      "limitation": "50 physicians; task-specific, not a general claim that AI cannot help.",
+      "checked_on": "2026-10-01"
+    },
+    {
+      "id": "E08",
+      "title": "From tool to teammate in clinician-AI collaborative workflows",
+      "publication_year": 2026,
+      "source_type": "randomized_trial",
+      "url": "https://www.nature.com/articles/s41746-026-02545-1",
+      "access_scope": "publisher_full_text_sections",
+      "supported_observation": "Structured collaborative workflows improved vignette performance versus conventional resources.",
+      "limitation": "70 physicians, predominantly internal medicine; no proof of durable student learning or patient outcomes.",
+      "checked_on": "2026-10-01"
+    },
+    {
+      "id": "E09",
+      "title": "WFME Basic Medical Education standards",
+      "publication_year": 2020,
+      "source_type": "official_framework",
+      "url": "https://wfme.org/standards/bme/",
+      "access_scope": "official_page",
+      "supported_observation": "Contextual curriculum and quality framework, not one universal curriculum.",
+      "limitation": "No HumanScope accreditation implied.",
+      "checked_on": "2026-10-01"
+    },
+    {
+      "id": "E10",
+      "title": "AAMC Core EPAs",
+      "publication_year": 2014,
+      "source_type": "official_framework",
+      "url": "https://www.aamc.org/about-us/mission-areas/medical-education/cbme/core-epas",
+      "access_scope": "official_page",
+      "supported_observation": "Professional activities offer an outcome-oriented reference.",
+      "limitation": "US residency-entry context; web quiz scores cannot establish entrustment.",
+      "checked_on": "2026-10-01"
+    },
+    {
+      "id": "E11",
+      "title": "NBME Item-Writing Guide",
+      "publication_year": null,
+      "source_type": "official_educator_resource",
+      "url": "https://www.nbme.org/institutions/nbme-item-writing-guide/",
+      "access_scope": "official_page_and_public_excerpt",
+      "supported_observation": "Use assessment blueprint and sound item-writing principles.",
+      "limitation": "No full current manual obtained; no rights to reuse protected exam questions inferred.",
+      "checked_on": "2026-10-01"
+    },
+    {
+      "id": "E12",
+      "title": "WHO guidance on large multi-modal models in health",
+      "publication_year": 2024,
+      "source_type": "official_guidance",
+      "url": "https://www.who.int/publications/b/70584",
+      "access_scope": "official_overview",
+      "supported_observation": "AI needs defined governance and oversight.",
+      "limitation": "Guidance does not certify the product; publication reuse has licensing conditions.",
+      "checked_on": "2026-10-01"
+    },
+    {
+      "id": "E13",
+      "title": "WCAG 2.2",
+      "publication_year": 2024,
+      "source_type": "official_standard",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "access_scope": "official_standard_sections",
+      "supported_observation": "Accessibility target includes keyboard, focus, alternatives to dragging and motion controls.",
+      "limitation": "No conformance claim without implementation testing.",
+      "checked_on": "2026-10-01"
+    },
+    {
+      "id": "E14",
+      "title": "Complete Anatomy",
+      "publication_year": null,
+      "source_type": "vendor_feature_description",
+      "url": "https://www.elsevier.com/products/complete-anatomy",
+      "access_scope": "official_product_page",
+      "supported_observation": "Atlas and educator resources illustrate integrated teaching workflows.",
+      "limitation": "Not independent effectiveness evidence; no assets copied.",
+      "checked_on": "2026-10-01"
+    },
+    {
+      "id": "E15",
+      "title": "AMBOSS student exams",
+      "publication_year": null,
+      "source_type": "vendor_feature_description",
+      "url": "https://www.amboss.com/us/students/exams",
+      "access_scope": "official_product_page",
+      "supported_observation": "Question bank, library and analytics integrated in a study journey.",
+      "limitation": "Not comparative proof of efficacy or pricing.",
+      "checked_on": "2026-10-01"
+    },
+    {
+      "id": "E16",
+      "title": "RADPrimer",
+      "publication_year": null,
+      "source_type": "vendor_feature_description",
+      "url": "https://www.elsevier.com/en-gb/products/radprimer",
+      "access_scope": "official_product_page",
+      "supported_observation": "Imaging curriculum and progress tracking offer a product reference.",
+      "limitation": "Vendor description only; no content reuse authorized.",
+      "checked_on": "2026-10-01"
+    }
+  ]
+}

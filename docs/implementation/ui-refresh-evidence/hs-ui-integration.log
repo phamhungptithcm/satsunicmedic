@@ -1,0 +1,11 @@
+
+ RUN  v5.0.3 /Users/hunpeo97/Desktop/Workspace/Coder/satsunicmedic
+
+(node:87659) MetadataLookupWarning: received unexpected error = All promises were rejected code = ETIMEDOUT, ENOTFOUND
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+ Test Files  1 passed (1)
+      Tests  23 passed (23)
+   Start at  23:07:26
+   Duration  25.43s (tests 86%, import 11%, transform 3%)
+

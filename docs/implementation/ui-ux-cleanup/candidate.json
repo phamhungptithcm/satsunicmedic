@@ -1,0 +1,17 @@
+{
+  "files": {
+    "apps/web/src/lib/body-vocabulary.ts": "240298bfe0e31d51c5ff4e933743540cf0a7f4266290de09c8868b0fa32f2326",
+    "apps/web/src/lib/body-explorer.ts": "4e712d0557018bcad076e6f02912df961c90cf3ce1a54a5fdcd1b5253cd7b415",
+    "apps/web/src/lib/body-explorer-ux.ts": "b85740d7611ba0ff1c9e165047062cce0393e1903c74b915ece1ede3c82d6995",
+    "apps/web/src/components/full-body-anatomy.tsx": "52980a5934fc3fc132e2e71c15dc6e4ce5cb9fa7a2f2d275191dedfa65b9cf64",
+    "apps/web/src/components/full-body-anatomy.module.css": "8f080f35ab3ccb77ab28961c9e06b81b98adc7b1cdc7a6fce2ebf5ee90f1a599",
+    "apps/web/src/components/quizzes.tsx": "c2df891c829ac52a7988a661ba6fa53a34f1aceea90d09487b99942030bcbfcb",
+    "apps/web/src/components/learning-empty.tsx": "d1c07a7e5fd0514b041dc7fa5c99f235628868ecb48c40352d8adda501b40499",
+    "apps/web/src/components/learning-empty.module.css": "5b24d17cae41dd49decaf57af523be2228d91c062d8af2c78fe5e46b2a71b21e",
+    "apps/web/src/components/explorer.tsx": "646e53fbc8b8d7a084ee232dfadff00c811acc9f0c9a18b4bb6ddde61d69a90b",
+    "packages/anatomy-viewer/src/full-body-canvas.tsx": "9fe1de9bbba3574b35a066ae6bd2e3f212d0dda0ed6599c86da6608afcf74e40",
+    "tests/body-explorer-ux.test.ts": "16a78d915b7685e266cabaff9a06836c4c53e1bbc41d0ed9695bdbb28d24aa84",
+    "tests/medical-body-scene.test.ts": "9b9096c56751aa20cdb93348aeeb06d9a342ed9469bc35c2b8547ff6372c48f4"
+  },
+  "sha256": "240e578868ed847ad48d5e01432a0211f3188a135d45cc19a643e74ac16db799"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PROPOSED",
+  "zonalBase": 129.41,
+  "haBase": 204.98,
+  "zonalWithReserve": 155.29,
+  "haWithReserve": 245.98,
+  "sales": {
+    "160": {
+      "personal": 13,
+      "teaching": 7
+    },
+    "250": {
+      "personal": 20,
+      "teaching": 10
+    },
+    "650": {
+      "personal": 50,
+      "teaching": 25
+    }
+  }
+}

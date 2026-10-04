@@ -1,0 +1,10 @@
+[Unit]
+Description=SatsunicMedic daily database backup
+After=docker.service
+Requires=docker.service
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /opt/satsunicmedic/backup.py
+User=root
+UMask=0077
+TimeoutStartSec=400

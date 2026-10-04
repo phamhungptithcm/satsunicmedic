@@ -1,0 +1,26 @@
+{
+  "checks": [
+    "animation",
+    "pause",
+    "camera presets",
+    "orbit",
+    "camera preserved",
+    "direct vessel picking",
+    "seek",
+    "occlusion rendering",
+    "missing territory disclosure",
+    "end clamp",
+    "keyboard opacity",
+    "WebGL context loss retry",
+    "768/390/320 no overflow",
+    "reduced motion",
+    "unmount remount",
+    "network retry",
+    "integrity failure retry"
+  ],
+  "picked": "rca",
+  "t1": 1.1,
+  "errors": [
+    "Failed to load resource: net::ERR_FAILED"
+  ]
+}

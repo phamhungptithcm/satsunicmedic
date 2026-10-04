@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "task_id": "STRUCTURE-SELECTION-01",
+  "status": "PASSED",
+  "dimensions": {
+    "requirement_match": {
+      "status": "PASSED",
+      "summary": "Scoped selection and motion evidence in structure-selection-review.md",
+      "evidence_refs": [
+        "structure-selection-review.md",
+        "evidence/structure-selection-hashes.json"
+      ]
+    },
+    "security": {
+      "status": "PASSED",
+      "summary": "Scoped selection and motion evidence in structure-selection-review.md",
+      "evidence_refs": [
+        "structure-selection-review.md",
+        "evidence/structure-selection-hashes.json"
+      ]
+    },
+    "code_quality": {
+      "status": "PASSED",
+      "summary": "Scoped selection and motion evidence in structure-selection-review.md",
+      "evidence_refs": [
+        "structure-selection-review.md",
+        "evidence/structure-selection-hashes.json"
+      ]
+    },
+    "failure_paths": {
+      "status": "PASSED",
+      "summary": "Scoped selection and motion evidence in structure-selection-review.md",
+      "evidence_refs": [
+        "structure-selection-review.md",
+        "evidence/structure-selection-hashes.json"
+      ]
+    },
+    "error_handling": {
+      "status": "PASSED",
+      "summary": "Scoped selection and motion evidence in structure-selection-review.md",
+      "evidence_refs": [
+        "structure-selection-review.md",
+        "evidence/structure-selection-hashes.json"
+      ]
+    },
+    "product_language": {
+      "status": "PASSED",
+      "summary": "Scoped selection and motion evidence in structure-selection-review.md",
+      "evidence_refs": [
+        "structure-selection-review.md",
+        "evidence/structure-selection-hashes.json"
+      ]
+    },
+    "trade_offs": {
+      "status": "PASSED",
+      "summary": "Scoped selection and motion evidence in structure-selection-review.md",
+      "evidence_refs": [
+        "structure-selection-review.md",
+        "evidence/structure-selection-hashes.json"
+      ]
+    },
+    "production_readiness": {
+      "status": "NOT_APPLICABLE",
+      "summary": "No release operation; original production readiness remains NOT_READY.",
+      "evidence_refs": [
+        "structure-selection-review.md"
+      ]
+    }
+  },
+  "findings": [
+    {
+      "severity": "medium",
+      "status": "fixed",
+      "summary": "Mobile heart detail clipped; bounded projected annotation placement and rechecked."
+    },
+    {
+      "severity": "low",
+      "status": "fixed",
+      "summary": "Published label anchor now follows matching selected ID."
+    }
+  ],
+  "limitations": [
+    "DEGRADED index and manual ledger",
+    "Published model browser acceptance unavailable",
+    "Reference four merged groups, not404 individually mapped parts"
+  ],
+  "residual_risks": [
+    "Physical touch, native screen-reader speech and OS motion setting not manually exercised."
+  ]
+}

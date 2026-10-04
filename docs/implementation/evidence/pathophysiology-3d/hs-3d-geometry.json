@@ -1,0 +1,20 @@
+{
+  "sha256": "6438ad759f81fdbc05c5910a1f4b7970bc193633695bff16c1b1e7928e5c2784",
+  "geometricContainment": [
+    {
+      "id": "lad",
+      "testedRays": 2112,
+      "outside": 0,
+      "minSurfaceClearance": 0.006981948825185674,
+      "minAxialWallDistance": 0.008755731184816762
+    },
+    {
+      "id": "lcx",
+      "testedRays": 2112,
+      "outside": 0,
+      "minSurfaceClearance": 0.015969665399613874,
+      "minAxialWallDistance": 0.01685815280155939
+    }
+  ],
+  "clinicalValidation": "NOT_REVIEWED"
+}

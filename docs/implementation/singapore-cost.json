@@ -1,0 +1,15 @@
+{
+  "source": "Google Cloud Billing Catalog v1, service 6F81-5844-456A",
+  "checkedAt": "2026-10-01",
+  "region": "asia-southeast1",
+  "currency": "USD",
+  "e2CoreHourly": 0.02690931,
+  "e2RamGiBHourly": 0.00360594,
+  "coreSku": "7102-B9AA-2ACF",
+  "ramSku": "E277-7DC2-2C7D",
+  "note": "Estimate derived from shared-core sustained allocation (0.5/1 vCPU), memory and 730 hours; rounded total targets include IP, disk/backup/traffic/registry allowances and 20% reserve, not tax or clinical assets. Actual invoices can differ. Existing 10 USD project alert retained. No hard spend cap.",
+  "e2SmallComputeMonthlyEstimate": 15.09,
+  "e2MediumComputeMonthlyEstimate": 30.17,
+  "e2SmallTargetMonthlyUsd": 40,
+  "e2MediumTargetMonthlyUsd": 55
+}

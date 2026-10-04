@@ -1,0 +1,3 @@
+# AC-01 compact icon controls
+
+Current explicit request refines approved discovery controls. Low-risk presentation-only: replace repeated action text by familiar icons in selected-structure actions, layer controls, muscle toggle, restore visibility, pagination, child navigation and canvas rotate/pan. Keep anatomical names, filters, recoverable error actions and secondary menu text meaningful. Preserve callbacks/state, native buttons, accessible names, hover titles, focus feedback and 44px coarse-pointer targets; desktop controls 32px. Only full-body-anatomy.tsx/CSS and AC-01 docs. Validate typecheck/lint, browser desktop/mobile, names, toggle, keyboard, overflow and review. No assets/data/dependencies/deploy.

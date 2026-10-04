@@ -1,0 +1,26 @@
+# Structure selection and motion review
+
+Decision: PASSED for implemented selection UI; overall product/medical release is NOT_READY. User approved clicking structure to show name and adjacent detail icon, then refined request to better presentation and natural animation. See structure-selection-plan.md.
+
+Current scope: existing reference canvas, existing heart canvas/panel, published canvas/Explorer, shared StructureInfo component and source-backed reference descriptions. No new app/dependency, paid service, model geometry or publication changes. Shared files reread; concurrent disease atlas/variant work retained.
+
+## Review cycles
+
+1. Added reference ray picking using visible meshes only, primary pointer and5px drag threshold, cancellation listeners; reused mapped heart and published selections. Compact native details card with source and dismiss/Escape, keyboard selector in reference viewer. Discovered heart details clipped near right/bottom edge on390px mobile; bounded projected annotation coordinates. Corrected stale published picked point when selection ID changes. Added cancellation for camera animation on unmount/context loss/manual orbit.
+2. Final scoped source review, web and viewer TypeScript and ESLint passed.53 reference/pathophysiology/flow tests passed. Browser reference ray click selected Tim; details opened with Enter, collapsed with Escape; hiding Tim removed its card; selecting Lồng ngực from keyboard selector showed mapped content; width/scrollWidth390/390; dragging removed selection without selecting another structure. Heart ray click selected Thành tâm thất and displayed details after viewport-clipping fix. Reference camera reset exercised. No blocking defect found in exercised scope.
+
+Evidence: structure-detail-mobile.png, heart-structure-detail.png, structure-selection.png and source-hashes manifest. Published viewer currently lacks a live usable manifest in this environment: source/compiler coverage only, not browser acceptance. No claim of all404 constituent parts being individually selectable: reference GLB contains four merged FMA meshes. Unknown/unpublished detail text remains explicit; heart details use existing label, stage context and BodyParts3D source, not fabricated per-vessel clinical content.
+
+## Content and platform review
+
+Inventory: click/drag gesture hint; Tìm cấu trúc and options; selected structure label; Chi tiết [name] icon accessible name; Đóng tên cấu trúc; CẤU TRÚC GIẢI PHẪU; descriptions, source and mapping granularity. Reference heart pumping sentence checked against NHLBI /health/heart/heart-beats; respiratory sentence against /health/lungs/respiratory-system. Rib-cage description is actual candidate inventory/interaction, not a new anatomical claim. Source links in UI. Loading/error/empty behavior preserved. No patient-specific advice or diagnosis.
+
+Purpose PASSED: name and detail stay beside model. Agency PASSED: direct pick, dismiss/Escape, drag remains orbit. Responsibility PASSED: mapped granularity, explicit lack of published detail, sources. Familiarity PASSED: standard Info icon and details, existing brand. Flexibility PASSED: keyboard selector/Enter/Escape and mobile layout. Simplicity PASSED: short label first, description only on request. Craft PASSED: clipping fixed; typography/focus/44px controls and bounded panels. Delight PASSED:200–220ms card entrance,240ms ease-out camera transition with interruption and reduced-motion bypass. Target web; no platform-specific imitation. Live accessibility evidence covers DOM names/states and keyboard, not native screen-reader speech. Reduced-motion implementation reviewed in CSS and matchMedia path; OS setting not manually changed. Product Language Gate PASSED within these scoped checks.
+
+## Technical and operational review
+
+Raycast only on release, not pointermove; loaded model hash unchanged. Controls listeners aborted on unmount; Three materials/geometries disposed as before. Camera RAF bounded to240ms and cancelled on lifecycle changes. No continuous animation introduced. Reference selected emissive tint mild and illustrative. R3F annotations use existing projection and HTML facilities. Library optional renderSelection/fallback contracts remain backward compatible. Existing medical/publication/auth/integrity tests preserved. No database or infrastructure impact. Rollback is limited to these scoped files, preserving parallel session work.
+
+Residual limitations: per-group reference selection only; finer article content requires additional authored data; published viewer live selection untested; physical touch and reduced-motion OS testing unperformed. Security/source review found no new external request except user-opened source link. Production build/deployment and clinical acceptance not performed.
+
+Repository intelligence DEGRADED: current gate rechecked, prior refresh failed at CocoIndex log permissions. Current bounded source is evidence; no full-index coverage claimed. Runtime ledger CLI unavailable; manual report only. Worktree dirty with concurrent work; no commit/push/deploy. Requested UI work complete in tested reference and heart viewers. Tokens and actual billed cost Unavailable; memory candidates None.

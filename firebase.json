@@ -1,0 +1,12 @@
+{
+  "functions": [{
+    "source": ".ai/local/firebase-functions",
+    "codebase": "medic",
+    "runtime": "nodejs24",
+    "ignore": ["node_modules", ".git", "firebase-debug.log", "firebase-debug.*.log"]
+  }],
+  "firestore": {
+    "rules": "infra/firebase/firestore.rules",
+    "indexes": "infra/firebase/firestore.indexes.json"
+  }
+}

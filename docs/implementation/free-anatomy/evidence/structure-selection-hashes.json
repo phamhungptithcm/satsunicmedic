@@ -1,0 +1,12 @@
+{
+  "apps/web/src/components/structure-info.tsx": "02e34ebf4111f06fe70fe5cb38a84f96c89e6e04cffcff7dad26a9fabab52939",
+  "apps/web/src/components/reference-anatomy.tsx": "f3351106262b5a4d822b257fa5901a82666ef6cf26103eb66fb2ce1dea460470",
+  "apps/web/src/components/pathophysiology-panel.tsx": "92297d8c970108165b7b7a638fb0aaac65c0bc6b1a38124a8ef97dd4163483a1",
+  "apps/web/src/components/explorer.tsx": "838512bd5a3a46ed6b23ff1aa63c5d687c7459478aa5f14ccf492e6f86d1e14d",
+  "apps/web/src/components/structure-info.module.css": "987c9e03bb5ec3125738925c4ea3215d217f284b36acf8f27842e7ac06e395e5",
+  "apps/web/src/components/reference-anatomy.module.css": "3a02a482b33d7b719bb7461adffed856627f490294e5ee4fabf9b1831083da02",
+  "apps/web/src/lib/structure-information.ts": "6429bb6783111fdc6a0c99a87cb3830a7eb27397ec72bb078fc828fe0544f9f4",
+  "packages/anatomy-viewer/src/reference-canvas.tsx": "244a96f00cc7743ca3d1470ed369c12b39635dcec4be4596ed461ae99cb65206",
+  "packages/anatomy-viewer/src/pathophysiology-canvas.tsx": "922dd7660e9b764b90feb5a78cd4cf84c5e95f6be6966ba26953b23e2169602e",
+  "packages/anatomy-viewer/src/canvas.tsx": "6aeddde9cb889a6fd4ea6800d9c8ee5a4693fcd322608ba5fcf13166e3accb52"
+}

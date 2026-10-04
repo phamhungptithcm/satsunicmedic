@@ -1,0 +1,9 @@
+
+ RUN  v5.0.3 /Users/hunpeo97/Desktop/Workspace/Coder/satsunicmedic
+
+
+ Test Files  10 passed (10)
+      Tests  96 passed (96)
+   Start at  23:06:14
+   Duration  4.15s (import 80%, transform 16%, tests 3%, worker 1%)
+

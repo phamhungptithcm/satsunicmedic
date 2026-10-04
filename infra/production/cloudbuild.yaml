@@ -1,0 +1,17 @@
+steps:
+  - name: gcr.io/cloud-builders/docker@sha256:001fb4a870a84485cf198c80002f7af42f6456f2dbc261d70a0b5f0111470df4
+    args: [build, -f, infra/docker/Dockerfile.api, -t, '${_REGISTRY}/api:${_RELEASE}', .]
+  - name: gcr.io/cloud-builders/docker@sha256:001fb4a870a84485cf198c80002f7af42f6456f2dbc261d70a0b5f0111470df4
+    args: [build, -f, infra/docker/Dockerfile.api, --target, migrate, -t, '${_REGISTRY}/migrate:${_RELEASE}', .]
+  - name: gcr.io/cloud-builders/docker@sha256:001fb4a870a84485cf198c80002f7af42f6456f2dbc261d70a0b5f0111470df4
+    args: [build, -f, infra/docker/Dockerfile.web, --build-arg, 'API_ORIGIN=http://api:8080', --build-arg, 'NEXT_PUBLIC_FIREBASE_API_KEY=${_FIREBASE_API_KEY}', --build-arg, 'NEXT_PUBLIC_FIREBASE_PROJECT_ID=satsunicmedic', --build-arg, 'NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=satsunicmedic.firebaseapp.com', -t, '${_REGISTRY}/web:${_RELEASE}', .]
+images:
+  - '${_REGISTRY}/api:${_RELEASE}'
+  - '${_REGISTRY}/migrate:${_RELEASE}'
+  - '${_REGISTRY}/web:${_RELEASE}'
+options:
+  logging: GCS_ONLY
+timeout: 1800s
+logsBucket: gs://satsunicmedic-build-source/logs
+substitutions:
+  _FIREBASE_API_KEY: ''

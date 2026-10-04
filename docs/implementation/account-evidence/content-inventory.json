@@ -1,0 +1,967 @@
+[
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 11,
+    "text": "KHÔNG GIAN CỦA BẠN"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 22,
+    "text": "Đã lưu thay đổi."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 22,
+    "text": "Thông tin đã được cập nhật ở nơi khác. Tải lại trang để xem bản mới trước khi chỉnh sửa tiếp."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 22,
+    "text": "Chưa xác nhận được việc lưu. Nội dung bạn nhập vẫn ở đây; hãy thử lại."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 23,
+    "text": "Trải nghiệm tài khoản"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 23,
+    "text": "Thông tin cá nhân"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 23,
+    "text": "Áp dụng cho khu vực quản lý tài khoản của bạn."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 23,
+    "text": "Tên hiển thị chỉ thay đổi trong HumanScope, không đổi tài khoản Google."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 25,
+    "text": "Tên hiển thị"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 25,
+    "text": "Bạn đang học với vai trò nào?"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 25,
+    "text": "Không bắt buộc chia sẻ vai trò của bạn."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 25,
+    "text": "Email đăng nhập"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 25,
+    "text": "Chưa có email"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 25,
+    "text": "Email do nhà cung cấp đăng nhập quản lý."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 26,
+    "text": "Múi giờ hiển thị hoạt động"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 26,
+    "text": "Giảm chuyển động"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 26,
+    "text": "Hạn chế hiệu ứng chuyển động trong các trang tài khoản."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 26,
+    "text": "Hãy"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 26,
+    "text": "đặt tên hiển thị"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 26,
+    "text": "trước khi lưu tùy chọn."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 27,
+    "text": "Bỏ thay đổi"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 27,
+    "text": "Đang lưu…"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 27,
+    "text": "Lưu thay đổi"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 30,
+    "text": "Gói của bạn"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 30,
+    "text": "Tiếp tục khám phá miễn phí. Nâng cấp khi bạn cần nhiều hơn."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 30,
+    "text": "Gói hiện tại"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 30,
+    "text": "HumanScope Free"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 30,
+    "text": "USD"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 30,
+    "text": "Không gian để bắt đầu tìm hiểu cơ thể người."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 30,
+    "text": "Khám phá các mô hình giải phẫu công khai"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 30,
+    "text": "Tìm hiểu nội dung trong thư viện"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 30,
+    "text": "Lưu ghi chú với tài khoản cá nhân"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 30,
+    "text": "Tiếp tục khám phá"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 30,
+    "text": "Chưa mở bán"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 30,
+    "text": "HumanScope Pro"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 30,
+    "text": "USD / năm"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 30,
+    "text": "Một gói năm cho trải nghiệm học chuyên sâu hơn."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 30,
+    "text": "Quyền lợi Pro đang được hoàn thiện"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 30,
+    "text": "Chỉ có gói thanh toán theo năm"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 30,
+    "text": "Chưa phát sinh giao dịch tại đây"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 30,
+    "text": "Nâng cấp chưa khả dụng"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 30,
+    "text": "Giá dự kiến. Quyền lợi và điều kiện thanh toán sẽ được hiển thị trước khi bạn mua."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 34,
+    "text": "Hồ sơ cá nhân"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 34,
+    "text": "Một vài thông tin để không gian này gần với bạn hơn."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 35,
+    "text": "Tùy chọn"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 35,
+    "text": "Điều chỉnh cách bạn sử dụng không gian tài khoản."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 37,
+    "text": "Đăng nhập & bảo mật"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 37,
+    "text": "Kiểm tra cách đăng nhập và những phiên còn hiệu lực."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 37,
+    "text": "Phương thức đăng nhập"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 37,
+    "text": "Tài khoản Google"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 37,
+    "text": "Tài khoản đã xác thực"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 37,
+    "text": "Chưa có email"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 37,
+    "text": "Đã kết nối"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 37,
+    "text": "Mật khẩu và xác minh hai bước được quản lý tại nhà cung cấp đăng nhập."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 37,
+    "text": "Phiên đăng nhập"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 37,
+    "text": "Hoạt động gần nhất theo múi giờ"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 37,
+    "text": ". Phiên không hoạt động quá 30 phút sẽ hết hiệu lực."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 37,
+    "text": "Danh sách chỉ hiển thị một phần các phiên."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 37,
+    "text": "Phiên bạn đang sử dụng"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 37,
+    "text": "Phiên đăng nhập khác"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 37,
+    "text": "Hoạt động:"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 37,
+    "text": "Hết hạn tối đa:"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 37,
+    "text": "Chưa có thông tin phiên để hiển thị. Tải lại trang để kiểm tra."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 37,
+    "text": "Dùng nút Đăng xuất trong menu tài khoản để kết thúc phiên hiện tại."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 38,
+    "text": "Thanh toán"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 38,
+    "text": "Thông tin thanh toán của gói HumanScope."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 38,
+    "text": "Thanh toán chưa mở"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 38,
+    "text": "HumanScope Pro chưa mở bán. Hiện chưa có dữ liệu hóa đơn hoặc phương thức thanh toán để hiển thị."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 38,
+    "text": "Xem các gói"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 39,
+    "text": "Dữ liệu & quyền riêng tư"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 39,
+    "text": "Hiểu và quản lý thông tin gắn với tài khoản của bạn."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 39,
+    "text": "Thông tin của bạn"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 39,
+    "text": "Hồ sơ cá nhân"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 39,
+    "text": "Tên hiển thị, vai trò học tập và tùy chọn tài khoản."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 39,
+    "text": "Chỉnh sửa"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 39,
+    "text": "Ghi chú và học tập"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 39,
+    "text": "Mở không gian học tập để xem nội dung của bạn."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 39,
+    "text": "Mở học tập"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 39,
+    "text": "Tải xuống dữ liệu"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 39,
+    "text": "Chức năng xuất toàn bộ dữ liệu tài khoản chưa khả dụng."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 39,
+    "text": "Tải dữ liệu chưa khả dụng"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 39,
+    "text": "Xóa tài khoản"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 39,
+    "text": "Chưa hỗ trợ xóa tài khoản từ giao diện này. Đăng xuất chỉ kết thúc phiên, không xóa thông tin đã lưu."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 39,
+    "text": "Xóa tài khoản chưa khả dụng"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 40,
+    "text": "Trợ giúp"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 40,
+    "text": "Những điều cần biết khi sử dụng tài khoản HumanScope."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 40,
+    "text": "Câu hỏi thường gặp"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 40,
+    "text": "Tôi có cần mua Pro để bắt đầu?"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 40,
+    "text": "Bạn có thể khám phá nội dung công khai miễn phí. Đăng nhập để sử dụng các chức năng cá nhân hiện có."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 40,
+    "text": "Pro có giá bao nhiêu?"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 40,
+    "text": "Giá dự kiến là 19.99 USD mỗi năm, chỉ có gói năm. Pro hiện chưa mở bán."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 40,
+    "text": "Vì sao tôi cần đăng nhập lại?"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 40,
+    "text": "Phiên hết hiệu lực khi không hoạt động quá 30 phút hoặc đến thời hạn tối đa. Đăng nhập lại bằng tài khoản cũ để tiếp tục."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 40,
+    "text": "Tôi có thể đổi email tại đây không?"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 40,
+    "text": "Email đăng nhập do nhà cung cấp xác thực quản lý. Bạn có thể đổi tên hiển thị riêng trong hồ sơ HumanScope."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 40,
+    "text": "Tìm hiểu về HumanScope"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Tài khoản của bạn"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Thông tin cá nhân, gói sử dụng và những tùy chọn quan trọng."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Chưa có email"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Tài khoản cá nhân"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Free"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Chỉnh sửa hồ sơ"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "GÓI CỦA BẠN"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Không ngừng khám phá."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Bạn đang sử dụng HumanScope Free. Tiếp tục tìm hiểu cơ thể người theo nhịp học của mình."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "HumanScope Free"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Miễn phí"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Khám phá các gói"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Đăng nhập & bảo mật"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Đăng nhập bằng Google"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Phiên đã xác thực"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Tài khoản của bạn"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Kiểm tra các phiên đang hoạt động và cách bảo vệ tài khoản của bạn."
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Quản lý đăng nhập"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Theo cách của bạn"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Tùy chọn trải nghiệm"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Múi giờ và chuyển động"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Dữ liệu & quyền riêng tư"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Thông tin gắn với tài khoản"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "HumanScope · Không gian học tập cá nhân"
+  },
+  {
+    "file": "apps/web/src/components/account/account-page.tsx",
+    "line": 41,
+    "text": "Bạn cần trợ giúp?"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 22,
+    "text": "Đóng hộp thoại"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 76,
+    "text": "Chưa đăng xuất được. Bạn vẫn đang trong phiên hiện tại; hãy thử lại."
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 79,
+    "text": "Tài khoản"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 84,
+    "text": "Tài khoản cá nhân"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 84,
+    "text": "Quản lý tài khoản"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 84,
+    "text": "Quản lý tài khoản"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 84,
+    "text": "Đăng xuất"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 84,
+    "text": "HumanScope Free"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 84,
+    "text": "HumanScope"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 84,
+    "text": "Xem gói của bạn"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 84,
+    "text": "Đăng xuất"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 86,
+    "text": "Đang tải tài khoản"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 86,
+    "text": "Đang xác nhận phiên đăng nhập của bạn."
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 87,
+    "text": "Không gian của bạn"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 87,
+    "text": "Đăng nhập để quản lý tài khoản, lưu ghi chú và tiếp tục việc học."
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 87,
+    "text": "Đăng nhập bằng Google"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 87,
+    "text": "Nếu phiên trước đã kết thúc, đăng nhập lại bằng đúng tài khoản bạn đã sử dụng."
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 87,
+    "text": "Tiếp tục khám phá không cần tài khoản"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 88,
+    "text": "Chưa tải được tài khoản"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 88,
+    "text": "Không thể xác minh thông tin lúc này. Kiểm tra kết nối rồi thử lại; lỗi tải không có nghĩa dữ liệu đã mất."
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 88,
+    "text": "Thử lại"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 92,
+    "text": "Đăng xuất HumanScope?"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 92,
+    "text": "Bạn có thay đổi chưa lưu"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 92,
+    "text": "Thay đổi chưa lưu sẽ bị bỏ."
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 92,
+    "text": "Ở lại để lưu hoặc bỏ thay đổi trước khi chuyển trang."
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 92,
+    "text": "Ở lại"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 92,
+    "text": "Đang đăng xuất…"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 92,
+    "text": "Đăng xuất"
+  },
+  {
+    "file": "apps/web/src/components/account/account-shell.tsx",
+    "line": 92,
+    "text": "Bỏ thay đổi"
+  },
+  {
+    "file": "apps/web/src/components/account/account-security.tsx",
+    "line": 11,
+    "text": "Đăng xuất tất cả phiên"
+  },
+  {
+    "file": "apps/web/src/components/account/account-security.tsx",
+    "line": 11,
+    "text": "Đăng xuất tất cả phiên chưa khả dụng. Bạn vẫn có thể đăng xuất phiên hiện tại."
+  },
+  {
+    "file": "apps/web/src/components/account/account-security.tsx",
+    "line": 24,
+    "text": "Chưa kết nối được Google để xác minh. Bạn có thể thử lại."
+  },
+  {
+    "file": "apps/web/src/components/account/account-security.tsx",
+    "line": 43,
+    "text": "Bạn đã chọn tài khoản Google khác. Chọn đúng tài khoản đang dùng trên HumanScope."
+  },
+  {
+    "file": "apps/web/src/components/account/account-security.tsx",
+    "line": 43,
+    "text": "Chưa xác nhận được việc đăng xuất tất cả phiên. Hãy thử lại hoặc tải lại trang để kiểm tra phiên hiện tại."
+  },
+  {
+    "file": "apps/web/src/components/account/account-security.tsx",
+    "line": 47,
+    "text": "Đăng xuất tất cả phiên?"
+  },
+  {
+    "file": "apps/web/src/components/account/account-security.tsx",
+    "line": 47,
+    "text": "Các phiên HumanScope, gồm phiên hiện tại, sẽ hết hiệu lực. Xác minh lại bằng đúng tài khoản Google để tiếp tục; dữ liệu đã lưu vẫn được giữ."
+  },
+  {
+    "file": "apps/web/src/components/account/account-security.tsx",
+    "line": 47,
+    "text": "Đang kết thúc các phiên đăng nhập…"
+  },
+  {
+    "file": "apps/web/src/components/account/account-security.tsx",
+    "line": 47,
+    "text": "Chọn tài khoản trong cửa sổ Google để xác minh."
+  },
+  {
+    "file": "apps/web/src/components/account/account-security.tsx",
+    "line": 47,
+    "text": "Đang chuẩn bị xác minh…"
+  },
+  {
+    "file": "apps/web/src/components/account/account-security.tsx",
+    "line": 47,
+    "text": "Hủy"
+  },
+  {
+    "file": "apps/web/src/components/account/account-security.tsx",
+    "line": 47,
+    "text": "Thử lại"
+  },
+  {
+    "file": "apps/web/src/components/account/account-security.tsx",
+    "line": 47,
+    "text": "Xác minh & đăng xuất"
+  },
+  {
+    "file": "apps/web/src/components/header.tsx",
+    "line": 9,
+    "text": "Khám phá"
+  },
+  {
+    "file": "apps/web/src/components/header.tsx",
+    "line": 10,
+    "text": "Thư viện"
+  },
+  {
+    "file": "apps/web/src/components/header.tsx",
+    "line": 11,
+    "text": "Cơ sở y tế"
+  },
+  {
+    "file": "apps/web/src/components/header.tsx",
+    "line": 12,
+    "text": "Học tập"
+  },
+  {
+    "file": "apps/web/src/components/header.tsx",
+    "line": 13,
+    "text": "Về HumanScope"
+  },
+  {
+    "file": "apps/web/src/components/header.tsx",
+    "line": 43,
+    "text": "HumanScope — trang khám phá"
+  },
+  {
+    "file": "apps/web/src/components/header.tsx",
+    "line": 47,
+    "text": "Điều hướng chính"
+  },
+  {
+    "file": "apps/web/src/components/header.tsx",
+    "line": 55,
+    "text": "Tài khoản"
+  },
+  {
+    "file": "apps/web/src/components/header.tsx",
+    "line": 55,
+    "text": "Đăng nhập"
+  },
+  {
+    "file": "apps/web/src/components/header.tsx",
+    "line": 56,
+    "text": "Đóng menu"
+  },
+  {
+    "file": "apps/web/src/components/header.tsx",
+    "line": 56,
+    "text": "Mở menu"
+  },
+  {
+    "file": "apps/web/src/components/header.tsx",
+    "line": 56,
+    "text": "Đóng menu"
+  },
+  {
+    "file": "apps/web/src/components/header.tsx",
+    "line": 56,
+    "text": "Mở menu"
+  },
+  {
+    "file": "apps/web/src/components/header.tsx",
+    "line": 60,
+    "text": "Điều hướng di động"
+  },
+  {
+    "file": "apps/web/src/lib/account.ts",
+    "line": 3,
+    "text": "Tổng quan"
+  },
+  {
+    "file": "apps/web/src/lib/account.ts",
+    "line": 3,
+    "text": "Cá nhân"
+  },
+  {
+    "file": "apps/web/src/lib/account.ts",
+    "line": 4,
+    "text": "Hồ sơ cá nhân"
+  },
+  {
+    "file": "apps/web/src/lib/account.ts",
+    "line": 5,
+    "text": "Đăng nhập & bảo mật"
+  },
+  {
+    "file": "apps/web/src/lib/account.ts",
+    "line": 6,
+    "text": "Tùy chọn"
+  },
+  {
+    "file": "apps/web/src/lib/account.ts",
+    "line": 7,
+    "text": "Gói của bạn"
+  },
+  {
+    "file": "apps/web/src/lib/account.ts",
+    "line": 7,
+    "text": "Gói & thanh toán"
+  },
+  {
+    "file": "apps/web/src/lib/account.ts",
+    "line": 8,
+    "text": "Thanh toán"
+  },
+  {
+    "file": "apps/web/src/lib/account.ts",
+    "line": 9,
+    "text": "Dữ liệu & quyền riêng tư"
+  },
+  {
+    "file": "apps/web/src/lib/account.ts",
+    "line": 9,
+    "text": "Dữ liệu & hỗ trợ"
+  },
+  {
+    "file": "apps/web/src/lib/account.ts",
+    "line": 10,
+    "text": "Trợ giúp"
+  },
+  {
+    "file": "apps/web/src/lib/account.ts",
+    "line": 12,
+    "text": "Sinh viên ngành sức khỏe"
+  },
+  {
+    "file": "apps/web/src/lib/account.ts",
+    "line": 12,
+    "text": "Người tự học"
+  },
+  {
+    "file": "apps/web/src/lib/account.ts",
+    "line": 12,
+    "text": "Giảng viên"
+  },
+  {
+    "file": "apps/web/src/lib/account.ts",
+    "line": 12,
+    "text": "Không muốn chia sẻ"
+  },
+  {
+    "file": "apps/web/src/lib/account.ts",
+    "line": 13,
+    "text": "Tài khoản của bạn"
+  }
+]

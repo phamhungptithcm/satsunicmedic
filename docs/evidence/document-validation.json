@@ -1,0 +1,84 @@
+{
+  "scope": "Documentation and design gallery static validation only",
+  "status": "PASSED",
+  "git_head": "8a749e7881f8808473a7fc88a51ff81154aadd50",
+  "documents_checked": 18,
+  "requirements_traced": [
+    "HS-01",
+    "HS-02",
+    "HS-03",
+    "HS-04",
+    "HS-05",
+    "HS-06",
+    "HS-07",
+    "HS-08",
+    "HS-09",
+    "HS-10",
+    "HS-11",
+    "HS-12",
+    "HS-13",
+    "HS-14",
+    "HS-15",
+    "HS-16",
+    "HS-17",
+    "HS-18"
+  ],
+  "inline_js_syntax": "PASSED",
+  "errors": [],
+  "sha256": {
+    "README.md": "1b345506c115b60a2397b70771e3ea0cafdc7aa2abaf68e296910fc3884ba228",
+    "docs/01-product-spec.md": "5d4980b076e46b7a6f9e48f4538715adbae8f1471ecaed7d56bb909fb251edf9",
+    "docs/02-design-system.md": "b921cee2814154227637b87204bfcda7269af7b7b4179c6a1b4591659f75e98b",
+    "docs/03-system-design.md": "822200c83d9d32b43364e202b4310f1c0d53b3a3406e0d5d47b04ca14f27fb3a",
+    "docs/04-data-api-spec.md": "48ed53a964b74395bee789bc67c46cfed8d1ef3a4516fdcd0e0d772b57e9fadf",
+    "docs/05-viewer-assets-spec.md": "7225db5964d1867cd5d7878ed71998a8fa7dd3cb2ce4646d9e36ae05d264381a",
+    "docs/06-security-content-governance.md": "150af841c51ded6d32083414d4a1bfab9af5cbe750019d2b696a2ff891eee83e",
+    "docs/07-zero-to-production.md": "29e184171c8cff2eae80f3c16a7a266fc8bb2defbcca44c515d74da80ca644a3",
+    "docs/08-validation-release.md": "2114c9b74c5bc177a4a716db298d9e936e349c2670c0238ccb5fa156e626bc52",
+    "docs/09-decisions.md": "6ffcade511c93b2a0e0a4f64092ac7889d26d69735fe3dec9fab30a590eeb1d3",
+    "docs/10-sources-intelligence.md": "2878c1d7e7d1f79385959b7773aeca1f91b1767e5a4460c65cb05e0b83458fa8",
+    "docs/11-document-review.md": "d51472d05417c6b3be0f2328194e793c0d1b157642fdd785be9f31c5fb6856c3",
+    "docs/12-product-content-review.md": "5921a8950c21f1a67faeda19a19cd4e5918c811a715c0332a3f286d29863f0bb",
+    "docs/README.md": "d178c3a9f7078c2ec6919c7f58860fd13a0728d05d14bbc43fd41d01a5fd6c16",
+    "docs/design/humanscope-v1/README.md": "e5a3652d6422446db4d7a8145ef36d71a86de72879f57239953d21d5856cb216",
+    "docs/design/humanscope-v1/human-4d-model-brief.md": "251c053219bde590ac9f0f239e4d57e4ff21d0dcbad44be7e6ccaa126f084874",
+    "docs/design/humanscope-v1/review.md": "cb5a3eb54d1d96c3e2cbd1f1ccdcce1d07be1661f0df73a9c338f03a497613bb",
+    "docs/design/humanscope-v1/ux-interactions.md": "38b0779f065e7f3bb9221a771dfbc2916a817e9c1d9f7b5a762f25e9b74991d9"
+  },
+  "assets": [
+    {
+      "file": "docs/design/humanscope-v1/assets/desktop-explore-concept.png",
+      "dimensions": [
+        1586,
+        992
+      ],
+      "bytes": 1348289,
+      "sha256": "bf22b28b55a0118d2d28274c262c42954dade5e91c26b68b68d4fa9603cd0fee"
+    },
+    {
+      "file": "docs/design/humanscope-v1/assets/heart-4d-concept.png",
+      "dimensions": [
+        1586,
+        992
+      ],
+      "bytes": 1386460,
+      "sha256": "c12ca4a5ac11acc15952b35427ee52a6909b9743495a04e05def01dba7e60117"
+    },
+    {
+      "file": "docs/design/humanscope-v1/assets/mobile-explore-concept.png",
+      "dimensions": [
+        853,
+        1844
+      ],
+      "bytes": 1324932,
+      "sha256": "0c990b348bea8287314b87ca92d5f5c7a95936ff01ff9c7b34cd098e80511663"
+    }
+  ],
+  "browser_evidence": "docs/design/humanscope-v1/review.md",
+  "limitations": [
+    "No product runtime",
+    "No validated 3D/4D model",
+    "No clinical/license acceptance",
+    "No production readiness"
+  ]
+}

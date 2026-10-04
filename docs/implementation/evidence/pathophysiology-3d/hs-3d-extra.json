@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "synthetic visibility pause",
+    "no auto resume",
+    "wrong/right quiz",
+    "three unmount/remount cycles",
+    "hung request timeout and retry"
+  ],
+  "cadence": {
+    "meanMs": 56.004999993642166,
+    "maxMs": 74.90000000000055
+  },
+  "heapBefore": 30754044,
+  "heapAfter": 30343000,
+  "timeoutMs": 16459,
+  "errors": [],
+  "limits": "Chromium SwiftShader; rAF cadence is not GPU benchmark; heap sample is not leak certification; synthetic visibility only"
+}

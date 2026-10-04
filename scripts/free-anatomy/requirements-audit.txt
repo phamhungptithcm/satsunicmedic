@@ -1,0 +1,3 @@
+# Isolated source-audit environment; never imported into the web runtime.
+pydicom==3.0.1
+numpy==2.2.6

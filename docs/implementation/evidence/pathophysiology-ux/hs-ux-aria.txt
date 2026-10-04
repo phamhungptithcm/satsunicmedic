@@ -1,0 +1,81 @@
+- main:
+  - navigation "Vị trí hiện tại":
+    - link "Học tập":
+      - /url: /hoc-tap
+    - text: Sinh lý bệnh
+  - paragraph: KHÔNG GIAN THỰC HÀNH
+  - heading "Nhìn sâu. Hiểu rõ." [level=1]
+  - paragraph: Khám phá cơ chế bệnh qua từng chuyển động.
+  - group: Nhồi máu cơ tim
+  - paragraph: Bản xem trước · Chưa duyệt y khoa. Dùng để góp ý mô hình và tương tác.
+  - region "Không gian mô hình tim 3D và diễn tiến 4D":
+    - heading "Nhồi máu cơ tim" [level=2]
+    - text: BodyParts3D Mô hình 3D · Dòng chảy theo thời gian
+    - button "Toàn màn hình"
+    - text: Tưới máu bình thường
+    - group "Công cụ quan sát":
+      - button "So với bình thường"
+      - group
+      - button "Đặt lại góc nhìn"
+    - text: Kéo để xoay · Cuộn/chụm để phóng to · Chạm để chọn
+    - button "Phát dòng chảy"
+    - strong: Khám phá dòng chảy
+    - text: Giai đoạn 1 / 4
+    - button "Về đầu bài"
+    - button "Giai đoạn tiếp"
+    - text: Tốc độ phát
+    - combobox "Tốc độ phát":
+      - option "0,5×"
+      - option "1×" [selected]
+      - option "2×"
+    - text: Tiến trình minh họa
+    - slider "Tiến trình minh họa": "0.4"
+    - text: Bình thường Tổn thương
+    - paragraph: Tiến trình minh họa · Không phải thời gian diễn tiến bệnh thực tế
+    - status: Chưa mở được toàn màn hình. Bạn vẫn có thể xem ở khung hiện tại.
+    - complementary "Giai đoạn và cấu trúc":
+      - text: DIỄN TIẾN BỆNH 01—04
+      - list:
+        - listitem:
+          - button "01 Tưới máu bình thường"
+        - listitem:
+          - button "02 Mảng xơ vữa"
+        - listitem:
+          - button "03 Huyết khối gây tắc"
+        - listitem:
+          - button "04 Tổn thương cơ tim"
+      - text: GIAI ĐOẠN 1
+      - heading "Tưới máu bình thường" [level=3]
+      - paragraph: Máu đi qua động mạch vành tới cơ tim.
+      - group: Vì sao điều này xảy ra?
+      - text: Cấu trúc đang chọn
+      - combobox "Cấu trúc đang chọn":
+        - option "Thành tâm thất"
+        - option "Thành nhĩ trái"
+        - option "Thành nhĩ phải"
+        - option "Nhánh gian thất trước (LAD)" [selected]
+        - option "Nhánh mũ (LCx)"
+        - option "Động mạch vành phải (RCA)"
+        - option "Thân chung mạch vành trái"
+        - option "Thân động mạch phổi"
+        - option "Cung động mạch chủ"
+        - option "Động mạch chủ lên"
+      - status: Nhánh gian thất trước (LAD)
+      - text: "Hạt sáng: chiều dòng chảy Vòng vàng: vị trí tổn thương giả định"
+      - paragraph: Chỉ minh họa dòng trên LAD và nhánh mũ. Không phải vận tốc hay lưu lượng đo được.
+  - region "Theo dấu dòng máu":
+    - text: THỬ HIỂU BIẾT CỦA BẠN
+    - heading "Theo dấu dòng máu" [level=2]
+    - group "Khi nhánh LAD trong kịch bản bị tắc, vùng nào bị giảm cấp máu qua nhánh đó?":
+      - text: Khi nhánh LAD trong kịch bản bị tắc, vùng nào bị giảm cấp máu qua nhánh đó?
+      - radio "Toàn bộ cơ thể ngừng nhận máu ngay lập tức."
+      - text: Toàn bộ cơ thể ngừng nhận máu ngay lập tức.
+      - radio "Vùng cơ tim phía sau chỗ tắc của nhánh đó."
+      - text: Vùng cơ tim phía sau chỗ tắc của nhánh đó.
+      - radio "Chỉ máu nằm trong buồng tim."
+      - text: Chỉ máu nằm trong buồng tim.
+    - button "Xem giải thích" [disabled]
+    - paragraph: Câu trả lời chỉ ở phiên xem này, không lưu vào tài khoản.
+  - group: Sơ đồ giải thích 2D Một góc nhìn khác về cùng cơ chế
+  - group: Nguồn và giới hạn Nội dung, mô hình và mức đơn giản hóa
+  - paragraph: Quan sát mô hình để đặt câu hỏi. Đối chiếu nguồn và hướng dẫn của giảng viên để học sâu hơn.

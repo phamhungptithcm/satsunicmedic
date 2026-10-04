@@ -1,0 +1,13 @@
+id,lesson,observable_objective,structure_or_concept_cards,proposed_items,interaction,assessment,dependency,priority,publication_status
+L01,Định hướng cơ thể và mặt phẳng,"Tìm cùng cấu trúc từ hai góc nhìn, phân biệt trái/phải theo cơ thể",4,5,Mô hình; góc chuẩn; cắt hình học,Marker và góc nhìn mới,Atlas QA; review thuật ngữ,P0,DRAFT_NOT_MEDICALLY_REVIEWED
+L02,Cấu trúc tim và quan hệ không gian,Nhận diện cấu trúc được giao và giải thích quan hệ lân cận,3,5,Tim; isolate; lớp,Nhận diện không nhãn,Bổ sung hình học thiếu; duyệt giải phẫu,P0,DRAFT_NOT_MEDICALLY_REVIEWED
+L03,Liên hệ đường tuần hoàn,Sắp xếp đường đi và giải thích từng liên kết theo nội dung đã duyệt,3,5,Scene hướng dẫn,Sắp chuỗi và tự giải thích,Mapping và review sinh lý,P0,DRAFT_NOT_MEDICALLY_REVIEWED
+L04,Mạch vành và mô được nuôi,Phân biệt mạch nuôi tim với đường máu trong buồng tim,3,5,Mạch vành; isolate,Câu cơ chế và góc nhìn mới,Mapping nguồn; duyệt phạm vi biến thể,P0,DRAFT_NOT_MEDICALLY_REVIEWED
+L05,Van tim và chu kỳ,Đối chiếu trạng thái được mô tả với pha có nguồn,3,5,Schematic hoặc cine có nhãn nguồn,Dự đoán trước khi chạy pha,Nguồn van/pha; không giả đồng bộ,P1,DRAFT_NOT_MEDICALLY_REVIEWED
+L06,Đọc cine tim ở mức nền tảng,Chọn frame theo nhiệm vụ và nêu điều có thể/không thể kết luận,2,5,Cine-MRI; từng frame,Frame chưa gặp,Dữ liệu đủ; metadata; reviewer imaging,P1,DRAFT_NOT_MEDICALLY_REVIEWED
+L07,Phổi và cây phế quản,Tìm nhánh/vùng đã duyệt và đối chiếu góc nhìn,3,5,Atlas hô hấp,Marker và giải thích quan hệ,Đủ hình học; reviewer,P0,DRAFT_NOT_MEDICALLY_REVIEWED
+L08,Chuyển động hô hấp,So sánh hai pha nguồn và phân biệt chuyển động với chức năng,2,5,CT theo pha; pause,So sánh pha,Dataset; registration; ca nguồn rõ,P2,DRAFT_NOT_MEDICALLY_REVIEWED
+L09,Lát cắt ngực,Nhận diện cấu trúc ở mặt phẳng mới và diễn giải hướng,3,5,Slice Lab có calibration,Ảnh giữ lại chưa luyện,Volume thật; orientation; mask QA,P1,DRAFT_NOT_MEDICALLY_REVIEWED
+L10,Từ cơ quan đến mô,Liên hệ đặc điểm mô được chỉ với chức năng được duyệt,1,5,Ảnh mô học có quyền,Ảnh mới và câu giải thích,Ảnh mô học và reviewer; chưa có pack,P2,DRAFT_NOT_MEDICALLY_REVIEWED
+L11,Đọc nguồn và nhận biết giới hạn,Phân biệt nhận định được nguồn hỗ trợ với suy diễn chưa đủ bằng chứng,2,5,Claim card; nguồn,Câu critical appraisal,Biên tập giáo dục; nguồn được quyền,P0,DRAFT_NOT_MEDICALLY_REVIEWED
+L12,Giải thích lại và tự lập kế hoạch ôn,Diễn đạt khái niệm cho người không chuyên và xác định phần cần ôn,1,5,Teach-back; review queue,Rubric và bài sau khoảng nghỉ,Reviewer; review scheduler; privacy,P0,DRAFT_NOT_MEDICALLY_REVIEWED

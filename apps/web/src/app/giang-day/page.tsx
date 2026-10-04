@@ -1,0 +1,5 @@
+import Link from 'next/link';
+import TeachingWorkspace from '../../components/teaching-workspace';
+import {canPreviewScenario} from '../../lib/pathophysiology';
+export const metadata={title:'Giảng dạy',robots:{index:false,follow:false}};
+export default async function Teaching(){const enabled=canPreviewScenario(process.env.NODE_ENV,process.env.DISCOVERY_MODE_ENABLED);const atlas=enabled?{binding:(await import('../../lib/pathophysiology-draft')).heartBinding,scenario:(await import('../../lib/coronary-scenarios')).coronaryScenarios.infarction}:undefined;const topics=canPreviewScenario(process.env.NODE_ENV,process.env.DISCOVERY_MODE_ENABLED)?(await import('../../lib/disease-catalog-data')).diseases.map(({id,title})=>({id,title})):[];return <main id="main" className="article-layout"><p className="eyebrow">GIẢNG DẠY</p><h1>Bài giảng của bạn</h1><p className="lead">Soạn bài, thêm hình giải phẫu và trình chiếu. Chỉ bạn xem được bài chưa chia sẻ.</p><p><Link href="/giang-day/lop-hoc">Đến lớp học →</Link></p><TeachingWorkspace topics={topics} atlas={atlas}/></main>;}

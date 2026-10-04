@@ -1,0 +1,744 @@
+{
+  "capturedAt": "2026-10-02T02:10:15.712272+00:00",
+  "head": "8a749e7881f8808473a7fc88a51ff81154aadd50",
+  "scope": "Source/config/tests only; excludes asset binaries, environment files and local evidence. Snapshot at end of review; not a deployable artifact or proof every file was reviewed.",
+  "aggregateSha256": "caad4740edd8ca5edb0998033bdbc99ed4a8cfb12161cf8c500e998d256761eb",
+  "files": [
+    {
+      "path": ".github/workflows/verify.yml",
+      "sha256": "f1af3c54be6656a170aa7c1d011208138010b286112296178031be114bf14dd7"
+    },
+    {
+      "path": "apps/api/package.json",
+      "sha256": "d6a2fc3b482b8a666fc31747811c291df2f8c74d427564a60c878c935a2f204a"
+    },
+    {
+      "path": "apps/api/prisma.config.ts",
+      "sha256": "2bd3f3efec77b6058896a5fca53bc258de1760792fe521fe47690fce0d6126f9"
+    },
+    {
+      "path": "apps/api/prisma/migrations/202610010001_initial/migration.sql",
+      "sha256": "d901177dd75f28b2b574526e58f84f23009ecd8ea2e0dfbee5a09bf5361fcd80"
+    },
+    {
+      "path": "apps/api/prisma/migrations/202610010002_learning_integrity/migration.sql",
+      "sha256": "173b198e0de918aa2997baf04d58d7fcdcfce2646ca0553eb5027b8f0fff7087"
+    },
+    {
+      "path": "apps/api/prisma/migrations/migration_lock.toml",
+      "sha256": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210"
+    },
+    {
+      "path": "apps/api/prisma/schema.prisma",
+      "sha256": "c296e6e8e2aad3b54f3058e19bdd36ec283bb355d1b94fbd4213c168129d2058"
+    },
+    {
+      "path": "apps/api/src/account.ts",
+      "sha256": "8950eef5ed5306a5343fd0d1b904a6191c400f621b8d1119102f78907bd757e2"
+    },
+    {
+      "path": "apps/api/src/app.ts",
+      "sha256": "184d43a6b25132d9b51977c49ddfd7c178ae6b647caa64febf229de3cd52d882"
+    },
+    {
+      "path": "apps/api/src/config.ts",
+      "sha256": "ba66f440904b3f3eeedddf7f789f7cbd4c1209b823cab3e7d0d4f854ab74e9b1"
+    },
+    {
+      "path": "apps/api/src/database.ts",
+      "sha256": "b8139b3d869bb4f2c7e4f671a22a77859b1ddcd7b0b5192679aa75f1d0cf4535"
+    },
+    {
+      "path": "apps/api/src/domain.ts",
+      "sha256": "dc4414599e703a8cdc8752b0526baa116b4483245b41395aeaaede41550eab0c"
+    },
+    {
+      "path": "apps/api/src/editor.ts",
+      "sha256": "d54754789ccd9fcc893b3a64bca8366af645f66072fdc308a979e3ab76b08482"
+    },
+    {
+      "path": "apps/api/src/errors.ts",
+      "sha256": "065fc2173797ebbf44681294b7206c7cb90d43a23fb9418f10158f4ada40bf71"
+    },
+    {
+      "path": "apps/api/src/facilities.ts",
+      "sha256": "c2ffe622172a575cbcafe10b1386d26b80b0ce32f97e02fd6e2065d27ca34cb1"
+    },
+    {
+      "path": "apps/api/src/firebase.ts",
+      "sha256": "afe64cd6e793f38428e7da638982fa2a49100dfe0a6a0e5b5d451073997e941d"
+    },
+    {
+      "path": "apps/api/src/identity.ts",
+      "sha256": "d794a6d31113d90f73bf3a9055e18bbcb2bf22aadf9416c5deb0218079491725"
+    },
+    {
+      "path": "apps/api/src/learning.ts",
+      "sha256": "953973fae156551c09dda7dbf131bc104101fee9f0aa971f4193081337283bf6"
+    },
+    {
+      "path": "apps/api/src/main.ts",
+      "sha256": "4f9b7a3630eb4eb4ce870a927e8f608cdbde266e4aed99ded538bb8cb4ea00af"
+    },
+    {
+      "path": "apps/api/src/openapi.ts",
+      "sha256": "371fbc7119d3e184e4093753720eb053e2c072c3d537c2f3c815f977eef51928"
+    },
+    {
+      "path": "apps/api/src/private.ts",
+      "sha256": "7f5cb94c60f2c7fa5cb9ddc201bb23cbbc5f3053b0ae4e16644200ed5f04a257"
+    },
+    {
+      "path": "apps/api/src/public.ts",
+      "sha256": "5094de76fe4c76d5b02170fa95609aa256129d9e6fb9b6e4e904a82f38d7759c"
+    },
+    {
+      "path": "apps/api/src/publication.ts",
+      "sha256": "11adbef772525a20c4b3f71b8a15a4bc9317031bcfced7815cb686acbd0be06c"
+    },
+    {
+      "path": "apps/api/src/security.ts",
+      "sha256": "fe9e976b614d47c3df3f0521250035a6fbb0e21d028f56700fb9edc2dc50f0a2"
+    },
+    {
+      "path": "apps/api/tsconfig.json",
+      "sha256": "ef21bf69338c31ddd6bdc8dbe20290fc280c90ed810189532a00111143cf2506"
+    },
+    {
+      "path": "apps/web/next-env.d.ts",
+      "sha256": "0f70629890b72a0a82e91972cc032c04b658b26c265373cb711cf576bfbf8fcc"
+    },
+    {
+      "path": "apps/web/next.config.ts",
+      "sha256": "d4ff806356bac049a856b1d6a8c2ca97917895bc25e4987d067a81590a00892f"
+    },
+    {
+      "path": "apps/web/package.json",
+      "sha256": "605a23941c6923bf47961383babab6d44cdfc5a9da77ec0f80e7a688d311a50c"
+    },
+    {
+      "path": "apps/web/postcss.config.mjs",
+      "sha256": "cc8f514ba7fda07a2e2828670c99e34275f314b350628d8c2ab39e68e50bf9f8"
+    },
+    {
+      "path": "apps/web/preview-assets/discovery/manifest.json",
+      "sha256": "dc39590c8da995bd3f461df9d04cbb47499542b0dd9943124c1bc3cacdb42cd4"
+    },
+    {
+      "path": "apps/web/preview-assets/heart/binding.json",
+      "sha256": "06691b73bfc6ab392388dad172f8ab669d2906dcc219f32c25a452d10c9834f3"
+    },
+    {
+      "path": "apps/web/preview-assets/heart/build.mjs",
+      "sha256": "94139cfaad2701283ebb868e762aaf516bb930b4271eaf84631f50863cdcaf14"
+    },
+    {
+      "path": "apps/web/preview-assets/heart/source-manifest.json",
+      "sha256": "9adc429e38557183782f163b05a92f113b565c1c32be3fa3909c03f6156518eb"
+    },
+    {
+      "path": "apps/web/preview-assets/heart/verify.mjs",
+      "sha256": "20e6c490962c2ab984991151deb3913807a8279fa3ae80199e36c2d7e1fcb9b1"
+    },
+    {
+      "path": "apps/web/src/app/ads.txt/route.ts",
+      "sha256": "2e287ecfce95efedf2880ba29667bc9a07b65e22c36730b89dc5ecaf2b6b7549"
+    },
+    {
+      "path": "apps/web/src/app/bai-viet/[slug]/page.tsx",
+      "sha256": "3bf75ddfa439c9b37481a6aba4bc3ad97367b1601bbecc187cb036fee52857d9"
+    },
+    {
+      "path": "apps/web/src/app/co-so-y-te/page.tsx",
+      "sha256": "27a04a14ac5c070f8e8866bf4f24b4560e9b1971515d4b1c3317f24a635e3593"
+    },
+    {
+      "path": "apps/web/src/app/error.tsx",
+      "sha256": "77cbfee0ad3a6cf910dde5761cd6be6f8b843e6efb816a3ac440b95db061d4ca"
+    },
+    {
+      "path": "apps/web/src/app/gioi-thieu/page.tsx",
+      "sha256": "713adcbb487a8071e4b8087a7d916d0bccdf53b05af43b567518a292c225903d"
+    },
+    {
+      "path": "apps/web/src/app/hoc-tap/page.tsx",
+      "sha256": "337d429fed89ac0c01157e9ea628248cc44eb7506d08de8b23e733b279c7551b"
+    },
+    {
+      "path": "apps/web/src/app/hoc-tap/sinh-ly-benh/asset/route.ts",
+      "sha256": "447a960ab0c16c0824f69e73445c0c80df50ac8e5af6f020d3e17177b144ddfe"
+    },
+    {
+      "path": "apps/web/src/app/hoc-tap/sinh-ly-benh/page.tsx",
+      "sha256": "8a9719bbc1acf527a9f9e52a2d65130bcc7260cf15b890e62f6a2ef6850bc222"
+    },
+    {
+      "path": "apps/web/src/app/kham-pha/mo-hinh-tham-khao/asset/route.ts",
+      "sha256": "3407aae573443a3629e8134273e74265c8aec35727845c131f10b69791d6a8f5"
+    },
+    {
+      "path": "apps/web/src/app/kham-pha/mo-hinh-tham-khao/page.tsx",
+      "sha256": "717b6f5f6ec6835f23ca4fb69b210a32a8708a201cac1bc7b2de91c0770dd543"
+    },
+    {
+      "path": "apps/web/src/app/kham-pha/toan-than/asset/[layer]/route.ts",
+      "sha256": "72bf1e5a9b2ed54c0868eb744c87e1a452d2fc59bc88c61ea93fc82e73659664"
+    },
+    {
+      "path": "apps/web/src/app/kham-pha/toan-than/page.tsx",
+      "sha256": "aa1919ce4756036018b7a1866fdd231c349f582ac51460814b06274c5e8e08ed"
+    },
+    {
+      "path": "apps/web/src/app/layout.tsx",
+      "sha256": "57359dfc61d9e87e99147cec03c0e90f6e7a0025a69495017597085329131d84"
+    },
+    {
+      "path": "apps/web/src/app/loading.tsx",
+      "sha256": "dc3a759e21e9c45494a4a0ab946865af55ceb09867e4e19e8a51a376c6ea03ff"
+    },
+    {
+      "path": "apps/web/src/app/not-found.tsx",
+      "sha256": "3d3a138501c5e5295d0e2e2b3a7ee3a24fa64c0367796e82c50c14583a78e5ca"
+    },
+    {
+      "path": "apps/web/src/app/page.tsx",
+      "sha256": "a310ca9d5f7b22ec1a867f4fe43013a862c6d0aa791b280d716f4b7d25ba8324"
+    },
+    {
+      "path": "apps/web/src/app/tai-khoan/[section]/page.tsx",
+      "sha256": "c644ac3444df80944fd03bd172fb29ff121600a823d2e75d1f79cc6b645fb26b"
+    },
+    {
+      "path": "apps/web/src/app/tai-khoan/layout.tsx",
+      "sha256": "8cb77645cf609a0e84f8c65e11a267dfb84fff6a38c46d588dccbab364ae04f4"
+    },
+    {
+      "path": "apps/web/src/app/tai-khoan/page.tsx",
+      "sha256": "9983d89a87f3db0ce00e2809bb4fabfc9f894a8fd0e12050b37c22718a125c03"
+    },
+    {
+      "path": "apps/web/src/app/thu-vien/page.tsx",
+      "sha256": "a4bcf25ef12746ce65c87a7989f7e2fd169a3c994bd67a3017cb347d2dfd48b4"
+    },
+    {
+      "path": "apps/web/src/components/account/account-page.tsx",
+      "sha256": "f288be483ec202a64a2cee9634840a67d591056768daf9c0f47bae94aa904c20"
+    },
+    {
+      "path": "apps/web/src/components/account/account-security.tsx",
+      "sha256": "4c48c18d0cc153228bd30d4d0224e892a60159a404647853ba3ee6e06e3ec589"
+    },
+    {
+      "path": "apps/web/src/components/account/account-shell.tsx",
+      "sha256": "372f3cb4bbf930f9bd1e7bbd8aa53516690671522ed4686f90fd746081ef1dd2"
+    },
+    {
+      "path": "apps/web/src/components/article-ad.tsx",
+      "sha256": "ccf22cd77605212c53ced0efe5eb5590d75c6578d8411aa82602d9bf9e27d90b"
+    },
+    {
+      "path": "apps/web/src/components/body-section-controls.tsx",
+      "sha256": "dbebc0204b39679e6da29e2fdcd175b2afff6c902b0c09e54c25740f1bf5742c"
+    },
+    {
+      "path": "apps/web/src/components/disease-atlas.tsx",
+      "sha256": "c4fdbdc428d7939086581565dafb2b20ee2ff9ca59d984784277d7019dc61fdd"
+    },
+    {
+      "path": "apps/web/src/components/explorer.tsx",
+      "sha256": "646e53fbc8b8d7a084ee232dfadff00c811acc9f0c9a18b4bb6ddde61d69a90b"
+    },
+    {
+      "path": "apps/web/src/components/footer.tsx",
+      "sha256": "f9d82caf234d574da3102e79d20d91687f49a2bf631f5f98de60996fe5bd167c"
+    },
+    {
+      "path": "apps/web/src/components/full-body-anatomy.tsx",
+      "sha256": "52980a5934fc3fc132e2e71c15dc6e4ce5cb9fa7a2f2d275191dedfa65b9cf64"
+    },
+    {
+      "path": "apps/web/src/components/full-body-experience.tsx",
+      "sha256": "b6a6dd4537b1b39e86ccbb6ab596ee12231006e0622b713b4b6517f306df7e32"
+    },
+    {
+      "path": "apps/web/src/components/header.tsx",
+      "sha256": "187b30065188b4dcc822fa05b08e4c03c512657a9192d9cfe47129b20171ddc5"
+    },
+    {
+      "path": "apps/web/src/components/learning-empty.tsx",
+      "sha256": "d1c07a7e5fd0514b041dc7fa5c99f235628868ecb48c40352d8adda501b40499"
+    },
+    {
+      "path": "apps/web/src/components/learning-reviews.tsx",
+      "sha256": "640e88b79becef6ebf5991fb7c4922ea334ad7573f2ccae2ace8ef496e196b40"
+    },
+    {
+      "path": "apps/web/src/components/loading.tsx",
+      "sha256": "ddc2aa58c7916b73e1c4fce6838cc0f13c81e37619867b4d3872e7de6ef78d20"
+    },
+    {
+      "path": "apps/web/src/components/login.tsx",
+      "sha256": "d8bbd74afe41a2a6321bd2e75278022432b9495e4a890d7b418284f298033175"
+    },
+    {
+      "path": "apps/web/src/components/medical-english.tsx",
+      "sha256": "4fa1179a71117cac469aa546c10e38901207f9523bc45a6378f43c5d5332639f"
+    },
+    {
+      "path": "apps/web/src/components/pathophysiology-panel.tsx",
+      "sha256": "d123cdb46d88da077b9090eb348a45d6133141c46b3e2e4d256bf04d5dac4fc6"
+    },
+    {
+      "path": "apps/web/src/components/quiz-slides.tsx",
+      "sha256": "5e49cc8f5b6c87ac441b1f196cab910f98dde6ff0eb647abf51ebccae4b4576b"
+    },
+    {
+      "path": "apps/web/src/components/quizzes.tsx",
+      "sha256": "c2df891c829ac52a7988a661ba6fa53a34f1aceea90d09487b99942030bcbfcb"
+    },
+    {
+      "path": "apps/web/src/components/reference-anatomy.tsx",
+      "sha256": "f3351106262b5a4d822b257fa5901a82666ef6cf26103eb66fb2ce1dea460470"
+    },
+    {
+      "path": "apps/web/src/components/site-shell.tsx",
+      "sha256": "6718bb5af3fb9c3292b89910520d15591a38b7eda02e5f623301bf7e67c69c22"
+    },
+    {
+      "path": "apps/web/src/components/structure-info.tsx",
+      "sha256": "03c4a3b42ce2e9db5e1f663d53fbbde061846d7513f19b93275e1c68b3e530f0"
+    },
+    {
+      "path": "apps/web/src/lib/account.ts",
+      "sha256": "10977e8bf6d3f503b58476cc8c4d749f07c86f306d8c21b36e7160a741c76a15"
+    },
+    {
+      "path": "apps/web/src/lib/ads-policy.ts",
+      "sha256": "83cfd4888fbd2b5e7827d74dc24324038af0b9572842f1e4cdca8d4d47436f3c"
+    },
+    {
+      "path": "apps/web/src/lib/body-explorer-ux.ts",
+      "sha256": "b85740d7611ba0ff1c9e165047062cce0393e1903c74b915ece1ede3c82d6995"
+    },
+    {
+      "path": "apps/web/src/lib/body-explorer.ts",
+      "sha256": "4e712d0557018bcad076e6f02912df961c90cf3ce1a54a5fdcd1b5253cd7b415"
+    },
+    {
+      "path": "apps/web/src/lib/body-vocabulary.ts",
+      "sha256": "240298bfe0e31d51c5ff4e933743540cf0a7f4266290de09c8868b0fa32f2326"
+    },
+    {
+      "path": "apps/web/src/lib/coronary-quiz.ts",
+      "sha256": "93fba2cdcd501c4b9db379a14b2afcc063d940741e00ce6421ca7fd4253c80b6"
+    },
+    {
+      "path": "apps/web/src/lib/coronary-scenarios.ts",
+      "sha256": "901e3996126b62a6331d5c10308809897c0e3eb55322a596d7af6e35436674b1"
+    },
+    {
+      "path": "apps/web/src/lib/discovery-release.ts",
+      "sha256": "67119dbda399dde2dde07a2393d329ad0bc4e33f1d10a5efaa855947458ef7f1"
+    },
+    {
+      "path": "apps/web/src/lib/disease-catalog-data.ts",
+      "sha256": "ee331e200ff8c644ea1adcb1191214ad78f4246b04441533a5f95e683f412bbf"
+    },
+    {
+      "path": "apps/web/src/lib/disease-catalog.ts",
+      "sha256": "5ceef9f0f7acc70e4cfe756953f336a0768d5dd8e6a0507bd0045b6432feaeb8"
+    },
+    {
+      "path": "apps/web/src/lib/full-body-anatomy.ts",
+      "sha256": "0ef3f78e05296fead265abc46fd1a53dfef6db569b23dcc88978386e37877d61"
+    },
+    {
+      "path": "apps/web/src/lib/google-sign-in.ts",
+      "sha256": "479b26710683c8f3043fbda1271c8170802c888db713a0dba1d8a4b5f7fe09be"
+    },
+    {
+      "path": "apps/web/src/lib/learning-quiz.ts",
+      "sha256": "dd5ad13bbdd5c41c487320ff286c2b1d351d06a676ea54d6b69dcf829da12b3d"
+    },
+    {
+      "path": "apps/web/src/lib/medical-english-data.ts",
+      "sha256": "a68594faacd0f5210d0a8eb2b351b396958fbd424cebda5ed0fa790d3ef83d5c"
+    },
+    {
+      "path": "apps/web/src/lib/medical-english-quiz.ts",
+      "sha256": "cae5fd85347716753fddc396d17e765dbdba2df3d3d22deafca115819dede12c"
+    },
+    {
+      "path": "apps/web/src/lib/medical-english.ts",
+      "sha256": "3c6f6c2f64001495d75ef56c991d0e4ff013fabfd37972c4487b3b2d9789950f"
+    },
+    {
+      "path": "apps/web/src/lib/pathophysiology-draft.ts",
+      "sha256": "e8827f6895ac699bb996390da722bff9a2f972b173d148a0dc81d17f82a13c7f"
+    },
+    {
+      "path": "apps/web/src/lib/pathophysiology.ts",
+      "sha256": "d10d99cab65b81fd91edd357c3cc93f284c0a56b6bc397b2606c069524131e48"
+    },
+    {
+      "path": "apps/web/src/lib/reference-anatomy.ts",
+      "sha256": "c178823301b66d7e46dedd1824b59c3e7326701b29e91b29422e38ea178443e6"
+    },
+    {
+      "path": "apps/web/src/lib/structure-information.ts",
+      "sha256": "b4839b50a7a9d38e1b9bdad45f82a331e68449dbfa3fffe2124a8d15a17b4986"
+    },
+    {
+      "path": "apps/web/src/proxy.ts",
+      "sha256": "161fcc16fa6a14adbdf9fe9bf2e00cd2c634b7ada412d63da3d66a9b5ab8e779"
+    },
+    {
+      "path": "apps/web/tsconfig.json",
+      "sha256": "58fe9bc1aa07a7bc614a8d9065108494b5e87d4b31d63bed417392b6b6d17b66"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "sha256": "8f407f303580d66b29fd4f5c5e4e08ec2be8c72a16a7758b6b1bc071d53e5608"
+    },
+    {
+      "path": "firebase.json",
+      "sha256": "5ece12578fb7efb5ddcc689f456882ba0351625a0518afac6355f4a6bff790da"
+    },
+    {
+      "path": "infra/docker/compose.yaml",
+      "sha256": "99e71e6a70887ed5da100bad7c2057b3b293decb3266ebce225e3fe0669d5c23"
+    },
+    {
+      "path": "infra/firebase/cloudbuild-web.yaml",
+      "sha256": "4733e8a96e0ce4944208842d35b2ea3d2119546e2204d930ba2a11c5221daa91"
+    },
+    {
+      "path": "infra/firebase/firebase.json",
+      "sha256": "4584f0ebb6221a9284cd979a6e0b49d151efe74f4ce19a5f695ebb4266f7eb3f"
+    },
+    {
+      "path": "infra/firebase/firestore.indexes.json",
+      "sha256": "15f2effb2e9d3a88c35c09955c8ca988e6ba1684d7e54c78d7d4aef856335fd9"
+    },
+    {
+      "path": "infra/firebase/package-functions.mjs",
+      "sha256": "dbc70a0686468c164e97eb1a98c1de238a407a6022a67d1494fb59b44bdd4a9e"
+    },
+    {
+      "path": "infra/production/backup-lifecycle.json",
+      "sha256": "30493af5da6c137ef77301d2feda2e5f3435de177060711c9ade05d2a3686ceb"
+    },
+    {
+      "path": "infra/production/backup.py",
+      "sha256": "e42fdc48180cbdb85103be5f7ce5ab012382b4e077692f721b806275442bec20"
+    },
+    {
+      "path": "infra/production/base-images.json",
+      "sha256": "7348eebcce8c00d2d6d6a536f81c38d76dfc321e59f5331612cc891e5a5289eb"
+    },
+    {
+      "path": "infra/production/bootstrap.sh",
+      "sha256": "374074bf6706b2b699d4feaa660a0308a9a48f8ce93144033c597ada43a225d3"
+    },
+    {
+      "path": "infra/production/build-source-lifecycle.json",
+      "sha256": "6c837b9d92aecda0d1da8f2c3bb55164ef584b5cd51dd6691174be6b9ff708a4"
+    },
+    {
+      "path": "infra/production/cloudbuild.yaml",
+      "sha256": "6ed28b6e3c4ce1c33bc1baf90f999baa49e437dad1391edb3c63ae9f63eda704"
+    },
+    {
+      "path": "infra/production/compose.yaml",
+      "sha256": "57068017bf339f4a30be4a386f02b07c0f84a21e9ddfd8d23e0582b06fba1ae5"
+    },
+    {
+      "path": "infra/production/configure-db-role.py",
+      "sha256": "0486ae484e547daa064b0b22d8277be47f0a82fa622703183f02c47ca5fef18b"
+    },
+    {
+      "path": "infra/production/deploy-on-vm.sh",
+      "sha256": "103c8d078668f7b930c05fa497b0054b49ac91a3f9e8724752b1bc1e5d5f3877"
+    },
+    {
+      "path": "infra/production/open-web.sh",
+      "sha256": "0f76751faa8eef20ad1bfde779e5964cb002851d544fa7b389d753b358323ae8"
+    },
+    {
+      "path": "infra/production/package-source.py",
+      "sha256": "c1f8737aba78438d68bcfd7fadac680a27828edc68d9c1d7baa9093753b196f9"
+    },
+    {
+      "path": "infra/production/provision-build.sh",
+      "sha256": "8744445f1c3074f68112f0df1608b7f5980fe971a6e7c541849fd2680173d14c"
+    },
+    {
+      "path": "infra/production/provision-vm.sh",
+      "sha256": "9315b7aef62585a132f4fcf474a5db19fe6dbbedf9bdfcbdb4868377f4200c8a"
+    },
+    {
+      "path": "infra/production/restore-check.sh",
+      "sha256": "cf3ef1b541b16427105c436b0187803cf1a76bd651b5c08b34561d00ee136195"
+    },
+    {
+      "path": "infra/production/smoke.mjs",
+      "sha256": "d85410c419c08d0d76158092f0f632437b860b345c9b45d61a4a4f022417feb5"
+    },
+    {
+      "path": "package.json",
+      "sha256": "f4934239e439382a21086684f883fb5768d1dc900317221d2512abc8cc0c8be1"
+    },
+    {
+      "path": "packages/anatomy-viewer/package.json",
+      "sha256": "ac8cda363d79ccd3c7cfd2c9a728b9f015da99e7d88032e6384add31e1fdfa3e"
+    },
+    {
+      "path": "packages/anatomy-viewer/src/body-sections.ts",
+      "sha256": "a747c5f4a5fd929c7081e4fd4e271eac70feefbe03e5f99af40cbee55fa709cc"
+    },
+    {
+      "path": "packages/anatomy-viewer/src/canvas.tsx",
+      "sha256": "6aeddde9cb889a6fd4ea6800d9c8ee5a4693fcd322608ba5fcf13166e3accb52"
+    },
+    {
+      "path": "packages/anatomy-viewer/src/full-body-canvas.tsx",
+      "sha256": "9fe1de9bbba3574b35a066ae6bd2e3f212d0dda0ed6599c86da6608afcf74e40"
+    },
+    {
+      "path": "packages/anatomy-viewer/src/index.ts",
+      "sha256": "f6a825225652b757ce903a38d63c1f719a8b9573961f335074d3b4aad6efda21"
+    },
+    {
+      "path": "packages/anatomy-viewer/src/optional-asset-load.ts",
+      "sha256": "59e36e8dad05a6eccb1be7b48a1817c2e17da6a7c37f8f40182e9c574537ab0e"
+    },
+    {
+      "path": "packages/anatomy-viewer/src/pathophysiology-canvas.tsx",
+      "sha256": "922dd7660e9b764b90feb5a78cd4cf84c5e95f6be6966ba26953b23e2169602e"
+    },
+    {
+      "path": "packages/anatomy-viewer/src/pathophysiology-flow.ts",
+      "sha256": "e07a83b6fbd457bba2abca257c1c2ae0b5f30aab0f38e6225574c1dfe8e6a1ac"
+    },
+    {
+      "path": "packages/anatomy-viewer/src/reference-canvas.tsx",
+      "sha256": "244a96f00cc7743ca3d1470ed369c12b39635dcec4be4596ed461ae99cb65206"
+    },
+    {
+      "path": "packages/anatomy-viewer/src/scene-history.ts",
+      "sha256": "6631f4cdcfb4e2aea0b406b5dd9f1f985c8eb42c272b5e9f5e11fe7904bce6eb"
+    },
+    {
+      "path": "packages/anatomy-viewer/src/verified-body-asset.ts",
+      "sha256": "3554dca8be300d1de0b9dea0bb4d2a7204b09c2e7888a5cc897e03088e7d533d"
+    },
+    {
+      "path": "packages/anatomy-viewer/tsconfig.json",
+      "sha256": "1fbbc0925df9183747de5559afe92daf167ae69165eb7286796049e8232b6d49"
+    },
+    {
+      "path": "packages/api-client/package.json",
+      "sha256": "c32023c5ea1bdffb914b407a4da62c4bde42b9f9c32f3658d45238ea06c3d21e"
+    },
+    {
+      "path": "packages/api-client/src/index.ts",
+      "sha256": "ffc98d9395d21b32b78dad95a28460fbf34ebda5b235eeb4390a9d964cd5e4c6"
+    },
+    {
+      "path": "packages/api-client/tsconfig.json",
+      "sha256": "23183891688ef05125b7fdcf94d84e87d6c1d8e85b3c040d81b0672589ba8003"
+    },
+    {
+      "path": "packages/contracts/package.json",
+      "sha256": "8c222e28b9b4a99b65f0a8999d091e6ae39b48e0f26a499f82f3063456670f21"
+    },
+    {
+      "path": "packages/contracts/src/account.ts",
+      "sha256": "299870d0e147d1f9327e89ced072fe8c78ed9662470f8f6632a674f5d7ea6c5d"
+    },
+    {
+      "path": "packages/contracts/src/index.ts",
+      "sha256": "65178a9f2154217dcbabfe17da2cc3a4f37ee9d39655d01635e13f5396ac24d2"
+    },
+    {
+      "path": "packages/contracts/src/learning-review.ts",
+      "sha256": "a2aa3ddbf36c30d76e2bb4f75fcc66305ef77bb687879c0b549e4ede30a08725"
+    },
+    {
+      "path": "packages/contracts/src/pathophysiology.ts",
+      "sha256": "a8fb9482e7774761dd89ff787bd6b070fae041dce3b56a31299510e27ced6323"
+    },
+    {
+      "path": "packages/contracts/tsconfig.json",
+      "sha256": "ded722de95d003ee8cd58c52446021f57099b6b617975459d09bb4a6d6415c98"
+    },
+    {
+      "path": "packages/ui/package.json",
+      "sha256": "8860e19df2b65d06852f628efca7b1797e5537855d3196e514ef08ce7dbd0a63"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "sha256": "d3e24e49aa086209b14dfbd5f1886bbd78f6cb9ff6279fc26e257e3e82789d93"
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "sha256": "bacd6995ad9af48f5d39ddd9a0c5f6104fea905ca97e2f29c32459dc152fc1d3"
+    },
+    {
+      "path": "scripts/free-anatomy/audit-cine.py",
+      "sha256": "531c1add0a6459e6c560eb221666e87808bc739f4667e52b1336e5c6f143397f"
+    },
+    {
+      "path": "scripts/free-anatomy/audit-isa.py",
+      "sha256": "910309041c6fcc10afe60fe23ad06ccb5772b82a3bad01c2e4d31adb0150d6d5"
+    },
+    {
+      "path": "scripts/free-anatomy/convert.mjs",
+      "sha256": "36891ede314907e5c817af0aa8a11922e68debabc8f5de688bc31ab52242d3d0"
+    },
+    {
+      "path": "scripts/free-anatomy/full-body-convert.mjs",
+      "sha256": "2e54774906217a6618b942b153e5f9571cd7a366368976051363d24ac3b5f3d2"
+    },
+    {
+      "path": "scripts/free-anatomy/full-body-prepare.py",
+      "sha256": "60dd5380447c0c769f960f9da27886978c64ebfff4a9ea11f3731092c5116b5c"
+    },
+    {
+      "path": "scripts/free-anatomy/prepare.py",
+      "sha256": "391346fa80545e72a9ae9eb8eda613d32f4050745a8e25af4354dd6f1132f43c"
+    },
+    {
+      "path": "scripts/free-anatomy/preview.mjs",
+      "sha256": "2ffb2a5d6d341e21e81117f1d9c6bbab58ecb7e79d261fa5e3bc2dfdeb9ea84c"
+    },
+    {
+      "path": "scripts/release-check.mjs",
+      "sha256": "fa2735a9fbe9a63faca474c0e3dbee87c81aadd488e8d8b0d0dae852404e8238"
+    },
+    {
+      "path": "tests/account.test.ts",
+      "sha256": "4332e7c74ac911c372bc7c6e47e9bd4243958c3af3905138654ac65d52225c47"
+    },
+    {
+      "path": "tests/ads-policy.test.ts",
+      "sha256": "9ac1b9de6fd17c8f5f6ad278611ab15c5017d25d8425e9ceae0e8d3a7b4c0ec5"
+    },
+    {
+      "path": "tests/api.integration.test.ts",
+      "sha256": "56c1ea1a446137ec3846a14787df5cad14f3eaab9987da21a3e25b3dd1582f4f"
+    },
+    {
+      "path": "tests/body-explorer-ux.test.ts",
+      "sha256": "16a78d915b7685e266cabaff9a06836c4c53e1bbc41d0ed9695bdbb28d24aa84"
+    },
+    {
+      "path": "tests/body-sections.test.ts",
+      "sha256": "9738a2aa2f073223db28b3ea1d699f2b6706e2721083dfbbb872feb1da42ccc3"
+    },
+    {
+      "path": "tests/contracts.test.ts",
+      "sha256": "c21b12c1a138fd87262cb0c76f3f270cfd0bf10b6ffa54cc5b6512731136490a"
+    },
+    {
+      "path": "tests/discovery-release.test.ts",
+      "sha256": "1c5beecf559b7ea496f418ce7bd73ada7269716af205ba2982b184ba5ad1e1a5"
+    },
+    {
+      "path": "tests/disease-atlas.test.ts",
+      "sha256": "56d6cfff9ed3f5f187a1a50da668283e2a43f3174e7c9832cd0d66dfa294c9fe"
+    },
+    {
+      "path": "tests/firebase-wrapper.test.ts",
+      "sha256": "1a9fc1f59a7a4dc10223686b9dafd7cdfa072cc47222f0743d858490b03a15b3"
+    },
+    {
+      "path": "tests/fixtures.ts",
+      "sha256": "c7229336bdbba0c7f016a0b97881ffe7f41d070da15dba31e8382024462ce32e"
+    },
+    {
+      "path": "tests/free-anatomy/test_prepare.py",
+      "sha256": "c61fda47b1f0839cf07fbf60e307bd3c4292750a0d552abb1ca15ab0309fa778"
+    },
+    {
+      "path": "tests/full-body-anatomy.test.ts",
+      "sha256": "4150d6934120bc53b9f01530dea19cc543d04d2d8098fb43e82d2cbb9fab9e9e"
+    },
+    {
+      "path": "tests/full-body-load-lifecycle.test.ts",
+      "sha256": "803284c1ad3141901c69a89da679873939effd8bae029dc4de2756fbb5378f17"
+    },
+    {
+      "path": "tests/google-session.test.ts",
+      "sha256": "38ab752bfdec9bb261fd678f31b7b0ef81d49e78445dea78ec9da804821316b7"
+    },
+    {
+      "path": "tests/google-sign-in.test.ts",
+      "sha256": "6cf67d6ef04edb26f4e343241750da8738fafedce6b1ee51bdc727279282b586"
+    },
+    {
+      "path": "tests/learning-quiz.test.ts",
+      "sha256": "50dc12e49da085c64f2210daab0a7704ac5ada7c3a657b1494d042a930656660"
+    },
+    {
+      "path": "tests/learning-review.test.ts",
+      "sha256": "517d918aee70a67b98be2232adc22d9e244c041dd24f0afd9b9168dfeaef869a"
+    },
+    {
+      "path": "tests/medical-body-load.test.ts",
+      "sha256": "0e08ab59cd6f58109254db8a0457a8f2baf2db66e885525daec7b0f74fd6de81"
+    },
+    {
+      "path": "tests/medical-body-scene.test.ts",
+      "sha256": "9b9096c56751aa20cdb93348aeeb06d9a342ed9469bc35c2b8547ff6372c48f4"
+    },
+    {
+      "path": "tests/medical-english.test.ts",
+      "sha256": "b88dbc8cd057a93c7b619746827730910dca7c3edc48bb8d8e5c2069e9c6e125"
+    },
+    {
+      "path": "tests/pathophysiology-flow.test.ts",
+      "sha256": "1045e63c508a57b9f1d7252cc8aeaf064efe3ef23f56f8fa0b4c151ab877a065"
+    },
+    {
+      "path": "tests/pathophysiology.test.ts",
+      "sha256": "08c19bb9e4b5cb95256f37c01014129428db421d3ac357e9b36dbcbbdd17abf2"
+    },
+    {
+      "path": "tests/quiz.test.ts",
+      "sha256": "b66bb0cf581ed51b02856d7910ba01d4a4ead8024d90aec1be8d70e6b537bf3d"
+    },
+    {
+      "path": "tests/reference-anatomy.test.ts",
+      "sha256": "9eabe4ac5cc38ce2c1a6f80aa41fb4d006bd60a9adf7bba6537e4fe28719db61"
+    },
+    {
+      "path": "tests/security.test.ts",
+      "sha256": "29c90bc8f8078c3875ad28c80a16a533d3698ba0ae7b6e378534ae2b32f88b29"
+    },
+    {
+      "path": "tests/test_cine_audit.py",
+      "sha256": "ace66a8e3eaebe5fe4e48006fc4c31219cec74ad20312b79c5481ce58ee241fd"
+    },
+    {
+      "path": "tests/test_isa_audit.py",
+      "sha256": "cb054667009d5c559c76c73dfcfeb00db507f55f38c66c30050eede8e8668425"
+    },
+    {
+      "path": "tsconfig.base.json",
+      "sha256": "cd800ba0a338e19d60fed3d3a769a3c7d985978cfa205c4110cf911fc12e0855"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "04ba186f4f2e9f0fa0d9e2305b201a50ac6ef5bd2cfe8da580ffb5f0f6162c92"
+    },
+    {
+      "path": "vitest.config.ts",
+      "sha256": "8fdd56dbb4e613259514e4f767e73a4455123f31886bd517980f6b529deaab58"
+    },
+    {
+      "path": "vitest.integration.config.ts",
+      "sha256": "1a762bc4e6b2fd5eec7eb7c327cf3a02eaf996fe5e25db2746e5c7f62df816a2"
+    }
+  ]
+}

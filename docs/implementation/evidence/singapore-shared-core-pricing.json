@@ -1,0 +1,31 @@
+[
+  {
+    "sku": "F8F4-3E2C-A4B2",
+    "description": "Small Instance with 1 VCPU running in Singapore",
+    "pricing": [
+      {
+        "summary": "",
+        "pricingExpression": {
+          "usageUnit": "h",
+          "displayQuantity": 1,
+          "tieredRates": [
+            {
+              "startUsageAmount": 0,
+              "unitPrice": {
+                "currencyCode": "USD",
+                "units": "0",
+                "nanos": 31100000
+              }
+            }
+          ],
+          "usageUnitDescription": "hour",
+          "baseUnit": "s",
+          "baseUnitDescription": "second",
+          "baseUnitConversionFactor": 3600
+        },
+        "currencyConversionRate": 1,
+        "effectiveTime": "2026-09-30T07:00:00Z"
+      }
+    ]
+  }
+]

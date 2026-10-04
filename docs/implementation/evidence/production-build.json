@@ -1,0 +1,34 @@
+{
+  "results": {
+    "images": [
+      {
+        "artifactRegistryPackage": "projects/satsunicmedic/locations/asia-southeast1/repositories/production/packages/api/versions/sha256:863835bd19d510e8a585ac9ffb3628c9d4fd3ba994a92d21241d182a0514f3fa",
+        "digest": "sha256:863835bd19d510e8a585ac9ffb3628c9d4fd3ba994a92d21241d182a0514f3fa",
+        "name": "asia-southeast1-docker.pkg.dev/satsunicmedic/production/api:release-20261001-4",
+        "pushTiming": {
+          "endTime": "2026-10-01T02:46:17.388584540Z",
+          "startTime": "2026-10-01T02:45:45.930144122Z"
+        }
+      },
+      {
+        "artifactRegistryPackage": "projects/satsunicmedic/locations/asia-southeast1/repositories/production/packages/migrate/versions/sha256:210c1c8dea9c087cb5bb8e667f1f830f51f2269d8fee6a64701b1af8aae62cb3",
+        "digest": "sha256:210c1c8dea9c087cb5bb8e667f1f830f51f2269d8fee6a64701b1af8aae62cb3",
+        "name": "asia-southeast1-docker.pkg.dev/satsunicmedic/production/migrate:release-20261001-4",
+        "pushTiming": {
+          "endTime": "2026-10-01T02:47:30.203865915Z",
+          "startTime": "2026-10-01T02:46:17.388670387Z"
+        }
+      },
+      {
+        "artifactRegistryPackage": "projects/satsunicmedic/locations/asia-southeast1/repositories/production/packages/web/versions/sha256:76da13e5d859b94ba4f5fa44dce6b0893267d4b6102ae2793d480e016817162d",
+        "digest": "sha256:76da13e5d859b94ba4f5fa44dce6b0893267d4b6102ae2793d480e016817162d",
+        "name": "asia-southeast1-docker.pkg.dev/satsunicmedic/production/web:release-20261001-4",
+        "pushTiming": {
+          "endTime": "2026-10-01T02:47:34.527914032Z",
+          "startTime": "2026-10-01T02:47:30.204044997Z"
+        }
+      }
+    ]
+  },
+  "status": "SUCCESS"
+}

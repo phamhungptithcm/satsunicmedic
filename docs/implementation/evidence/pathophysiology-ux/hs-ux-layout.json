@@ -1,0 +1,23 @@
+[
+  {
+    "width": 768,
+    "overflow": false,
+    "visibleButtons": 11,
+    "minWidth": 44,
+    "minHeight": 44
+  },
+  {
+    "width": 390,
+    "overflow": false,
+    "visibleButtons": 11,
+    "minWidth": 44,
+    "minHeight": 44
+  },
+  {
+    "width": 320,
+    "overflow": false,
+    "visibleButtons": 11,
+    "minWidth": 44,
+    "minHeight": 44
+  }
+]

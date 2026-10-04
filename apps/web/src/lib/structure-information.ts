@@ -1,0 +1,10 @@
+import { medicalTerms } from "./medical-english-data";
+import { structureTerm } from "./medical-english";
+import type { StructureInfoData } from "../components/structure-info";
+export const referenceStructures: Record<string, StructureInfoData> = {
+  FMA7088: { id: "FMA7088", medicalTerm: structureTerm(medicalTerms, "FMA7088"), label: "Tim", description: "Tim co bóp để bơm máu tới phổi và các phần còn lại của cơ thể.", scope: "Mẫu này gộp các thành phần của tim thành một cấu trúc chọn được.", sourceUrl: "https://www.nhlbi.nih.gov/health/heart/heart-beats", sourceLabel: "NHLBI · Hoạt động của tim" },
+  FMA7480: { id: "FMA7480", medicalTerm: structureTerm(medicalTerms, "FMA7480"), label: "Lồng ngực", description: "Nhóm cấu trúc lồng ngực trong bộ dữ liệu BodyParts3D. Bạn có thể ẩn lớp này để quan sát tim cùng mạch và phế quản bên trong.", scope: "Mẫu hiện tại gộp 41 thành phần nguồn; chưa phân biệt từng xương khi chọn.", sourceUrl: "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/", sourceLabel: "BodyParts3D · Dữ liệu nguồn" },
+  FMA7309: { id: "FMA7309", medicalTerm: structureTerm(medicalTerms, "FMA7309"), label: "Mạch và phế quản phổi phải", description: "Hệ hô hấp đưa không khí vào phổi; hệ tuần hoàn vận chuyển máu tới và từ phổi.", scope: "Nhóm bên phải của cơ thể. Mẫu này chỉ hiển thị mạch và phế quản, không có bề mặt phổi hay lựa chọn từng nhánh.", sourceUrl: "https://www.nhlbi.nih.gov/health/lungs/respiratory-system", sourceLabel: "NHLBI · Hệ hô hấp" },
+  FMA7310: { id: "FMA7310", medicalTerm: structureTerm(medicalTerms, "FMA7310"), label: "Mạch và phế quản phổi trái", description: "Hệ hô hấp đưa không khí vào phổi; hệ tuần hoàn vận chuyển máu tới và từ phổi.", scope: "Nhóm bên trái của cơ thể. Mẫu này chỉ hiển thị mạch và phế quản, không có bề mặt phổi hay lựa chọn từng nhánh.", sourceUrl: "https://www.nhlbi.nih.gov/health/lungs/respiratory-system", sourceLabel: "NHLBI · Hệ hô hấp" },
+};
+export const referenceGroups: Record<string, string> = { FMA7088: "heart", FMA7480: "skeleton", FMA7309: "lungs", FMA7310: "lungs" };

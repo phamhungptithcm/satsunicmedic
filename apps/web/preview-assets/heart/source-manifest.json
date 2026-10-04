@@ -1,0 +1,79 @@
+{
+  "upstreamRevision": "fd527e6f4daf732fd814314d9257df5877b844bc",
+  "provider": "BodyParts3D, The Database Center for Life Science",
+  "licenseSource": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+  "license": "CC-BY-4.0",
+  "mirrorLicenseNotice": "CC-BY-SA-2.1-JP (older notice; retained with provenance)",
+  "records": [
+    {
+      "id": "FJ2428",
+      "sourcePath": "meshes/FJ2428_BP21837_FMA13884_Wall of ventricle.obj",
+      "url": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/fd527e6f4daf732fd814314d9257df5877b844bc/meshes/FJ2428_BP21837_FMA13884_Wall%20of%20ventricle.obj",
+      "bytes": 2660566,
+      "sha256": "db5d6415f07c42b7b1af03f66190679595f8b6c4ff659b8d571ba8694afed75f"
+    },
+    {
+      "id": "FJ2438",
+      "sourcePath": "meshes/FJ2438_BP22747_FMA9531_Wall of left atrium.obj",
+      "url": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/fd527e6f4daf732fd814314d9257df5877b844bc/meshes/FJ2438_BP22747_FMA9531_Wall%20of%20left%20atrium.obj",
+      "bytes": 509716,
+      "sha256": "17544b1214ea0626f9564aeb42b5bb9d52a126f22237a499f8de0eca6073d8a7"
+    },
+    {
+      "id": "FJ2439",
+      "sourcePath": "meshes/FJ2439_BP21422_FMA9457_Wall of right atrium.obj",
+      "url": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/fd527e6f4daf732fd814314d9257df5877b844bc/meshes/FJ2439_BP21422_FMA9457_Wall%20of%20right%20atrium.obj",
+      "bytes": 1211319,
+      "sha256": "85fddffea47ac61de11d29219fc4f32dfc857d17b3082929a3f048c57522c887"
+    },
+    {
+      "id": "FJ2631",
+      "sourcePath": "meshes/FJ2631_BP24013_FMA74912_Trunk of anterior interventricular branch of left coronary artery.obj",
+      "url": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/fd527e6f4daf732fd814314d9257df5877b844bc/meshes/FJ2631_BP24013_FMA74912_Trunk%20of%20anterior%20interventricular%20branch%20of%20left%20coronary%20artery.obj",
+      "bytes": 186677,
+      "sha256": "8326aefd6ff1ccf6ca7c3194ed61b57ed9d7ccf3376f537ae83eb08f4f824714"
+    },
+    {
+      "id": "FJ2649",
+      "sourcePath": "meshes/FJ2649_BP19556_FMA3895_Circumflex branch of left coronary artery.obj",
+      "url": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/fd527e6f4daf732fd814314d9257df5877b844bc/meshes/FJ2649_BP19556_FMA3895_Circumflex%20branch%20of%20left%20coronary%20artery.obj",
+      "bytes": 80670,
+      "sha256": "16423ff420831deba4e5c8106233e7778e5fb246be8d36302d766c7624a59899"
+    },
+    {
+      "id": "FJ2723",
+      "sourcePath": "meshes/FJ2723_BP20573_FMA3802_Trunk of right coronary artery.obj",
+      "url": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/fd527e6f4daf732fd814314d9257df5877b844bc/meshes/FJ2723_BP20573_FMA3802_Trunk%20of%20right%20coronary%20artery.obj",
+      "bytes": 281250,
+      "sha256": "641cff7c6ee08e0a78eee7368a0ea3be421c689fd6f289656312b897226d6538"
+    },
+    {
+      "id": "FJ2737",
+      "sourcePath": "meshes/FJ2737_BP24008_FMA3855_Trunk of left coronary artery.obj",
+      "url": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/fd527e6f4daf732fd814314d9257df5877b844bc/meshes/FJ2737_BP24008_FMA3855_Trunk%20of%20left%20coronary%20artery.obj",
+      "bytes": 12280,
+      "sha256": "b9ad2fdf82c49029a65ab124e98ac8ce8cc58b20b77ce392cfac004d6bbab7b1"
+    },
+    {
+      "id": "FJ2966",
+      "sourcePath": "meshes/FJ2966_BP23682_FMA8612_Pulmonary trunk.obj",
+      "url": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/fd527e6f4daf732fd814314d9257df5877b844bc/meshes/FJ2966_BP23682_FMA8612_Pulmonary%20trunk.obj",
+      "bytes": 89276,
+      "sha256": "21cd36edc646954c795e8bd658f97448953b3e09d3e0c8b78f78711d7c9ef776"
+    },
+    {
+      "id": "FJ3411",
+      "sourcePath": "meshes/FJ3411_BP23913_FMA3768_Arch of aorta.obj",
+      "url": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/fd527e6f4daf732fd814314d9257df5877b844bc/meshes/FJ3411_BP23913_FMA3768_Arch%20of%20aorta.obj",
+      "bytes": 41378,
+      "sha256": "6b72258bcc413abbcf6193e11575933d08f3ba960b52a7b8462a7b0ccb4607eb"
+    },
+    {
+      "id": "FJ3413",
+      "sourcePath": "meshes/FJ3413_BP20272_FMA3736_Ascending aorta.obj",
+      "url": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/fd527e6f4daf732fd814314d9257df5877b844bc/meshes/FJ3413_BP20272_FMA3736_Ascending%20aorta.obj",
+      "bytes": 24321,
+      "sha256": "6903aed5746a4e210ebd7c0a15bba69707b2ef29398b97903bc2815c2f82c2bc"
+    }
+  ]
+}

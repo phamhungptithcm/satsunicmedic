@@ -1,0 +1,16 @@
+.git
+.ai
+.ai-agent-kit
+.agents
+.codex
+node_modules
+**/node_modules
+**/.next
+**/dist
+**/generated
+.pnpm-store
+docs
+.env
+.env.*
+!*.example
+*-debug.log

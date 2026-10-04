@@ -1,0 +1,4 @@
+import {z} from 'zod';
+export const learningTopicIds=['myocardial-infarction','coronary-atherosclerosis','coronary-spasm','heart-failure','arrhythmia','hypertension','valve-disease','deep-vein-thrombosis','pulmonary-embolism','asthma','copd','pneumonia','ischemic-stroke','hemorrhagic-stroke','type-1-diabetes','type-2-diabetes','hyperthyroidism','hypothyroidism','chronic-kidney-disease','kidney-stones','gerd','peptic-ulcer','cirrhosis','gallstones','osteoarthritis','rheumatoid-arthritis','osteoporosis'] as const;
+export const learningPositionSchema=z.object({schemaVersion:z.literal(1),unitRevision:z.literal('2026-10-01'),topicId:z.enum(learningTopicIds),level:z.enum(['general','medical','specialist']),step:z.int().min(0).max(20)}).strict();
+export type LearningPosition=z.infer<typeof learningPositionSchema>;

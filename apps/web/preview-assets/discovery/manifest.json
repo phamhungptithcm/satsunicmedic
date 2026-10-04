@@ -1,0 +1,404 @@
+{
+  "scope": "Educational discovery. Unreviewed for clinical use.",
+  "attribution": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "source": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/",
+  "derivative": "Converted and simplified GLB geometry; Vietnamese labels and illustrative scenarios added. Not diagnostic or patient-specific.",
+  "assets": [
+    {
+      "path": "reference.glb",
+      "sha256": "595e110ff1bbb6b03400d31584abcfc3584f77b11cacc452f3a02bea6b3d106a",
+      "byteLength": 9145964
+    },
+    {
+      "path": "heart.glb",
+      "sha256": "6438ad759f81fdbc05c5910a1f4b7970bc193633695bff16c1b1e7928e5c2784",
+      "byteLength": 5355044
+    },
+    {
+      "path": "full-body-v2/head-0.glb",
+      "sha256": "6b5bb62d426d35a016778ba8176bdd0c80ccdad8674d242868d6888ac383ae9b",
+      "byteLength": 3552060
+    },
+    {
+      "path": "full-body-v2/head-1.glb",
+      "sha256": "0e0361a97fa565bf0a79a9eae58b3569062a83b662ca34eb453d672ade948e8d",
+      "byteLength": 3223444
+    },
+    {
+      "path": "full-body-v2/right-leg-0.glb",
+      "sha256": "2bfa33d93752a61ebd19431a5d22335c05e786fe3a41e2c83bdf1829ab16c66a",
+      "byteLength": 792532
+    },
+    {
+      "path": "full-body-v2/left-leg-0.glb",
+      "sha256": "c76424792da3599b592d354b238c8f5d43b42a94092cfea9e42203a23c7bf5b5",
+      "byteLength": 795400
+    },
+    {
+      "path": "full-body-v2/abdomen-0.glb",
+      "sha256": "4075d02b5644adc4492dcc2d8ce0699e0ceba162c87cd50e1d91027dfff4268f",
+      "byteLength": 6174720
+    },
+    {
+      "path": "full-body-v2/thorax-0.glb",
+      "sha256": "e20e1b17dc59e404cba53a1a5e8a12e201e6249a84a22ca7f3828ef8f7a5fb30",
+      "byteLength": 3583992
+    },
+    {
+      "path": "full-body-v2/other-0.glb",
+      "sha256": "d59d17993803e06934cb4a1df9655eeeca12f1ceeb46e1f9a3971832e733005b",
+      "byteLength": 749212
+    },
+    {
+      "path": "full-body-v2/right-arm-0.glb",
+      "sha256": "963107d34d3975575007141165ed6b498ac000e9d1f5e0dcdf3c71271b2bf4a9",
+      "byteLength": 1543812
+    },
+    {
+      "path": "full-body-v2/left-arm-0.glb",
+      "sha256": "8d00203e26fb1a6383452774b949c37c720bade9d9d21382f10df6d0754faf84",
+      "byteLength": 2089396
+    },
+    {
+      "path": "full-body-v2/thorax-1.glb",
+      "sha256": "0845aa9b80e417ed65f490275e290d7364688d4a7c8558b7303b62942376af03",
+      "byteLength": 648272
+    },
+    {
+      "path": "full-body-v2/thorax-2.glb",
+      "sha256": "f21e38250c2acff83f0ce8141a5cccf60b40902e861552de4df379ecbd218b79",
+      "byteLength": 746596
+    },
+    {
+      "path": "full-body-v2/head-2.glb",
+      "sha256": "ee776023fb7b8647265a57f485ecdef13ae098b47ced1aa1665a9c158328bf36",
+      "byteLength": 3432960
+    },
+    {
+      "path": "full-body-v2/head-3.glb",
+      "sha256": "85ba0844bb12aa50eb98ca189376c57fb99d608a6881323a5d4f65ec7ee66c8f",
+      "byteLength": 3248108
+    },
+    {
+      "path": "full-body-v2/other-1.glb",
+      "sha256": "be2886aeab88e15e746938a216ac803ca8be1c67eaa162aa540d06aad2b62826",
+      "byteLength": 2079288
+    },
+    {
+      "path": "full-body-v2/other-2.glb",
+      "sha256": "364fa3eb037c296286caa7bef1cadcab1bf43a07b515bacecdc66035f8222dab",
+      "byteLength": 1397512
+    },
+    {
+      "path": "full-body-v2/other-3.glb",
+      "sha256": "ca120c2861b1929ebb1d1f899784572eaea065bffd25f757580ea4119020c4a6",
+      "byteLength": 2667840
+    },
+    {
+      "path": "full-body-v2/thorax-3.glb",
+      "sha256": "be1ae7d8adb684a6f1adedcc4aa0e13695886451f24b4949caeea508b4a71c81",
+      "byteLength": 1446716
+    },
+    {
+      "path": "full-body-v2/thorax-4.glb",
+      "sha256": "ee64fdb51cfede7252243bad62366e1bcd1d2ad9df3ad2a5b18ca822d79cdebe",
+      "byteLength": 874852
+    },
+    {
+      "path": "full-body-v2/thorax-5.glb",
+      "sha256": "f518a8a97967a164270ebcb1f67c61029498b8a2010a1ea2c7b8749094977623",
+      "byteLength": 396824
+    },
+    {
+      "path": "full-body-v2/thorax-6.glb",
+      "sha256": "eeb7973fd6cffcb7312b5b8af4d71f328096bc44628677d1ddb2263f3bd8232a",
+      "byteLength": 521228
+    },
+    {
+      "path": "full-body-v2/thorax-7.glb",
+      "sha256": "cfc25c449d35f66572794c32a3fd70b54d253c626a21c03bbcf9117103fcd700",
+      "byteLength": 440136
+    },
+    {
+      "path": "full-body-v2/other-4.glb",
+      "sha256": "82a2cf35b96998752e65be0bdb89e6b0794ba9f3d091dac09765006eed351aae",
+      "byteLength": 192748
+    },
+    {
+      "path": "full-body-v2/other-5.glb",
+      "sha256": "927dd86387118c0c79a5747b3e22c65b7b794009d257f3b8af00d5dfbd2ad19f",
+      "byteLength": 441528
+    },
+    {
+      "path": "full-body-v2/thorax-8.glb",
+      "sha256": "5e87e4456b60f86db4946ae73d42e3dfcc66db9c074baa15aa1fcc3d1c12f760",
+      "byteLength": 411720
+    },
+    {
+      "path": "full-body-v2/other-6.glb",
+      "sha256": "7a05c1481e0370784553171dd5279bcee0f6a501eec2648468e5486256873183",
+      "byteLength": 2653940
+    },
+    {
+      "path": "full-body-v2/thorax-9.glb",
+      "sha256": "91f835ffbe3ecad63e7c2ba942697ae8db145c1cfb963360e216f5e028920a88",
+      "byteLength": 395120
+    },
+    {
+      "path": "full-body-v2/skin.glb",
+      "sha256": "5bb35f36b580210acafc3fa0918df3f88b6be184f9526383e0384b4bfa5fdf1b",
+      "byteLength": 4901336
+    },
+    {
+      "path": "full-body-v2/thorax-10.glb",
+      "sha256": "1690de4c76414fa0d6bb1994cce24bff6729513364179982e3baa3a5383b8f6d",
+      "byteLength": 249272
+    },
+    {
+      "path": "full-body-v2/thorax-11.glb",
+      "sha256": "73839f807a2dd93585d02f005a233eaed30c6faa2607f0361c2d4117655d80e4",
+      "byteLength": 240528
+    },
+    {
+      "path": "full-body-v2/thorax-12.glb",
+      "sha256": "3aab17d5a18216929862d20481a24900b71eb5c016a61f9cff921b17289daf20",
+      "byteLength": 279124
+    },
+    {
+      "path": "full-body-v2/thorax-13.glb",
+      "sha256": "132b63daba4655d34bc730a60d5f6a55b0de98d0870c270e2cf93ed11dda0ec7",
+      "byteLength": 262252
+    },
+    {
+      "path": "full-body-v2/other-7.glb",
+      "sha256": "9a1aac283a6c801bacf9176fb031598bc0592d1497ed8bba174764edb850f6db",
+      "byteLength": 653112
+    },
+    {
+      "path": "full-body-v2/thorax-14.glb",
+      "sha256": "0e4e6eb2629695fa14aefab82dddfb55c7ea1467257a969264bbc6bd4be7b7ed",
+      "byteLength": 1642868
+    },
+    {
+      "path": "full-body-v2/other-8.glb",
+      "sha256": "e1d36b6c7e325f76ef124daa5786a901325d11c22ed3dc0c724acb5a7382241d",
+      "byteLength": 1292180
+    },
+    {
+      "path": "full-body-v2/thorax-15.glb",
+      "sha256": "234e2201e4f89c59dde050c1c0bc5e744a7554c8cabb62da8a8a96a4090ebb89",
+      "byteLength": 2444692
+    },
+    {
+      "path": "full-body-v2/neck-0.glb",
+      "sha256": "8ae62a5ce8123d282ec83c83378eadc36ed7d364a21cedec5444a2ee067d59ae",
+      "byteLength": 1777024
+    },
+    {
+      "path": "full-body-v2/other-9.glb",
+      "sha256": "218c3d9bffd02d19f15c2f40453844e00137bff7089757acea06d5355b7a5a15",
+      "byteLength": 2315408
+    },
+    {
+      "path": "full-body-v2/head-4.glb",
+      "sha256": "6a468f00b4af08b5a95b56a9242f5aabe8f43cfa2a91f8cdddccaa0b40a286f7",
+      "byteLength": 2107232
+    },
+    {
+      "path": "full-body-v2/left-arm-1.glb",
+      "sha256": "67d281060990afcd7c305656b1b153ab4fb2e9fbd3a5549c006bca5fd09f6a7d",
+      "byteLength": 93832
+    },
+    {
+      "path": "full-body-v2/thorax-16.glb",
+      "sha256": "80e91e8a520006fc1dd42ea71c1741fb73903c609140389765acffba6d18c98f",
+      "byteLength": 5325236
+    },
+    {
+      "path": "full-body-v2/right-arm-1.glb",
+      "sha256": "e27139f7eb7626928a124e7b0f0512b1b40d399fd7d920dfe39555ce1853fc4e",
+      "byteLength": 538764
+    },
+    {
+      "path": "full-body-v2/other-10.glb",
+      "sha256": "553ed75cbafcfbad923965b6d4ec560c05c51ea11e7505cdcd7a1bbf60c2feca",
+      "byteLength": 1099556
+    },
+    {
+      "path": "full-body-v2/other-11.glb",
+      "sha256": "fe7c8821617f0747de50b4f516ea51ff09de38055bebd15394b79b294b1db7d2",
+      "byteLength": 986932
+    },
+    {
+      "path": "full-body-v2/other-12.glb",
+      "sha256": "17c50c5180da2ad26b5635fcdb18c4139af7e9ff90cb847dfbf080f51b196a90",
+      "byteLength": 802444
+    },
+    {
+      "path": "full-body-v2/other-13.glb",
+      "sha256": "c25d04ca68c15480098f2fafe9153739d3405fc6bceb4a1b2310f2494f5a4123",
+      "byteLength": 1745732
+    },
+    {
+      "path": "full-body-v2/other-14.glb",
+      "sha256": "6f853437d05eaabb3190be0d8cd3c279009951279742e47c920cdbef3f92c1b1",
+      "byteLength": 1837756
+    },
+    {
+      "path": "full-body-v2/other-15.glb",
+      "sha256": "c8cf46875a60575d9c12177c652f37c39a94947aea039615979d74734ffc4427",
+      "byteLength": 1500036
+    },
+    {
+      "path": "full-body-v2/other-16.glb",
+      "sha256": "1864a11e945d08859b1c72d5cc3f3232b58552a7dd36560d3856b6e47211a1c7",
+      "byteLength": 2120464
+    },
+    {
+      "path": "full-body-v2/other-17.glb",
+      "sha256": "852e5e2421f0d2051857ff499ccfdccb796b4ba63427fd2174890c45f39ea7b6",
+      "byteLength": 2110528
+    },
+    {
+      "path": "full-body-v2/other-18.glb",
+      "sha256": "4fdd12c4a891be272b29eebdea1e9ffc4910a1c67591a0773ac609d3f028db1f",
+      "byteLength": 2823540
+    },
+    {
+      "path": "full-body-v2/thorax-17.glb",
+      "sha256": "80f903c1ab5665540fe663ef439d1a351ab75cd4ede841efd86ff163ef767b6d",
+      "byteLength": 5981812
+    },
+    {
+      "path": "full-body-v2/thorax-18.glb",
+      "sha256": "0802e15ab0c05da46bd592a82b1df1426715b966b1556d72f9699dc0ded5dc95",
+      "byteLength": 5513928
+    },
+    {
+      "path": "full-body-v2/thorax-19.glb",
+      "sha256": "fd167fea072de2a7b0c9add782c7ce403350fc1334f83f60ff73afa821b7392d",
+      "byteLength": 2779416
+    },
+    {
+      "path": "full-body-v2/other-19.glb",
+      "sha256": "16f6dcbf6666a251321ae1a97a58cc3fa09a51bd480d58b21f2ed181e1108a7a",
+      "byteLength": 1644008
+    },
+    {
+      "path": "full-body-v2/other-20.glb",
+      "sha256": "36e50b805c2e8c6ff8398fe7063d712d49e43193ba9d46612bdfab88d327d494",
+      "byteLength": 1787240
+    },
+    {
+      "path": "full-body-v2/other-21.glb",
+      "sha256": "6c12af136997eb55f5f6e8f71f09133001c91459d0bb2ec7f256d551d38b2447",
+      "byteLength": 1599880
+    },
+    {
+      "path": "full-body-v2/other-22.glb",
+      "sha256": "c51f7d48745d06d08163815d2865d195ea0c9b66f038bce0b32c3919ff557ae4",
+      "byteLength": 5965740
+    },
+    {
+      "path": "full-body-v2/other-23.glb",
+      "sha256": "e050cbd66f5a94927da1f33952d0b78926f92ac22964c7f485e885865450e335",
+      "byteLength": 2055032
+    },
+    {
+      "path": "full-body-v2/other-24.glb",
+      "sha256": "0e898f650bbe3bbe1b04598223f524f74579d55d2b9918f4a6b24410d11a3468",
+      "byteLength": 1259392
+    },
+    {
+      "path": "full-body-v2/neck-1.glb",
+      "sha256": "a4877c02f8e2cce26defe0a1edb638a54dda9bd7ec1e776b73ca3b0f937b48bd",
+      "byteLength": 5565296
+    },
+    {
+      "path": "full-body-v2/other-25.glb",
+      "sha256": "f9f06e945e0f479937cf604d4c988f9a6c1fdf68d7c1ddc518183cb37fe22e58",
+      "byteLength": 876292
+    },
+    {
+      "path": "full-body-v2/other-26.glb",
+      "sha256": "623974b5446531e58b27c0f0a9b8202eb64c0eb61a259afffa0b95a0c3f49634",
+      "byteLength": 1821028
+    },
+    {
+      "path": "full-body-v2/other-27.glb",
+      "sha256": "e7ad70eb0bbd941d4d618b4d881f009f531f9d8d3229735637df5df91556bc1e",
+      "byteLength": 1412248
+    },
+    {
+      "path": "full-body-v2/other-28.glb",
+      "sha256": "5fe0f1865db8b559976b042c9b09830e0d3fba8ee5aba6cffee6a0f49dd3333b",
+      "byteLength": 4545828
+    },
+    {
+      "path": "full-body-v2/other-29.glb",
+      "sha256": "6100b33943421ec56def0221183a740eb3a715dc7ae5b07a16f9d85992fad6d9",
+      "byteLength": 1480128
+    },
+    {
+      "path": "full-body-v2/other-30.glb",
+      "sha256": "cdb8bf9332d9627024483a39ddb0db9213cbcce16b6ffbcbc4ce64f62aa4aeb4",
+      "byteLength": 3112808
+    },
+    {
+      "path": "full-body-v2/other-31.glb",
+      "sha256": "36f6593a5f95e19ad51acd103b167dffdc538f2b5526de538fd03ce0bb9bc205",
+      "byteLength": 3229100
+    },
+    {
+      "path": "full-body-v2/other-32.glb",
+      "sha256": "e7018c001a815edc839ffb8f55d7488ed68cab40c84711d044edfba8a6dd3f50",
+      "byteLength": 1478516
+    },
+    {
+      "path": "full-body-v2/other-33.glb",
+      "sha256": "83453ab5282233502f000dbacbc12f0a1916e6dcd4119b00b4d40f6ac0c549f9",
+      "byteLength": 1112004
+    },
+    {
+      "path": "full-body-v2/other-34.glb",
+      "sha256": "99556a164c499a1b574d70c9eae3b71226948e6c35d8bee4ce6360799dd1176d",
+      "byteLength": 789516
+    },
+    {
+      "path": "full-body-v2/other-35.glb",
+      "sha256": "00bab4fe7e514d9e001b6632ca643bb2c4c99dd44f6f038296cccfb131769a5b",
+      "byteLength": 1835160
+    },
+    {
+      "path": "full-body-v2/other-36.glb",
+      "sha256": "6232f8698e0efd3e8733f501fee637c2ad0458fa90d826b42c06585bea9e4ed0",
+      "byteLength": 2043736
+    },
+    {
+      "path": "full-body-v2/other-37.glb",
+      "sha256": "fe2774f800007e1e176eb8a8d6f9652a0e24a85ed9345f3423bfff8b0d344e5f",
+      "byteLength": 1872364
+    },
+    {
+      "path": "full-body-v2/neck-2.glb",
+      "sha256": "2134d25993709569883c02f00026303eb6b3d7ea4462a46b4ea79aefb13babba",
+      "byteLength": 410428
+    },
+    {
+      "path": "full-body-v2/other-38.glb",
+      "sha256": "37d3590343a4a48bce13ff66732045f1375231b003883d5e0221a663db90b36e",
+      "byteLength": 630556
+    },
+    {
+      "path": "full-body-v2/other-39.glb",
+      "sha256": "bdc5bd37cb93249651903a8852a756a5e4b2808a80037d32e531ec7ee676dd6f",
+      "byteLength": 1671452
+    },
+    {
+      "path": "full-body-v2/other-40.glb",
+      "sha256": "8ee23e069f9a1876769b13c8b9d7c9d53d9615967370e5a9a5d4dae4c9fe5d64",
+      "byteLength": 2478752
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "checkedAt": "2026-10-01T03:42:28.570606+00:00",
+  "projectId": "satsunicmedic",
+  "region": "asia-southeast1",
+  "architecture": "Firebase App Hosting + Authentication + Firestore + Functions gen2",
+  "url": "https://medic--satsunicmedic.asia-southeast1.hosted.app",
+  "deploymentStatus": "LIVE_FOUNDATION",
+  "fullProductReadiness": "NOT_READY",
+  "imageDigest": "sha256:e7cc8a7dde2e0f71c6bb3c72788882a918cec330c404ebf37836a6ba25b3dbe3",
+  "webBuild": "14512817-2c38-437a-8b24-992cea3682cf",
+  "webRevision": "medic-firebase-release-2",
+  "emulatorIntegration": {
+    "passed": 23
+  },
+  "unitTests": {
+    "passed": 78
+  },
+  "apiLiveSmoke": {
+    "passed": 13
+  },
+  "webApiSmoke": {
+    "passed": 13
+  },
+  "pageSmoke": {
+    "passed": 9
+  },
+  "firestoreIndexesReady": 13,
+  "authRealAccountEndToEnd": "NOT_TESTED",
+  "backupRestore": "NOT_TESTED",
+  "medicalAssetsAndReview": "BLOCKED_MISSING_INPUT",
+  "adsense": "DEFERRED_DISABLED",
+  "customDomain": "DEFERRED_BY_OWNER",
+  "scaling": {
+    "web": {
+      "min": 0,
+      "max": 1
+    },
+    "api": {
+      "min": 0,
+      "max": 1
+    }
+  },
+  "billing": "Usage based; maxInstances and budget alerts are not a hard monetary cap",
+  "retainedResources": "Stopped VM disk/static IPv4, previous images and private buckets remain billable; no data deletion performed",
+  "deploymentWarnings": [
+    "Functions deployment completed ACTIVE; CLI exited1 solely because optional artifact cleanup policy was not configured. No force deletion accepted."
+  ],
+  "evidence": [
+    {
+      "path": ".ai/local/firebase-web-build-result.json",
+      "sha256": "bc66224ec6b8bccb92ed69e533f6c9e9c416110ba0e7f0141926a209ba93e7a8"
+    },
+    {
+      "path": ".ai/local/firebase-rollout-readback.json",
+      "sha256": "8d99e3140b07fdc6c70e1d170d3947fc02354b9938f6afcc1ecf04f9237b7f10"
+    },
+    {
+      "path": ".ai/local/firebase-index-readback.json",
+      "sha256": "bff1d9a267a42d7dcc24a9999858b868a18cde9ab2b539a86d728a72fe0338af"
+    },
+    {
+      "path": ".ai/local/firebase-api-live-smoke.json",
+      "sha256": "3a7f4e109ccdae01ba19e61f704ee68be63287e03e7efb2c8cfc4c94fc5b9c29"
+    },
+    {
+      "path": ".ai/local/firebase-web-live-smoke.json",
+      "sha256": "bc00286fe5e7f9b1fe747acb89b3291105c12ce19746f1df39812a12019a5a96"
+    },
+    {
+      "path": ".ai/local/firebase-web-pages-smoke.json",
+      "sha256": "3b68206ee7b4768d69d03605a590aa947203767dfc1cb7e4326438eff3f19fa6"
+    },
+    {
+      "path": ".ai/local/firebase-runtime-iam-readback.json",
+      "sha256": "52b82fda046005ae9a2a395cfd4e9dfc68f64f6e1777d77b8ca1af03d2ecfdbc"
+    },
+    {
+      "path": ".ai/local/firebase-api-runtime-readback.json",
+      "sha256": "52c96f7cdcd47fff1802dffac87de4b3583a722714f07e9a14cc0a86f5f2a24e"
+    },
+    {
+      "path": ".ai/local/firebase-web-runtime-readback.json",
+      "sha256": "0315b3c5f4f6aca38d0e536b44dba3f8bc23c976eb00c8d4fa73e412d34f5cbb"
+    },
+    {
+      "path": ".ai/local/firebase-workspace-audit.json",
+      "sha256": "1d9698cecb7639d9b1367b5ebb9a30f15bbd88869b82101f8bdfc159f0e4009b"
+    },
+    {
+      "path": ".ai/local/firebase-functions-audit.json",
+      "sha256": "3cd940ca6b6acebe2c9c789f575c8e77c2150823425d480656446762d4c84fe4"
+    }
+  ],
+  "tokenUsage": "Unavailable",
+  "actualBilledCost": "Unavailable",
+  "memoryCandidates": []
+}

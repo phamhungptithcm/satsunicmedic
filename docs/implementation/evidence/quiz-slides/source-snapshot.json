@@ -1,0 +1,34 @@
+[
+  {
+    "path": "apps/web/src/components/quiz-slides.tsx",
+    "sha256": "c5cbf69ddac4d3beb9de9f94dd39ad1e17708ff7b5b3f6ca8cae83884ecf9046"
+  },
+  {
+    "path": "apps/web/src/components/quiz-slides.module.css",
+    "sha256": "d566c13e5791b6cac1f10711b9575a02769c39160edb0d9e461d1787baeda610"
+  },
+  {
+    "path": "apps/web/src/components/pathophysiology-panel.tsx",
+    "sha256": "fdbf09dc4bbdd6e766f16256ba68d44dfe9e80dd31486ecb98a2d1c589978475"
+  },
+  {
+    "path": "apps/web/src/components/disease-atlas.tsx",
+    "sha256": "c4fdbdc428d7939086581565dafb2b20ee2ff9ca59d984784277d7019dc61fdd"
+  },
+  {
+    "path": "apps/web/src/lib/learning-quiz.ts",
+    "sha256": "b6f81a516de63d5e7cccc63c8d758b45a9f518cf79b67a986ef82e7433f2904d"
+  },
+  {
+    "path": "apps/web/src/lib/coronary-quiz.ts",
+    "sha256": "93fba2cdcd501c4b9db379a14b2afcc063d940741e00ce6421ca7fd4253c80b6"
+  },
+  {
+    "path": "apps/web/src/app/hoc-tap/sinh-ly-benh/page.tsx",
+    "sha256": "1237caa24167854f53572338b259cfad11961b602c6ec29812efe69b21687040"
+  },
+  {
+    "path": "tests/learning-quiz.test.ts",
+    "sha256": "e0c0e51f197ff177ea65ca628b88663ff5eade2adb0a6e46a146157911c0a03e"
+  }
+]

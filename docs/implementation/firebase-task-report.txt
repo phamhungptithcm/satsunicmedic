@@ -1,0 +1,90 @@
+AI Agent Kit — Final Task Report
+Task: HS-FIREBASE-2
+State: REVIEW_READY
+Commit: 8a749e7881f8808473a7fc88a51ff81154aadd50
+Generated: 2026-10-01T03:44:58.853Z
+
+Progress: 100% — 1/1 applicable criteria verified
+
+Usage & Cost
+  Tokens used: Unavailable — no_usage_evidence
+  Estimated cost: Unavailable
+
+Completed
+  - [VERIFIED] 1. Firestore emulator security and concurrency checks pass and Firebase production default URL verified
+
+Remaining
+  - No applicable acceptance criterion remains.
+
+Quality
+  - architecture: PASSED
+  - build: PASSED
+  - compilation: PASSED
+  - final-implementation-review: STALE — Final implementation review is STALE.
+  - integration: PASSED
+  - lint: PASSED
+  - migration: PASSED
+  - security: PASSED
+  - static-analysis: PASSED
+  - tests: PASSED
+  - typecheck: PASSED
+
+Final Implementation Review
+Decision: STALE
+Review cycles: 3
+Reviewed:
+  - requirement_match: PASSED — Typed Firestore replaces active SQL runtime; approved web/auth/Firestore foundation, Singapore and deployment amendment are aligned. Preserved unrelated UI WIP. Final status/preflight/evidence documents match actual scoped foundation; deferred domain/staging no longer falsely block release preflight.
+  - security: PASSED — Reviewed current identity, role/owner/CSRF paths, production emulator rejection, deny-all client rules, dedicated SA declarations and isolated package. Live privilege readback pending separate production dimension.
+  - code_quality: PASSED — Node24, TS6 strict, Nest12/Next16/FirebaseAdmin14 architecture. All 27 implementation hashes match. Independent 78/78 unit tests pass; independent QA wrapper probe and inherited 23 emulator tests support scoped assurance.
+  - failure_paths: PASSED — Examined invalid inputs, missing/expired identity, stale revisions, concurrent unique keys and scene counters, idempotent retries, search capacity, corrupt payload and provider failure paths. Full live outage/cold-start simulations not claimed.
+  - error_handling: PASSED — SafeErrors emits generic user responses and structured request failure IDs; wrapper returns safe 413/503 and resets rejected init promise. Transaction failures expose no parent pointer to incomplete payload.
+  - production_readiness: PASSED — Scoped Firebase foundation deployed: web image e7cc8a7dde2e0f71c6bb3c72788882a918cec330c404ebf37836a6ba25b3dbe3, App Hosting rollout SUCCEEDED; API ACTIVE node24/api-00001-cem;13 indexes READY; API13/13, same-origin web13/13, pages9/9 smoke pass. Runtime dedicated SAs, max1/concurrency20/512Mi and supplied project-role readbacks examined. Workspace/API artifact audits report0. Cloud Build success proves isolated web build; API build inherited and independent root tsc passes. Full medical release NOT_READY. Final release-check still fails closed exit2 for real unresolved medical assets/reviewer/real account auth/restore/full-product acceptance. Custom Auth IAM role definition contains only session creation,user read,user update.
+  - trade_offs: PASSED — Documented bound of 1024 search candidates, 100 systems/scenes, 16MiB offline payloads, 256KiB HTTP, no SQL rollback after new writes, no hard spend cap, retention and restore limits.
+Findings and fixes:
+  - No findings recorded.
+Residual risks:
+  - P2 deferred ingestion invariant: no AssetVersion.objectKey uniqueness in generic Admin put; no current public ingestion or delivery. Before ingestion enablement reserve keys transactionally.
+  - Backup restore and production outage rehearsal NOT TESTED; operational rollback must preserve Firestore and use Firebase-compatible code.
+  - Unreachable chunks may remain after failed transactions; no automatic retention cleanup or idempotency TTL.
+  - Per-instance peer-IP rate limiting and maxInstances1 are not multi-user capacity proof or hard spending caps.
+  - UI/product and clinical release are outside migration foundation scope; licensed assets and clinical content still absent.
+Limitations:
+  - Repository Intelligence Gate DEGRADED; bounded direct source and compiler/tests used.
+  - All application files are uncommitted/untracked relative to bootstrap HEAD; assurance is file-hash-bound, not commit-bound.
+  - Source/emulator23-test integration evidence is inherited from implementer; independent final reviewer ran78 unit tests and root tsc; QA independently ran wrapper network probes.
+  - No full recursive pnpm build rerun in final cycle; exact deployable web image Cloud Build and API build evidence are separate.
+  - Actual account sign-in/session-cookie exchange, owner flows on live provider, restore rehearsal, load capacity and outage rehearsal NOT TESTED; must precede accepting real users.
+  - Parent browser observation reported production root and login form; reviewer did not independently drive UI. No claim of UI WIP acceptance.
+  - Project IAM binding readback reviewed; custom identity role permits only createSession/users.get/users.update in supplied role readback; inherited/organization IAM not independently enumerated.
+  - Functions deploy command exit1 was reported due optional Artifact Registry cleanup-policy configuration; actual ACTIVE revision independently supported by saved readback. Retained images may incur cost.
+  - Review cycle history recorded retrospectively from independent reviewer evidence; source and deployment checks occurred before ledger recording.
+
+Engineering Team
+  Type: ASSURANCE_WORKCELL
+  Execution: NATIVE_SUBAGENTS
+  Status: NOT_READY
+  Review independence: VERIFIED
+  Shared context: STALE
+  Handoffs: 6
+  Open conflicts: 0
+
+Architecture Pulse
+  Evidence: NOT_RUN
+  Outcome: Unavailable
+  Artifact: Unavailable
+  Coverage: Unavailable
+  Confidence: Unavailable
+
+Code Status
+  Git worktree: DIRTY — 0 staged, 1 modified, 1051 untracked, 0 conflicts
+  No known issues were found within the executed checks.
+
+Production Readiness: NOT_READY
+  Production readiness is fail-closed until every blocker has current evidence.
+
+Blockers
+  - Git worktree is DIRTY.
+  - Final implementation review is STALE.
+  - Skill routing is ABSTAIN (NO_MATCH).
+  - Agent workcell is NOT_READY; the latest independent review must complete cleanly.
+  - Required quality gate final-implementation-review is STALE.

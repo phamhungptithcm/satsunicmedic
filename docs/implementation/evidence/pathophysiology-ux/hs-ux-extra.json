@@ -1,0 +1,12 @@
+{
+  "checks": [
+    "outside dismiss",
+    "fullscreen denial",
+    "direct artery raycast",
+    "hidden pause",
+    "720/320 open library reflow",
+    "accessibility tree and button names"
+  ],
+  "picked": "lad",
+  "errors": []
+}

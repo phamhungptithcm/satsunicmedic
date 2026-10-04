@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HumanScope — Bộ thiết kế UI/UX & 4D</title>
+  <style>
+    :root{color-scheme:light;--blue:#163cff;--navy:#111c35;--muted:#586174;--line:#d9dce4;--paper:#f5f6f9}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--navy);font:15px/1.6 Inter,Arial,sans-serif}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}a{color:#0b29c7;text-underline-offset:3px}a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:4px}.skip{position:absolute;left:16px;top:-100px;background:white;padding:12px;z-index:9}.skip:focus{top:12px}header{background:white;border-bottom:1px solid var(--line);padding:24px max(24px,calc((100vw - 1480px)/2));display:flex;align-items:center;justify-content:space-between;gap:24px}header strong{font-size:23px;letter-spacing:-.7px}header span{display:block;color:var(--muted);font-size:13px}header a{white-space:nowrap}main{max-width:1528px;padding:28px 24px 48px;margin:auto}h1{font-size:28px;line-height:1.2;letter-spacing:-.8px;margin:0 0 10px}h2{font-size:19px;margin:0 0 10px}p{margin:0 0 16px}.intro{max-width:860px;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 20px}nav button{min-height:44px;border:1px solid var(--line);border-radius:6px;background:white;color:var(--navy);padding:10px 18px}nav button[aria-pressed=true]{background:var(--blue);border-color:var(--blue);color:white}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:24px;align-items:start}.canvas{min-width:0}figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}.image-wrap{background:#e9ecf2;display:flex;justify-content:center;padding:12px}img{display:block;width:100%;height:auto;object-fit:contain;align-self:start}img[hidden]{display:none}figure[data-view=mobile] img{width:min(390px,100%)}figcaption{padding:16px 18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}.asset-links{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:16px 0}.asset-links a{padding:4px 0}.disclosure{border-left:3px solid var(--blue);padding:10px 16px;background:#edf1ff;color:#24365d;margin-top:20px;font-size:14px}.notes{background:white;border:1px solid var(--line);padding:22px;border-radius:8px}.notes ol{padding-left:20px;margin:12px 0 24px}.notes li{margin:12px 0}.label{color:var(--muted);font-size:12px;letter-spacing:.07em;text-transform:uppercase}.state{border-top:1px solid var(--line);padding-top:16px;font-size:13px;color:var(--muted)}.handoff{margin-top:36px;padding-top:24px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:32px}.handoff ul{padding-left:20px}.handoff li{margin:8px 0}.status{font-size:13px;color:var(--muted)}footer{margin-top:24px;color:var(--muted);font-size:13px}.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:1000px){.workspace{grid-template-columns:1fr}.notes{display:block}.notes ol{margin-bottom:16px}.handoff{gap:24px}}@media(max-width:600px){header{padding:18px;align-items:flex-start}header strong{font-size:20px}header a{font-size:13px}main{padding:24px 16px}h1{font-size:25px}nav{gap:6px}nav button{flex:1;padding:9px 10px;font-size:14px}.image-wrap{padding:0}.handoff{grid-template-columns:1fr}.notes{padding:18px}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Đến nội dung thiết kế</a>
+  <header><div><strong>HumanScope</strong><span>Bộ thiết kế UI/UX & mô hình 4D · v1</span></div><a href="README.md">Tài liệu bàn giao</a></header>
+  <main id="main">
+    <h1>Khám phá cơ thể, từng lớp một.</h1>
+    <p class="intro">Ba bản thiết kế cho không gian khám phá giải phẫu. Chọn một màn hình để xem bố cục và luồng dự kiến. Các nút nằm trong ảnh là hình minh họa; đây chưa phải ứng dụng giải phẫu.</p>
+    <nav aria-label="Chọn bản thiết kế">
+      <button type="button" data-view="desktop" aria-pressed="true" aria-controls="design-panel">01 · Desktop</button>
+      <button type="button" data-view="mobile" aria-pressed="false" aria-controls="design-panel">02 · Mobile</button>
+      <button type="button" data-view="activity" aria-pressed="false" aria-controls="design-panel">03 · Trải nghiệm 4D</button>
+    </nav>
+    <section class="workspace" id="design-panel" aria-labelledby="screen-title">
+      <div class="canvas">
+        <figure id="figure" data-view="desktop">
+          <div class="image-wrap"><img id="concept" src="assets/desktop-explore-concept.png" width="1586" height="992" alt="Bản thiết kế desktop HumanScope: cây cấu trúc bên trái, hình người giải phẫu trên nền tối ở giữa và thông tin Tim bên phải. Đây là ảnh AI chưa kiểm duyệt, không phải mô hình 3D." fetchpriority="high"></div>
+          <figcaption id="caption">01 · Khám phá toàn thân. Tập trung vào mô hình, tìm cấu trúc và đọc thông tin trong cùng không gian.</figcaption>
+        </figure>
+        <div class="asset-links"><a id="original" href="assets/desktop-explore-concept.png" target="_blank" rel="noopener">Mở ảnh gốc</a><a href="ux-interactions.md">Xem đặc tả tương tác</a><a href="human-4d-model-brief.md">Xem thiết kế mô hình 4D</a></div>
+        <div class="disclosure"><strong>Hình tham chiếu AI, chưa kiểm duyệt giải phẫu.</strong> Bộ này thể hiện hướng thiết kế. Chưa có file GLB, mesh chọn được hoặc hoạt ảnh sinh lý chạy thật.</div>
+      </div>
+      <aside class="notes">
+        <p class="label">Luồng sử dụng dự kiến</p><h2 id="screen-title">Khám phá trên desktop</h2>
+        <p id="purpose">Cơ thể ở trung tâm; công cụ hỗ trợ quan sát thay vì lấn át mô hình.</p>
+        <ol id="steps"><li>Tìm một cấu trúc hoặc chọn hệ cơ quan.</li><li>Chọn cấu trúc trên mô hình; cây và panel cùng cập nhật.</li><li>Cô lập để quan sát hoặc mở Hoạt động.</li><li>Trở về toàn thân và giữ được ngữ cảnh.</li></ol>
+        <div class="state" id="state-note">Khi chưa có tài nguyên phù hợp, hiển thị lý do và nội dung đọc đã được duyệt. Không dùng ảnh này làm canvas 3D giả.</div>
+      </aside>
+    </section>
+    <p id="announcement" class="visually-hidden" aria-live="polite"></p>
+    <section class="handoff" aria-label="Phạm vi và bàn giao">
+      <div><h2>Ngôn ngữ thiết kế</h2><p>Nền trắng, xanh dương <strong>#163cff</strong>, navy <strong>#111c35</strong>, viền mảnh và vùng quan sát charcoal. Giữ màu mô hình tự nhiên và công cụ gọn theo HunpeoLabs/Satsunic.</p><ul><li>Desktop: cây cấu trúc · canvas · nội dung.</li><li>Mobile: canvas và sheet mở theo nhu cầu.</li><li>4D: tập trung cơ quan, giai đoạn, timeline và chú thích đồng bộ.</li></ul></div>
+      <div><h2>Hợp đồng mô hình người</h2><p>Hình dáng, chất liệu và góc nhìn trong ảnh là tham chiếu. Topology, rig, mapping giải phẫu và chuyển động phải được dựng và kiểm duyệt riêng.</p><ul><li>12 nhóm giải phẫu, mesh và định danh ổn định.</li><li>Camera, lớp, lựa chọn và animation cùng phiên bản.</li><li>Hoạt ảnh bằng rig/morph đã duyệt, không phóng to toàn thân theo nhịp.</li></ul><p class="status">Nền tảng dự kiến: Next.js · NestJS · Three/R3F · Google Cloud · Firebase.</p></div>
+    </section>
+    <footer>Trạng thái: bản thiết kế để review. Chưa xác nhận độ chính xác giải phẫu, giấy phép model hoặc khả năng vận hành production.</footer>
+    <noscript><p>JavaScript đang tắt. Xem trực tiếp <a href="assets/mobile-explore-concept.png">ảnh mobile</a> và <a href="assets/heart-4d-concept.png">ảnh trải nghiệm 4D</a>.</p></noscript>
+  </main>
+  <script>
+    const views = {
+      desktop: {file:'desktop-explore-concept.png',title:'Khám phá trên desktop',caption:'01 · Khám phá toàn thân. Tập trung vào mô hình, tìm cấu trúc và đọc thông tin trong cùng không gian.',purpose:'Cơ thể ở trung tâm; công cụ hỗ trợ quan sát thay vì lấn át mô hình.',alt:'Bản thiết kế desktop HumanScope: cây cấu trúc bên trái, hình người giải phẫu trên nền tối ở giữa và thông tin Tim bên phải. Đây là ảnh AI chưa kiểm duyệt, không phải mô hình 3D.',steps:['Tìm một cấu trúc hoặc chọn hệ cơ quan.','Chọn cấu trúc trên mô hình; cây và panel cùng cập nhật.','Cô lập để quan sát hoặc mở Hoạt động.','Trở về toàn thân và giữ được ngữ cảnh.'],note:'Khi chưa có tài nguyên phù hợp, hiển thị lý do và nội dung đọc đã được duyệt. Không dùng ảnh này làm canvas 3D giả.'},
+      mobile: {file:'mobile-explore-concept.png',title:'Khám phá trên mobile',caption:'02 · Canvas và bottom sheet. Thông tin mở theo nhu cầu, không thu nhỏ ba cột desktop.',purpose:'Giữ cơ quan đang xem trong tầm nhìn và đưa thao tác chính vào vùng dễ chạm.',alt:'Bản thiết kế mobile HumanScope với hình giải phẫu ở trên, sheet thông tin Tim ở dưới và ba điểm vào Cấu trúc, Thông tin, Hoạt động. Hình AI chưa kiểm duyệt.',steps:['Chạm Cấu trúc để tìm hoặc chọn cơ quan.','Sheet thu gọn sau khi chọn; camera giữ vùng đang xem.','Mở Thông tin hoặc Hoạt động khi cần.','Đóng sheet để quan sát; giữ selection và trả focus.'],note:'Thiết kế cần kiểm tra trên viewport 390px và khi bàn phím mở. Ảnh cao không chứng minh mọi điều khiển vừa trong một màn hình; xem kích thước sheet ở đặc tả.'},
+      activity: {file:'heart-4d-concept.png',title:'Quan sát hoạt động 4D',caption:'03 · Xem riêng một cơ quan. Timeline, giai đoạn và chú thích dùng cùng một clock trong triển khai tương lai.',purpose:'Hiểu sự thay đổi theo thời gian mà vẫn kiểm soát góc nhìn, tốc độ và điểm dừng.',alt:'Bản thiết kế chế độ Hoạt động của tim: hình tim lớn trên nền tối, danh sách giai đoạn bên phải và timeline phía dưới. Đây là concept, chưa có hoạt ảnh sinh lý.',steps:['Mở Hoạt động từ cơ quan đang chọn.','Chọn giai đoạn hoặc tua tới một mốc.','Tạm dừng để xem nhãn và đọc chú thích.','Về toàn thân để khôi phục góc nhìn trước đó.'],note:'Giai đoạn 1–3 là nhãn thiết kế tạm. Số giai đoạn, tên và thời gian sẽ lấy từ clip đã duyệt; không phải mô tả chu kỳ tim thực tế.'}
+    };
+    const buttons = [...document.querySelectorAll('nav button')];
+    function selectView(key, announce=true) {
+      const view=views[key]; if(!view)return;
+      buttons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.view===key)));
+      const img=document.getElementById('concept');img.hidden=true;document.getElementById('figure').setAttribute('aria-busy','true');img.src='assets/'+view.file;img.alt=view.alt;img.removeAttribute('width');img.removeAttribute('height');
+      document.getElementById('figure').dataset.view=key;
+      document.getElementById('caption').textContent='Đang tải ảnh thiết kế…';
+      document.getElementById('screen-title').textContent=view.title;
+      document.getElementById('purpose').textContent=view.purpose;
+      document.getElementById('state-note').textContent=view.note;
+      document.getElementById('original').href='assets/'+view.file;
+      document.getElementById('steps').replaceChildren(...view.steps.map(text=>{const li=document.createElement('li');li.textContent=text;return li;}));
+      if(announce)document.getElementById('announcement').textContent='Đang xem bản thiết kế: '+view.title+'.';
+    }
+    buttons.forEach(button=>button.addEventListener('click',()=>selectView(button.dataset.view)));
+    document.getElementById('concept').addEventListener('load',()=>{document.getElementById('concept').hidden=false;document.getElementById('figure').setAttribute('aria-busy','false');document.getElementById('caption').textContent=views[document.getElementById('figure').dataset.view].caption;});
+    document.getElementById('concept').addEventListener('error',()=>{document.getElementById('figure').setAttribute('aria-busy','false');document.getElementById('announcement').textContent='Chưa tải được ảnh thiết kế. Bạn có thể dùng liên kết Mở ảnh gốc hoặc đọc đặc tả tương tác.';document.getElementById('caption').textContent='Chưa tải được ảnh thiết kế. Mở ảnh gốc hoặc đọc đặc tả tương tác bên dưới.';});
+  </script>
+</body>
+</html>

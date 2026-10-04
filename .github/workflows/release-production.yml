@@ -1,0 +1,134 @@
+name: Release production
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+# Lock the entire run, including release publication. A new push never cancels a deployment.
+concurrency:
+  group: production-satsunicmedic
+  cancel-in-progress: false
+jobs:
+  verify:
+    uses: ./.github/workflows/verify.yml
+    permissions:
+      contents: read
+  deploy:
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    environment:
+      name: production
+      url: https://medic--satsunicmedic.asia-southeast1.hosted.app
+    permissions:
+      contents: read
+      actions: read
+      id-token: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GCP_WORKLOAD_IDENTITY_PROVIDER: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+      GCP_DEPLOY_SERVICE_ACCOUNT: ${{ vars.GCP_DEPLOY_SERVICE_ACCOUNT }}
+      FIREBASE_WEB_API_KEY: ${{ vars.FIREBASE_WEB_API_KEY }}
+      DISCOVERY_EVIDENCE_RUN_ID: ${{ vars.DISCOVERY_EVIDENCE_RUN_ID }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24.19.0
+      - name: Validate configuration and current main
+        run: |
+          mkdir -p .ai/local/cicd
+          node --input-type=module -e "import {validateConfig} from './scripts/ci/deploy-production.mjs'; validateConfig(process.env)"
+          node scripts/ci/release.mjs check
+      - run: npm install --global pnpm@11.19.0 firebase-tools@15.32.1
+      - run: pnpm install --frozen-lockfile
+      - name: Download candidate acceptance evidence
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: discovery-evidence
+          path: .ai/local/cicd/acceptance
+          github-token: ${{ github.token }}
+          run-id: ${{ vars.DISCOVERY_EVIDENCE_RUN_ID }}
+      - name: Enforce discovery release gate
+        run: node --import tsx scripts/ci/deploy-production.mjs preflight
+      - name: Build and audit Functions artifact
+        run: |
+          pnpm --filter @hs/contracts build
+          pnpm --filter @hs/api build
+          node infra/firebase/package-functions.mjs
+          npm install --prefix .ai/local/firebase-functions --package-lock-only --ignore-scripts
+          npm ci --prefix .ai/local/firebase-functions --omit=dev --ignore-scripts
+          npm audit --prefix .ai/local/firebase-functions --omit=dev --audit-level=high
+          pnpm audit --prod --audit-level=high
+      - name: Retain exact Functions artifact for recovery
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: functions-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            .ai/local/firebase-functions/dist
+            .ai/local/firebase-functions/vendor
+            .ai/local/firebase-functions/package.json
+            .ai/local/firebase-functions/package-lock.json
+            .ai/local/firebase-functions/.env.satsunicmedic
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 30
+      - uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093 # v3
+        with:
+          project_id: satsunicmedic
+          workload_identity_provider: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_DEPLOY_SERVICE_ACCOUNT }}
+      - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db # v3
+        with:
+          version: '581.0.0'
+      - name: Build immutable web image, deploy and verify
+        run: node scripts/ci/deploy-production.mjs deploy
+      - name: Retain deployment evidence (including partial failure)
+        if: ${{ always() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: production-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            .ai/local/cicd/identity.json
+            .ai/local/cicd/candidate-files.json
+            .ai/local/cicd/acceptance-result.json
+            .ai/local/cicd/build.json
+            .ai/local/cicd/deployment.json
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 30
+  release:
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      actions: read
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24.19.0
+      # A failed-job rerun increments run_attempt even though deploy was not rerun.
+      # Select the newest successful deployment manifest of THIS run, not an arbitrary run.
+      - name: Retrieve successful deployment evidence
+        run: |
+          node --input-type=module <<'NODE'
+          import {execFileSync} from 'node:child_process';
+          import {mkdirSync} from 'node:fs';
+          const id=process.env.GITHUB_RUN_ID;
+          const artifacts=JSON.parse(execFileSync('gh',['api',`repos/${process.env.GITHUB_REPOSITORY}/actions/runs/${id}/artifacts?per_page=100`],{encoding:'utf8'})).artifacts;
+          const candidates=artifacts.filter(a=>a.name.startsWith(`production-${id}-`)&&!a.expired).sort((a,b)=>b.id-a.id);
+          if(!candidates.length)throw new Error('Missing deployment manifest; do not redeploy to repair release metadata');
+          mkdirSync('.ai/local/cicd',{recursive:true});
+          execFileSync('gh',['run','download',id,'--name',candidates[0].name,'--dir','.ai/local/cicd'],{stdio:'inherit'});
+          NODE
+      - name: Create immutable tag and release notes
+        run: node scripts/ci/release.mjs publish

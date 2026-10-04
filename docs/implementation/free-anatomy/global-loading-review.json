@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "task_id": "GLOBAL-LOADING-01",
+  "status": "PASSED",
+  "dimensions": {
+    "requirement_match": {
+      "status": "PASSED",
+      "summary": "Scoped UI review in global-loading-review.md",
+      "evidence_refs": [
+        "global-loading-review.md",
+        "evidence/global-loading-hashes.json"
+      ]
+    },
+    "security": {
+      "status": "PASSED",
+      "summary": "Scoped UI review in global-loading-review.md",
+      "evidence_refs": [
+        "global-loading-review.md",
+        "evidence/global-loading-hashes.json"
+      ]
+    },
+    "code_quality": {
+      "status": "PASSED",
+      "summary": "Scoped UI review in global-loading-review.md",
+      "evidence_refs": [
+        "global-loading-review.md",
+        "evidence/global-loading-hashes.json"
+      ]
+    },
+    "failure_paths": {
+      "status": "PASSED",
+      "summary": "Scoped UI review in global-loading-review.md",
+      "evidence_refs": [
+        "global-loading-review.md",
+        "evidence/global-loading-hashes.json"
+      ]
+    },
+    "error_handling": {
+      "status": "PASSED",
+      "summary": "Scoped UI review in global-loading-review.md",
+      "evidence_refs": [
+        "global-loading-review.md",
+        "evidence/global-loading-hashes.json"
+      ]
+    },
+    "product_language": {
+      "status": "PASSED",
+      "summary": "Scoped UI review in global-loading-review.md",
+      "evidence_refs": [
+        "global-loading-review.md",
+        "evidence/global-loading-hashes.json"
+      ]
+    },
+    "trade_offs": {
+      "status": "PASSED",
+      "summary": "Scoped UI review in global-loading-review.md",
+      "evidence_refs": [
+        "global-loading-review.md",
+        "evidence/global-loading-hashes.json"
+      ]
+    },
+    "production_readiness": {
+      "status": "NOT_APPLICABLE",
+      "summary": "UI scope only; no deployment, original release NOT_READY remains.",
+      "evidence_refs": [
+        "global-loading-review.md"
+      ]
+    }
+  },
+  "findings": [
+    {
+      "severity": "low",
+      "status": "fixed",
+      "summary": "Distinguished quiz opening feedback from answer submission."
+    }
+  ],
+  "limitations": [
+    "DEGRADED indexes and unavailable runtime ledger CLI",
+    "Native screen-reader speech and OS motion preference not exercised",
+    "Legal enforceability and clinical release not assessed"
+  ],
+  "residual_risks": []
+}

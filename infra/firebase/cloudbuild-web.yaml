@@ -1,0 +1,19 @@
+steps:
+  - name: gcr.io/cloud-builders/docker@sha256:001fb4a870a84485cf198c80002f7af42f6456f2dbc261d70a0b5f0111470df4
+    args: [build, -f, infra/docker/Dockerfile.web, --build-arg, 'API_ORIGIN=https://asia-southeast1-satsunicmedic.cloudfunctions.net/api', --build-arg, 'NEXT_PUBLIC_FIREBASE_API_KEY=${_FIREBASE_API_KEY}', --build-arg, 'NEXT_PUBLIC_FIREBASE_PROJECT_ID=${_FIREBASE_PROJECT_ID}', --build-arg, 'NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=${_FIREBASE_AUTH_DOMAIN}', --build-arg, 'NEXT_PUBLIC_GOOGLE_CLIENT_ID=${_GOOGLE_CLIENT_ID}', --build-arg, 'NEXT_PUBLIC_GOOGLE_ONE_TAP_ENABLED=${_GOOGLE_ONE_TAP_ENABLED}', -t, '${_REGISTRY}/web:${_RELEASE}', .]
+images:
+  - '${_REGISTRY}/web:${_RELEASE}'
+serviceAccount: projects/satsunicmedic/serviceAccounts/medic-build@satsunicmedic.iam.gserviceaccount.com
+options:
+  logging: GCS_ONLY
+timeout: 1800s
+logsBucket: gs://satsunicmedic-build-source/logs
+substitutions:
+  _REGISTRY: asia-southeast1-docker.pkg.dev/satsunicmedic/medic
+  _RELEASE: firebase-release-1
+  _FIREBASE_API_KEY: ''
+  _FIREBASE_PROJECT_ID: satsunicmedic
+  _FIREBASE_AUTH_DOMAIN: satsunicmedic.firebaseapp.com
+
+  _GOOGLE_CLIENT_ID: '108608537442-7t36jpp5122p4g8rgr1illo0c8amh4av.apps.googleusercontent.com'
+  _GOOGLE_ONE_TAP_ENABLED: 'true'

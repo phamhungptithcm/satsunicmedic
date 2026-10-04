@@ -1,0 +1,561 @@
+{
+  "scope": "27 existing topics; not exhaustive disease inventory",
+  "wholeBodyCompleteness": "unknown",
+  "normalActivityCoverage": "coronary baseline illustration only",
+  "rows": [
+    {
+      "diseaseId": "myocardial-infarction",
+      "title": "Nhồi máu cơ tim",
+      "system": "Tim mạch",
+      "organ": "Tim",
+      "source": {
+        "title": "NHLBI · Myocardial infarction",
+        "url": "https://www.nhlbi.nih.gov/health/heart-attack/causes"
+      },
+      "simulation": "infarction",
+      "status": "implemented-unreviewed",
+      "anatomyId": "FMA7088",
+      "mappingStatus": "source-linked",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "draft",
+        "medical": "draft",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "coronary-atherosclerosis",
+      "title": "Bệnh mạch vành do xơ vữa",
+      "system": "Tim mạch",
+      "organ": "Tim",
+      "source": {
+        "title": "NHLBI · Coronary heart disease",
+        "url": "https://www.nhlbi.nih.gov/health/coronary-heart-disease/causes"
+      },
+      "simulation": "stenosis",
+      "status": "implemented-unreviewed",
+      "anatomyId": "FMA7088",
+      "mappingStatus": "source-linked",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "draft",
+        "medical": "draft",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "coronary-spasm",
+      "title": "Co thắt động mạch vành",
+      "system": "Tim mạch",
+      "organ": "Tim",
+      "source": {
+        "title": "NHLBI · Coronary artery spasm",
+        "url": "https://www.nhlbi.nih.gov/health/angina/types"
+      },
+      "simulation": "spasm",
+      "status": "implemented-unreviewed",
+      "anatomyId": "FMA7088",
+      "mappingStatus": "source-linked",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "draft",
+        "medical": "draft",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "heart-failure",
+      "title": "Suy tim",
+      "system": "Tim mạch",
+      "organ": "Tim",
+      "source": {
+        "title": "NHLBI · Heart failure",
+        "url": "https://www.nhlbi.nih.gov/health/heart-failure"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "arrhythmia",
+      "title": "Rối loạn nhịp tim",
+      "system": "Tim mạch",
+      "organ": "Tim",
+      "source": {
+        "title": "NHLBI · Arrhythmia",
+        "url": "https://www.nhlbi.nih.gov/health/arrhythmias"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "hypertension",
+      "title": "Tăng huyết áp",
+      "system": "Tim mạch",
+      "organ": "Động mạch",
+      "source": {
+        "title": "NHLBI · Hypertension",
+        "url": "https://www.nhlbi.nih.gov/health/high-blood-pressure"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "valve-disease",
+      "title": "Bệnh van tim",
+      "system": "Tim mạch",
+      "organ": "Van tim",
+      "source": {
+        "title": "NHLBI · Heart valve disease",
+        "url": "https://www.nhlbi.nih.gov/health/heart-valve-diseases"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "deep-vein-thrombosis",
+      "title": "Huyết khối tĩnh mạch sâu",
+      "system": "Tim mạch",
+      "organ": "Tĩnh mạch",
+      "source": {
+        "title": "NHLBI · Deep vein thrombosis",
+        "url": "https://www.nhlbi.nih.gov/health/venous-thromboembolism"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "pulmonary-embolism",
+      "title": "Thuyên tắc động mạch phổi",
+      "system": "Hô hấp",
+      "organ": "Mạch phổi",
+      "source": {
+        "title": "NHLBI · Pulmonary embolism",
+        "url": "https://www.nhlbi.nih.gov/health/pulmonary-embolism"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "asthma",
+      "title": "Hen phế quản",
+      "system": "Hô hấp",
+      "organ": "Phế quản",
+      "source": {
+        "title": "NHLBI · Asthma",
+        "url": "https://www.nhlbi.nih.gov/health/asthma"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "copd",
+      "title": "Bệnh phổi tắc nghẽn mạn tính",
+      "system": "Hô hấp",
+      "organ": "Phổi",
+      "source": {
+        "title": "NHLBI · Chronic obstructive pulmonary disease",
+        "url": "https://www.nhlbi.nih.gov/health/copd"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "pneumonia",
+      "title": "Viêm phổi",
+      "system": "Hô hấp",
+      "organ": "Phế nang",
+      "source": {
+        "title": "NHLBI · Pneumonia",
+        "url": "https://www.nhlbi.nih.gov/health/pneumonia"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "ischemic-stroke",
+      "title": "Đột quỵ thiếu máu não",
+      "system": "Thần kinh",
+      "organ": "Não",
+      "source": {
+        "title": "NINDS · Ischemic stroke",
+        "url": "https://www.ninds.nih.gov/health-information/stroke/stroke-overview"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "hemorrhagic-stroke",
+      "title": "Đột quỵ xuất huyết",
+      "system": "Thần kinh",
+      "organ": "Não",
+      "source": {
+        "title": "NINDS · Hemorrhagic stroke",
+        "url": "https://www.ninds.nih.gov/health-information/stroke/stroke-overview"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "type-1-diabetes",
+      "title": "Đái tháo đường típ 1",
+      "system": "Nội tiết",
+      "organ": "Tụy",
+      "source": {
+        "title": "NIDDK · Type 1 diabetes",
+        "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/type-1-diabetes"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "type-2-diabetes",
+      "title": "Đái tháo đường típ 2",
+      "system": "Nội tiết",
+      "organ": "Tụy và mô ngoại vi",
+      "source": {
+        "title": "NIDDK · Type 2 diabetes",
+        "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/type-2-diabetes"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "hyperthyroidism",
+      "title": "Cường giáp",
+      "system": "Nội tiết",
+      "organ": "Tuyến giáp",
+      "source": {
+        "title": "NIDDK · Hyperthyroidism",
+        "url": "https://www.niddk.nih.gov/health-information/endocrine-diseases/hyperthyroidism"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "hypothyroidism",
+      "title": "Suy giáp",
+      "system": "Nội tiết",
+      "organ": "Tuyến giáp",
+      "source": {
+        "title": "NIDDK · Hypothyroidism",
+        "url": "https://www.niddk.nih.gov/health-information/endocrine-diseases/hypothyroidism"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "chronic-kidney-disease",
+      "title": "Bệnh thận mạn",
+      "system": "Thận – tiết niệu",
+      "organ": "Thận",
+      "source": {
+        "title": "NIDDK · Chronic kidney disease",
+        "url": "https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease-ckd"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "kidney-stones",
+      "title": "Sỏi thận",
+      "system": "Thận – tiết niệu",
+      "organ": "Thận và niệu quản",
+      "source": {
+        "title": "NIDDK · Kidney stones",
+        "url": "https://www.niddk.nih.gov/health-information/urologic-diseases/kidney-stones"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "gerd",
+      "title": "Trào ngược dạ dày – thực quản",
+      "system": "Tiêu hóa",
+      "organ": "Thực quản",
+      "source": {
+        "title": "NIDDK · Gastroesophageal reflux disease",
+        "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/acid-reflux-ger-gerd-adults"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "peptic-ulcer",
+      "title": "Loét dạ dày – tá tràng",
+      "system": "Tiêu hóa",
+      "organ": "Dạ dày và tá tràng",
+      "source": {
+        "title": "NIDDK · Peptic ulcer disease",
+        "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/peptic-ulcers-stomach-ulcers"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "cirrhosis",
+      "title": "Xơ gan",
+      "system": "Tiêu hóa",
+      "organ": "Gan",
+      "source": {
+        "title": "NIDDK · Cirrhosis",
+        "url": "https://www.niddk.nih.gov/health-information/liver-disease/cirrhosis"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "gallstones",
+      "title": "Sỏi mật",
+      "system": "Tiêu hóa",
+      "organ": "Túi mật và đường mật",
+      "source": {
+        "title": "NIDDK · Gallstones",
+        "url": "https://www.niddk.nih.gov/health-information/digestive-diseases/gallstones"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "osteoarthritis",
+      "title": "Thoái hóa khớp",
+      "system": "Cơ xương khớp",
+      "organ": "Khớp",
+      "source": {
+        "title": "NIAMS · Osteoarthritis",
+        "url": "https://www.niams.nih.gov/health-topics/osteoarthritis"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "rheumatoid-arthritis",
+      "title": "Viêm khớp dạng thấp",
+      "system": "Cơ xương khớp",
+      "organ": "Màng hoạt dịch",
+      "source": {
+        "title": "NIAMS · Rheumatoid arthritis",
+        "url": "https://www.niams.nih.gov/health-topics/rheumatoid-arthritis"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    },
+    {
+      "diseaseId": "osteoporosis",
+      "title": "Loãng xương",
+      "system": "Cơ xương khớp",
+      "organ": "Xương",
+      "source": {
+        "title": "NIAMS · Osteoporosis",
+        "url": "https://www.niams.nih.gov/health-topics/osteoporosis"
+      },
+      "simulation": null,
+      "status": "not-implemented",
+      "anatomyId": null,
+      "mappingStatus": "pending",
+      "clinicalReview": "unreviewed",
+      "learningLevels": {
+        "general": "not-authored",
+        "medical": "not-authored",
+        "specialist": "not-authored"
+      }
+    }
+  ],
+  "requiredAudiences": [
+    "general",
+    "medical",
+    "specialist"
+  ],
+  "version": "sim-01-2026-10-02.2",
+  "normalFunctionGuides": {
+    "representation": "guided-anatomy",
+    "count": 11,
+    "sourceFile": "apps/web/src/lib/anatomy-functions.ts",
+    "animated": false,
+    "clinicalReview": "not-claimed",
+    "scope": "Introductory system functions; not exhaustive processes or specialist curricula"
+  }
+}

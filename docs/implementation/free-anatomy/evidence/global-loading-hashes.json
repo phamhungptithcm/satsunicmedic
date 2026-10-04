@@ -1,0 +1,13 @@
+{
+  "apps/web/src/components/loading.module.css": "15d0a38c050d2bee1c4a990092b881bb7e0768a91cc5126add6755616b65875a",
+  "apps/web/src/components/loading.tsx": "ddc2aa58c7916b73e1c4fce6838cc0f13c81e37619867b4d3872e7de6ef78d20",
+  "apps/web/src/components/footer.tsx": "20831388299b269a80389d5c5bd9cdb1a30aadf2d276468347a03e359d8b2c4e",
+  "apps/web/src/components/reference-anatomy.tsx": "3d7f3f182b537d8f18bd5d7ceb208211b919ca9a602920b7a376aa79cc294e73",
+  "apps/web/src/components/pathophysiology-panel.tsx": "5d7c8b5993ee6d4cae97469f6629cbd77f2b38aad5f9e6be47126b6cd2b47d1a",
+  "apps/web/src/components/explorer.tsx": "f10ac2a1dc3e22c80d144989d2bac6f0214507b39133093bafa969a18cdeaf8d",
+  "apps/web/src/components/quizzes.tsx": "5a14c40c184a6c83673662b66e719a8542d9737b4c12bd56bf05fa6d94067492",
+  "apps/web/src/components/login.tsx": "d8bbd74afe41a2a6321bd2e75278022432b9495e4a890d7b418284f298033175",
+  "apps/web/src/app/loading.tsx": "dc3a759e21e9c45494a4a0ab946865af55ceb09867e4e19e8a51a376c6ea03ff",
+  "apps/web/src/app/globals.css": "3acc325543bf7495ce7e10856d5f4a161867652f5a0a4029830b21ca81068cd7",
+  "packages/anatomy-viewer/src/canvas.tsx": "555cc43e0259d9f55c30cc9aed353ed7d244db1519d976e2ebbaa1b31f6d7b8d"
+}

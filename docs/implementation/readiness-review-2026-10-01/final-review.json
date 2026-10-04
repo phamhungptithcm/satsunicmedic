@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "task_id": "HS-READINESS-20261001",
+  "status": "BLOCKED",
+  "review_cycle": 2,
+  "candidate_source_manifest": "source-hashes.json",
+  "dimensions": {
+    "requirement_match": {
+      "status": "PASSED",
+      "summary": "Inventory and concrete completion plan delivered; implementation requires plan approval.",
+      "evidence_refs": [
+        "../production-readiness-review-2026-10-01.md"
+      ]
+    },
+    "security": {
+      "status": "NOT_RUN",
+      "summary": "Scoped negative emulator checks pass; comprehensive security and live OAuth remain unverified.",
+      "evidence_refs": [
+        "../production-readiness-review-2026-10-01.md"
+      ]
+    },
+    "code_quality": {
+      "status": "FAILED",
+      "summary": "R3-R6 remain open despite passing TypeScript, lint and unit checks.",
+      "evidence_refs": [
+        "../production-readiness-review-2026-10-01.md"
+      ]
+    },
+    "failure_paths": {
+      "status": "PASSED",
+      "summary": "Existing 26-test emulator regression passed; limited to tested failure paths.",
+      "evidence_refs": [
+        "../production-readiness-review-2026-10-01.md"
+      ]
+    },
+    "error_handling": {
+      "status": "PASSED",
+      "summary": "Scoped existing regression and source read; not full application certification.",
+      "evidence_refs": [
+        "../production-readiness-review-2026-10-01.md"
+      ]
+    },
+    "production_readiness": {
+      "status": "FAILED",
+      "summary": "R1/R2 plus missing live acceptance and candidate build evidence.",
+      "evidence_refs": [
+        "../production-readiness-review-2026-10-01.md"
+      ]
+    },
+    "trade_offs": {
+      "status": "PASSED",
+      "summary": "Discovery and clinical/payment/community/cine requirements separated explicitly.",
+      "evidence_refs": [
+        "../production-readiness-review-2026-10-01.md"
+      ]
+    }
+  },
+  "findings": [
+    {
+      "id": "R1",
+      "status": "OPEN",
+      "evidence": "../production-readiness-review-2026-10-01.md"
+    },
+    {
+      "id": "R2",
+      "status": "OPEN",
+      "evidence": "../production-readiness-review-2026-10-01.md"
+    },
+    {
+      "id": "R3",
+      "status": "OPEN",
+      "evidence": "../production-readiness-review-2026-10-01.md"
+    },
+    {
+      "id": "R4",
+      "status": "OPEN",
+      "evidence": "../production-readiness-review-2026-10-01.md"
+    },
+    {
+      "id": "R5",
+      "status": "OPEN",
+      "evidence": "../production-readiness-review-2026-10-01.md"
+    },
+    {
+      "id": "R6",
+      "status": "OPEN",
+      "evidence": "../production-readiness-review-2026-10-01.md"
+    }
+  ],
+  "residual_risks": [
+    "Live Google, recovery, browser/device, load, clean build and advisory scan not verified.",
+    "Production route /tai-khoan returned 404; current live revision unknown."
+  ],
+  "limitations": [
+    "Read-only engineering review; no application changes.",
+    "CocoIndex stale/unhealthy after one refresh.",
+    "Runtime ledger CLI unavailable; this JSON is not a runtime receipt."
+  ]
+}

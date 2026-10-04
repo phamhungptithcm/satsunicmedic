@@ -1,0 +1,19 @@
+{
+  "apps/api/src/account.ts": "8950eef5ed5306a5343fd0d1b904a6191c400f621b8d1119102f78907bd757e2",
+  "apps/api/src/app.ts": "184d43a6b25132d9b51977c49ddfd7c178ae6b647caa64febf229de3cd52d882",
+  "apps/api/src/domain.ts": "ff5e1770d8168f405eba6f88449b8ed734271c84c0e03c5eea8b849a3a83ff94",
+  "apps/web/src/app/tai-khoan/[section]/page.tsx": "c644ac3444df80944fd03bd172fb29ff121600a823d2e75d1f79cc6b645fb26b",
+  "apps/web/src/app/tai-khoan/layout.tsx": "8cb77645cf609a0e84f8c65e11a267dfb84fff6a38c46d588dccbab364ae04f4",
+  "apps/web/src/app/tai-khoan/page.tsx": "9983d89a87f3db0ce00e2809bb4fabfc9f894a8fd0e12050b37c22718a125c03",
+  "apps/web/src/components/account/account-page.tsx": "f288be483ec202a64a2cee9634840a67d591056768daf9c0f47bae94aa904c20",
+  "apps/web/src/components/account/account-security.tsx": "4c48c18d0cc153228bd30d4d0224e892a60159a404647853ba3ee6e06e3ec589",
+  "apps/web/src/components/account/account-shell.tsx": "c739b8ff74fdeb2a906f49f538bb834e23fda9e9da9f2df143c6a0a6ae44b9aa",
+  "apps/web/src/components/account/account.module.css": "3fbb70cd17e3039406bc99b94279f08a093556611cfc2d6a7739ee1d4322d5f7",
+  "apps/web/src/components/explorer.tsx": "6f4b27c1f9a4d9ee5ef9d1fd85279585f89679e84d6eae8abe3864773a6e28e8",
+  "apps/web/src/components/header.tsx": "72d257f025d386531cdf48bb6659c28fad18b7b12909f0d75388fb00469aba6e",
+  "apps/web/src/lib/account.ts": "10977e8bf6d3f503b58476cc8c4d749f07c86f306d8c21b36e7160a741c76a15",
+  "packages/contracts/src/account.ts": "299870d0e147d1f9327e89ced072fe8c78ed9662470f8f6632a674f5d7ea6c5d",
+  "packages/contracts/src/index.ts": "41324213d6084fcb83e8be18a5fc760830b33ffe2db4c07bc6108875c163fa02",
+  "tests/account.test.ts": "4332e7c74ac911c372bc7c6e47e9bd4243958c3af3905138654ac65d52225c47",
+  "tests/api.integration.test.ts": "227156d7d5f07f537dec009caa28f801e93ab4880db84457fac7c12d289988af"
+}

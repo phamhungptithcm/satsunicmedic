@@ -1,0 +1,26 @@
+{
+  "checks": [
+    "single playback",
+    "actual animated pixels",
+    "pause",
+    "preset",
+    "keyboard zoom",
+    "opacity",
+    "settings Escape/focus",
+    "stage seek",
+    "comparison explanation sync",
+    "stage exits comparison",
+    "medical limit",
+    "replay",
+    "fullscreen entry/exit",
+    "structure status",
+    "768/390/320 and open settings overflow",
+    "reduced motion",
+    "search remount",
+    "quiz feedback",
+    "load failure/retry"
+  ],
+  "errors": [
+    "Failed to load resource: net::ERR_FAILED"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+ "version":"2026-10-03.1",
+ "sources":[{"url":"https://bachmai.gov.vn/don-vi","checkedAt":"2026-10-03T00:00:00Z","title":"Bệnh viện Bạch Mai · Đơn vị và địa chỉ cơ sở"}],
+ "branches":[
+  {"id":"65a6bb4a-8010-4b2a-bf7f-655a6a39ab01","legalName":"Bệnh viện Bạch Mai","branchName":"Bạch Mai · Hà Nội","address":"78 Giải Phóng, phường Kim Liên, Hà Nội","areaCode":"01","officialUrl":"https://bachmai.gov.vn","sourceIndex":0,"services":[],"status":"DRAFT"},
+  {"id":"65a6bb4a-8010-4b2a-bf7f-655a6a39ab02","legalName":"Bệnh viện Bạch Mai","branchName":"Bạch Mai · Ninh Bình","address":"Quốc lộ 21B, phường Liêm Tuyền, tỉnh Ninh Bình","areaCode":"37","officialUrl":"https://bachmai.gov.vn","sourceIndex":0,"services":[],"status":"DRAFT"}
+ ]
+}

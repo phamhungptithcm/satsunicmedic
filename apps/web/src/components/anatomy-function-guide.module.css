@@ -1,0 +1,9 @@
+.guide{border-top:1px solid #e3e8f0;padding:12px 0;font-size:12px;line-height:1.65;color:#43526b}
+.guide summary{cursor:pointer;color:#203459;font-weight:600;min-height:32px;align-content:center}
+.guide .level{display:flex;align-items:center;gap:8px;margin-top:10px}
+.guide select{min-width:0;flex:1;border:1px solid #dce2ed;border-radius:6px;min-height:32px;background:white;color:#203459;font:inherit;padding:4px}
+.parts{display:flex;flex-wrap:wrap;gap:6px}
+.parts button{display:inline-flex;align-items:center;gap:5px;min-height:32px;padding:4px 8px;background:#f3f6ff;border:1px solid #dfe6f5;border-radius:6px;color:#294b99;font:inherit;cursor:pointer}
+.guide .scope{font-size:11px;color:#5b6880}.guide a{display:inline-flex;align-items:center;gap:4px;color:#244fc6}.guide small{display:block;margin-top:5px;color:#61718a;font-size:10px}
+.guide :is(button,select,summary,a):focus-visible{outline:2px solid #163cff;outline-offset:3px}
+@media(max-width:650px),(pointer:coarse){.guide select,.parts button,.guide summary{min-height:44px}}

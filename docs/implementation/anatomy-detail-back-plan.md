@@ -1,0 +1,11 @@
+# Compact detail card and in-memory return
+
+Authorization: continuation of approved SELECT-01 interactions; user's explicit follow-up requests a more compact/smoother card and a back action without reloading data. Existing auth/data/asset boundaries unchanged.
+
+Intelligence DEGRADED: stale CodeGraph, unhealthy/stale CocoIndex. Verified current TSX, scene history, inspect/nearby helpers, renderer reconcile/apply/read/cleanup and load lifecycle tests. Existing React19/Next app and Three0.186, no new dependencies.
+
+Root cause: reconcile disposes decoded models outside the active scope. Existing undo can restore scene state but has no pinned geometry. Smallest change: preserve one return-scene snapshot on detail entry; pass its required chunk IDs to renderer; retain already loaded/in-flight chunks for that snapshot, hide inactive geometry, and use existing camera interpolation to restore the snapshot. Do not prefetch or accumulate all visited scenes. Clear the snapshot on back, explicit region/system navigation and whole-body reset. Another detail entry replaces the single snapshot; history remains separate. List and card detail actions share the behavior; nearby action also preserves the departing view.
+
+Files: FullBodyAnatomy TSX (snapshot, return button, retained chunk prop), CSS (compact contextual card and back button), FullBodyCanvas (optional retained chunks, bounded reconcile lifetime). Retain asset hash/identity validation, two-job download concurrency, retry latch, unmount disposal and shortcut behavior. Loaded return geometry is reused without request/decode; first-time or previously failed assets may still need loading. No page/router reload.
+
+Risk medium: GPU memory holds active + one previous scope; stale async completions must observe current retained keys. Preserve previous scope/query/view/clips/opacity/camera, close selection card on returning. Tests: actual scope→detail→manipulation→back, same canvas element, exact camera/state restoration, zero asset requests on back with browser cache disabled; retained inactive geometry hidden, second detail replaces snapshot, scope reset clears back; mobile card bounds/44px targets; existing failure/retry and type/lint regression. Rollback only captured three-file delta. Product-language and final review evidence required before handoff.

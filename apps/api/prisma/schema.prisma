@@ -1,0 +1,217 @@
+generator client {
+  provider = "prisma-client-js"
+  output = "../generated/client"
+}
+datasource db {
+  provider = "postgresql"
+}
+enum PublicationStatus {
+  DRAFT
+  IN_REVIEW
+  APPROVED
+  PUBLISHED
+  WITHDRAWN
+}
+enum Role {
+  USER
+  AUTHOR
+  REVIEWER
+  PUBLISHER
+  ADMIN
+}
+model User {
+  id String @id @default(uuid()) @db.Uuid
+  firebaseUid String @unique
+  roles Role[] @default([USER])
+  disabledAt DateTime? @db.Timestamptz
+  createdAt DateTime @default(now()) @db.Timestamptz
+  sessions Session[]
+  notes Note[]
+  authoredRevisions ArticleRevision[]
+  contentReviews ContentReview[]
+  auditEvents AuditEvent[]
+  idempotencyRecords IdempotencyRecord[]
+  learningAttempts LearningAttempt[]
+  shareGrants ShareGrant[]
+  lessons Lesson[]
+}
+model Session {
+  id String @id @default(uuid()) @db.Uuid
+  tokenHash String @unique
+  userId String @db.Uuid
+  user User @relation(fields:[userId],references:[id])
+  expiresAt DateTime @db.Timestamptz
+  lastSeenAt DateTime @default(now()) @db.Timestamptz
+  revokedAt DateTime? @db.Timestamptz
+  @@index([userId,revokedAt])
+}
+model AnatomyStructure {
+  id String @id
+  systemId String
+  nameVi String
+  nameEn String?
+  laterality String
+  published Boolean @default(false)
+  reviewDueAt DateTime? @db.Timestamptz
+  @@index([systemId,published])
+}
+model AssetVersion {
+  id String @id @default(uuid()) @db.Uuid
+  status PublicationStatus @default(DRAFT)
+  manifest Json
+  objectKey String @unique
+  sha256 String
+  reviewDueAt DateTime? @db.Timestamptz
+  licenseExpiresAt DateTime? @db.Timestamptz
+  createdAt DateTime @default(now()) @db.Timestamptz
+  scenes Scene[]
+  shares ShareGrant[]
+}
+model Article {
+  id String @id @default(uuid()) @db.Uuid
+  slug String @unique
+  locale String
+  anatomyId String?
+  publishedRevisionId String? @unique @db.Uuid
+  publishedRevision ArticleRevision? @relation("PublishedRevision",fields:[publishedRevisionId],references:[id])
+  revisions ArticleRevision[] @relation("ArticleRevisions")
+}
+model ArticleRevision {
+  id String @id @default(uuid()) @db.Uuid
+  articleId String @db.Uuid
+  article Article @relation("ArticleRevisions",fields:[articleId],references:[id])
+  publishedByArticle Article? @relation("PublishedRevision")
+  authorId String @db.Uuid
+  author User @relation(fields:[authorId],references:[id])
+  body Json
+  contentHash String
+  status PublicationStatus @default(DRAFT)
+  revision Int @default(1)
+  reviewDueAt DateTime? @db.Timestamptz
+  createdAt DateTime @default(now()) @db.Timestamptz
+  reviews ContentReview[]
+  @@index([articleId,status])
+}
+model ContentReview {
+  id String @id @default(uuid()) @db.Uuid
+  revisionId String @db.Uuid
+  revision ArticleRevision @relation(fields:[revisionId],references:[id])
+  reviewerId String @db.Uuid
+  reviewer User @relation(fields:[reviewerId],references:[id])
+  contentHash String
+  approved Boolean
+  createdAt DateTime @default(now()) @db.Timestamptz
+  @@unique([revisionId,reviewerId])
+}
+model Note {
+  id String @id @default(uuid()) @db.Uuid
+  ownerId String @db.Uuid
+  owner User @relation(fields:[ownerId],references:[id])
+  anatomyId String?
+  text String
+  revision Int @default(1)
+  createdAt DateTime @default(now()) @db.Timestamptz
+  updatedAt DateTime @updatedAt @db.Timestamptz
+  @@index([ownerId,createdAt])
+}
+model Lesson {
+  id String @id @default(uuid()) @db.Uuid
+  ownerId String @db.Uuid
+  owner User @relation(fields:[ownerId],references:[id])
+  title String
+  description String
+  revision Int @default(1)
+  createdAt DateTime @default(now()) @db.Timestamptz
+  scenes Scene[]
+  shares ShareGrant[]
+  @@index([ownerId,createdAt])
+}
+model Scene {
+  id String @id @default(uuid()) @db.Uuid
+  lessonId String @db.Uuid
+  lesson Lesson @relation(fields:[lessonId],references:[id])
+  assetVersionId String @db.Uuid
+  asset AssetVersion @relation(fields:[assetVersionId],references:[id])
+  snapshot Json
+  revision Int @default(1)
+  @@index([lessonId])
+}
+model AuditEvent {
+  id String @id @default(uuid()) @db.Uuid
+  actorId String @db.Uuid
+  actor User @relation(fields:[actorId],references:[id])
+  action String
+  objectId String
+  createdAt DateTime @default(now()) @db.Timestamptz
+  @@index([objectId,createdAt])
+}
+model IdempotencyRecord {
+  id String @id @default(uuid()) @db.Uuid
+  userId String @db.Uuid
+  user User @relation(fields:[userId],references:[id])
+  key String
+  fingerprint String
+  response Json
+  expiresAt DateTime @db.Timestamptz
+  @@unique([userId,key])
+}
+model ContentReport {
+  id String @id @default(uuid()) @db.Uuid
+  objectId String
+  category String
+  text String?
+  createdAt DateTime @default(now()) @db.Timestamptz
+}
+
+model FacilityBranch {
+  id String @id @default(uuid()) @db.Uuid
+  legalName String
+  branchName String
+  address String
+  areaCode String
+  officialUrl String
+  specialties String[]
+  evidence Json
+  status PublicationStatus @default(DRAFT)
+  checkedAt DateTime? @db.Timestamptz
+  reviewDueAt DateTime? @db.Timestamptz
+  @@index([areaCode,status])
+}
+model Quiz {
+  id String @id @default(uuid()) @db.Uuid
+  title String
+  status PublicationStatus @default(DRAFT)
+  revision Int @default(1)
+  reviewDueAt DateTime? @db.Timestamptz
+  questions Json
+  attempts LearningAttempt[]
+}
+model LearningAttempt {
+  id String @id @default(uuid()) @db.Uuid
+  userId String @db.Uuid
+  user User @relation(fields:[userId],references:[id])
+  quizId String @db.Uuid
+  quiz Quiz @relation(fields:[quizId],references:[id])
+  quizRevision Int
+  idempotencyKey String
+  fingerprint String
+  result Json
+  createdAt DateTime @default(now()) @db.Timestamptz
+  @@unique([userId,idempotencyKey])
+  @@index([userId,createdAt])
+}
+model ShareGrant {
+  id String @id @default(uuid()) @db.Uuid
+  ownerId String @db.Uuid
+  owner User @relation(fields:[ownerId],references:[id])
+  lessonId String @db.Uuid
+  lesson Lesson @relation(fields:[lessonId],references:[id])
+  assetVersionId String @db.Uuid
+  asset AssetVersion @relation(fields:[assetVersionId],references:[id])
+  sceneRevision Int
+  snapshot Json
+  expiresAt DateTime @db.Timestamptz
+  revokedAt DateTime? @db.Timestamptz
+  createdAt DateTime @default(now()) @db.Timestamptz
+  @@index([ownerId])
+}

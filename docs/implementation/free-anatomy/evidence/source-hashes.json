@@ -1,0 +1,17 @@
+{
+  "apps/web/src/components/explorer.tsx": "9adaf5c8b2fc2e2d1f648e74f8935c4043e41beacb0f251f9eff9702bebd989f",
+  "packages/anatomy-viewer/package.json": "13c2e915ebda6323ccf801b71e2fd5c3c0b0931ff2cae1982c399e9beb937c08",
+  "packages/anatomy-viewer/src/reference-canvas.tsx": "93f54732e5a9ad33629484467dda19bf3239be08bb868be008b46ef5e849ba71",
+  "apps/web/src/lib/reference-anatomy.ts": "4ee210836f779bd883a9c8cdc3e4b7e6fdce51c23dc521cdbfcae32ea8b46104",
+  "tests/reference-anatomy.test.ts": "9eabe4ac5cc38ce2c1a6f80aa41fb4d006bd60a9adf7bba6537e4fe28719db61",
+  "apps/web/src/app/kham-pha/mo-hinh-tham-khao/page.tsx": "2b8b1709a4023656e01015d4ea25f29e4e9f6f033b5e66ecf9bdb2690c562071",
+  "apps/web/src/app/kham-pha/mo-hinh-tham-khao/asset/route.ts": "5784ab1f406441ce74786437a794d416140bcd577fcec08c35f0aa3a4fd7baa7",
+  "apps/web/src/components/reference-anatomy.tsx": "689b7ea1c1027a14910965d4d1472dc9c5ec6afe353a6bb6b0e71550034973d9",
+  "apps/web/src/components/reference-anatomy.module.css": "523fb0c15fb941d084b1db9891cf286ffae8ade2ba6d1eb92b64e7d395f19d7c",
+  "scripts/free-anatomy/preview.html": "b72868267340c25b9d25ce30d3d547589667730e546f10aaa1cdc9bf30689c3e",
+  "scripts/free-anatomy/preview.css": "a87b16903c1fcc53764d2a36f15e733761507d869b607df8e5144a8f32e37197",
+  "scripts/free-anatomy/convert.mjs": "36891ede314907e5c817af0aa8a11922e68debabc8f5de688bc31ab52242d3d0",
+  "scripts/free-anatomy/preview.mjs": "2ffb2a5d6d341e21e81117f1d9c6bbab58ecb7e79d261fa5e3bc2dfdeb9ea84c",
+  "scripts/free-anatomy/prepare.py": "391346fa80545e72a9ae9eb8eda613d32f4050745a8e25af4354dd6f1132f43c",
+  "tests/free-anatomy/test_prepare.py": "c61fda47b1f0839cf07fbf60e307bd3c4292750a0d552abb1ca15ab0309fa778"
+}

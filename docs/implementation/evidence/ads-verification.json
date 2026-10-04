@@ -1,0 +1,22 @@
+{
+  "files": {
+    "apps/web/src/lib/ads-policy.ts": "83cfd4888fbd2b5e7827d74dc24324038af0b9572842f1e4cdca8d4d47436f3c",
+    "apps/web/src/components/article-ad.tsx": "ccf22cd77605212c53ced0efe5eb5590d75c6578d8411aa82602d9bf9e27d90b",
+    "apps/web/src/components/header.tsx": "574abe374aeec5b3a7ab83dd69e9a636568b63c87b3c6921b5f68d4a3c60a090",
+    "apps/web/src/proxy.ts": "161fcc16fa6a14adbdf9fe9bf2e00cd2c634b7ada412d63da3d66a9b5ab8e779",
+    "apps/web/src/app/ads.txt/route.ts": "2e287ecfce95efedf2880ba29667bc9a07b65e22c36730b89dc5ecaf2b6b7549",
+    "apps/web/src/app/bai-viet/[slug]/page.tsx": "659ee60ac709fdaf06543b4561f7edf08d9aa7b09e240e28eed5e513712de855",
+    "apps/web/src/app/thu-vien/page.tsx": "d6997c101de499ad2504068feb3534d92f1994502e4868e6101ac2fba83a1e51",
+    "tests/ads-policy.test.ts": "9ac1b9de6fd17c8f5f6ad278611ab15c5017d25d8425e9ceae0e8d3a7b4c0ec5"
+  },
+  "node": "24.19.0",
+  "typecheck": "PASS",
+  "lint": "PASS",
+  "unitTestsPassed": 24,
+  "build": "PASS",
+  "httpAdsTxt": "PASS verified publisher record on localhost",
+  "httpRootNoAdScript": "PASS with ADSENSE_ENABLED=false",
+  "liveCMP": "NOT_TESTED",
+  "liveCreative": "NOT_TESTED",
+  "production": "NOT_READY"
+}

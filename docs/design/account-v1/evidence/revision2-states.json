@@ -1,0 +1,26 @@
+[
+  {
+    "value": "pro",
+    "text": "Thêm chiều sâu cho việc học.\n\nBắt đầu miễn phí. Chọn Pro khi bạn muốn tiến xa hơn.\n\nThông tin gói\nHumanScope Pro\n\nGói cá nhân · thanh toán theo năm\n\nĐang sử dụng\nGiá theo năm\n\nThuế, nếu có, thể hiện trên chứng từ.\n\n19,99 USD\nNgày gia hạn tiếp theo\n\nNgày minh họa\n\n01/10/2027\nHủy gia hạn\nLịch sử thanh toán\nNhững điều cần biết trước khi nâng cấp\nGói Pro có tự gia hạn không?\nHết Pro thì dữ liệu của tôi có mất không?\nFree và Pro có khác nhau về độ chính xác không?"
+  },
+  {
+    "value": "cancelled",
+    "text": "Thêm chiều sâu cho việc học.\n\nBắt đầu miễn phí. Chọn Pro khi bạn muốn tiến xa hơn.\n\nBạn đã tắt gia hạn. Pro vẫn dùng được đến hết ngày 01/10/2027. Sau đó tài khoản trở về Free.\nThông tin gói\nHumanScope Pro\n\nGói cá nhân · thanh toán theo năm\n\nĐã hủy gia hạn\nGiá theo năm\n\nThuế, nếu có, thể hiện trên chứng từ.\n\n19,99 USD\nQuyền Pro còn đến\n\nNgày minh họa\n\n01/10/2027\nXem cách bật lại gia hạn\nLịch sử thanh toán\nNhững điều cần biết trước khi nâng cấp\nGói Pro có tự gia hạn không?\nHết Pro thì dữ liệu của tôi có mất không?\nFree và Pro có khác nhau về độ chính xác không?"
+  },
+  {
+    "value": "past_due",
+    "text": "Thêm chiều sâu cho việc học.\n\nBắt đầu miễn phí. Chọn Pro khi bạn muốn tiến xa hơn.\n\nLần gia hạn chưa thành công. Trong tình huống minh họa này, Pro được giữ đến 04/10/2026. Cập nhật phương thức thanh toán để tiếp tục.\nThông tin gói\nHumanScope Pro\n\nGói cá nhân · thanh toán theo năm\n\nCần cập nhật thanh toán\nGiá theo năm\n\nThuế, nếu có, thể hiện trên chứng từ.\n\n19,99 USD\nNgày gia hạn tiếp theo\n\nNgày minh họa\n\nCần xử lý thanh toán\nCập nhật thanh toán\nLịch sử thanh toán\nNhững điều cần biết trước khi nâng cấp\nGói Pro có tự gia hạn không?\nHết Pro thì dữ liệu của tôi có mất không?\nFree và Pro có khác nhau về độ chính xác không?"
+  },
+  {
+    "value": "expired",
+    "text": "Thêm chiều sâu cho việc học.\n\nBắt đầu miễn phí. Chọn Pro khi bạn muốn tiến xa hơn.\n\nPro đã hết hạn. Ghi chú và lịch sử học của bạn vẫn được giữ; các công cụ chuyên sâu đã tạm khóa.\nFree\nGói hiện tại\n\nBắt đầu với những điều cốt lõi.\n\n0 USD\n\nKhông cần thông tin thanh toán\n\nKhám phá và đọc nội dung công khai\nMột module học nền tảng hoàn chỉnh\nQuiz cơ bản và giải thích sau nộp\nGhi chú và lịch sử học cá nhân\nĐang sử dụng Free\nHumanScope Pro\n19,99 USD / năm\n\nHiểu sâu hơn. Ôn đúng phần cần thiết.\n\n19,99 USD / năm\n\nThu mỗi năm · thuế nếu có tại bước thanh toán\n\nModule sinh lý bệnh tương tác chuyên sâu\nÔn lại câu sai và lịch ôn cách quãng\nTiến độ theo chủ đề học\nThêm không gian cho ghi chú và bộ học\nXem trước bước nâng cấp\n\nQuyền lợi đang được thiết kế. Chưa mở bán.\n\nNhững điều cần biết trước khi nâng cấp\nGói Pro có tự gia hạn không?\nHết Pro thì dữ liệu của tôi có mất không?\nFree và Pro có khác nhau về độ chính xác không?"
+  },
+  {
+    "value": "pending",
+    "text": "Thêm chiều sâu cho việc học.\n\nBắt đầu miễn phí. Chọn Pro khi bạn muốn tiến xa hơn.\n\nChúng tôi đang xác nhận thanh toán. Bạn vẫn có thể dùng Free trong lúc chờ; không cần mua lại.\nThông tin gói\nHumanScope Free\n\nĐang dùng Free trong lúc chờ xác nhận\n\nĐang xác nhận\nGiá theo năm\n\nThuế, nếu có, thể hiện trên chứng từ.\n\n19,99 USD\nNgày gia hạn tiếp theo\n\nChưa có ngày được xác nhận.\n\nChưa xác nhận\nXem trạng thái thanh toán\nLịch sử thanh toán\nNhững điều cần biết trước khi nâng cấp\nGói Pro có tự gia hạn không?\nHết Pro thì dữ liệu của tôi có mất không?\nFree và Pro có khác nhau về độ chính xác không?"
+  },
+  {
+    "value": "free",
+    "text": "Thêm chiều sâu cho việc học.\n\nBắt đầu miễn phí. Chọn Pro khi bạn muốn tiến xa hơn.\n\nFree\nGói hiện tại\n\nBắt đầu với những điều cốt lõi.\n\n0 USD\n\nKhông cần thông tin thanh toán\n\nKhám phá và đọc nội dung công khai\nMột module học nền tảng hoàn chỉnh\nQuiz cơ bản và giải thích sau nộp\nGhi chú và lịch sử học cá nhân\nĐang sử dụng Free\nHumanScope Pro\n19,99 USD / năm\n\nHiểu sâu hơn. Ôn đúng phần cần thiết.\n\n19,99 USD / năm\n\nThu mỗi năm · thuế nếu có tại bước thanh toán\n\nModule sinh lý bệnh tương tác chuyên sâu\nÔn lại câu sai và lịch ôn cách quãng\nTiến độ theo chủ đề học\nThêm không gian cho ghi chú và bộ học\nXem trước bước nâng cấp\n\nQuyền lợi đang được thiết kế. Chưa mở bán.\n\nNhững điều cần biết trước khi nâng cấp\nGói Pro có tự gia hạn không?\nHết Pro thì dữ liệu của tôi có mất không?\nFree và Pro có khác nhau về độ chính xác không?"
+  }
+]

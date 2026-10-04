@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "task_id": "HS-READINESS-COMPLETE-1",
+  "status": "BLOCKED",
+  "cycle_count": 4,
+  "dimensions": {
+    "requirement_match": {
+      "status": "FAILED",
+      "summary": "Priority local slice delivered; entire backlog incomplete.",
+      "evidence_refs": [
+        "../readiness-completion-report.md",
+        "../readiness-completion-product-content.md",
+        "source-hashes.json"
+      ]
+    },
+    "security": {
+      "status": "PASSED",
+      "summary": "Scoped owner/reauth/CSRF negatives verified in local emulators; not comprehensive live security sign-off.",
+      "evidence_refs": [
+        "../readiness-completion-report.md",
+        "../readiness-completion-product-content.md",
+        "source-hashes.json"
+      ]
+    },
+    "code_quality": {
+      "status": "PASSED",
+      "summary": "Typecheck/lint and current targeted regression passed.",
+      "evidence_refs": [
+        "../readiness-completion-report.md",
+        "../readiness-completion-product-content.md",
+        "source-hashes.json"
+      ]
+    },
+    "failure_paths": {
+      "status": "PASSED",
+      "summary": "Pagination retry/stale cursor, export abort/budgets/no partial file, API failures tested within local scope.",
+      "evidence_refs": [
+        "../readiness-completion-report.md",
+        "../readiness-completion-product-content.md",
+        "source-hashes.json"
+      ]
+    },
+    "error_handling": {
+      "status": "PASSED",
+      "summary": "Existing sanitized error envelope preserved; bounded explicit export failure.",
+      "evidence_refs": [
+        "../readiness-completion-report.md",
+        "../readiness-completion-product-content.md",
+        "source-hashes.json"
+      ]
+    },
+    "production_readiness": {
+      "status": "FAILED",
+      "summary": "Live route/index/provider/recovery/candidate gates not all accepted.",
+      "evidence_refs": [
+        "../readiness-completion-report.md",
+        "../readiness-completion-product-content.md",
+        "source-hashes.json"
+      ]
+    },
+    "trade_offs": {
+      "status": "PASSED",
+      "summary": "Limits, concurrency blocker, workload isolation and external dependencies recorded.",
+      "evidence_refs": [
+        "../readiness-completion-report.md",
+        "../readiness-completion-product-content.md",
+        "source-hashes.json"
+      ]
+    }
+  },
+  "findings": [
+    {
+      "id": "REMAINING-RETENTION",
+      "severity": "high",
+      "status": "OPEN",
+      "summary": "30-day deletion requires shared-payload concurrency protocol; no unsafe collector shipped."
+    },
+    {
+      "id": "REMAINING-PROVIDER-UI",
+      "severity": "medium",
+      "status": "NOT_TESTED",
+      "summary": "Enabled Google export popup path lacks browser/provider evidence; collector unit and export API tests pass."
+    },
+    {
+      "id": "REMAINING-PRODUCTION",
+      "severity": "high",
+      "status": "OPEN",
+      "summary": "Live account web/API returned404; new index and compatible rollout still required."
+    },
+    {
+      "id": "REMAINING-MVP",
+      "severity": "medium",
+      "status": "PARTIAL",
+      "summary": "Private community intake/review backend implemented and emulator-tested; Pro, community web/org/publication and cine remain incomplete."
+    }
+  ],
+  "review_cycles": [
+    {
+      "cycle": 1,
+      "fixes": [
+        "Cursor authorization/pagination",
+        "Keep previous list visible after next-page failure",
+        "Independent integration test limiter window"
+      ]
+    },
+    {
+      "cycle": 2,
+      "fixes": [
+        "Export field allowlist",
+        "Cancellation and page/byte/record budgets",
+        "Repeated-cursor rejection",
+        "Legacy partial-review disclosure"
+      ]
+    },
+    {
+      "cycle": 3,
+      "fixes": [
+        "Rejected unsafe shared-blob scan/delete design before registration",
+        "Dedicated local emulators for final API regression",
+        "Rechecked scoped implementation and evidence boundaries"
+      ]
+    },
+    {
+      "cycle": 4,
+      "fixes": [
+        "Private intake default off; community publication permanently disabled in this slice",
+        "Revoked reviewer verification blocks private read and decision",
+        "Rejected review requires a new immutable revision",
+        "Duplicate author input returns400, not503"
+      ],
+      "verification": [
+        "281 unit pass",
+        "36 full API integration pass, then7 community integration pass after final input fix",
+        "Full root typecheck/lint and API build/OpenAPI regeneration pass"
+      ],
+      "remaining": [
+        "Community web/org/promotion/export/retention not implemented",
+        "Entire roadmap remains incomplete; external activation deferred"
+      ]
+    }
+  ],
+  "limitations": [
+    "Node25 local optimized build, not a Node24 Linux deployment",
+    "Concurrent other-chat WIP not comprehensively certified",
+    "No live Google/restore/device/payment/deletion execution",
+    "Manual evidence record; runtime ledger CLI unavailable",
+    "Prior browser evidence does not cover community or certify the new API candidate"
+  ]
+}

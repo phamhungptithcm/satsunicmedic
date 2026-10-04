@@ -1,0 +1,7 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Firebase Admin API is the sole data path; all browser identities are denied.
+    match /{document=**} { allow read, write: if false; }
+  }
+}

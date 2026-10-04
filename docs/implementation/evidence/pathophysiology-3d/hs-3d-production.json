@@ -1,0 +1,27 @@
+[
+  {
+    "path": "/hoc-tap/sinh-ly-benh",
+    "status": 404,
+    "notFound": true,
+    "draft": false
+  },
+  {
+    "path": "/hoc-tap/sinh-ly-benh?_rsc=test",
+    "status": 200,
+    "notFound": true,
+    "draft": false
+  },
+  {
+    "path": "/hoc-tap/sinh-ly-benh/asset",
+    "status": 404,
+    "notFound": true,
+    "draft": false
+  },
+  {
+    "path": "/hoc-tap",
+    "status": 200,
+    "notFound": false,
+    "draft": false,
+    "previewLink": false
+  }
+]
