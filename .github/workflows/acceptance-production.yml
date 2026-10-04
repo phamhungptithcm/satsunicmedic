@@ -1,0 +1,67 @@
+name: Accept production candidate
+on:
+  workflow_dispatch:
+    inputs:
+      external_evidence:
+        description: 'Reviewed external receipts and measured costs JSON. Empty input runs technical checks but blocks acceptance.'
+        type: string
+        required: false
+        default: '{}'
+permissions:
+  contents: read
+concurrency:
+  group: acceptance-satsunicmedic
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/main'
+    uses: ./.github/workflows/verify.yml
+  acceptance:
+    if: github.ref == 'refs/heads/main'
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 24.19.0
+      - run: npm install --global pnpm@11.19.0
+      - run: pnpm install --frozen-lockfile
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: acceptance-verify-${{ github.run_id }}
+          path: .ai/local/acceptance
+      - run: node scripts/ci/acceptance-production.mjs run dependencyAudit
+      - run: pnpm exec playwright install --with-deps chromium
+      - name: Build discovery surface for browser checks
+        run: pnpm build
+        env:
+          DISCOVERY_MODE_ENABLED: 'true'
+      - run: node scripts/ci/acceptance-production.mjs run browser
+      - name: Retain browser and dependency receipts
+        if: ${{ always() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: acceptance-browser-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            .ai/local/acceptance/browser.json
+            .ai/local/acceptance/browser-results.json
+            .ai/local/acceptance/dependencyAudit.json
+            .ai/local/acceptance/anatomy-*.png
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 7
+      - name: Validate complete external acceptance and measured costs
+        run: node --import tsx scripts/ci/acceptance-production.mjs assemble
+        env:
+          ACCEPTANCE_EXTERNAL_JSON: ${{ inputs.external_evidence }}
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: discovery-evidence
+          path: .ai/local/discovery-evidence/*.json
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 7

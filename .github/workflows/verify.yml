@@ -23,15 +23,26 @@ jobs:
           java-version: '21'
       - run: npm install --global pnpm@11.19.0 firebase-tools@15.32.1
       - run: pnpm install --frozen-lockfile
-      - run: pnpm typecheck
-      - run: pnpm lint
-      - run: pnpm exec eslint scripts/ci/*.mjs
-      - run: pnpm test
-      - run: firebase emulators:exec --only auth,firestore --project demo-humanscope --config infra/firebase/firebase.json 'pnpm test:integration'
-      - run: pnpm build
-      # Use tsc output: tsx does not emit Nest decorator metadata for path parameters.
-      - run: pnpm --filter @hs/api exec node dist/openapi.js
-      - run: git diff --exit-code -- docs/implementation/openapi.json
+      - run: node scripts/ci/acceptance-production.mjs run typecheck
+      - run: node scripts/ci/acceptance-production.mjs run lint
+      - run: node scripts/ci/acceptance-production.mjs run unit
+      - run: node scripts/ci/acceptance-production.mjs run integration
+      - run: node scripts/ci/acceptance-production.mjs run build
+      - name: Retain technical check receipts
+        if: ${{ always() }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: acceptance-verify-${{ github.run_id }}
+          path: |
+            .ai/local/acceptance/typecheck.json
+            .ai/local/acceptance/lint.json
+            .ai/local/acceptance/unit.json
+            .ai/local/acceptance/integration.json
+            .ai/local/acceptance/build.json
+          overwrite: true
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 7
   source-audits:
     runs-on: ubuntu-latest
     timeout-minutes: 10
