@@ -1,4 +1,5 @@
 import { chromium } from 'playwright';
+import { DIRECTORY_VERSION } from '../../packages/contracts/dist/directory.js';
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
 import { mkdirSync, writeFileSync } from 'node:fs';
@@ -32,7 +33,7 @@ try {
   page.on('pageerror', error => errors.push(error.message));
   let directoryFails = true;
   await page.route('**/api/v1/**', async route => {
-    if (route.request().url().includes('/facilities/search')) return route.fulfill({ status: directoryFails ? 503 : 200, contentType: 'application/json', body: JSON.stringify(directoryFails ? { message: 'Synthetic unavailable' } : { items: [], nextCursor: null }) });
+    if (route.request().url().includes('/facilities/search')) return route.fulfill({ status: directoryFails ? 503 : 200, contentType: 'application/json', body: JSON.stringify(directoryFails ? { message: 'Synthetic unavailable' } : { items: [], nextCursor: null, version: DIRECTORY_VERSION }) });
     return route.fulfill({ status: 401, contentType: 'application/json', body: JSON.stringify({ message: 'Synthetic unauthenticated' }) });
   });
   let failModel = true;
