@@ -20,7 +20,7 @@ Target: project `satsunicmedic`, Singapore, App Hosting `medic`, Functions codeb
 | `FIREBASE_WEB_API_KEY` | Verified public Firebase Web SDK key with appropriate restrictions; no private provider key |
 | `DISCOVERY_EVIDENCE_RUN_ID` | Successful trusted Actions run containing exact-candidate evidence below |
 
-The initial inspection found no repository Actions variables and no environments. WIF/IAM have not been provisioned by this task. These are setup prerequisites, not a claim that CI is already active.
+The initial inspection found no repository Actions variables or environments. The low-cost setup below now provisions these prerequisites; full authenticated deployment acceptance remains unverified.
 
 ## Candidate evidence
 
@@ -97,4 +97,6 @@ The legacy static IP was released after source/reference and provider checks; it
 
 WIF provider is `projects/108608537442/locations/global/workloadIdentityPools/github-production/providers/github`; deploy identity is `medic-deploy@satsunicmedic.iam.gserviceaccount.com`. Numeric repo/owner, main ref and production environment subject are all constrained. GitHub environment allows only branch main. Custom project role omits IAM changes, secret access, Firestore document access and deletion; registry access is scoped read-only, build-source writes are create-only under cicd/. No service-account key was created.
 
-**Still blocked:** `actAs` was not granted because automatic approval review requires explicit recipient/privilege approval. The existing Functions build uses the default Compute identity with Editor, which must not be delegated to CI under the approved least-privilege constraint. Prefer a separate scoped plan to move Functions builds to a narrowly permissioned build identity. The exact-SHA acceptance artifact and verified monthly forecast are also missing. Do not set a dummy DISCOVERY_EVIDENCE_RUN_ID, bypass publication/auth/restore checks, or rerun deployment as if setup were complete.
+**IAM v2 applied (2026-10-03):** after explicit approval, medic-deploy has Service Account User on exactly medic-build, medic-web and medic-functions. Provider readback confirms no delegation to the default Compute account. The API build now uses medic-build; its runtime identity remains medic-functions. The migration completed and read-only web/API smoke passed. Build permissions added only source-object read on the Functions source bucket and writer on gcf-artifacts.
+
+**Still blocked:** the exact-SHA acceptance artifact and verified monthly forecast are missing. Real GitHub OIDC deployment and negative-token validation remain untested. Do not set a dummy DISCOVERY_EVIDENCE_RUN_ID or bypass publication/auth/restore checks. This IAM migration does not release the new application candidate.

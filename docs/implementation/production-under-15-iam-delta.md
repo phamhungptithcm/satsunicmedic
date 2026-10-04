@@ -1,6 +1,6 @@
 # PROD-LOW15-IAM v2 — Exact remaining impersonation boundary
 
-Status: PREPARED, NOT_APPLIED. Required because automatic approval review rejected actAs even after the default Compute identity was excluded. This record does not claim user approval.
+Status: APPROVED; applied and provider readback verified (2026-10-03). Approver: repository owner. Approval task reference: current user reply “apporved” to the explicit IAM v2 question naming medic-build, medic-web, medic-functions and the Functions build identity migration. Previous auto-review rejection is resolved by this exact recipient/privilege approval; no broader rights are authorized.
 
 Recipient: serviceAccount:medic-deploy@satsunicmedic.iam.gserviceaccount.com, whose WIF trust is restricted to numeric repo 1398846396, owner 32831453, refs/heads/main, production environment. No key creation.
 

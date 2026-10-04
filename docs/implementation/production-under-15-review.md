@@ -20,9 +20,17 @@ Cycle 2: 352 unit tests (38 files), 39 emulator integration tests, full producti
 
 ## Remaining findings
 
-1. Automatic approval review rejected actAs bindings, including the narrower retry for medic-build, medic-web and medic-functions. NO actAs binding was applied. Exact recipients/risks and proposed safer Functions build identity migration are prepared in production-under-15-iam-delta.md. The existing default Compute build account has Editor and was deliberately excluded from delegation.
+1. Resolved after explicit IAM v2 approval: medic-deploy can act as exactly medic-build, medic-web and medic-functions. Fresh provider readback confirms no default Compute delegation. API build migrated to medic-build using only buildConfig.serviceAccount field mask; operation completed, API ACTIVE, runtime identity unchanged, live smoke PASSED. Earlier rejection and cycle 2 describe the prior state. Full trusted CI identity validation remains open under finding 3.
 2. Exact-candidate trusted acceptance artifact and actual measured remaining-month projection are absent; DISCOVERY_EVIDENCE_RUN_ID intentionally unset. Existing live Google/session, restore and medical/asset acceptance gaps remain. No gate bypass, fake acceptance or release tag.
 3. IAM effectiveness under a real GitHub OIDC token, negative-token rejection and first cloud build remain NOT_TESTED. New custom role may reveal additional narrowly scoped provider requirements; do not broaden automatically.
 4. Costs outside native spend caps (storage, bandwidth, builds, logs) and reporting latency can exceed the target. No global hard cap or automatic billing disable was configured. Native pause activation was NOT deliberately triggered; configured enforcement is provider/UI readback, not an outage test.
 
 Detailed local evidence: .ai/local/production-low15 (budgets/scaling/WIF/variables readbacks, focused/unit/integration/build/lint/typecheck logs, live smoke). Runtime task: PROD-LOW15. Token usage and actual billed task cost unavailable. Memory candidates: None.
+
+## IAM v2 follow-up review
+
+Approved cloud-only scope: exact account delegation, scoped build permissions and API build identity migration. No application, UI, database, dependency or model changes. Profiles: universal, DevOps, infrastructure. Security review confirms account-level grants, no new keys, no default Compute delegation and no expanded secret/admin grants. Migration errors were checked through the long-running operation; source/runtime and scaling are checked separately. Rollback is documented in the approved delta plan. New source release stays fail-closed.
+
+Evidence: .ai/local/production-iam-v2 contains sanitized operation, IAM, source/runtime, scaling and live smoke readbacks. Full release review remains BLOCKED by current candidate acceptance, cost projection and real OIDC/restore/auth evidence. Prior full source tests are historical evidence at 5a6b46d; this documentation/provider-only follow-up does not claim a fresh full test suite. Token usage and actual billed task cost unavailable. Memory candidates: None.
+
+Provider post-check: original and copied source archives have identical MD5/CRC32C and size 88,889 bytes despite a new object generation. Revision api-00005-fiq is ACTIVE. Both services retain min 0/max 1, CPU 1, memory 512 MiB and concurrency 20. No new source deployment occurred.
