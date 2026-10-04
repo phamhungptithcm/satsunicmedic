@@ -127,7 +127,8 @@ export async function indexesReady(api) {
   return poll(async () => {
     let pageToken; let ready = true;
     do {
-      const url = `https://firestore.googleapis.com/v1/projects/${project}/databases/(default)/collectionGroups/-/indexes?pageSize=100${pageToken ? `&pageToken=${encodeURIComponent(pageToken)}` : ''}`;
+      // The provider currently only accepts its default (zero) page size.
+      const url = `https://firestore.googleapis.com/v1/projects/${project}/databases/(default)/collectionGroups/-/indexes${pageToken ? `?pageToken=${encodeURIComponent(pageToken)}` : ''}`;
       const page = await api(url);
       for (const index of page.indexes ?? []) {
         if (index.state === 'NEEDS_REPAIR') throw new Error('Firestore index needs repair');

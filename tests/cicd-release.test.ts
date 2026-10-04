@@ -3,7 +3,7 @@ import { describe, it, expect, afterEach } from 'vitest';
 // @ts-expect-error Native ESM script has no generated declaration file.
 import { identity, assertCurrent, existingTag, publish, validateManifest } from '../scripts/ci/release.mjs';
 // @ts-expect-error Native ESM script has no generated declaration file.
-import { validateAcceptance, validateConfig, candidatePaths, safeSourcePath, poll, deployCandidate, googleClient, command, stageSource, publicDiscoveryCatalog, commandFailureSummary } from '../scripts/ci/deploy-production.mjs';
+import { validateAcceptance, validateConfig, candidatePaths, safeSourcePath, poll, indexesReady, deployCandidate, googleClient, command, stageSource, publicDiscoveryCatalog, commandFailureSummary } from '../scripts/ci/deploy-production.mjs';
 // @ts-expect-error Native ESM script has no generated declaration file.
 import { smoke } from '../scripts/ci/smoke-production.mjs';
 
@@ -90,6 +90,18 @@ describe('release retry and note range', () => {
 });
 
 describe('provider errors, polling and smoke', () => {
+  it('uses provider default index page size and checks subsequent pages', async () => {
+    const urls: string[] = [];
+    await expect(indexesReady(async (url: string) => {
+      urls.push(url);
+      const query = new URL(url).searchParams;
+      if (query.has('pageSize')) throw new Error('Invalid page size. Only 0 is supported.');
+      return query.has('pageToken') ? { indexes: [{ state: 'READY' }] } : { indexes: [{ state: 'READY' }], nextPageToken: 'next/+=' };
+    })).resolves.toEqual({ ready: true });
+    expect(urls).toHaveLength(2);
+    expect(new URL(urls[1]!).searchParams.get('pageToken')).toBe('next/+=');
+    await expect(indexesReady(async () => ({ indexes: [{ state: 'NEEDS_REPAIR' }] }))).rejects.toThrow('needs repair');
+  });
   it('times out and fails terminal provider operations', async () => {
     await expect(poll(async () => ({ ready: false }), () => false, 'test', { attempts: 2, wait: async () => {} })).rejects.toThrow('timed out');
     await expect(poll(async () => ({ state: 'FAILED' }), () => false, 'test')).rejects.toThrow('failed');
