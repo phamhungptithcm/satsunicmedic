@@ -19,11 +19,21 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 const json = path => JSON.parse(readFileSync(path, 'utf8'));
 const save = (name, value) => { mkdirSync(output, { recursive: true }); writeFileSync(`${output}/${name}.json`, JSON.stringify(value, null, 2) + '\n'); };
 
-// Commands use argv, never a shell. Do not echo provider output (it may contain credentials).
+// Report only fixed categories, status codes and permission identifiers. Never echo provider text.
+export function commandFailureSummary(error) {
+  const output = `${error.stdout ?? ''}\n${error.stderr ?? ''}`;
+  const statuses = [...new Set([...output.matchAll(/(?:HTTP(?: Error)?[: ]+|status(?:Code)?[":= ]+)([45]\d\d)\b/gi)].map(m => m[1]))];
+  const permissions = [...new Set([...output.matchAll(/\b(?:iam|datastore|firebaserules|serviceusage|cloudfunctions|firebaseextensions|storage|run|cloudbuild)\.(?:serviceAccounts|databases|indexes|fields|entities|rulesets|releases|projects|services|functions|operations|instances|buckets|objects|builds)\.(?:get|list|create|update|delete|use|actAs|getMetadata|getAccessToken|setIamPolicy|getIamPolicy|enable)\b/g)].map(m => m[0]))];
+  const services = ['firestore', 'firebaserules', 'cloudfunctions', 'serviceusage', 'cloudresourcemanager', 'firebase', 'firebaseextensions', 'iam'].filter(s => output.includes(`${s}.googleapis.com`));
+  const categories = Object.entries({ permission: /permission|PERMISSION_DENIED|forbidden/i, authentication: /unauthenticated|authenticate|invalid.credentials/i, interactive: /non.interactive|confirmation|prompt/i, missingFile: /ENOENT|file.*not.found|cannot.find.module/i, validation: /invalid.argument|invalid.config|failed.to.compile/i }).filter(([, pattern]) => pattern.test(output)).map(([name]) => name);
+  return JSON.stringify({ statuses, observedPermissions: permissions.slice(0, 20), services, categories });
+}
+// Commands use argv, never a shell. Raw provider output stays in memory only.
+
 export function command(executable, args, options = {}) {
-  try { const result = execFileSync(executable, args, { encoding: 'utf8', timeout: 2_400_000,
+  try { const result = execFileSync(executable, executable === 'firebase' && args[0] === 'deploy' ? [...args, '--debug'] : args, { encoding: 'utf8', timeout: 2_400_000,
     maxBuffer: 32 * 1024 * 1024, stdio: ['ignore', 'pipe', 'pipe'], ...options }); return Buffer.isBuffer(result) ? result : result.trim(); }
-  catch { throw new Error(`Command failed: ${executable} ${args[0]}; inspect provider operation logs`); }
+  catch (error) { throw new Error(`Command failed: ${executable} ${args[0]}; ${commandFailureSummary(error)}`); }
 }
 
 export function validateConfig(env) {

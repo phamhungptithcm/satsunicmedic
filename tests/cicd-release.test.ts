@@ -3,7 +3,7 @@ import { describe, it, expect, afterEach } from 'vitest';
 // @ts-expect-error Native ESM script has no generated declaration file.
 import { identity, assertCurrent, existingTag, publish, validateManifest } from '../scripts/ci/release.mjs';
 // @ts-expect-error Native ESM script has no generated declaration file.
-import { validateAcceptance, validateConfig, candidatePaths, safeSourcePath, poll, deployCandidate, googleClient, command, stageSource, publicDiscoveryCatalog } from '../scripts/ci/deploy-production.mjs';
+import { validateAcceptance, validateConfig, candidatePaths, safeSourcePath, poll, deployCandidate, googleClient, command, stageSource, publicDiscoveryCatalog, commandFailureSummary } from '../scripts/ci/deploy-production.mjs';
 // @ts-expect-error Native ESM script has no generated declaration file.
 import { smoke } from '../scripts/ci/smoke-production.mjs';
 
@@ -229,4 +229,11 @@ it('stages the public catalog imported by the web app while excluding CI scripts
   const staged = stageSource(paths, (_cmd: string, args: string[]) => readFileSync(args[1]!.replace('HEAD:', '')), join(root, 'source'));
   expect(readFileSync(join(staged, publicDiscoveryCatalog))).toEqual(readFileSync(publicDiscoveryCatalog));
   expect(existsSync(join(staged, 'scripts/ci/deploy-production.mjs'))).toBe(false);
+});
+
+
+it('exposes bounded failure classifications without raw provider data', () => {
+  const summary = commandFailureSummary({ stdout: 'POST https://firestore.googleapis.com/v1/projects/private-project HTTP Error: 403 Permission datastore.databases.getMetadata denied for private-person@example.invalid', stderr: 'Bearer private-secret-token Authorization: eyJprivate.secret.token' });
+  expect(JSON.parse(summary)).toMatchObject({ statuses: ['403'], observedPermissions: ['datastore.databases.getMetadata'], services: ['firestore'], categories: ['permission'] });
+  for (const secret of ['private-secret', 'private-project', 'private-person', 'eyJprivate', 'Authorization']) expect(summary).not.toContain(secret);
 });
