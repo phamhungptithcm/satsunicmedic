@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "./progress-link";
 import { Info, Layers3 } from "lucide-react";
 import styles from "./footer.module.css";
 

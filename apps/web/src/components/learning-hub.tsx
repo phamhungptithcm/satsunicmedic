@@ -1,6 +1,6 @@
 'use client';
 import {useEffect,useState} from 'react';
-import Link from 'next/link';
+import Link from "./progress-link";
 import {BookOpen,Presentation,Search,ArrowRight} from 'lucide-react';
 import {request} from '@hs/api-client';
 import {learningPositionSchema,type LearningPosition,normalizeDirectoryTerm} from '@hs/contracts';

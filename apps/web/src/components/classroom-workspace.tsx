@@ -1,11 +1,12 @@
 'use client';
+import Loading from './loading';
 import {useEffect,useRef,useState} from 'react';
-import Link from 'next/link';
+import Link from "./progress-link";
 import dynamic from 'next/dynamic';
 import {request,csrfHeaders,ApiError} from '@hs/api-client';
 import type {ClassView,AssignmentView,LessonDocument,presentLesson,HeartBinding,LearningScenario} from '@hs/contracts';
 import styles from './learning-workspace.module.css';
-const Atlas=dynamic(()=>import('./full-body-anatomy'),{ssr:false});
+const Atlas=dynamic(()=>import('./full-body-anatomy'),{ssr:false,loading:()=> <Loading label="Đang mở mô hình"/>});
 type Detail=ClassView&{assignments:AssignmentView[]};
 type Assignment={id:string;content:ReturnType<typeof presentLesson>;lessonRevision:number;dueAt:string|null;submission:{reflection:string;createdAt:string}|null};
 export default function ClassroomWorkspace({atlas}:{atlas?:{binding:HeartBinding;scenario:LearningScenario}}){
@@ -23,7 +24,7 @@ export default function ClassroomWorkspace({atlas}:{atlas?:{binding:HeartBinding
  function openAssignment(id:string){if(!active)return;setActiveAtlas(null);setResults(null);setReflection('');void run(async signal=>{const row=await read<Assignment>(`/api/v1/classes/${active.id}/assignments/${id}`,signal);setAssignment(row);setReflection(row.submission?.reflection??'');});}
  async function lessonPage(signal:AbortSignal,cursor?:string){const page=await read<{items:LessonDocument[];nextCursor:string|null}>(`/api/v1/lessons?limit=20${cursor?`&cursor=${encodeURIComponent(cursor)}`:''}`,signal);setLessons(old=>cursor?[...old,...page.items]:page.items);setLessonCursor(page.nextCursor);}
  const unsent=!!assignment&&!assignment.submission&&reflection.length>0;
- return <><div className={styles.toolbar}><Link href="/giang-day">← Soạn bài</Link><button disabled={busy} onClick={load}>Làm mới</button></div><p role="status">{busy?'Đang xử lý…':message}</p>{signedOut&&<Link href="/tai-khoan">Đăng nhập</Link>}
+ return <><div className={styles.toolbar}><Link href="/giang-day">← Soạn bài</Link><button disabled={busy} onClick={load}>Làm mới</button></div><p role={busy?undefined:"status"}>{busy?<Loading inline label="Đang thực hiện yêu cầu"/>:message}</p>{signedOut&&<Link href="/tai-khoan">Đăng nhập</Link>}
  <div className={styles.grid}><form className={styles.card} onSubmit={e=>{e.preventDefault();const title=String(new FormData(e.currentTarget).get('title'));void run(async signal=>{const created=await write<ClassView>('/api/v1/classes',{title},signal);setClasses(old=>[...old,created]);setActive({...created,assignments:[]});setAssignment(null);setReflection('');setInvite(null);setResults(null);setMembers(null);setMessage('Đã tạo lớp.');});}}><h2>Tạo lớp</h2><label className={styles.field}>Tên lớp<input required name="title" maxLength={160}/></label><button disabled={busy||unsent}>Tạo lớp</button></form>
  <form className={styles.card} onSubmit={e=>{e.preventDefault();const form=new FormData(e.currentTarget),id=String(form.get('classId'));void run(async signal=>{await write(`/api/v1/classes/${encodeURIComponent(id)}/join`,{token:String(form.get('token')).trim(),displayName:String(form.get('displayName')).trim()},signal);const page=await read<{items:ClassView[]}>('/api/v1/classes',signal);setClasses(page.items);setMessage('Đã tham gia lớp.');});}}><h2>Tham gia lớp</h2><label className={styles.field}>Mã lớp<input name="classId" required maxLength={36}/></label><label className={styles.field}>Mã mời<input name="token" required maxLength={64} autoComplete="off"/></label><label className={styles.field}>Tên hiển thị trong lớp<input name="displayName" required maxLength={80}/></label><p className={styles.note}>Giảng viên xem được tên và bài nộp của bạn. Ghi chú cá nhân vẫn riêng tư.</p><button disabled={busy}>Tham gia</button></form></div>
  <div className={styles.toolbar}>{classes.map(c=><button key={c.id} disabled={busy||unsent} aria-pressed={active?.id===c.id} onClick={()=>open(c.id)}>{c.title}</button>)}</div>

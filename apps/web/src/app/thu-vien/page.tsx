@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "../../components/progress-link";
 import { BookOpen } from "lucide-react";
 export const metadata = { title: "Thư viện kiến thức" };
 export default async function Library() {

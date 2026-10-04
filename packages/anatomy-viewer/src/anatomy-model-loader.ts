@@ -1,6 +1,6 @@
 import { Group, LoadingManager, Mesh, type Object3D } from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { readVerifiedBodyBytes } from './verified-body-asset';
+import { readVerifiedBodyBytes, type ByteProgress } from './verified-body-asset';
 import type { BodyCatalog } from './scene-history';
 
 export function disposeAnatomyModel(model: Object3D) {
@@ -12,10 +12,10 @@ export function disposeAnatomyModel(model: Object3D) {
 }
 
 /** Both discovery and lessons verify the same canonical chunks and source identities. */
-export async function loadAnatomyChunk(catalog: BodyCatalog, key: string, signal: AbortSignal): Promise<Group> {
+export async function loadAnatomyChunk(catalog: BodyCatalog, key: string, signal: AbortSignal, progress?: ByteProgress): Promise<Group> {
  const asset=catalog.assets[key];
  if (!asset || !/^[a-zA-Z0-9_-]+$/.test(key)) throw Error('Manifest');
- const bytes=await readVerifiedBodyBytes(`/kham-pha/toan-than/asset/${key}`,asset,signal);
+ const bytes=await readVerifiedBodyBytes(`/kham-pha/toan-than/asset/${key}`,asset,signal,progress);
  const manager=new LoadingManager();
  manager.setURLModifier(()=>{throw Error('External resources forbidden');});
  const parsed=await new GLTFLoader(manager).parseAsync(bytes.buffer,'');

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { Activity, ArrowLeft, ArrowUpRight, BookOpen, Box, Brain, ChevronRight, Heart, Search, Wind, Bone, Droplets, Microscope, Utensils } from "lucide-react";
-import Link from 'next/link';
+import Link from "./progress-link";
 import {relationForDisease} from '@hs/contracts';
 import type { HeartBinding, LearningScenario } from "@hs/contracts";
 import { simulationCoverage } from "../lib/simulation-catalog";

@@ -1,4 +1,5 @@
 'use client';
+import Loading from '../loading';
 import { useEffect, useRef, useState } from 'react';
 import { ApiError, csrfHeaders, request } from '@hs/api-client';
 import { completeGoogleSignIn, prepareGoogleSignIn, type GoogleSignInClient } from '../../lib/google-sign-in';
@@ -53,5 +54,5 @@ function ExportDialog({ close }: { close: () => void }) {
       if (active.current && !controller.signal.aborted) setMessage(error instanceof Error && (error.message === 'EXPORT_CAPACITY_EXCEEDED' || error instanceof ApiError && error.code === 'EXPORT_CAPACITY_EXCEEDED') ? 'Dữ liệu vượt giới hạn của một lần tải. Chưa tạo file; dữ liệu của bạn vẫn được giữ.' : error instanceof ApiError && error.code === 'IDENTITY_MISMATCH' ? 'Chọn đúng tài khoản Google đang dùng trên HumanScope.' : 'Chưa tạo được file dữ liệu. Bạn có thể xác minh và thử lại.');
     } finally { submitting.current=false;if (active.current) setBusy(false); }
   }
-  return <AccountDialog title="Tải dữ liệu cá nhân" onClose={() => { pending.current?.abort(); close(); }}><p>Xác minh lại bằng Google trước khi đọc dữ liệu. Bạn có thể hủy; file chưa hoàn chỉnh sẽ không được tải.</p><p role="status">{message}</p><div className="actions"><button onClick={() => { pending.current?.abort(); close(); }}>Đóng</button>{!client && message ? <button onClick={() => { setMessage(''); setAttempt(value=>value+1); }}>Thử lại</button> : <button disabled={!client || busy} onClick={() => void download()}>{busy ? 'Đang chuẩn bị…' : 'Xác minh & tải dữ liệu'}</button>}</div></AccountDialog>;
+  return <AccountDialog title="Tải dữ liệu cá nhân" onClose={() => { pending.current?.abort(); close(); }}><p>Xác minh lại bằng Google trước khi đọc dữ liệu. Bạn có thể hủy; file chưa hoàn chỉnh sẽ không được tải.</p><p role={busy || (!client && !message) ? undefined : "status"}>{busy ? <Loading inline label={message}/> : !client && !message ? <Loading inline label="Đang chuẩn bị xác minh"/> : message}</p><div className="actions"><button onClick={() => { pending.current?.abort(); close(); }}>Đóng</button>{!client && message ? <button onClick={() => { setMessage(''); setAttempt(value=>value+1); }}>Thử lại</button> : <button disabled={!client || busy} onClick={() => void download()}>Xác minh & tải dữ liệu</button>}</div></AccountDialog>;
 }

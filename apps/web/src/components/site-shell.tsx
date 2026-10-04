@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useLayoutEffect, useState, type Dispatch, type MouseEvent, type ReactNode, type SetStateAction } from "react";
 import Header from "./header";
+import RequestProgress from "./request-progress";
 
 type ShellOptions = {
   authenticated?: boolean;
@@ -44,6 +45,7 @@ export default function SiteShell({ children, footer }: { children: ReactNode; f
   return (
     <ShellContext.Provider value={setOptions}>
       <div className="site-shell" onClickCapture={captureNavigation}>
+        <RequestProgress/>
         <Header authenticated={options.authenticated} onLogin={options.onLogin} fullDocument={options.fullDocument} />
         <div className="site-content">{children}</div>
         {footer}

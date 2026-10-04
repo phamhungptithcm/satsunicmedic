@@ -2,7 +2,7 @@
 import { suppressOneTap } from "../lib/google-one-tap";
 import { useCallback, useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
-import Link from "next/link";
+import Link from "./progress-link";
 import {
   QueryClient,
   QueryClientProvider,

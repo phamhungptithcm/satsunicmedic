@@ -1,6 +1,8 @@
 'use client';
+import { useProgressRouter as useRouter } from './request-progress';
+import Loading from './loading';
 import { useEffect,useRef,useState } from 'react';
-import { useRouter,useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import { Search,RotateCcw,ChevronDown } from 'lucide-react';
 import { request } from '@hs/api-client';
 import { provinces,specialties,diseaseDirectoryRelations,relationForDisease,facilityPageSchema,type FacilityView } from '@hs/contracts';
@@ -38,7 +40,7 @@ export default function FacilitySearch(){
   </form>
   {related&&<p className={styles.note}>{related.name}: tra cứu chuyên khoa liên quan. Bạn nên liên hệ cơ sở để được hướng dẫn trước khi khám. <a href={related.source} target="_blank" rel="noopener noreferrer">Tài liệu tham khảo</a></p>}
   <p className={styles.note}>Chuyên khoa được đối chiếu theo từng cơ sở. Thông tin quá hạn rà soát sẽ tạm ẩn.</p>
-  <div role="status">{busy?'Đang tìm cơ sở…':failed?'Chưa tải được danh sách. Bạn có thể thử lại.':`${items.length} cơ sở đã tìm thấy`}</div>
+  <div role={busy?undefined:"status"}>{busy?<Loading inline label="Đang tìm cơ sở"/>:failed?'Chưa tải được danh sách. Bạn có thể thử lại.':`${items.length} cơ sở đã tìm thấy`}</div>
   {failed&&<button onClick={()=>next?void more():setRetry(v=>v+1)}>Thử lại</button>}
   {!busy&&!failed&&!items.length&&<section className="library-empty"><h2>{next?'Chưa tìm thấy trong phần đã xem':'Chưa tìm thấy cơ sở phù hợp'}</h2><p>Danh mục còn được bổ sung. Thử giảm bộ lọc{next?' hoặc tiếp tục tra cứu':''}.</p></section>}
   <div className="content-grid">{items.map(b=><FacilityCard key={b.id} branch={b} back={params.toString()}/>)}</div>

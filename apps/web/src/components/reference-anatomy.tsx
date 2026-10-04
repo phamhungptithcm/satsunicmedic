@@ -1,6 +1,6 @@
 "use client";
 import { useCallback, useState } from "react";
-import Link from "next/link";
+import Link from "./progress-link";
 import dynamic from "next/dynamic";
 import { ArrowLeft, Bone, Check, Heart, Layers3, Minus, Plus, RotateCcw, RotateCw, Scan, Wind } from "lucide-react";
 import { referenceAnatomy } from "../lib/reference-anatomy";

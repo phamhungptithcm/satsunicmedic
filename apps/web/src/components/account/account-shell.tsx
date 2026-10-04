@@ -1,8 +1,9 @@
 'use client';
+import { useProgressRouter as useRouter } from '../request-progress';
 import { suppressOneTap } from "../../lib/google-one-tap";
 import { createContext, useCallback, useContext, useEffect, useRef, useState, type ReactNode, type MouseEvent } from 'react';
-import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import Link from "../progress-link";
+import { usePathname } from 'next/navigation';
 import { ArrowRight, CreditCard, HelpCircle, House, Layers3, LockKeyhole, LogOut, Settings2, ShieldCheck, Sparkles, UserRound, X } from 'lucide-react';
 import { request, csrfHeaders, ApiError } from '@hs/api-client';
 import type { AccountSettings, AccountView } from '@hs/contracts';
@@ -92,6 +93,6 @@ export default function AccountShell({ children }: { children: ReactNode }) {
       {status === 'ready' && account && <AccountContext.Provider value={{ account, save, reload, setDirty, expired: expire }}>{children}</AccountContext.Provider>}
     </main></div>
     {login && <Login onClose={() => setLogin(false)} onSuccess={() => { reload(); window.dispatchEvent(new Event('hs-auth-changed')); }} />}
-    {confirm && <AccountDialog title={confirm.kind === 'logout' ? 'Đăng xuất HumanScope?' : 'Bạn có thay đổi chưa lưu'} onClose={() => { if (!busy) { setConfirm(null); setMessage(''); } }}><p>{confirm.kind === 'logout' ? `Bạn cần đăng nhập lại để mở dữ liệu riêng.${dirty ? ' Thay đổi chưa lưu sẽ bị bỏ.' : ''}` : 'Ở lại để lưu hoặc bỏ thay đổi trước khi chuyển trang.'}</p>{message && <p role="alert">{message}</p>}<div className="actions"><button disabled={busy} onClick={() => setConfirm(null)}>Ở lại</button><button disabled={busy} className="primary" onClick={() => { if (confirm.kind === 'logout') void logout(); else { setDirty(false); const path = confirm.path; setConfirm(null); router.push(path); } }}>{busy ? 'Đang đăng xuất…' : confirm.kind === 'logout' ? 'Đăng xuất' : 'Bỏ thay đổi'}</button></div></AccountDialog>}
+    {confirm && <AccountDialog title={confirm.kind === 'logout' ? 'Đăng xuất HumanScope?' : 'Bạn có thay đổi chưa lưu'} onClose={() => { if (!busy) { setConfirm(null); setMessage(''); } }}><p>{confirm.kind === 'logout' ? `Bạn cần đăng nhập lại để mở dữ liệu riêng.${dirty ? ' Thay đổi chưa lưu sẽ bị bỏ.' : ''}` : 'Ở lại để lưu hoặc bỏ thay đổi trước khi chuyển trang.'}</p>{message && <p role="alert">{message}</p>}<div className="actions"><button disabled={busy} onClick={() => setConfirm(null)}>Ở lại</button><button disabled={busy} aria-label={busy ? "Đang đăng xuất" : undefined} className="primary" onClick={() => { if (confirm.kind === 'logout') void logout(); else { setDirty(false); const path = confirm.path; setConfirm(null); router.push(path); } }}>{busy ? <Loading inline label="Đang đăng xuất"/> : confirm.kind === 'logout' ? 'Đăng xuất' : 'Bỏ thay đổi'}</button></div></AccountDialog>}
   </div></div>;
 }

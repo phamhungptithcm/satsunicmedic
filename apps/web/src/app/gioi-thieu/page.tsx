@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "../../components/progress-link";
 export const metadata = { title: "Về HumanScope" };
 export default function About() {
   return (

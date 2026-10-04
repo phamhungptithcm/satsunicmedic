@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "../../../components/progress-link";
 import { notFound } from 'next/navigation';
 import { facilityViewSchema,uuid } from '@hs/contracts';
 import { FacilityCard } from '../../../components/facility-card';

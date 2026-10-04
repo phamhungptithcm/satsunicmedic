@@ -1,4 +1,5 @@
 'use client';
+import Loading from '../loading';
 import { suppressOneTap } from "../../lib/google-one-tap";
 import { useEffect, useRef, useState } from 'react';
 import { ApiError, csrfHeaders, request } from '@hs/api-client';
@@ -45,5 +46,5 @@ function RevokeDialog({ onClose, onRevoked }: { onClose: () => void; onRevoked: 
     } finally { submitting.current = false; if (active.current) { setBusy(false); setExchanging(false); } }
   }
   function close() { if (!exchanging) { active.current = false; onClose(); } }
-  return <AccountDialog title="Đăng xuất tất cả phiên?" onClose={close}><p>Các phiên HumanScope, gồm phiên hiện tại, sẽ hết hiệu lực. Xác minh lại bằng đúng tài khoản Google để tiếp tục; dữ liệu đã lưu vẫn được giữ.</p>{message && <p className="account-message" role="alert">{message}</p>}<p className="inline-message" role="status">{busy ? exchanging ? 'Đang kết thúc các phiên đăng nhập…' : 'Chọn tài khoản trong cửa sổ Google để xác minh.' : !client && !message ? 'Đang chuẩn bị xác minh…' : ''}</p><div className="actions"><button disabled={exchanging} onClick={close}>Hủy</button>{message && !client ? <button onClick={() => { setMessage(''); setAttempt(value => value + 1); }}>Thử lại</button> : <button className="primary" disabled={!client || busy} onClick={() => void revoke()}>Xác minh & đăng xuất</button>}</div></AccountDialog>;
+  return <AccountDialog title="Đăng xuất tất cả phiên?" onClose={close}><p>Các phiên HumanScope, gồm phiên hiện tại, sẽ hết hiệu lực. Xác minh lại bằng đúng tài khoản Google để tiếp tục; dữ liệu đã lưu vẫn được giữ.</p>{message && <p className="account-message" role="alert">{message}</p>}<p className="inline-message" role={exchanging || (!client && !message) ? undefined : "status"}>{busy ? exchanging ? <Loading inline label="Đang kết thúc các phiên đăng nhập"/> : 'Chọn tài khoản trong cửa sổ Google để xác minh.' : !client && !message ? <Loading inline label="Đang chuẩn bị xác minh"/> : ''}</p><div className="actions"><button disabled={exchanging} onClick={close}>Hủy</button>{message && !client ? <button onClick={() => { setMessage(''); setAttempt(value => value + 1); }}>Thử lại</button> : <button className="primary" disabled={!client || busy} onClick={() => void revoke()}>Xác minh & đăng xuất</button>}</div></AccountDialog>;
 }

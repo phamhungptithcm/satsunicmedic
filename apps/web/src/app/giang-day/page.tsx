@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "../../components/progress-link";
 import TeachingWorkspace from '../../components/teaching-workspace';
 import {canPreviewScenario} from '../../lib/pathophysiology';
 export const metadata={title:'Giảng dạy',robots:{index:false,follow:false}};

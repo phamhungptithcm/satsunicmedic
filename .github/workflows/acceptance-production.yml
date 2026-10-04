@@ -51,6 +51,9 @@ jobs:
             .ai/local/acceptance/browser-results.json
             .ai/local/acceptance/dependencyAudit.json
             .ai/local/acceptance/anatomy-*.png
+            .ai/local/acceptance/ui-performance*.json
+            .ai/local/acceptance/progress-*.png
+            .ai/local/acceptance/*failure.png
           include-hidden-files: true
           if-no-files-found: warn
           retention-days: 7

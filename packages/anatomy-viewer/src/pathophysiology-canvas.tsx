@@ -30,6 +30,7 @@ type Props = {
   view: "front" | "back" | "left" | "right";
   viewRevision: number;
   zoom: number;
+  onProgress?: (progress:{loaded:number;total:number})=>void;
   onStatus: (status: "loading" | "ready" | "error") => void;
 };
 
@@ -175,11 +176,11 @@ export default function PathophysiologyCanvas(props: Props) {
     const controller = new AbortController(); let owned: Group | null = null;
     props.onStatus("loading");
     const timeout = window.setTimeout(() => { controller.abort(); props.onStatus("error"); }, 15000);
-    void loadCanonicalHeart(props.catalog, props.binding, controller.signal).then(result => {
+    void loadCanonicalHeart(props.catalog, props.binding, controller.signal,(loaded,total)=>props.onProgress?.({loaded,total})).then(result => {
       window.clearTimeout(timeout); owned = result; setModel(result); props.onStatus("ready");
     }).catch(() => { window.clearTimeout(timeout); if (!controller.signal.aborted) props.onStatus("error"); });
     return () => { window.clearTimeout(timeout); controller.abort(); if (owned) disposeModel(owned); };
-  }, [props.catalog, props.binding, props.onStatus]);
+  }, [props.catalog, props.binding, props.onStatus, props.onProgress]);
   if (!model) return null;
   return <Boundary onError={() => props.onStatus("error")}>
     <Canvas style={{ height: "calc(100% - 96px)" }} frameloop={props.playing ? "always" : "demand"} dpr={[1, 1.5]} camera={{ position: [1.1, 0.35, 5.7], fov: 42, near: .01, far: 750 }} gl={{ antialias: true, powerPreference: "default", localClippingEnabled: true }} aria-label="Tim 3D tương tác: kéo để xoay, cuộn để phóng to; có nút chọn cấu trúc và góc nhìn bên ngoài mô hình">

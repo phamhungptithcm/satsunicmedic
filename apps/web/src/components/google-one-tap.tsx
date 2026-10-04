@@ -1,8 +1,9 @@
 'use client';
+import { useProgressRouter as useRouter } from './request-progress';
 import Script from 'next/script';
-import Link from 'next/link';
+import Link from "./progress-link";
 import {useEffect,useRef,useState} from 'react';
-import {useRouter} from 'next/navigation';
+
 import {ApiError,request,csrfHeaders} from '@hs/api-client';
 import {completeGoogleSignIn,prepareGoogleSignIn} from '../lib/google-sign-in';
 import {googleIdentity,oneTapConfigured,oneTapSuppressed,validGoogleCredential} from '../lib/google-one-tap';

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "./progress-link";
 import { BookOpen, RotateCcw } from 'lucide-react';
 import styles from './learning-empty.module.css';
 

@@ -1,7 +1,10 @@
+import { beginRequest } from './request-activity';
+export { getPendingRequests, getServerPendingRequests, subscribeRequests, beginRequest } from './request-activity';
 export class ApiError extends Error {
   constructor(public readonly status: number, public readonly code: string) { super(code); }
 }
 export async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
+  const finish = beginRequest();
   const abort = new AbortController();
   const timeout = setTimeout(() => abort.abort(), 10000);
   const cancel = () => abort.abort();
@@ -17,6 +20,7 @@ export async function request<T>(path: string, options: RequestInit = {}): Promi
     if(response.status===204)return undefined as T;
     return await response.json() as T;
   } finally {
+    finish();
     clearTimeout(timeout);
     options.signal?.removeEventListener('abort',cancel);
   }

@@ -1,4 +1,5 @@
 import { chromium } from 'playwright';
+import { verifyUiPerformance } from './ui-performance-browser.mjs';
 import { DIRECTORY_VERSION } from '../../packages/contracts/dist/directory.js';
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
@@ -28,6 +29,8 @@ try {
     await new Promise(r => setTimeout(r, 1000));
   }
   browser = await chromium.launch({ headless: true, args: ['--enable-unsafe-swiftshader'] });
+  await verifyUiPerformance(browser, origin, directory);
+  checked('cache reuse and delayed-operation progress');
   page = await browser.newPage({ viewport: { width: 1440, height: 1000 }, reducedMotion: 'reduce' });
   page.setDefaultTimeout(60_000);
   page.on('pageerror', error => errors.push(error.message));

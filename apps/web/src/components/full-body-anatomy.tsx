@@ -26,6 +26,8 @@ export default function FullBodyAnatomy({binding,scenario,initialStructure,initi
  const resultsRef=useRef<HTMLDivElement>(null);
  const [returnView,setReturnView]=useState<BodyScene|null>(null);
  const [mode,setMode]=useState<'rotate'|'pan'>('pan'),[help,setHelp]=useState(false),[notice,setNotice]=useState('');
+ const [progress,setProgress]=useState({loaded:0,total:0});
+ const onProgress=useCallback((next:{loaded:number;total:number})=>setProgress(old=>old.loaded===next.loaded&&old.total===next.total?old:next),[]);
  const [status,setStatus]=useState<'loading'|'ready'|'error'>('loading'),[chunkStatus,setChunkStatus]=useState<'loading'|'ready'|'error'>('ready');
  const [attempt,setAttempt]=useState(0),[retry,setRetry]=useState(0),[activity,setActivity]=useState<string|null>(null);
  const [mobilePanel,setMobilePanel]=useState<'search'|'tools'>('search'),[interacting,setInteracting]=useState(false);
@@ -118,10 +120,10 @@ export default function FullBodyAnatomy({binding,scenario,initialStructure,initi
    </aside>
    <section ref={stageRef} className={styles.stage} aria-label="Không gian mô hình toàn thân">
     <div className={styles.stageTop}><button onClick={whole}>Toàn thân</button>{scene.region!=='all'&&<><ChevronRight size={12}/><span>{model.regions[scene.region]?.label}</span></>}<span className={styles.source}>BodyParts3D</span></div>
-    <Canvas key={attempt} catalog={model} scene={scene} retainedChunks={returnView?requiredChunks(model,returnView):[]} active={!activity} interacting={interacting} retry={retry} label={bodyLabel(scene.selected)} mode={mode} onInspect={inspect} onNearby={focus} onFrame={frame} onHelp={()=>setHelp(v=>!v)} onCloseHelp={()=>setHelp(false)} onSelect={select} onCamera={camera} onStatus={setStatus} onChunks={setChunkStatus}/>
-    {status==='loading'&&<Loading label="Đang tải mô hình toàn thân" overlay dark/>}
+    <Canvas key={attempt} catalog={model} scene={scene} retainedChunks={returnView?requiredChunks(model,returnView):[]} active={!activity} interacting={interacting} retry={retry} label={bodyLabel(scene.selected)} mode={mode} onInspect={inspect} onNearby={focus} onFrame={frame} onHelp={()=>setHelp(v=>!v)} onCloseHelp={()=>setHelp(false)} onSelect={select} onCamera={camera} onProgress={onProgress} onStatus={setStatus} onChunks={setChunkStatus}/>
+    {status==='loading'&&<Loading label={progress.total>0&&progress.loaded>=progress.total?"Đang dựng mô hình":"Đang tải mô hình toàn thân"} progress={progress} overlay dark/>}
     {status==='error'&&<div className={styles.overlay} role="alert"><Focus size={32}/><h2>Chưa tải được mô hình</h2><button onClick={()=>{setStatus('loading');setAttempt(a=>a+1);}}>Thử lại</button></div>}
-    {scene.inside&&chunkStatus!=='ready'&&status==='ready'&&<div className={styles.loading} role={chunkStatus==='error'?'alert':'status'}>{chunkStatus==='loading'?<Loading label="Đang tải các cấu trúc cần xem" inline dark/>:<><span>Một số cấu trúc chưa tải được. Phần đã tải vẫn được giữ lại.</span><button onClick={()=>setRetry(r=>r+1)}>Tải lại phần còn thiếu</button></>}</div>}
+    {scene.inside&&chunkStatus!=='ready'&&status==='ready'&&<div className={styles.loading} role={chunkStatus==='error'?'alert':undefined}>{chunkStatus==='loading'?<Loading label={progress.total>0&&progress.loaded>=progress.total?"Đang dựng mô hình":"Đang tải các cấu trúc cần xem"} progress={progress} inline dark/>:<><span>Một số cấu trúc chưa tải được. Phần đã tải vẫn được giữ lại.</span><button onClick={()=>setRetry(r=>r+1)}>Tải lại phần còn thiếu</button></>}</div>}
     {!scene.inside&&status==='ready'&&<button className={styles.reveal} onClick={reveal} aria-label="Khám phá bên trong" title="Khám phá bên trong"><Layers size={22} strokeWidth={1.6} aria-hidden="true"/></button>}
     <button className={styles.interactionMode} aria-label={interacting?'Xong · Cuộn trang':'Tương tác với mô hình'} aria-pressed={interacting} disabled={status!=='ready'} onClick={()=>setInteracting(value=>!value)}>{interacting&&<Check size={14}/>} {interacting?'Xong':'Tương tác'}</button>
     {returnView&&<button className={styles.returnView} aria-label="Quay lại" onClick={goBack} title="Khôi phục góc nhìn trước khi xem chi tiết"><span className={styles.returnGlyph}><ArrowLeft size={15} strokeWidth={1.5}/></span></button>}

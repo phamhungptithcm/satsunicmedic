@@ -179,7 +179,7 @@ export default function Quizzes({initialQuiz,initialRevision}:{initialQuiz?:stri
             </fieldset>
           ))}
           {!result && (
-            <button className="primary" disabled={busy}>
+            <button className="primary" aria-label={busy && !opening ? "Đang nộp" : undefined} disabled={busy}>
               {busy && !opening ? <Loading inline label="Đang nộp" /> : "Nộp câu trả lời"}
             </button>
           )}

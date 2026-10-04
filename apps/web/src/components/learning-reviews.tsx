@@ -1,4 +1,5 @@
 "use client";
+import Loading from './loading';
 import { useEffect, useRef, useState } from 'react';
 import { ApiError, request } from '@hs/api-client';
 import type { LearningReviewList } from '@hs/contracts';
@@ -33,8 +34,8 @@ export default function LearningReviews({ onOpen, disabled }: { onOpen: (id: str
   return <section aria-label="Lịch ôn của bạn">
     <h2>Ôn lại kiến thức</h2>
     <p>Lịch gợi ý thử nghiệm, không phải đánh giá năng lực lâm sàng. Thời gian hiển thị theo giờ Việt Nam (UTC+7).</p>
-    <button type="button" disabled={loading || disabled} onClick={() => void load()}>{loading ? 'Đang tải lịch ôn…' : 'Tải lịch ôn của tôi'}</button>
-    <p role="status">{message}</p>
+    <button type="button" disabled={loading || disabled} onClick={() => void load()}>Tải lịch ôn của tôi</button>
+    <p role={loading ? undefined : "status"}>{loading ? <Loading inline label={message.replace(/…$/, '')}/> : message}</p>
     {data?.nextCursor && <button type="button" disabled={loading || disabled} onClick={() => void load(true)}>Tải thêm bài ôn</button>}
     {data?.truncated && !data.nextCursor && <p>Đang hiển thị một phần lịch ôn. Các bài khác vẫn được lưu trong tài khoản.</p>}
     <ul>{data?.items.map(item => <li key={`${item.quizId}:${item.quizRevision}`}>

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
+import Link from "./progress-link";
 import { BookOpen, Box, GraduationCap, Hospital, Info, Menu, UserRound, X } from "lucide-react";
 import { request } from "@hs/api-client";
 const destinations = [

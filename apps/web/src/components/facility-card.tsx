@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "./progress-link";
 import { specialties, provinceForCode, type FacilityView } from '@hs/contracts';
 export function FacilityCard({branch:b,detail=false,back=''}:{branch:FacilityView;detail?:boolean;back?:string}){
  return <article className="content-card">

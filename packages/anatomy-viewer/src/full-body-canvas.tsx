@@ -12,18 +12,23 @@ import { navigationAction, navigateCamera, navigateWheel } from "./body-navigati
 type Props = { catalog: BodyCatalog; scene: BodyScene; active: boolean; interacting?: boolean; retry: number; label: string;
  retainedChunks?:readonly string[]; mode?:'rotate'|'pan'; onInspect?:(id:string)=>void; onNearby?:(id:string)=>void; onFrame?:(selected:boolean)=>void; onHelp?:()=>void; onCloseHelp?:()=>void;
  onSelect: (id:string)=>void; onCamera: (pose:CameraPose, gesture:boolean)=>void;
+ onProgress?:(progress:{loaded:number;total:number})=>void;
  onStatus:(status:'loading'|'ready'|'error')=>void; onChunks:(status:'loading'|'ready'|'error')=>void };
 
 export default function FullBodyCanvas(props:Props) {
  const host=useRef<HTMLDivElement>(null), label=useRef<HTMLDivElement>(null), current=useRef(props), update=useRef<(()=>void)|null>(null);
- useEffect(()=>{current.current=props;update.current?.();},[props]);
+ useEffect(()=>{
+  const before=current.current;current.current=props;
+  // Progress-only parent renders must not traverse every mesh again.
+  if(before.scene!==props.scene||before.active!==props.active||before.retry!==props.retry||before.mode!==props.mode||before.interacting!==props.interacting||before.label!==props.label||JSON.stringify(before.retainedChunks)!==JSON.stringify(props.retainedChunks))update.current?.();
+ },[props]);
  const [card,setCard]=useState<string|null>(null);
  const cardTarget=useRef<string|null>(null);
  const dismiss=()=>{cardTarget.current=null;setCard(null);};
  const catalog=props.catalog;
  useEffect(()=>{
   const container=host.current;if(!container)return;
-  const lifecycle=new AbortController();let stopped=false, frame=0, dampingFrame=0, updatingControls=false, pendingGesture=false, lastDampingTime=0, settleDeadline=0, retry=current.current.retry;
+  const lifecycle=new AbortController();let renderFrame=0,progressFrame=0;const downloaded=new Map<string,number>();let stopped=false, frame=0, dampingFrame=0, updatingControls=false, pendingGesture=false, lastDampingTime=0, settleDeadline=0, retry=current.current.retry;
   const narrow=matchMedia('(pointer:coarse)'),reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
   let wheelTimer:ReturnType<typeof setTimeout>|undefined;
   const finishWheel=()=>{if(wheelTimer!==undefined){clearTimeout(wheelTimer);wheelTimer=undefined;if(!stopped&&current.current.active&&controls){syncInput();current.current.onCamera(pose(),true);}}};
@@ -48,7 +53,7 @@ export default function FullBodyCanvas(props:Props) {
   };
   const clearOutline=()=>{for(const obj of [...outline.children]){outline.remove(obj);if(obj instanceof THREE.LineSegments){obj.geometry.dispose();(obj.material as THREE.Material).dispose();}}};
   const pose=():CameraPose=>({position:camera.position.toArray(),target:controls!.target.toArray()});
-  const render=()=>{if(stopped||!current.current.active)return;renderer?.render(scene,camera);
+  const draw=()=>{if(stopped||!current.current.active)return;renderer?.render(scene,camera);
    if(label.current){const s=current.current.scene;label.current.hidden=(!s.labels&&!cardTarget.current)||!s.selected||(!s.inside&&s.selected!=='FJ2810')||!selectionIds(catalog,s.selected).some(id=>visibleSource(id,s)&&(id==='FJ2810'||sceneSourceIds(catalog,s).includes(id))&&models.has(catalog.structures[id]!.chunk));
     if(!label.current.hidden){const bounds=selectionBounds(catalog,s.selected!);const center=new THREE.Vector3(...bounds[0]).add(new THREE.Vector3(...bounds[1])).multiplyScalar(.5);center.project(camera);label.current.hidden=center.z>1||center.z< -1||Math.abs(center.x)>1||Math.abs(center.y)>1;
      const width=label.current.offsetWidth,height=label.current.offsetHeight,topInset=100;
@@ -57,8 +62,10 @@ export default function FullBodyCanvas(props:Props) {
     }
     if(label.current.hidden&&cardTarget.current)closeCard();
    }};
+  const render=()=>{if(stopped||renderFrame)return;renderFrame=requestAnimationFrame(()=>{renderFrame=0;draw();});};
+  const progress=()=>{if(stopped||progressFrame)return;progressFrame=requestAnimationFrame(()=>{progressFrame=0;if(stopped)return;const keys=[...new Set(['skin',...requiredChunks(catalog,current.current.scene)])];let loaded=0,total=0;for(const key of keys){const bytes=catalog.assets[key]!.byteLength;total+=bytes;loaded+=models.has(key)?bytes:Math.min(bytes,downloaded.get(key)??0);}current.current.onProgress?.({loaded,total});});};
   const read=async(key:string,signal:AbortSignal)=>{
-   const model=await loadAnatomyChunk(catalog,key,signal);
+   const model=await loadAnatomyChunk(catalog,key,signal,(loaded)=>{downloaded.set(key,loaded);progress();});
    if(stopped){disposeModel(model);throw Error('Cancelled');}
    return model;
   };
@@ -82,6 +89,7 @@ export default function FullBodyCanvas(props:Props) {
    move({position:center.clone().add(new THREE.Vector3(...direction).multiplyScalar(distance)).toArray(),target:center.toArray()},smooth);
   };
   const apply=()=>{
+   progress();
    const s=current.current.scene,visible=new Set(sceneSourceIds(catalog,s)),selected=new Set(selectionIds(catalog,s.selected));
    const wanted=requiredChunks(catalog,s);const ready=wanted.every(k=>models.has(k));
    // Keep the surface while the first interior chunk is loading or failed.
@@ -103,12 +111,12 @@ export default function FullBodyCanvas(props:Props) {
    const wanted=new Set(requiredChunks(catalog,current.current.scene));
    // Keep only the active scope and the single return view; never prefetch retained keys.
    const retained=new Set(current.current.retainedChunks??[]);
-   for(const [key,model] of models)if(key!=='skin'&&!wanted.has(key)&&!retained.has(key)){scene.remove(model);disposeModel(model);models.delete(key);}
-   for(const [key,request]of pending)if(!wanted.has(key)&&!retained.has(key)&&key!=='skin'){request.abort();pending.delete(key);}
+   for(const [key,model] of models)if(key!=='skin'&&!wanted.has(key)&&!retained.has(key)){scene.remove(model);disposeModel(model);models.delete(key);downloaded.delete(key);}
+   for(const [key,request]of pending)if(!wanted.has(key)&&!retained.has(key)&&key!=='skin'){request.abort();pending.delete(key);downloaded.delete(key);}
    // Two bounded downloads/decode jobs at a time. Error is latched until explicit retry.
    for(const key of wanted){if(pending.size>=2)break;if(models.has(key)||pending.has(key)||failed.has(key))continue;
     const request=new AbortController();pending.set(key,request);const timer=setTimeout(()=>request.abort(),45000);
-    void read(key,request.signal).then(model=>{if(stopped||(!requiredChunks(catalog,current.current.scene).includes(key)&&!current.current.retainedChunks?.includes(key))){disposeModel(model);return;}models.set(key,model);scene.add(model);}).catch(()=>{if(!stopped&&pending.get(key)===request)failed.add(key);}).finally(()=>{clearTimeout(timer);if(pending.get(key)===request)pending.delete(key);if(!stopped){apply();reconcile();}});
+    void read(key,request.signal).then(model=>{if(stopped||(!requiredChunks(catalog,current.current.scene).includes(key)&&!current.current.retainedChunks?.includes(key))){disposeModel(model);return;}models.set(key,model);scene.add(model);}).catch(()=>{if(!stopped&&pending.get(key)===request)failed.add(key);}).finally(()=>{clearTimeout(timer);if(pending.get(key)===request)pending.delete(key);if(!stopped){reconcile();}});
    }
    apply();
   };
@@ -165,14 +173,14 @@ export default function FullBodyCanvas(props:Props) {
     const hit=raycaster.intersectObjects(objects,false).find(h=>{const mesh=h.object as THREE.Mesh;return(Array.isArray(mesh.material)?mesh.material:[mesh.material]).every(m=>m.opacity>0&&!m.clippingPlanes?.some(p=>p.distanceToPoint(h.point)<0));});
     if(hit){const id=hit.object.userData.sourceId as string;current.current.onSelect(id);cardTarget.current=id;setCard(id);}else closeCard();
    },{signal:lifecycle.signal});
-   canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();stopped=true;cancelWheel();cancelAnimationFrame(frame);cancelAnimationFrame(dampingFrame);dampingFrame=0;controls!.enabled=false;update.current=null;closeCard();current.current.onStatus('error');},{signal:lifecycle.signal});
+   canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();stopped=true;cancelAnimationFrame(renderFrame);cancelAnimationFrame(progressFrame);cancelWheel();cancelAnimationFrame(frame);cancelAnimationFrame(dampingFrame);dampingFrame=0;controls!.enabled=false;update.current=null;closeCard();current.current.onStatus('error');},{signal:lifecycle.signal});
    update.current=()=>{const p=current.current,s=p.scene;if((s.region!==previous.region&&s.selected!==cardTarget.current)||s.focusRevision!==previous.focusRevision||s.selected!==cardTarget.current||!p.active)closeCard();syncInput();if(!p.active){cancelWheel();cancelAnimationFrame(frame);cancelAnimationFrame(dampingFrame);dampingFrame=0;pendingGesture=false;scripted=false;return;}
     if(retry!==p.retry){retry=p.retry;failed.clear();}
     if(s.camera&&JSON.stringify(s.camera)!==JSON.stringify(previous.camera)&&JSON.stringify(s.camera)!==JSON.stringify(pose()))move(s.camera);else if(s.focusRevision!==previous.focusRevision&&!s.camera)fit();else if(s.zoom!==previous.zoom&&!s.camera){const offset=camera.position.clone().sub(controls!.target);offset.setLength(THREE.MathUtils.clamp(offset.length()*Math.pow(.8,s.zoom-previous.zoom),.025,8));move({position:controls!.target.clone().add(offset).toArray(),target:controls!.target.toArray()});}
     previous=s;reconcile();};
    update.current();current.current.onStatus('ready');
   }).catch(()=>{if(!stopped)current.current.onStatus('error');}).finally(()=>clearTimeout(skinTimer));
-  return()=>{stopped=true;cancelWheel();lifecycle.abort();for(const request of pending.values())request.abort();cancelAnimationFrame(frame);cancelAnimationFrame(dampingFrame);update.current=null;observer?.disconnect();controls?.dispose();clearOutline();for(const model of models.values())disposeModel(model);renderer?.dispose();renderer?.domElement.remove();};
+  return()=>{stopped=true;cancelAnimationFrame(renderFrame);cancelAnimationFrame(progressFrame);cancelWheel();lifecycle.abort();for(const request of pending.values())request.abort();cancelAnimationFrame(frame);cancelAnimationFrame(dampingFrame);update.current=null;observer?.disconnect();controls?.dispose();clearOutline();for(const model of models.values())disposeModel(model);renderer?.dispose();renderer?.domElement.remove();};
  },[catalog]);
  return <><div ref={host} style={{position:'absolute',inset:0}}/><div ref={label} hidden role="group" aria-label={`Lựa chọn xem ${props.label}`} data-body-card={card&&card===props.scene.selected?'open':undefined} style={{position:'absolute',pointerEvents:card?'auto':'none',width:card?208:undefined,maxWidth:'calc(100% - 16px)',padding:4,borderRadius:9,background:'#25282cf5',border:'1px solid #b7c0ce26',boxShadow:'0 4px 16px #0003',color:'#f3f6fc',fontSize:11,zIndex:4,overflowWrap:'anywhere'}} onKeyDown={e=>{if(e.key==='Escape'){dismiss();host.current?.querySelector('canvas')?.focus();e.stopPropagation();}}}>
  <div data-body-card-heading style={{display:'flex',alignItems:'center',gap:8}}><strong style={{flex:1,paddingLeft:6,lineHeight:1.4,fontWeight:500}}>{props.label}</strong>
