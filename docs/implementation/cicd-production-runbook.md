@@ -83,3 +83,18 @@ A real recovery drill and first cloud run remain NOT_TESTED until executed with 
 - [Firebase App Hosting rollout and rollback](https://firebase.google.com/docs/app-hosting/rollouts)
 - [App Hosting REST discovery contract](https://firebaseapphosting.googleapis.com/$discovery/rest?version=v1beta)
 - [GitHub generated release notes](https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes)
+
+
+## PROD-LOW15: approved cost envelope
+
+The owner approved PROD-LOW15 except all 3D/asset optimization. Models, routes and caching remain unchanged. Registry now reuses `asia-southeast1-docker.pkg.dev/satsunicmedic/production/web`; this is the existing build-writable repository. `medic` was never provisioned.
+
+Configured provider spend caps: Cloud Run USD 3/month and Cloud Run Functions USD 2/month, project satsunicmedic only, shown as Configured in Billing. Existing project USD 10 alert excludes credits and includes a 100% forecast warning. These do not cap storage/CDN/egress or guarantee a final USD 15 invoice. Credits and free quotas are not assumed when admitting a release.
+
+Before a paid build, `runProduction` requires `acceptance/costs.json` from the trusted exact-candidate acceptance bundle. Supply commit matching the release SHA, project, region, currency USD, checkedAt (within 24h), numeric monthToDateUsd, projectedMonthTotalUsd, and nonempty actualCostSource/projectionSource references. Projection must include remaining-month traffic, new deployment/build, database/storage and the retained disk, and must be below USD 11 so USD 4 remains for tax/variance. Unknown projections block; do not copy a fixture or extrapolate a quiet hour as a promise. The helper reads fresh Cloud Run settings using only resource fields, overwriting any submitted service settings. Both services require min 0, max 1 at revision and service level, CPU 1, 512 MiB, concurrency 20. `cost-result.json` is local operational evidence, not a monetary kill switch.
+
+The legacy static IP was released after source/reference and provider checks; its stopped VM, 30 GB disk and backup buckets are retained. Restoring that VM now requires a newly assigned address and any needed DNS update.
+
+WIF provider is `projects/108608537442/locations/global/workloadIdentityPools/github-production/providers/github`; deploy identity is `medic-deploy@satsunicmedic.iam.gserviceaccount.com`. Numeric repo/owner, main ref and production environment subject are all constrained. GitHub environment allows only branch main. Custom project role omits IAM changes, secret access, Firestore document access and deletion; registry access is scoped read-only, build-source writes are create-only under cicd/. No service-account key was created.
+
+**Still blocked:** `actAs` was not granted because automatic approval review requires explicit recipient/privilege approval. The existing Functions build uses the default Compute identity with Editor, which must not be delegated to CI under the approved least-privilege constraint. Prefer a separate scoped plan to move Functions builds to a narrowly permissioned build identity. The exact-SHA acceptance artifact and verified monthly forecast are also missing. Do not set a dummy DISCOVERY_EVIDENCE_RUN_ID, bypass publication/auth/restore checks, or rerun deployment as if setup were complete.

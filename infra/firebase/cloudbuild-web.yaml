@@ -9,7 +9,7 @@ options:
 timeout: 1800s
 logsBucket: gs://satsunicmedic-build-source/logs
 substitutions:
-  _REGISTRY: asia-southeast1-docker.pkg.dev/satsunicmedic/medic
+  _REGISTRY: asia-southeast1-docker.pkg.dev/satsunicmedic/production
   _RELEASE: firebase-release-1
   _FIREBASE_API_KEY: ''
   _FIREBASE_PROJECT_ID: satsunicmedic

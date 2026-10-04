@@ -1,0 +1,25 @@
+{
+  "project": "satsunicmedic",
+  "region": "asia-southeast1",
+  "currency": "USD",
+  "monthlyCeilingUsd": 15,
+  "reserveUsd": 4,
+  "alertUsd": 10,
+  "services": [
+    "medic",
+    "api"
+  ],
+  "limits": {
+    "minInstances": 0,
+    "maxInstances": 1,
+    "cpu": 1,
+    "memoryMiB": 512,
+    "concurrency": 20
+  },
+  "spendCapsUsd": {
+    "run.googleapis.com": 3,
+    "cloudfunctions.googleapis.com": 2
+  },
+  "modelsChanged": false,
+  "hardTotalSpendCap": false
+}

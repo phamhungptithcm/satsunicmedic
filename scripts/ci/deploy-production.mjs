@@ -5,12 +5,13 @@ import { resolve, dirname, relative } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { identity, githubClient, assertCurrent, existingTag } from './release.mjs';
 import { smoke, productionOrigin } from './smoke-production.mjs';
+import { checkProductionCosts, costPolicy } from './check-production-costs.mjs';
 
 const project = 'satsunicmedic';
 const location = 'asia-southeast1';
 const backend = `projects/${project}/locations/${location}/backends/medic`;
 const appHosting = 'https://firebaseapphosting.googleapis.com/v1beta/';
-const registry = `${location}-docker.pkg.dev/${project}/medic/web`;
+const registry = `${location}-docker.pkg.dev/${project}/production/web`;
 const output = '.ai/local/cicd';
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const json = path => JSON.parse(readFileSync(path, 'utf8'));
@@ -205,6 +206,23 @@ export function stageSource(paths, run = command) {
   return target;
 }
 
+// Only resource settings are read; environment variables and credentials are excluded.
+export function readLiveCostServices(run = command) {
+  return costPolicy.services.map(name => {
+    const service = JSON.parse(run('gcloud', ['run', 'services', 'describe', name, '--project', project, '--region', location,
+      '--format=json(metadata.annotations,spec.template.metadata.annotations,spec.template.spec.containers[0].resources.limits,spec.template.spec.containerConcurrency)']));
+    const annotations = service.spec?.template?.metadata?.annotations ?? {};
+    const spec = service.spec?.template?.spec;
+    const limits = spec?.containers?.[0]?.resources?.limits ?? {};
+    const memory = /^(\d+)(Mi|Gi)$/.exec(limits.memory ?? '');
+    const serviceMax = service.metadata?.annotations?.['run.googleapis.com/maxScale'];
+    return { name, minInstances: Math.max(Number(annotations['autoscaling.knative.dev/minScale'] ?? 0), Number(service.metadata?.annotations?.['run.googleapis.com/minScale'] ?? 0)),
+      maxInstances: Math.max(Number(annotations['autoscaling.knative.dev/maxScale']), Number(serviceMax ?? 0)),
+      cpu: Number(limits.cpu), memoryMiB: memory ? Number(memory[1]) * (memory[2] === 'Gi' ? 1024 : 1) : null,
+      concurrency: spec?.containerConcurrency };
+  });
+}
+
 export async function runProduction(env = process.env) {
   const id = json(`${output}/identity.json`);
   if (JSON.stringify(id) !== JSON.stringify(identity(env, json('package.json').version))) throw new Error('Identity artifact mismatch');
@@ -212,6 +230,12 @@ export async function runProduction(env = process.env) {
   const tag = await existingTag(id, github);
   if (tag) throw new Error('Release already tagged; rerun only the failed release job to avoid redeploying');
   if (!/^[1-9]\d*$/.test(env.GITHUB_RUN_ATTEMPT ?? '')) throw new Error('Invalid run attempt');
+  const costs = json(`${output}/acceptance/costs.json`);
+  if (costs.commit !== id.sha) throw new Error('Cost evidence commit mismatch');
+  costs.services = readLiveCostServices();
+  const costResult = checkProductionCosts(costs);
+  save('cost-result', costResult);
+  if (costResult.status !== 'PASSED') throw new Error(`Cost gate: ${costResult.failures.join('; ')}`);
   const api = googleClient();
   const source = stageSource(json(`${output}/candidate-files.json`));
   const imageTag = `sha-${id.sha}-run-${id.runId}-${env.GITHUB_RUN_ATTEMPT}`;

@@ -42,7 +42,7 @@ export async function existingTag(id, api) {
 export function validateManifest(manifest, id) {
   if (manifest.status !== 'SUCCEEDED' || manifest.sha !== id.sha || manifest.tag !== id.tag ||
       manifest.runId !== id.runId || manifest.repository !== id.repository ||
-      !/^asia-southeast1-docker\.pkg\.dev\/satsunicmedic\/medic\/web@sha256:[a-f0-9]{64}$/.test(manifest.image ?? '') ||
+      !/^asia-southeast1-docker\.pkg\.dev\/satsunicmedic\/production\/web@sha256:[a-f0-9]{64}$/.test(manifest.image ?? '') ||
       manifest.smoke !== 'PASSED' || !manifest.functionRevision || !manifest.rollout) {
     throw new Error('Missing successful deployment evidence for this run and SHA');
   }

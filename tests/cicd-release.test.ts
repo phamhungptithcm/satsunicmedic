@@ -19,7 +19,7 @@ const env = { GITHUB_SHA: sha, GITHUB_REF: 'refs/heads/main', GITHUB_RUN_NUMBER:
   GCP_WORKLOAD_IDENTITY_PROVIDER: 'projects/123/locations/global/workloadIdentityPools/ci/providers/github',
   GCP_DEPLOY_SERVICE_ACCOUNT: 'ci@satsunicmedic.iam.gserviceaccount.com', FIREBASE_WEB_API_KEY: `AIza${'a'.repeat(32)}`, DISCOVERY_EVIDENCE_RUN_ID: '99' };
 const id = identity(env, '0.1.0');
-const image = `asia-southeast1-docker.pkg.dev/satsunicmedic/medic/web@sha256:${'b'.repeat(64)}`;
+const image = `asia-southeast1-docker.pkg.dev/satsunicmedic/production/web@sha256:${'b'.repeat(64)}`;
 const good = { ...id, status: 'SUCCEEDED', smoke: 'PASSED', image, functionRevision: 'api-1', rollout: 'rollout-1' };
 
 describe('production configuration and immutable identity', () => {
