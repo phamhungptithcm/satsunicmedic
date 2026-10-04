@@ -5,6 +5,7 @@ RUN npm install --global pnpm@11.19.0
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc tsconfig.base.json ./
 COPY apps/web ./apps/web
 COPY packages ./packages
+COPY scripts/free-anatomy/catalog/discovery.json ./scripts/free-anatomy/catalog/discovery.json
 RUN pnpm install --frozen-lockfile
 ARG API_ORIGIN=http://127.0.0.1:4186
 ENV API_ORIGIN=$API_ORIGIN

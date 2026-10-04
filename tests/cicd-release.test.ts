@@ -3,11 +3,11 @@ import { describe, it, expect, afterEach } from 'vitest';
 // @ts-expect-error Native ESM script has no generated declaration file.
 import { identity, assertCurrent, existingTag, publish, validateManifest } from '../scripts/ci/release.mjs';
 // @ts-expect-error Native ESM script has no generated declaration file.
-import { validateAcceptance, validateConfig, candidatePaths, safeSourcePath, poll, deployCandidate, googleClient, command } from '../scripts/ci/deploy-production.mjs';
+import { validateAcceptance, validateConfig, candidatePaths, safeSourcePath, poll, deployCandidate, googleClient, command, stageSource, publicDiscoveryCatalog } from '../scripts/ci/deploy-production.mjs';
 // @ts-expect-error Native ESM script has no generated declaration file.
 import { smoke } from '../scripts/ci/smoke-production.mjs';
 
-import { mkdtempSync, writeFileSync, mkdirSync, rmSync } from 'node:fs';
+import { mkdtempSync, writeFileSync, mkdirSync, rmSync, readFileSync, existsSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
@@ -219,4 +219,14 @@ it('repairs a tag-only release failure without recreating or moving its tag', as
   };
   await publish(id, good, api);
   expect(writes).toEqual(['releases/generate-notes', 'releases']);
+});
+
+
+it('stages the public catalog imported by the web app while excluding CI scripts', () => {
+  const root = mkdtempSync(join(tmpdir(), 'medic-build-input-')); directories.push(root);
+  const paths = candidatePaths([publicDiscoveryCatalog, 'scripts/ci/deploy-production.mjs']);
+  expect(paths).toContain(publicDiscoveryCatalog);
+  const staged = stageSource(paths, (_cmd: string, args: string[]) => readFileSync(args[1]!.replace('HEAD:', '')), join(root, 'source'));
+  expect(readFileSync(join(staged, publicDiscoveryCatalog))).toEqual(readFileSync(publicDiscoveryCatalog));
+  expect(existsSync(join(staged, 'scripts/ci/deploy-production.mjs'))).toBe(false);
 });

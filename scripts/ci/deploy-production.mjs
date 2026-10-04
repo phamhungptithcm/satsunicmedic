@@ -12,6 +12,7 @@ const project = 'satsunicmedic';
 const location = 'asia-southeast1';
 const backend = `projects/${project}/locations/${location}/backends/medic`;
 const appHosting = 'https://firebaseapphosting.googleapis.com/v1beta/';
+export const publicDiscoveryCatalog = 'scripts/free-anatomy/catalog/discovery.json';
 const registry = `${location}-docker.pkg.dev/${project}/production/web`;
 const output = '.ai/local/cicd';
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -35,7 +36,7 @@ export function validateConfig(env) {
 
 export function candidatePaths(paths) {
   const rootFiles = new Set(['package.json', 'pnpm-lock.yaml', 'pnpm-workspace.yaml', '.npmrc', 'tsconfig.base.json', 'tsconfig.json', '.dockerignore', 'firebase.json']);
-  return paths.filter(p => rootFiles.has(p) || /^(apps|packages|infra\/firebase|infra\/docker|scripts\/ci)\//.test(p) || p === 'docs/implementation/production-risk-acceptance-approval.json' || p === 'scripts/discovery-release-check.ts' || p.startsWith('.github/'));
+  return paths.filter(p => rootFiles.has(p) || p === publicDiscoveryCatalog || /^(apps|packages|infra\/firebase|infra\/docker|scripts\/ci)\//.test(p) || p === 'docs/implementation/production-risk-acceptance-approval.json' || p === 'scripts/discovery-release-check.ts' || p.startsWith('.github/'));
 }
 export function safeSourcePath(path) {
   return !path.split('/').some(p => p === '..' || p === '.git' || p === 'node_modules' || p === '.next' || p === 'dist' || p === '.ai') &&
@@ -195,11 +196,10 @@ export async function deployCandidate(id, image, deps) {
   }
 }
 
-export function stageSource(paths, run = command) {
-  const target = `${output}/source`;
+export function stageSource(paths, run = command, target = `${output}/source`) {
   mkdirSync(target, { recursive: false });
   // Only the clean committed allowlist is sent to Cloud Build; ADC files are excluded.
-  const buildPaths = paths.filter(p => !p.startsWith('.github/') && !p.startsWith('scripts/') && !p.startsWith('apps/api/'));
+  const buildPaths = paths.filter(p => !p.startsWith('.github/') && (!p.startsWith('scripts/') || p === publicDiscoveryCatalog) && !p.startsWith('apps/api/'));
   for (const path of buildPaths) {
     if (!safeSourcePath(path) || !lstatSync(path).isFile()) throw new Error(`Unsafe build input: ${path}`);
     // Ensure the working copy still matches the approved Git object after dependency install.
