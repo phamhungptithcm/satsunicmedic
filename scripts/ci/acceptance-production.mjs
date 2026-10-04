@@ -4,6 +4,7 @@ import { readFileSync, writeFileSync, mkdirSync, rmSync, realpathSync, lstatSync
 import { resolve, relative } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { candidatePaths, validateAcceptance } from './deploy-production.mjs';
+import { validateDeferrals } from './owner-deferrals.mjs';
 import { checkProductionCosts } from './check-production-costs.mjs';
 
 export const technicalChecks = ['typecheck', 'lint', 'unit', 'integration', 'build', 'browser', 'dependencyAudit'];
@@ -69,9 +70,11 @@ export async function assemble(candidate, receiptsRoot, external, destination, r
     // Exclude any undeclared fields from uploaded evidence.
     receipts[name] = { name, status: receipt.status, commit: receipt.commit, candidateSha256: receipt.candidateSha256, checkedAt: receipt.checkedAt, results: receipt.results.map(r => ({ exitCode: r.exitCode, outputSha256: r.outputSha256 })) };
   }
+  const deferred = validateDeferrals(external?.deferred, candidate, now);
   const missingExternal = [];
   for (const name of externalChecks) {
     const receipt = external?.checks?.[name];
+    if (deferred.some(item => item.check === name)) { if (receipt) throw Error(`Conflicting passed/deferred evidence: ${name}`); continue; }
     try { validateReceipt(receipt, candidate, name, now); } catch { missingExternal.push(name); continue; }
     for (const key of ['summary', 'source', 'reviewer']) {
       if (typeof receipt[key] !== 'string' || !receipt[key].trim() || receipt[key].length > 4000) throw new Error(`Missing external evidence ${name}.${key}`);
@@ -83,16 +86,17 @@ export async function assemble(candidate, receiptsRoot, external, destination, r
   if (costs?.commit !== candidate.commit || checkProductionCosts(costs, now).status !== 'PASSED') throw new Error('Missing or invalid measured monthly cost projection');
   const cleanCosts = Object.fromEntries(['commit', 'project', 'region', 'currency', 'checkedAt', 'monthToDateUsd', 'projectedMonthTotalUsd', 'actualCostSource', 'projectionSource', 'services'].map(key => [key, costs[key]]));
   cleanCosts.services = costs.services.map(s => Object.fromEntries(['name', 'minInstances', 'maxInstances', 'cpu', 'memoryMiB', 'concurrency'].map(k => [k, s[k]])));
-  const content = JSON.stringify({ receipts, costs: cleanCosts });
+  const content = JSON.stringify({ receipts, deferred, costs: cleanCosts });
   if (/-----BEGIN|AIza[\w-]{20,}|Bearer\s+\S+|eyJ[\w-]{15,}\.[\w-]+\./i.test(content)) throw new Error('Potential secret in supplied evidence');
   mkdirSync(destination, { recursive: true });
-  const evidence = { ...candidate, checks: {}, deferred: [] };
+  const evidence = { ...candidate, checks: {}, deferred };
   try {
+    if (deferred.length) writeFileSync(resolve(destination, 'owner-deferrals.json'), JSON.stringify(deferred, null, 2));
     for (const [name, receipt] of Object.entries(receipts)) {
       writeFileSync(resolve(destination, `${name}.json`), JSON.stringify(receipt, null, 2));
       evidence.checks[name] = { status: 'PASSED', candidateSha256: candidate.candidateSha256, checkedAt: receipt.checkedAt, evidence: `${name}.json` };
     }
-    await validateAcceptance(evidence, candidate.files.map(f => f.path), candidate.commit, root, destination);
+    await validateAcceptance(evidence, candidate.files.map(f => f.path), candidate.commit, root, destination, now);
     writeFileSync(resolve(destination, 'costs.json'), JSON.stringify(cleanCosts, null, 2));
     writeFileSync(resolve(destination, 'evidence.json'), JSON.stringify(evidence, null, 2));
   } catch (error) { rmSync(destination, { recursive: true, force: true }); throw error; }

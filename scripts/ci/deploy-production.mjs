@@ -1,3 +1,4 @@
+import { assertExternalDecisions } from './owner-deferrals.mjs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync, mkdirSync, cpSync, lstatSync, realpathSync } from 'node:fs';
@@ -34,7 +35,7 @@ export function validateConfig(env) {
 
 export function candidatePaths(paths) {
   const rootFiles = new Set(['package.json', 'pnpm-lock.yaml', 'pnpm-workspace.yaml', '.npmrc', 'tsconfig.base.json', 'tsconfig.json', '.dockerignore', 'firebase.json']);
-  return paths.filter(p => rootFiles.has(p) || /^(apps|packages|infra\/firebase|infra\/docker|scripts\/ci)\//.test(p) || p === 'scripts/discovery-release-check.ts' || p.startsWith('.github/'));
+  return paths.filter(p => rootFiles.has(p) || /^(apps|packages|infra\/firebase|infra\/docker|scripts\/ci)\//.test(p) || p === 'docs/implementation/production-risk-acceptance-approval.json' || p === 'scripts/discovery-release-check.ts' || p.startsWith('.github/'));
 }
 export function safeSourcePath(path) {
   return !path.split('/').some(p => p === '..' || p === '.git' || p === 'node_modules' || p === '.next' || p === 'dist' || p === '.ai') &&
@@ -42,12 +43,17 @@ export function safeSourcePath(path) {
     !/\.(pem|p12|key)$/i.test(path) && !path.startsWith('/') && !path.includes('\\');
 }
 
-export async function validateAcceptance(evidence, paths, sha, root, bundle) {
+export async function validateAcceptance(evidence, paths, sha, root, bundle, now = Date.now()) {
   if (evidence.commit !== sha) throw new Error('Discovery evidence commit mismatch');
   const declared = evidence.files?.map(f => f.path).sort();
   if (JSON.stringify(declared) !== JSON.stringify(paths)) throw new Error('Discovery manifest must cover every selected committed candidate file');
+  const deferred = assertExternalDecisions(evidence, now);
+  if (deferred.length) {
+    const attachment = realpathSync(resolve(bundle, 'owner-deferrals.json'));
+    if (relative(realpathSync(bundle), attachment).startsWith('..') || !lstatSync(attachment).isFile() || JSON.stringify(JSON.parse(readFileSync(attachment, 'utf8'))) !== JSON.stringify(deferred)) throw Error('Missing/mismatched owner decision attachment');
+  }
   const { checkDiscovery } = await import('../discovery-release-check.ts');
-  const result = checkDiscovery(evidence, root);
+  const result = checkDiscovery(evidence, root, now);
   if (result.status !== 'READY_FOR_REVIEW') throw new Error(`Discovery gate: ${result.failures.join('; ')}`);
   for (const check of Object.values(evidence.checks)) {
     const base = realpathSync(bundle);
@@ -125,7 +131,7 @@ export async function indexesReady(api) {
 export async function deployCandidate(id, image, deps) {
   const { api, run, github, smokeCheck = smoke, persist = save } = deps;
   if (!new RegExp(`^${registry.replaceAll('.', '\\.')}@sha256:[a-f0-9]{64}$`).test(image)) throw new Error('Invalid immutable image');
-  const manifest = { ...id, image, status: 'STARTED', smoke: 'NOT_RUN' };
+  const manifest = { ...id, image, status: 'STARTED', smoke: 'NOT_RUN', deferred: deps.deferred ?? [] };
   const functionUrl = `https://cloudfunctions.googleapis.com/v2/projects/${project}/locations/${location}/functions/api`;
   const previous = await api(`${appHosting}${backend}/traffic`);
   if (previous.rolloutPolicy?.codebaseBranch && !previous.rolloutPolicy.disabled) throw new Error('Disable competing App Hosting automatic rollout before CI owns deployment');
@@ -259,7 +265,7 @@ export async function runProduction(env = process.env) {
   } finally { command('docker', ['rm', '--force', 'medic-ci-smoke']); }
   // Recheck main after the long build, before any runtime mutation.
   await assertCurrent(id, github);
-  return deployCandidate(id, `${registry}@${digest}`, { api, run: command, github, attempt: env.GITHUB_RUN_ATTEMPT });
+  return deployCandidate(id, `${registry}@${digest}`, { api, run: command, github, attempt: env.GITHUB_RUN_ATTEMPT, deferred: assertExternalDecisions(json(`${output}/acceptance/evidence.json`)) });
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

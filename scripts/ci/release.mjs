@@ -90,7 +90,8 @@ export async function publish(id, manifest, api) {
     configuration_file_path: '.github/release.yml',
   });
   const commits = await commitNotes(id, previous, api);
-  const body = `${generated.body}\n\n${commits}\n\n## Deployment\nProduction deployment: SUCCEEDED\nCommit: ${id.sha}\nImage: ${manifest.image}\nFunction revision: ${manifest.functionRevision}\nRollout: ${manifest.rollout}\nSmoke: PASSED (public readiness and unauthenticated private-route denial)\nRun: ${id.runUrl}\n\n## Acceptance limits\nDiscovery scope only. Smoke does not prove clinical validity, real-account OAuth, restore, or physical-device acceptance. See the run's candidate-bound discovery evidence and explicit deferrals.\n`;
+  const limitations = (manifest.deferred ?? []).map(item => `- DEFERRED: ${item.check}. ${item.reason} Consequence: ${item.consequence} Follow-up: ${item.followUp}`).join('\n');
+  const body = `${generated.body}\n\n${commits}\n\n## Deployment\nProduction deployment: SUCCEEDED\nCommit: ${id.sha}\nImage: ${manifest.image}\nFunction revision: ${manifest.functionRevision}\nRollout: ${manifest.rollout}\nSmoke: PASSED (public readiness and unauthenticated private-route denial)\nRun: ${id.runUrl}\n\n## Acceptance limits\nEducational release. Smoke does not establish clinical validity or complete anatomical coverage. Candidate-bound checks and owner decisions are retained in the acceptance artifact.\n${limitations || 'No owner deferrals recorded.'}\n`;
   // Creating a release explicitly at SHA avoids creating a tag at a moving branch.
   // Create the lightweight ref first so retries validate the immutable target.
   if (!tag) await api('git/refs', 'POST', { ref: `refs/tags/${id.tag}`, sha: id.sha });

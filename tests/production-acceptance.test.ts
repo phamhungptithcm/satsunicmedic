@@ -7,6 +7,10 @@ import { createHash } from 'node:crypto';
 import { assemble, validateReceipt, technicalChecks, externalChecks } from '../scripts/ci/acceptance-production.mjs';
 // @ts-expect-error Native operational ESM has no generated declarations.
 import { costPolicy } from '../scripts/ci/check-production-costs.mjs';
+// @ts-expect-error Native operational ESM has no generated declarations.
+import { ownerApproval, deferrableChecks, validateDeferrals } from '../scripts/ci/owner-deferrals.mjs';
+// @ts-expect-error Native operational ESM has no generated declarations.
+import { validateAcceptance } from '../scripts/ci/deploy-production.mjs';
 const roots: string[] = [];
 afterEach(() => roots.splice(0).forEach(p => rmSync(p, { recursive: true, force: true })));
 function fixture() {
@@ -68,5 +72,63 @@ describe('production acceptance producer boundary', () => {
   it('rejects recognizable credentials in external evidence', async () => {
     const f = fixture(); f.external.checks.liveGoogle.summary = 'Bearer sensitive-token';
     await expect(assemble(f.candidate, f.receipts, f.external, f.bundle, f.root)).rejects.toThrow('secret');
+  });
+});
+
+function deferredFixture() {
+  const f = fixture();
+  const now = Date.parse(ownerApproval.approvedAt) + 1000;
+  const date = new Date(now).toISOString();
+  for (const name of technicalChecks) writeFileSync(join(f.receipts, `${name}.json`), JSON.stringify({ ...f.receipt(name), checkedAt: date }));
+  f.external.checks.assetRights.checkedAt = date;
+  f.external.costs.checkedAt = date;
+  const deferred = deferrableChecks.map((check: string) => ({ check, status: 'DEFERRED', commit: f.candidate.commit, candidateSha256: f.candidate.candidateSha256,
+    approval: ownerApproval.id, owner: ownerApproval.owner, taskReference: ownerApproval.taskReference, acceptedAt: date,
+    reason: 'Synthetic test decision', consequence: 'Acceptance remains unverified', followUp: 'Complete the missing acceptance' }));
+  for (const check of deferrableChecks) delete f.external.checks[check];
+  return { ...f, now, deferred, external: { ...f.external, deferred } };
+}
+describe('explicit owner decisions', () => {
+  it('retains six DEFERRED decisions separately from eight PASSED checks', async () => {
+    const f = deferredFixture();
+    const result = await assemble(f.candidate, f.receipts, f.external, f.bundle, f.root, f.now);
+    expect(result.deferred).toEqual(f.deferred);
+    expect(Object.keys(result.checks)).toHaveLength(8);
+    expect(result.checks.restore).toBeUndefined();
+    expect(existsSync(join(f.bundle, 'owner-deferrals.json'))).toBe(true);
+    writeFileSync(join(f.bundle, 'owner-deferrals.json'), '[]');
+    await expect(validateAcceptance(result, ['candidate.txt'], f.candidate.commit, f.root, f.bundle, f.now)).rejects.toThrow('decision attachment');
+    rmSync(join(f.bundle, 'owner-deferrals.json'));
+    await expect(validateAcceptance(result, ['candidate.txt'], f.candidate.commit, f.root, f.bundle, f.now)).rejects.toThrow();
+    writeFileSync(join(f.root, 'outside.json'), JSON.stringify(f.deferred));
+    symlinkSync(join(f.root, 'outside.json'), join(f.bundle, 'owner-deferrals.json'));
+    await expect(validateAcceptance(result, ['candidate.txt'], f.candidate.commit, f.root, f.bundle, f.now)).rejects.toThrow('decision attachment');
+  });
+  it.each(['assetRights', 'unit', 'browser', 'dependencyAudit', 'costs', 'unknown'])('cannot defer %s', check => {
+    const f = deferredFixture();
+    expect(() => validateDeferrals([{ ...f.deferred[0], check }], f.candidate, f.now)).toThrow('Non-deferrable');
+  });
+  it.each(['owner', 'approval', 'taskReference', 'commit', 'candidateSha256', 'status', 'acceptedAt', 'reason', 'consequence', 'followUp'])('rejects missing or mismatched %s', key => {
+    const f = deferredFixture();
+    expect(() => validateDeferrals([{ ...f.deferred[0], [key]: '' }], f.candidate, f.now)).toThrow();
+  });
+  it('rejects expiry, future dates, duplicates and unapproved owners', () => {
+    const f = deferredFixture();
+    expect(() => validateDeferrals(f.deferred, f.candidate, Date.parse(ownerApproval.validUntil) + 1)).toThrow('Stale');
+    expect(() => validateDeferrals(f.deferred, f.candidate, f.now - 1)).toThrow('Stale');
+    expect(() => validateDeferrals([f.deferred[0], f.deferred[0]], f.candidate, f.now)).toThrow('duplicate');
+    expect(() => validateDeferrals([{ ...f.deferred[0], owner: 'unapproved' }], f.candidate, f.now)).toThrow('Unapproved');
+  });
+  it('rejects conflicting pass and defer decisions', async () => {
+    const f = deferredFixture(); f.external.checks.restore = f.receipt('restore');
+    await expect(assemble(f.candidate, f.receipts, f.external, f.bundle, f.root, f.now)).rejects.toThrow('Conflicting');
+  });
+  it('keeps costs mandatory when every permitted check is deferred', async () => {
+    const f = deferredFixture(); f.external.costs.projectedMonthTotalUsd = 15;
+    await expect(assemble(f.candidate, f.receipts, f.external, f.bundle, f.root, f.now)).rejects.toThrow('cost projection');
+  });
+  it('rejects secrets in owner decisions', async () => {
+    const f = deferredFixture(); f.deferred[0].reason = 'Bearer private-token';
+    await expect(assemble(f.candidate, f.receipts, f.external, f.bundle, f.root, f.now)).rejects.toThrow('secret');
   });
 });

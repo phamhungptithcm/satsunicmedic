@@ -1,0 +1,16 @@
+{
+  "id": "PROD-RISK-01",
+  "owner": "phamhungptithcm",
+  "taskReference": "Codex conversation: owner approved PROD-RISK-01 on 2026-10-04 after explicit risk acceptance",
+  "approvedAt": "2026-10-04T06:24:59Z",
+  "validUntil": "2026-10-05T06:24:59Z",
+  "baseline": "5e90ef13eabbe65378a33811cf7a8d0dc06136b3",
+  "allowedChecks": [
+    "liveGoogle",
+    "restore",
+    "physicalDevices",
+    "medicalReview",
+    "anatomyCorrectness",
+    "fullProduct"
+  ]
+}

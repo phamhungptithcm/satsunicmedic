@@ -74,10 +74,12 @@ describe('release retry and note range', () => {
       if (path.startsWith('releases?')) return [{ tag_name: 'v0.1.0-build.11', body: 'Production deployment: SUCCEEDED' }];
       throw new Error(`Unexpected ${path}`);
     };
-    await publish(id, good, api);
+    await publish(id, { ...good, deferred: [{ check: 'medicalReview', reason: 'Owner accepted unreviewed educational content.', consequence: 'Clinical validity is unverified.', followUp: 'Obtain specialist review.' }] }, api);
     expect(writes.find(w => w.path === 'git/refs')?.body.sha).toBe(sha);
     expect(writes.find(w => w.path === 'releases/generate-notes')?.body.previous_tag_name).toBe('v0.1.0-build.11');
     expect(writes.find(w => w.path === 'releases')?.body.body).toContain('fix(ci): direct main commit');
+    expect(writes.find(w => w.path === 'releases')?.body.body).toContain('DEFERRED: medicalReview. Owner accepted unreviewed educational content.');
+    expect(writes.find(w => w.path === 'releases')?.body.body).toContain('Clinical validity is unverified.');
     const count = writes.length; await publish(id, good, api); expect(writes).toHaveLength(count);
   });
   it('does not create tags for failed deployments', async () => {
@@ -181,8 +183,8 @@ function acceptanceFixture() {
   const candidateSha256 = createHash('sha256').update(JSON.stringify(files)).digest('hex');
   const receipt = { status: 'PASSED', candidateSha256, checkedAt: new Date().toISOString(), evidence: 'check.txt' };
   const evidence = { scope: 'discovery', commit: sha, files, candidateSha256,
-    checks: Object.fromEntries(requiredChecks.map(c => [c, { ...receipt }])),
-    deferred: ['liveGoogle', 'restore', 'physicalDevices'].map(check => ({ check, reason: 'test-only fixture', approval: 'fixture owner' })) };
+    checks: Object.fromEntries([...requiredChecks, 'liveGoogle', 'restore', 'physicalDevices', 'medicalReview', 'anatomyCorrectness', 'fullProduct'].map(c => [c, { ...receipt }])),
+    deferred: [] };
   return { root, bundle, evidence };
 }
 describe('acceptance gate completeness and evidence attachments', () => {
